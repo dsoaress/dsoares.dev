@@ -7,6 +7,8 @@ module.exports = {
     bem pequena) produção acadêmica e um blog com assuntos relacionados (ou não).`,
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-transition-link`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
