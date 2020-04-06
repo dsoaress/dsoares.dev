@@ -9,7 +9,7 @@ const Profile = () => (
     <S.ProfileImg></S.ProfileImg>
     <S.ProfileDesc>
       <S.ProfileDescP>
-        <S.ProfileDescBig>Olá,</S.ProfileDescBig> me chamdo Daniel Soares, sou
+        <S.ProfileDescBig>Olá,</S.ProfileDescBig> me chamo Daniel Soares, sou
         estudante de Ciência Política e Sociologia na{" "}
         <a href="/">
           Universidade Federal da Integração Latino-America (UNILA)
