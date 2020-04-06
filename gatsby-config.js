@@ -31,6 +31,20 @@ module.exports = {
         // icon: `src/images/gatsby-icon.png`,
       },
     },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Rubik Mono One`,
+          },
+          {
+            family: `Rubik`,
+            variants: [`400`, `400i`, `700`, `700i`],
+          },
+        ],
+      },
+    },
     `gatsby-plugin-offline`,
   ],
 }
