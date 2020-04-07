@@ -26,6 +26,26 @@ const GlobalStyles = createGlobalStyle`
     }
   }
 
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+
   p {
     margin-bottom: 20px;
 
