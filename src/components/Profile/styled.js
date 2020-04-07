@@ -5,22 +5,21 @@ import Profife from "../../images/profile.jpg"
 
 export const ProfileWrapper = styled.div`
   display: flex;
-  flex: 1;
   align-items: center;
-  padding: 0 3%;
-
-  ${media.lessThan("600px")`
-    padding: 0 20px;
-  `}
 `
 
 export const ProfileImg = styled.div`
-  width: 35%;
-  min-height: 50vh;
+  width: 30%;
+  height: 55vh;
+  min-height: 310px;
   border-radius: 3px;
   margin-right: 5%;
   background: url(${Profife}) center;
   background-size: cover;
+
+  ${media.lessThan("780px")`
+  width: 40%;
+  `}
 
   ${media.lessThan("600px")`
     display: none;
@@ -28,7 +27,12 @@ export const ProfileImg = styled.div`
 `
 
 export const ProfileDesc = styled.div`
-  width: 60%;
+  width: 65%;
+  padding-bottom: 30px;
+
+  ${media.lessThan("780px")`
+  width: 55%;
+  `}
 
   ${media.lessThan("600px")`
     width: 100%;
