@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import * as S from "./styled"
 import SocialLinks from "../SocialLinks"
@@ -11,12 +11,30 @@ const Profile = () => (
       <S.ProfileDescP>
         <S.ProfileDescBig>Olá,</S.ProfileDescBig> me chamo Daniel Soares, sou
         estudante de Ciência Política e Sociologia na{" "}
-        <a href="/">
+        <a
+          href="https://unila.edu.br"
+          alt="Universidade Federal da Integração Latino-America (UNILA)"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Universidade Federal da Integração Latino-America (UNILA)
         </a>
         , em Foz do Iguaçu (Brasil), atualmente cursando o último ano da
-        graduação. Aqui tem meu <Link to="/">currículo</Link> e um{" "}
-        <Link to="/">blog</Link> com assuntos relacionados (ou não).
+        graduação. Aqui tem meu{" "}
+        <AniLink
+          to="/curriculo"
+          cover
+          direction="right"
+          bg="#1a1d23"
+          duration={1}
+        >
+          currículo
+        </AniLink>{" "}
+        e um{" "}
+        <AniLink to="/blog" cover direction="right" bg="#1a1d23" duration={1}>
+          blog
+        </AniLink>{" "}
+        com assuntos relacionados (ou não).
       </S.ProfileDescP>
       <SocialLinks />
     </S.ProfileDesc>
