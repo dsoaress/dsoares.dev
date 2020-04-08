@@ -11,18 +11,39 @@ const GlobalStyles = createGlobalStyle`
     font-family: "Rubik", sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    color: #dadada;
-    background: #1a1d23;
+    color: var(--default);
+    background: var(--background);
+    transition: color 1s;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+
+    &.dark {
+      --highLight: #FF5184;
+      --default: #dadada;
+      --background: #1a1d23;
+      --backgroundMedium: #272c35;
+    }
+
+    &.light {
+      --highLight: #BC2D57;
+      --default: #222;
+      --background: #fff;
+      --backgroundMedium: #EBEBEB;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   a {
-    color: #FF5184;
+    color: var(--highLight);
     text-decoration: none;
-    border-bottom: 1px dashed #FF5184;
+    border-bottom: 1px dashed var(--highLight);
     transition: color 0.5s;
 
     &:hover {
-      color: #dadada;
+      color: var(--default);
     }
   }
 
