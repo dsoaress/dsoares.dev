@@ -10,5 +10,5 @@ export const NotFoundWrapper = styled.div`
 
 export const Icon = styled(MessageSquareError)`
   width: 60px;
-  color: #bc2d57;
+  color: #ff5184;
 `

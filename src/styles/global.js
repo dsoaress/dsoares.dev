@@ -16,9 +16,9 @@ const GlobalStyles = createGlobalStyle`
   }
 
   a {
-    color: #BC2D57;
+    color: #FF5184;
     text-decoration: none;
-    border-bottom: 1px dashed #BC2D57;
+    border-bottom: 1px dashed #FF5184;
     transition: color 0.5s;
 
     &:hover {
