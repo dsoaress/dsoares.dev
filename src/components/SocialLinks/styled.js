@@ -3,7 +3,7 @@ import media from "styled-media-query"
 
 export const SocialLinksList = styled.ul`
   list-style: none;
-  margin-top: 40px;
+  margin: 40px 0 0 0;
 
   ${media.lessThan("medium")`
     margin-top: 20px;
