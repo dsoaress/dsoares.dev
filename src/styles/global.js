@@ -18,14 +18,14 @@ const GlobalStyles = createGlobalStyle`
     -ms-overflow-style: none;
 
     &.dark {
-      --highLight: #FF5184;
+      --highLight: #E61F5B;
       --default: #dadada;
-      --background: #1a1d23;
-      --backgroundMedium: #272c35;
+      --background: #111213;
+      --backgroundMedium: #1A1D23;
     }
 
     &.light {
-      --highLight: #BC2D57;
+      --highLight: #E61F5B;
       --default: #222;
       --background: #fff;
       --backgroundMedium: #EBEBEB;
