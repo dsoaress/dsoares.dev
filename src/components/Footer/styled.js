@@ -19,5 +19,5 @@ export const HeartIcon = styled(Heart)`
   width: 20px;
   height: 20px;
   margin-bottom: 5px;
-  fill: #bc2d57;
+  fill: #ff5184;
 `

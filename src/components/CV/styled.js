@@ -1,11 +1,13 @@
 import styled from "styled-components"
 
+import { Orcid } from "@styled-icons/fa-brands/Orcid"
+import { AlternateEmail } from "@styled-icons/material/AlternateEmail"
+import { LocationMarker } from "@styled-icons/heroicons-solid/LocationMarker"
 import { LinkExternal } from "@styled-icons/boxicons-regular/LinkExternal"
 import { ClockOutline } from "@styled-icons/evaicons-outline/ClockOutline"
 
 export const CVWrapper = styled.section`
   max-width: 800px;
-  font-size: 14px;
 `
 
 export const Title = styled.h1`
@@ -31,7 +33,7 @@ export const DataSubTitle = styled.h3`
     color: #dadada;
 
     &:hover {
-      color: #bc2d57;
+      color: #ff5184;
     }
   }
 `
@@ -47,22 +49,39 @@ export const DataGroup = styled.div`
 `
 
 export const DataYear = styled.span`
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
-  color: #bc2d57;
-  min-width: 80px;
+  color: #ff5184;
+  min-width: 90px;
 `
 
 export const DataDesc = styled.div``
 
+export const OrcidIcon = styled(Orcid)`
+  width: 18px;
+  color: #ff5184;
+`
+
+export const EmailIcon = styled(AlternateEmail)`
+  width: 20px;
+  margin-top: -2px;
+  color: #ff5184;
+`
+
+export const LocationlIcon = styled(LocationMarker)`
+  width: 20px;
+  margin-top: -4px;
+  color: #ff5184;
+`
+
 export const LinkIcon = styled(LinkExternal)`
-  width: 15px;
+  width: 20px;
   margin: -3px 0 0 5px;
-  color: #bc2d57;
+  color: #ff5184;
 `
 
 export const ClockIcon = styled(ClockOutline)`
-  width: 15px;
-  margin: -3px 0 0 0;
-  color: #bc2d57;
+  width: 20px;
+  margin-top: -3px;
+  color: #ff5184;
 `

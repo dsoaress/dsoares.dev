@@ -10,7 +10,7 @@ export const Header = styled.header`
   justify-content: space-between;
   height: 140px;
   padding: 0 3%;
-  border-top: 10px solid #bc2d57;
+  border-top: 10px solid #ff5184;
 
   ${media.lessThan("600px")`
     height: 100px;
@@ -24,7 +24,7 @@ export const Logo = styled.div`
 `
 
 export const LastName = styled.span`
-  color: #bc2d57;
+  color: #ff5184;
 `
 
 export const NavLinks = styled.nav``
@@ -35,7 +35,7 @@ export const NavLinksItem = styled.li`
   display: inline-block;
   margin-left: 30px;
   .active {
-    color: #bc2d57;
+    color: #ff5184;
     text-decoration-line: line-through;
   }
 
@@ -49,7 +49,7 @@ export const NavLinksLink = styled(AniLink)`
   text-decoration: none;
   border: none;
   &:hover {
-    color: #bc2d57;
+    color: #ff5184;
     text-decoration-line: line-through;
   }
 `
