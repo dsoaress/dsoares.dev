@@ -52,6 +52,7 @@ const Header = () => (
             bg="#1a1d23"
             duration={1}
             to="/lightmode"
+            title="Lightmode"
           >
             <S.SunIcon />
           </S.NavLinksLink>
