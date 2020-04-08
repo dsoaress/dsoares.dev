@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import GlobalStyled from "../../styles/global"
+import GlobalStyled from "./global"
 import * as S from "./styled"
 
 import Header from "../Header"
