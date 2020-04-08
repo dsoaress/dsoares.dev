@@ -27,13 +27,13 @@ export const DataSubTitle = styled.h3`
   font-size: 0.9rem;
   margin-top: 30px;
   padding: 20px;
-  background: #272c35;
+  background: var(--backgroundMedium);
 
   a {
-    color: #dadada;
+    color: var(--default);
 
     &:hover {
-      color: #ff5184;
+      color: var(--highLight);
     }
   }
 `
@@ -51,7 +51,7 @@ export const DataGroup = styled.div`
 export const DataYear = styled.span`
   font-size: 12px;
   font-weight: 700;
-  color: #ff5184;
+  color: var(--highLight);
   min-width: 90px;
 `
 
@@ -59,29 +59,29 @@ export const DataDesc = styled.div``
 
 export const OrcidIcon = styled(Orcid)`
   width: 18px;
-  color: #ff5184;
+  color: var(--highLight);
 `
 
 export const EmailIcon = styled(AlternateEmail)`
   width: 20px;
   margin-top: -2px;
-  color: #ff5184;
+  color: var(--highLight);
 `
 
 export const LocationlIcon = styled(LocationMarker)`
   width: 20px;
   margin-top: -4px;
-  color: #ff5184;
+  color: var(--highLight);
 `
 
 export const LinkIcon = styled(LinkExternal)`
   width: 20px;
   margin: -3px 0 0 5px;
-  color: #ff5184;
+  color: var(--highLight);
 `
 
 export const ClockIcon = styled(ClockOutline)`
   width: 20px;
   margin-top: -3px;
-  color: #ff5184;
+  color: var(--highLight);
 `

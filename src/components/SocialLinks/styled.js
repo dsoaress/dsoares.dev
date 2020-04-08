@@ -16,11 +16,11 @@ export const SocialLinksItem = styled.li`
 `
 
 export const SocialLinksLink = styled.a`
-  color: #dadada;
+  color: var(--default);
   text-decoration: none;
   transition: color 0.5s;
   &:hover {
-    color: #ff5184;
+    color: var(--highLight);
   }
 `
 

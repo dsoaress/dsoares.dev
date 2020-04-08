@@ -25,13 +25,19 @@ const Profile = () => (
           to="/curriculo"
           cover
           direction="right"
-          bg="#1a1d23"
+          bg="var(--background)"
           duration={1}
         >
           currículo
         </AniLink>{" "}
         e um{" "}
-        <AniLink to="/blog" cover direction="right" bg="#1a1d23" duration={1}>
+        <AniLink
+          to="/blog"
+          cover
+          direction="right"
+          bg="var(--background)"
+          duration={1}
+        >
           blog
         </AniLink>{" "}
         com assuntos relacionados (ou não).
