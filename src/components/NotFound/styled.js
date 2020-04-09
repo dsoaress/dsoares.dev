@@ -8,6 +8,12 @@ export const NotFoundWrapper = styled.div`
   align-items: center;
 `
 
+export const NotFoundTitle = styled.h1`
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 0;
+`
+
 export const Icon = styled(MessageSquareError)`
   width: 60px;
   color: var(--highLight);

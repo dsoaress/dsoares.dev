@@ -1,6 +1,5 @@
 import styled from "styled-components"
 
-import { Orcid } from "@styled-icons/fa-brands/Orcid"
 import { AlternateEmail } from "@styled-icons/material/AlternateEmail"
 import { LocationMarker } from "@styled-icons/heroicons-solid/LocationMarker"
 import { LinkExternal } from "@styled-icons/boxicons-regular/LinkExternal"
@@ -11,8 +10,7 @@ export const CVWrapper = styled.section`
 `
 
 export const Title = styled.h1`
-  padding-bottom: 0.5rem;
-  margin-bottom: 0.2rem;
+  font-size: 4rem;
   border-bottom: 1px solid #3d4555;
 `
 
@@ -56,11 +54,6 @@ export const DataYear = styled.span`
 `
 
 export const DataDesc = styled.div``
-
-export const OrcidIcon = styled(Orcid)`
-  width: 18px;
-  color: var(--highLight);
-`
 
 export const EmailIcon = styled(AlternateEmail)`
   width: 20px;

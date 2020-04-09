@@ -8,11 +8,11 @@ export const Footer = styled.footer`
   align-items: center;
   justify-content: center;
   height: 80px;
-  font-size: 12px;
+  font-size: 0.75rem;
 `
 
 export const FooterItens = styled.p`
-  margin: -2px;
+  margin: -2px 0;
 `
 
 export const HeartIcon = styled(Heart)`
