@@ -11,9 +11,17 @@ module.exports = {
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        pathToConfigModule: `src/components/Layout/typography`,
+        name: `uploads`,
+        path: `${__dirname}/static/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/posts`,
       },
     },
     {
@@ -26,6 +34,30 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-relative-images",
+            options: {
+              name: "uploads",
+            },
+          },
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              maxWidth: 1200,
+              linkImagesToOriginal: false,
+              showCaptions: true,
+              quality: 90,
+              withWebp: true,
+            },
+          },
+          `gatsby-remark-prismjs`,
+        ],
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Daniel Soares`,
@@ -35,6 +67,12 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         // icon: `src/images/gatsby-icon.png`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/components/Layout/typography`,
       },
     },
     {
