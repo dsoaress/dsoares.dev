@@ -5,7 +5,7 @@ import * as S from "./styled"
 const NotFound = () => (
   <S.NotFoundWrapper>
     <S.Icon />
-    <h1>NÃO ENCONTRADO</h1>
+    <S.NotFoundTitle>NÃO ENCONTRADO</S.NotFoundTitle>
     <p>Você acabou de pegar uma rota que não existe... </p>
   </S.NotFoundWrapper>
 )

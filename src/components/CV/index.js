@@ -6,8 +6,16 @@ const CV = () => (
   <S.CVWrapper>
     <S.Title>Currículo</S.Title>
     <S.Bio>
-      Daniel Paiva Soares: Graduando em Ciência Política e Sociologia pela
-      Universidade Federal da Integração Latino-Americana, UNILA.
+      <p>
+        Daniel Paiva Soares: Graduando em Ciência Política e Sociologia pela
+        Universidade Federal da Integração Latino-Americana, UNILA.
+      </p>
+      <p>
+        <S.EmailIcon /> daniel.soares@me.com
+      </p>
+      <p>
+        <S.LocationlIcon /> Foz do Iguaçu, Paraná
+      </p>
     </S.Bio>
     <S.DataTitle>Formação</S.DataTitle>
     <S.DataGroup>
