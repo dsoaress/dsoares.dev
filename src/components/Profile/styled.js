@@ -1,21 +1,19 @@
 import styled from "styled-components"
 import media from "styled-media-query"
 
-import Profife from "../../images/profile.jpg"
+import Img from "gatsby-image"
 
 export const ProfileWrapper = styled.div`
   display: flex;
   align-items: center;
 `
 
-export const ProfileImg = styled.div`
+export const ProfileImage = styled(Img)`
   width: 30%;
   height: 55vh;
   min-height: 310px;
   border-radius: 3px;
   margin-right: 5%;
-  background: url(${Profife}) center;
-  background-size: cover;
 
   ${media.lessThan("780px")`
   width: 40%;
