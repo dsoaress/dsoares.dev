@@ -46,7 +46,7 @@ module.exports = {
           {
             resolve: "gatsby-remark-images",
             options: {
-              maxWidth: 1200,
+              maxWidth: 800,
               linkImagesToOriginal: false,
               showCaptions: true,
               quality: 90,
@@ -54,6 +54,7 @@ module.exports = {
             },
           },
           `gatsby-remark-prismjs`,
+          `gatsby-remark-lazy-load`,
         ],
       },
     },
