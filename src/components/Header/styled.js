@@ -29,11 +29,13 @@ export const LastName = styled.span`
 
 export const NavLinks = styled.nav``
 
-export const NavLinksList = styled.ul``
+export const NavLinksList = styled.ul`
+  margin: 0;
+`
 
 export const NavLinksItem = styled.li`
   display: inline-block;
-  margin-left: 30px;
+  margin: 0 0 0 30px;
   .active {
     color: var(--highLight);
     text-decoration-line: line-through;
