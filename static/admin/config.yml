@@ -1,0 +1,49 @@
+backend:
+  name: github
+  repo: dsoaress/dsoares.me
+  branch: master
+
+  commit_messages:
+    create: ":sparkles: {{slug}}"
+    update: ":speech_balloon: {{slug}}"
+    delete: ":fire: {{slug}}"
+    uploadMedia: "[skip ci] :bento: {{path}}"
+    deleteMedia: "[skip ci] :fire: {{path}}"
+
+media_folder: "static/images"
+public_folder: "images"
+
+locale: "pt"
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - label: "Template Key"
+        name: "templateKey"
+        widget: "hidden"
+        default: "blogPost"
+
+      - label: "Título"
+        name: "title"
+        widget: "string"
+
+      - label: "Data"
+        name: "date"
+        widget: "datetime"
+        dateFormat: "DD.MM.YYYY"
+        timeFormat: "HH:mm"
+        format: "LLL"
+
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
