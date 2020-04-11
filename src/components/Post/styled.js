@@ -8,57 +8,43 @@ export const PostWrapper = styled.section`
   max-width: 800px;
 `
 
-export const PostTitle = styled.h1`
-  font-size: 6rem;
-  line-height: 0.8;
-  margin-top: 3rem;
-
-  ${media.lessThan("medium")`
-  font-size: 3rem;
-  line-height: 1;
-  margin-top: 1rem;
-  `}
-`
-
 export const Meta = styled.div`
-  text-align: center;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-style: italic;
-  line-height: 1.4;
-  margin: 3rem 0 5rem;
-  padding: 1rem 0;
-  background: var(--backgroundMedium);
-
-  ${media.lessThan("medium")`
-  margin: 2rem 0 3rem;
-  `}
-
-  ${media.lessThan("375px")`
-  font-size: 0.65rem;
-  `}
-`
-
-export const MetaItem = styled.span`
-  margin: 0 15px;
+  color: var(--medium);
 `
 
 export const CalendarIcon = styled(Calendar)`
-  width: 18px;
+  width: 15px;
   margin: -5px 5px 0 0;
   color: var(--highLight);
-
-  ${media.lessThan("375px")`
-  width: 14px;
-  `}
 `
 
 export const ClockIcon = styled(ClockOutline)`
-  width: 18px;
-  margin: -5px 5px 0 0;
+  width: 15px;
+  margin: -5px 5px 0 10px;
   color: var(--highLight);
+`
 
-  ${media.lessThan("375px")`
-  width: 14px;
+export const PostTitle = styled.h1`
+  font-size: 6rem;
+  line-height: 0.8;
+  margin: 3rem 0;
+
+  ${media.lessThan("medium")`
+  font-size: 3.1rem;
+  line-height: 1;
+  margin: 2rem 0;
+  `}
+`
+
+export const PostDescription = styled.h2`
+  font-size: 1.4rem;
+  font-weight: normal;
+  line-height: 1.3;
+
+  ${media.lessThan("medium")`
+  font-size: 1.4rem;
   `}
 `
 

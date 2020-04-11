@@ -18,32 +18,32 @@ export const PostItemWrapper = styled.div`
   padding: 20px 0;
 `
 
-export const PostTitleWrapper = styled.header``
-
-export const PostTitle = styled.h2`
-  font-size: 2.5rem;
-  margin: 0;
-`
+export const PostTitleWrapper = styled.section``
 
 export const Meta = styled.div`
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-style: italic;
-  padding: 1rem 0;
+  color: var(--medium);
 `
 
 export const CalendarIcon = styled(Calendar)`
-  width: 18px;
+  width: 15px;
   margin: -5px 5px 0 0;
   color: var(--highLight);
 `
 
 export const ClockIcon = styled(ClockOutline)`
-  width: 18px;
-  margin: -5px 5px 0 20px;
+  width: 15px;
+  margin: -5px 5px 0 10px;
   color: var(--highLight);
 `
 
-export const PostExcerpt = styled.p`
+export const PostTitle = styled.h2`
+  font-size: 2.5rem;
+  margin: 1rem 0;
+`
+
+export const PostDescription = styled.p`
   a {
     border: none;
   }

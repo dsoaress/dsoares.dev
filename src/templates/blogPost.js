@@ -13,17 +13,14 @@ const BlogPost = ({ data }) => {
     <Layout>
       <S.PostWrapper>
         <SEO title={post.frontmatter.title} />
-        <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
         <S.Meta>
-          <S.MetaItem>
-            <S.CalendarIcon />
-            {post.frontmatter.date}
-          </S.MetaItem>
-          <S.MetaItem>
-            <S.ClockIcon />
-            {post.timeToRead} min de leitura
-          </S.MetaItem>
+          <S.CalendarIcon />
+          {post.frontmatter.date}
+          <S.ClockIcon />
+          {post.timeToRead} min de leitura
         </S.Meta>
+        <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
+        <S.PostDescription>{post.frontmatter.description}</S.PostDescription>
         <S.MainContent dangerouslySetInnerHTML={{ __html: post.html }} />
       </S.PostWrapper>
     </Layout>
@@ -35,6 +32,7 @@ export const query = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
+        description
         date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
       }
       id
