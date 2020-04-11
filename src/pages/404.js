@@ -6,7 +6,7 @@ import NotFound from "../components/NotFound"
 
 const NotFoundPage = () => (
   <Layout>
-    <SEO title="404: Not found" />
+    <SEO title="Não encontrado" />
     <NotFound />
   </Layout>
 )
