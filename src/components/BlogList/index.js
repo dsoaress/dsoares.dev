@@ -18,6 +18,7 @@ const BlogList = () => {
             frontmatter {
               date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
               title
+              description
             }
             timeToRead
             fields {
@@ -40,14 +41,18 @@ const BlogList = () => {
         ({
           node: {
             id,
-            frontmatter: { date, title },
+            frontmatter: { date, title, description },
             timeToRead,
             fields: { slug },
-            excerpt,
           },
         }) => (
           <S.PostItemWrapper>
             <S.PostTitleWrapper>
+              <S.Meta>
+                <S.CalendarIcon />
+                {date} <S.ClockIcon />
+                {timeToRead} mim de leitura
+              </S.Meta>
               <AniLink
                 cover
                 direction="right"
@@ -57,14 +62,9 @@ const BlogList = () => {
               >
                 <S.PostTitle>{title}</S.PostTitle>
               </AniLink>
-              <S.Meta>
-                <S.CalendarIcon />
-                {date} <S.ClockIcon />
-                {timeToRead} mim de leitura
-              </S.Meta>
             </S.PostTitleWrapper>
-            <S.PostExcerpt>
-              {excerpt}{" "}
+            <S.PostDescription>
+              {description}{" "}
               <AniLink
                 cover
                 direction="right"
@@ -74,7 +74,7 @@ const BlogList = () => {
               >
                 <S.ArrowIcon />
               </AniLink>
-            </S.PostExcerpt>
+            </S.PostDescription>
           </S.PostItemWrapper>
         )
       )}
