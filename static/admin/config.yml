@@ -36,9 +36,9 @@ collections:
       - label: "Data"
         name: "date"
         widget: "datetime"
-        dateFormat: "DD.MM.YYYY"
+        dateFormat: "DD/MM/YYYY"
         timeFormat: "HH:mm"
-        format: "LLL"
+        format: "YYYY-MM-DD HH:mm:ss"
 
       - label: "Tags"
         name: "tags"
