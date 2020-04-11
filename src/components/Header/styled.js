@@ -10,11 +10,15 @@ export const Header = styled.header`
   justify-content: space-between;
   height: 140px;
   padding: 0 3%;
+  margin-bottom: 40px;
   border-top: 10px solid var(--highLight);
 
   ${media.lessThan("600px")`
-    height: 100px;
-    padding: 0 20px;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 140px;
+    padding: 20px 20px;
+    border-bottom: 1px solid var(--backgroundMedium);
   `}
 `
 
@@ -42,7 +46,7 @@ export const NavLinksItem = styled.li`
   }
 
   ${media.lessThan("600px")`
-    display: none;
+    margin: 0 10px;
   `}
 `
 
