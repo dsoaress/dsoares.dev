@@ -92,5 +92,11 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify-cms`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-156483158-3",
+      },
+    },
   ],
 }
