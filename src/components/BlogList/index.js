@@ -19,12 +19,18 @@ const BlogList = () => {
               date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
               title
               description
+              image {
+                childImageSharp {
+                  fluid(maxWidth: 600, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
             }
             timeToRead
             fields {
               slug
             }
-            excerpt(pruneLength: 400)
           }
         }
       }
@@ -41,12 +47,20 @@ const BlogList = () => {
         ({
           node: {
             id,
-            frontmatter: { date, title, description },
+            frontmatter: {
+              date,
+              title,
+              description,
+              image: {
+                childImageSharp: { fluid },
+              },
+            },
             timeToRead,
             fields: { slug },
           },
         }) => (
           <S.PostItemWrapper>
+            <S.PostItemImage fluid={fluid} />
             <S.PostTitleWrapper>
               <S.Meta>
                 <S.CalendarIcon />
@@ -62,19 +76,20 @@ const BlogList = () => {
               >
                 <S.PostTitle>{title}</S.PostTitle>
               </AniLink>
+
+              <S.PostDescription>
+                {description}{" "}
+                <AniLink
+                  cover
+                  direction="right"
+                  bg="var(--background)"
+                  duration={1}
+                  to={slug}
+                >
+                  <S.ArrowIcon />
+                </AniLink>
+              </S.PostDescription>
             </S.PostTitleWrapper>
-            <S.PostDescription>
-              {description}{" "}
-              <AniLink
-                cover
-                direction="right"
-                bg="var(--background)"
-                duration={1}
-                to={slug}
-              >
-                <S.ArrowIcon />
-              </AniLink>
-            </S.PostDescription>
           </S.PostItemWrapper>
         )
       )}

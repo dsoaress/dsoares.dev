@@ -1,4 +1,6 @@
 import styled from "styled-components"
+import media from "styled-media-query"
+import Img from "gatsby-image"
 
 import { Calendar } from "@styled-icons/boxicons-solid/Calendar"
 import { ClockOutline } from "@styled-icons/evaicons-outline/ClockOutline"
@@ -15,10 +17,28 @@ export const Title = styled.h1`
 `
 
 export const PostItemWrapper = styled.div`
+  display: flex;
   padding: 20px 0;
+
+  ${media.lessThan("600px")`
+    flex-direction: column;
+  `}
 `
 
-export const PostTitleWrapper = styled.section``
+export const PostItemImage = styled(Img)`
+  flex: 1;
+  margin-right: 20px;
+  border-radius: 4px;
+
+  ${media.lessThan("600px")`
+  margin-right: 0;
+  `}
+`
+
+export const PostTitleWrapper = styled.div`
+  flex: 2;
+  padding-top: 1.666rem;
+`
 
 export const Meta = styled.div`
   font-size: 0.75rem;
