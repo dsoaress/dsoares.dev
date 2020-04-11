@@ -15,15 +15,15 @@ const GlobalStyles = createGlobalStyle`
     -ms-overflow-style: none;
 
     &.dark {
-      --highLight: #E61F5B;
+      --highLight: #BC2D57;
       --default: #dadada;
       --medium: #888;
-      --background: #111213;
-      --backgroundMedium: #1A1D23;
+      --background: #1A1D23;
+      --backgroundMedium: #2d313a;
     }
 
     &.light {
-      --highLight: #E61F5B;
+      --highLight: #BC2D57;
       --default: #222;
       --medium: #888;
       --background: #fff;
