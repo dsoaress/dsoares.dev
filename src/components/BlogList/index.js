@@ -65,7 +65,7 @@ const BlogList = () => {
               <S.Meta>
                 <S.CalendarIcon />
                 {date} <S.ClockIcon />
-                {timeToRead} mim de leitura
+                {timeToRead} min de leitura
               </S.Meta>
               <AniLink
                 cover
