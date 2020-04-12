@@ -3,8 +3,8 @@ module.exports = {
     title: `Daniel Soares`,
     description: `Estudante de Ciência Política e Sociologia na Universidade 
     Federal da Integração Latino-America (UNILA), em Foz do Iguaçu, atualmente 
-    cursando o último ano da graduação. Aqui tem um apanhado da minha (ainda 
-    bem pequena) produção acadêmica e um blog com assuntos relacionados (ou não).`,
+    cursando o último ano da graduação. Aqui tem um pouco sobre mim e um blog
+    blog onde abordo assuntos do meu interesse.`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
