@@ -65,15 +65,9 @@ export const SunIcon = styled(Sun)`
   height: 25px;
   color: yellow;
   transition: color 0.5s;
-  &:hover {
-    color: var(--default);
-  }
 
   &.light {
     color: var(--default);
     transition: color 0.5s;
-    &:hover {
-      color: #e8d105;
-    }
   }
 `
