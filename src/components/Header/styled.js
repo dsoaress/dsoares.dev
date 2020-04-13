@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import media from "styled-media-query"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 
 import { Sun } from "@styled-icons/evaicons-solid/Sun"
 
@@ -50,7 +50,7 @@ export const NavLinksItem = styled.li`
   `}
 `
 
-export const NavLinksLink = styled(AniLink)`
+export const NavLinksLink = styled(Link)`
   color: var(--default);
   text-decoration: none;
   border: none;

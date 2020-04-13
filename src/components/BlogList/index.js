@@ -1,6 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 import * as S from "./styled"
 
@@ -67,27 +66,15 @@ const BlogList = () => {
                 {date} <S.ClockIcon />
                 {timeToRead} min de leitura
               </S.Meta>
-              <AniLink
-                cover
-                direction="right"
-                bg="var(--background)"
-                duration={1}
-                to={slug}
-              >
+              <Link to={slug}>
                 <S.PostTitle>{title}</S.PostTitle>
-              </AniLink>
+              </Link>
 
               <S.PostDescription>
                 {description}{" "}
-                <AniLink
-                  cover
-                  direction="right"
-                  bg="var(--background)"
-                  duration={1}
-                  to={slug}
-                >
+                <Link to={slug}>
                   <S.ArrowIcon />
-                </AniLink>
+                </Link>
               </S.PostDescription>
             </S.PostTitleWrapper>
           </S.PostItemWrapper>
