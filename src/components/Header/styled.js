@@ -63,11 +63,6 @@ export const NavLinksLink = styled(Link)`
 export const SunIcon = styled(Sun)`
   width: 25px;
   height: 25px;
-  color: yellow;
-  transition: color 0.5s;
-
-  &.light {
-    color: var(--default);
-    transition: color 0.5s;
-  }
+  color: var(--sun);
+  cursor: pointer;
 `
