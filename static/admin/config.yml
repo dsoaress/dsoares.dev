@@ -18,7 +18,8 @@ locale: "pt"
 collections:
   - name: "posts"
     label: "Posts"
-    folder: "posts"
+    label_singular: "Post"
+    folder: "src/pages/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
@@ -44,6 +45,6 @@ collections:
         name: "tags"
         widget: "list"
 
-      - label: "Body"
+      - label: "Texto"
         name: "body"
         widget: "markdown"
