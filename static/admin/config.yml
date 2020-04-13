@@ -4,11 +4,11 @@ backend:
   branch: master
 
   commit_messages:
-    create: ":sparkles: {{slug}}"
-    update: ":speech_balloon: {{slug}}"
-    delete: ":fire: {{slug}}"
-    uploadMedia: "[skip ci] :bento: {{path}}"
-    deleteMedia: "[skip ci] :fire: {{path}}"
+    create: ":pencil: Creating {{slug}}"
+    update: ":pencil: Updating {{slug}}"
+    delete: ":fire: Deleting {{slug}}"
+    uploadMedia: "[skip ci] :bento: Uploading {{path}}"
+    deleteMedia: "[skip ci] :fire: Deleting {{path}}"
 
 media_folder: "static/images"
 public_folder: "images"
