@@ -17,6 +17,7 @@ const GlobalStyles = createGlobalStyle`
     &.dark {
       --highLight: #BC2D57;
       --default: #dadada;
+      --sun: yellow;
       --medium: #888;
       --background: #1A1D23;
       --backgroundMedium: #2d313a;
@@ -25,6 +26,7 @@ const GlobalStyles = createGlobalStyle`
     &.light {
       --highLight: #BC2D57;
       --default: #222;
+      --sun: #222;
       --medium: #888;
       --background: #fff;
       --backgroundMedium: #EBEBEB;
