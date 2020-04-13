@@ -42,44 +42,32 @@ const BlogList = () => {
     <S.BlogWrapper>
       <S.Title>Blog</S.Title>
 
-      {blogItens.map(
-        ({
-          node: {
-            id,
-            frontmatter: {
-              date,
-              title,
-              description,
-              image: {
-                childImageSharp: { fluid },
-              },
-            },
-            timeToRead,
-            fields: { slug },
-          },
-        }) => (
-          <S.PostItemWrapper>
-            <S.PostItemImage fluid={fluid} />
-            <S.PostTitleWrapper>
-              <S.Meta>
-                <S.CalendarIcon />
-                {date} <S.ClockIcon />
-                {timeToRead} min de leitura
-              </S.Meta>
-              <Link to={slug}>
-                <S.PostTitle>{title}</S.PostTitle>
-              </Link>
+      {blogItens.map(({ node: blogItem }) => (
+        <S.PostItemWrapper key={blogItem.fields.slug}>
+          {blogItem.frontmatter.image && (
+            <S.PostItemImage
+              fluid={blogItem.frontmatter.image.childImageSharp.fluid}
+            />
+          )}
+          <S.PostTitleWrapper>
+            <S.Meta>
+              <S.CalendarIcon />
+              {blogItem.frontmatter.date} <S.ClockIcon />
+              {blogItem.timeToRead} min de leitura
+            </S.Meta>
+            <Link to={blogItem.fields.slug}>
+              <S.PostTitle>{blogItem.frontmatter.title}</S.PostTitle>
+            </Link>
 
-              <S.PostDescription>
-                {description}{" "}
-                <Link to={slug}>
-                  <S.ArrowIcon />
-                </Link>
-              </S.PostDescription>
-            </S.PostTitleWrapper>
-          </S.PostItemWrapper>
-        )
-      )}
+            <S.PostDescription>
+              {blogItem.frontmatter.description}{" "}
+              <Link to={blogItem.fields.slug}>
+                <S.ArrowIcon />
+              </Link>
+            </S.PostDescription>
+          </S.PostTitleWrapper>
+        </S.PostItemWrapper>
+      ))}
     </S.BlogWrapper>
   )
 }
