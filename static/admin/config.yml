@@ -48,3 +48,30 @@ collections:
       - label: "Texto"
         name: "body"
         widget: "markdown"
+
+  - name: "pages"
+    label: "Páginas"
+    editor:
+      preview: false
+    files:
+      - file: "src/pages/index.md"
+        label: "Home"
+        name: "home"
+        fields:
+          - label: "Template Key"
+            name: "templateKey"
+            widget: "hidden"
+            default: "indexPage"
+
+          - label: "Título"
+            name: "title"
+            widget: "hidden"
+            default: "Home"
+
+          - label: "Saudação"
+            name: "greeting"
+            widget: "string"
+
+          - label: "Texto"
+            name: "body"
+            widget: "markdown"
