@@ -10,8 +10,8 @@ backend:
     uploadMedia: "[skip ci] :bento: Uploading {{path}}"
     deleteMedia: "[skip ci] :fire: Deleting {{path}}"
 
-media_folder: "static/images"
-public_folder: "images"
+media_folder: "/static/images"
+public_folder: "/images"
 
 locale: "pt"
 
