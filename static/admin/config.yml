@@ -34,6 +34,17 @@ collections:
         name: "title"
         widget: "string"
 
+      - label: "Descrição"
+        name: "description"
+        widget: "text"
+
+      - label: "Imagem em destaque"
+        name: "image"
+        widget: "image"
+        media_library:
+          config:
+            multiple: false
+
       - label: "Data"
         name: "date"
         widget: "datetime"
