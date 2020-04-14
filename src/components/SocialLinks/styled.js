@@ -4,16 +4,15 @@ import media from "styled-media-query"
 export const SocialLinksList = styled.ul`
   list-style: none;
   margin: 40px 0 0 0;
+  display: flex;
+  justify-content: space-around;
 
   ${media.lessThan("medium")`
     margin-top: 20px;
   `}
 `
 
-export const SocialLinksItem = styled.li`
-  display: inline-block;
-  margin-right: 40px;
-`
+export const SocialLinksItem = styled.li``
 
 export const SocialLinksLink = styled.a`
   color: var(--default);
