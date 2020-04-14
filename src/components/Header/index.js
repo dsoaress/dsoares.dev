@@ -25,8 +25,8 @@ const Header = () => {
             </S.NavLinksLink>
           </S.NavLinksItem>
           <S.NavLinksItem>
-            <S.NavLinksLink to="/curriculo" activeClassName="active">
-              currículo
+            <S.NavLinksLink to="/sobre-mim" activeClassName="active">
+              sobre mim
             </S.NavLinksLink>
           </S.NavLinksItem>
           <S.NavLinksItem>
