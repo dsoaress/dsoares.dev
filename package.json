@@ -5,6 +5,9 @@
   "version": "1.0.0",
   "author": "Daniel Soares <daniel.soares@me.com>",
   "dependencies": {
+    "@types/react": "^16.9.34",
+    "babel-plugin-styled-components": "^1.10.7",
+    "codemirror": "^5.52.2",
     "gatsby": "^2.20.14",
     "gatsby-image": "^2.3.2",
     "gatsby-plugin-catch-links": "^2.2.1",
@@ -29,10 +32,12 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^5.2.1",
+    "react-is": "^16.13.1",
     "react-typography": "^0.16.19",
     "styled-components": "^5.1.0",
     "styled-icons": "^10.2.1",
     "styled-media-query": "^2.1.2",
+    "typescript": "^3.8.3",
     "typography": "^0.16.19"
   },
   "devDependencies": {
