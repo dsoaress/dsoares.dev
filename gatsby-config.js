@@ -90,7 +90,14 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
-    `gatsby-plugin-netlify-cms`,
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        enableIdentityWidget: false,
+        htmlTitle: `Gestor de conteúdo`,
+        htmlFavicon: `src/images/icon.png`,
+      }
+    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
