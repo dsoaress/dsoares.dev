@@ -5,6 +5,7 @@ module.exports = {
     Federal da Integração Latino-America (UNILA), em Foz do Iguaçu, atualmente 
     cursando o último ano da graduação. Aqui tem um pouco sobre mim e um blog
     blog onde abordo assuntos do meu interesse.`,
+    siteUrl: 'https://dsoares.me'
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -57,6 +58,59 @@ module.exports = {
       },
     },
     `gatsby-plugin-catch-links`,
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.frontmatter.description,
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  custom_elements: [{ "content:encoded": "<p>" + edge.node.frontmatter.description + "</p>" + edge.node.html }],
+                })
+              })
+            },
+            query: `
+              {
+                allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, filter: {frontmatter: {templateKey: {eq: "blogPost"}}}) {
+                  edges {
+                    node {
+                      html
+                      fields {
+                        slug
+                      }
+                      frontmatter {
+                        title
+                        date
+                        description
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/feed.xml",
+            title: "Daniel Soares",
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
