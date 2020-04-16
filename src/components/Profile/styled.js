@@ -27,6 +27,7 @@ export const ProfileImage = styled(Img)`
 export const ProfileDesc = styled.div`
   width: 65%;
   padding-bottom: 30px;
+  font-size: 18px;
 
   ${media.lessThan("780px")`
   width: 55%;
@@ -34,13 +35,6 @@ export const ProfileDesc = styled.div`
 
   ${media.lessThan("600px")`
     width: 100%;
-  `}
-`
-
-export const ProfileDescP = styled.p`
-  font-size: 18px;
-
-  ${media.lessThan("medium")`
     font-size: 16px;
   `}
 `

@@ -24,7 +24,7 @@ const About = ({ title, text }) => {
       <S.AboutTitle>{title}</S.AboutTitle>
       <S.AboutFlex>
         <S.AboutDesc>
-          <S.AboutDescP>{text}</S.AboutDescP>
+          {text}
           <SocialLinks />
         </S.AboutDesc>
         <S.AboutImage fluid={aboutImage.childImageSharp.fluid} />

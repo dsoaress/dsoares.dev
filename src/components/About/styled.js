@@ -30,8 +30,6 @@ export const AboutDesc = styled.div`
   `}
 `
 
-export const AboutDescP = styled.p``
-
 export const AboutImage = styled(Img)`
   width: 30%;
   height: 450px;
