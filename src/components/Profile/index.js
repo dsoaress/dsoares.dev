@@ -23,9 +23,10 @@ const Profile = ({ greeting, text }) => {
     <S.ProfileWrapper>
       <S.ProfileImage fluid={profileImage.childImageSharp.fluid} />
       <S.ProfileDesc>
-        <S.ProfileDescP>
-          <S.ProfileDescBig>{greeting}</S.ProfileDescBig> {text}
-        </S.ProfileDescP>
+        <S.ProfileDescBig>
+          {greeting}
+        </S.ProfileDescBig>
+        {text}
         <SocialLinks />
       </S.ProfileDesc>
     </S.ProfileWrapper>
