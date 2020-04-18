@@ -2,7 +2,7 @@
   "name": "dsoares-site",
   "private": true,
   "description": "My personal site on dsoares.me",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Daniel Soares <daniel.soares@me.com>",
   "dependencies": {
     "@types/react": "^16.9.34",
