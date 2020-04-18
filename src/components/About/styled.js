@@ -4,10 +4,8 @@ import media from "styled-media-query"
 import Img from "gatsby-image"
 
 export const AboutWrapper = styled.div`
-  max-width: 800px;
+  display: block;
 `
-
-export const AboutTitle = styled.h1``
 
 export const AboutFlex = styled.div`
   display: flex;

@@ -8,17 +8,11 @@ import { ArrowForward as Arrow } from "@styled-icons/material-rounded/ArrowForwa
 
 export const BlogWrapper = styled.div`
   display: block;
-  max-width: 800px;
-`
-
-export const Title = styled.h1`
-  font-size: 4rem;
-  margin-bottom: 0;
 `
 
 export const PostItemWrapper = styled.div`
   display: flex;
-  padding: 20px 0;
+  padding-bottom: 20px;
 
   ${media.lessThan("600px")`
     flex-direction: column;
@@ -31,13 +25,13 @@ export const PostItemImage = styled(Img)`
   border-radius: 4px;
 
   ${media.lessThan("600px")`
-  margin-right: 0;
+    margin-right: 0;
   `}
 `
 
 export const PostTitleWrapper = styled.div`
   flex: 2;
-  padding-top: 1.666rem;
+  padding-top: 1.8rem;
 `
 
 export const Meta = styled.div`
@@ -59,7 +53,6 @@ export const ClockIcon = styled(ClockOutline)`
 `
 
 export const PostTitle = styled.h2`
-  font-size: 2.5rem;
   margin: 1rem 0;
 `
 

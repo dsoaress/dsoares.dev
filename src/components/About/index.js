@@ -21,7 +21,7 @@ const About = ({ title, text }) => {
 
   return (
     <S.AboutWrapper>
-      <S.AboutTitle>{title}</S.AboutTitle>
+      <h1>{title}</h1>
       <S.AboutFlex>
         <S.AboutDesc>
           {text}
