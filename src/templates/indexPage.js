@@ -15,6 +15,7 @@ const IndexPage = ({ data }) => {
         text={
           <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
         }
+        image={data.markdownRemark.frontmatter.image.childImageSharp.fluid}
       />
     </Layout>
   )
@@ -25,6 +26,13 @@ export const query = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         greeting
+        image {
+          childImageSharp {
+            fluid(maxWidth: 550, quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
       }
       id
       html

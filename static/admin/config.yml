@@ -83,6 +83,13 @@ collections:
             name: "greeting"
             widget: "string"
 
+          - label: "Imagem"
+            name: "image"
+            widget: "image"
+            media_library:
+              config:
+                multiple: false
+
           - label: "Texto"
             name: "body"
             widget: "markdown"
@@ -99,6 +106,13 @@ collections:
           - label: "Título"
             name: "title"
             widget: "string"
+
+          - label: "Imagem"
+            name: "image"
+            widget: "image"
+            media_library:
+              config:
+                multiple: false
 
           - label: "Texto"
             name: "body"

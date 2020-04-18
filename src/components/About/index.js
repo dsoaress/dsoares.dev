@@ -1,36 +1,20 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 
 import * as S from "./styled"
 import SocialLinks from "../SocialLinks"
 
-const About = ({ title, text }) => {
-  const { aboutImage } = useStaticQuery(
-    graphql`
-      query {
-        aboutImage: file(relativePath: { eq: "about.jpg" }) {
-          childImageSharp {
-            fluid(maxHeight: 900, quality: 100) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-      }
-    `
-  )
+const About = ({ title, text, image }) => (
 
-  return (
-    <S.AboutWrapper>
-      <h1>{title}</h1>
-      <S.AboutFlex>
-        <S.AboutDesc>
-          {text}
-          <SocialLinks />
-        </S.AboutDesc>
-        <S.AboutImage fluid={aboutImage.childImageSharp.fluid} />
-      </S.AboutFlex>
-    </S.AboutWrapper>
-  )
-}
+  <S.AboutWrapper>
+    <h1>{title}</h1>
+    <S.AboutFlex>
+      <S.AboutDesc>
+        {text}
+        <SocialLinks />
+      </S.AboutDesc>
+      <S.AboutImage fluid={image} />
+    </S.AboutFlex>
+  </S.AboutWrapper>
+)
 
 export default About
