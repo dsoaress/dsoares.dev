@@ -9,7 +9,7 @@ import About from "../components/About"
 const AboutPage = ({ data }) => {
   return (
     <Layout>
-      <SEO title={data.markdownRemark.frontmatter.title} />
+      <SEO title="Sobre mim" />
       <About
         title={data.markdownRemark.frontmatter.title}
         text={
