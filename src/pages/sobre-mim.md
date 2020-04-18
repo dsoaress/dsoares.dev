@@ -1,6 +1,6 @@
 ---
 templateKey: aboutPage
-title: Olá, de novo 👋
+title: Olá, de novo
 ---
 
 Como já deve ter ficado claro, me chamo Daniel Soares. Um sociólogo em formação, além de desenvolvedor web _hobbista_. Uma combinação pouco convencional.
