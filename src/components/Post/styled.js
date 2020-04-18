@@ -1,11 +1,10 @@
 import styled from "styled-components"
-import media from "styled-media-query"
 
 import { Calendar } from "@styled-icons/boxicons-solid/Calendar"
 import { ClockOutline } from "@styled-icons/evaicons-outline/ClockOutline"
 
-export const PostWrapper = styled.section`
-  max-width: 800px;
+export const PostWrapper = styled.article`
+  display: block;
 `
 
 export const Meta = styled.div`
@@ -27,25 +26,7 @@ export const ClockIcon = styled(ClockOutline)`
 `
 
 export const PostTitle = styled.h1`
-  font-size: 6rem;
-  line-height: 0.8;
-  margin: 3rem 0;
-
-  ${media.lessThan("medium")`
-  font-size: 3.1rem;
-  line-height: 1;
-  margin: 2rem 0;
-  `}
-`
-
-export const PostDescription = styled.h2`
-  font-size: 1.4rem;
-  font-weight: normal;
-  line-height: 1.3;
-
-  ${media.lessThan("medium")`
-  font-size: 1.4rem;
-  `}
+  margin: 1rem 0;
 `
 
 export const MainContent = styled.section`

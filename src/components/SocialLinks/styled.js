@@ -5,7 +5,7 @@ export const SocialLinksList = styled.ul`
   list-style: none;
   margin: 40px 0 0 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 
   ${media.lessThan("medium")`
     margin-top: 20px;

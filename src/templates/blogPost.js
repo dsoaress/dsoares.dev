@@ -20,8 +20,11 @@ const BlogPost = ({ data }) => {
           {post.timeToRead} min de leitura
         </S.Meta>
         <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
-        <S.PostDescription>{post.frontmatter.description}</S.PostDescription>
-        <S.MainContent dangerouslySetInnerHTML={{ __html: post.html }} />
+        <S.MainContent
+          dangerouslySetInnerHTML={{
+            __html: "<p>" + post.frontmatter.description + "</p>" + post.html,
+          }}
+        />
       </S.PostWrapper>
     </Layout>
   )

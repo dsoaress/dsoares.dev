@@ -40,7 +40,7 @@ const BlogList = () => {
 
   return (
     <S.BlogWrapper>
-      <S.Title>Blog</S.Title>
+      <h1>Blog</h1>
 
       {blogItens.map(({ node: blogItem }) => (
         <S.PostItemWrapper key={blogItem.fields.slug}>

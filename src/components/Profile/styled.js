@@ -10,7 +10,7 @@ export const ProfileWrapper = styled.div`
 
 export const ProfileImage = styled(Img)`
   width: 30%;
-  height: 55vh;
+  height: 45vh;
   min-height: 310px;
   border-radius: 3px;
   margin-right: 5%;
@@ -26,8 +26,6 @@ export const ProfileImage = styled(Img)`
 
 export const ProfileDesc = styled.div`
   width: 65%;
-  padding-bottom: 30px;
-  font-size: 18px;
 
   ${media.lessThan("780px")`
   width: 55%;
@@ -35,19 +33,5 @@ export const ProfileDesc = styled.div`
 
   ${media.lessThan("600px")`
     width: 100%;
-    font-size: 16px;
-  `}
-`
-
-export const ProfileDescBig = styled.span`
-  font-size: 120px;
-  display: block;
-
-  ${media.between("601px", "large")`
-    font-size: 80px;
-  `}
-
-  ${media.lessThan("600px")`
-    font-size: 60px;
   `}
 `
