@@ -5,7 +5,7 @@ module.exports = {
     Federal da Integração Latino-America (UNILA), em Foz do Iguaçu, atualmente 
     cursando o último ano da graduação. Aqui tem um pouco sobre mim e um blog
     blog onde abordo assuntos do meu interesse.`,
-    siteUrl: 'https://dsoares.me'
+    siteUrl: "https://dsoares.me",
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -76,13 +76,21 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
+              return allMarkdownRemark.edges.map((edge) => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.frontmatter.description,
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ "content:encoded": "<p>" + edge.node.frontmatter.description + "</p>" + edge.node.html }],
+                  custom_elements: [
+                    {
+                      "content:encoded":
+                        "<p>" +
+                        edge.node.frontmatter.description +
+                        "</p>" +
+                        edge.node.html,
+                    },
+                  ],
                 })
               })
             },
@@ -150,7 +158,7 @@ module.exports = {
         enableIdentityWidget: false,
         htmlTitle: `Gestor de conteúdo`,
         htmlFavicon: `src/images/icon.png`,
-      }
+      },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
