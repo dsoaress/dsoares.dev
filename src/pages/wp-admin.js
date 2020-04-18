@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import gif from "../images/wp-admin.gif"
+import gif from "../../static/images/wp-admin.gif"
 
 export const WPAdminWrapper = styled.section`
   background: url(${gif}) center center no-repeat;

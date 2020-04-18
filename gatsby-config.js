@@ -24,13 +24,6 @@ module.exports = {
         path: `${__dirname}/src/pages`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -128,7 +121,7 @@ module.exports = {
         background_color: `#E61F5B`,
         theme_color: `#E61F5B`,
         display: `fullscreen`,
-        icon: `src/images/icon.png`,
+        icon: `static/images/icon.png`,
       },
     },
     {
@@ -157,7 +150,7 @@ module.exports = {
       options: {
         enableIdentityWidget: false,
         htmlTitle: `Gestor de conteúdo`,
-        htmlFavicon: `src/images/icon.png`,
+        htmlFavicon: `static/images/icon.png`,
       },
     },
     {
