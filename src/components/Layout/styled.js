@@ -8,7 +8,7 @@ export const LayoutWrapper = styled.section`
 `
 
 export const MainWrapper = styled.main`
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 0 3%;
   display: flex;
