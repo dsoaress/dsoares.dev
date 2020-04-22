@@ -20,8 +20,8 @@ const BlogList = () => {
               description
               image {
                 childImageSharp {
-                  fluid(maxWidth: 600, quality: 100) {
-                    ...GatsbyImageSharpFluid
+                  fluid(maxWidth: 580, quality: 80) {
+                    ...GatsbyImageSharpFluid_withWebp
                   }
                 }
               }
