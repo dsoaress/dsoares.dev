@@ -7,7 +7,7 @@ const NotFound = () => (
     <S.Icon />
     <S.NotFoundTitle>NÃO ENCONTRADO</S.NotFoundTitle>
     <S.NotFoundText>
-      Você acabou de pegar uma rota que não existe...{" "}
+      Você acabou de pegar uma rota que não existe...
     </S.NotFoundText>
   </S.NotFoundWrapper>
 )
