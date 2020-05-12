@@ -8,7 +8,7 @@
     "@types/react": "^16.9.34",
     "babel-plugin-styled-components": "^1.10.7",
     "codemirror": "^5.52.2",
-    "gatsby": "^2.20.28",
+    "gatsby": "^2.21.24",
     "gatsby-image": "^2.3.4",
     "gatsby-plugin-catch-links": "^2.2.3",
     "gatsby-plugin-feed": "^2.4.3",
@@ -49,7 +49,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=TRUE gatsby build --log-pages",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
