@@ -1,12 +1,10 @@
 ---
 templateKey: blogPost
+date: 2020-04-20 19:14:00
 title: O iPad pode substituir meu computador?
 description: Esse será um texto bastante diferente dos dois anteriores. Quero falar um pouco da minha experiência com o iPad para estudar.
 image: /images/iPad.jpg
-date: 2020-04-20 19:14:00
-tags:
-  - estudo
-  - escrita acadêmica
+tags: estudo, escrita acadêmica
 ---
 
 ![Foto por Nikita Katsevich / Unsplash](/images/iPad.jpg)

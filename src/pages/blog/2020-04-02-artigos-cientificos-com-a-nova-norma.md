@@ -1,15 +1,10 @@
 ---
 templateKey: blogPost
-title: Artigos científicos com a nova norma
-description: Como “post inaugural” desse blog vou falar um pouco sobre a NBR
-  6022, norma que define as regras para a elaboração e apresentação de artigos
-  científicos e que foi atualizada em 2018 pela Associação Brasileira de Normas
-  Técnicas (ABNT).
-image: /images/foto.jpg
 date: 2020-04-02 21:00:00
-tags:
-  - normas abnt
-  - escrita academica
+title: Artigos científicos com a nova norma
+description: Como “post inaugural” desse blog vou falar um pouco sobre a NBR 6022, norma que define as regras para a elaboração e apresentação de artigos científicos e que foi atualizada em 2018 pela Associação Brasileira de Normas Técnicas (ABNT).
+image: /images/foto.jpg
+tags: normas abnt, escrita academica
 ---
 
 ![Foto por ijeab / Freepik](/images/foto.jpg)

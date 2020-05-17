@@ -1,12 +1,10 @@
 ---
 templateKey: blogPost
+date: 2020-04-19 18:00:00
 title: Gerenciando referências bibliográficas
 description: Pode parecer algo simples e trivial para muitos acadêmicos e pesquisadores o uso de gerenciadores de referências bibliográficas, mas para muitos outros esse é um assunto bem obscuro (ou até mesmo desconhecido). Se você se encontra nesse segundo grupo, esse texto é para você.
 image: /images/zotero_artigo.jpg
-date: 2020-04-19 18:00:00
-tags:
-  - referências bibliográficas
-  - escrita acadêmica
+tags: referências bibliográficas, escrita acadêmica
 ---
 
 ![Foto por Matthew Feeney / Unsplash](/images/zotero_artigo.jpg)
