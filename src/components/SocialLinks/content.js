@@ -4,12 +4,16 @@ const links = [
     url: `https://www.instagram.com/dansoares`,
   },
   {
-    label: "Twitter",
-    url: `https://twitter.com/dpsoaress`,
-  },
-  {
     label: "Github",
     url: `https://github.com/dsoaress`,
+  },
+  {
+    label: "Academia",
+    url: `https://unila-br.academia.edu/DanielSoares`,
+  },
+  {
+    label: "Lattes",
+    url: `http://lattes.cnpq.br/4697357157498166`,
   },
   {
     label: "Whatsapp",

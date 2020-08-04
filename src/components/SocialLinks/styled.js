@@ -25,10 +25,42 @@ export const SocialLinksLink = styled.a`
 
 export const IconWrapper = styled.div`
   width: 30px;
-  height: 30px;
+
+  .instagram {
+    width: 33px;
+
+    ${media.lessThan("medium")`
+      width: 28px;
+    `}
+  }
+
+  .academia {
+    width: 24px;
+
+    ${media.lessThan("medium")`
+      width: 21px;
+    `}
+  }
+
+  .lattes {
+    width: 27px;
+    margin-top: 2px;
+
+    ${media.lessThan("medium")`
+      width: 23px;
+      margin-top: 3px;
+    `}
+  }
+
+  .whatsapp {
+    width: 32px;
+
+    ${media.lessThan("medium")`
+      width: 28px;
+    `}
+  }
 
   ${media.lessThan("medium")`
     width: 25px;
-    height: 25px;
   `}
 `
