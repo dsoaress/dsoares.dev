@@ -5,7 +5,7 @@ module.exports = {
     Federal da Integração Latino-America (UNILA), em Foz do Iguaçu, atualmente 
     cursando o último ano da graduação. Aqui tem um pouco sobre mim e um blog
     blog onde abordo assuntos do meu interesse.`,
-    siteUrl: "https://dsoares.me",
+    siteUrl: 'https://dsoares.me'
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -14,15 +14,15 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `uploads`,
-        path: `${__dirname}/static/images`,
-      },
+        path: `${__dirname}/static/images`
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
-        path: `${__dirname}/src/pages`,
-      },
+        path: `${__dirname}/src/pages`
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -31,24 +31,24 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: "gatsby-remark-relative-images",
+            resolve: 'gatsby-remark-relative-images',
             options: {
-              name: "uploads",
-            },
+              name: 'uploads'
+            }
           },
           {
-            resolve: "gatsby-remark-images",
+            resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 900,
               linkImagesToOriginal: false,
               showCaptions: true,
               quality: 80,
-              withWebp: true,
-            },
+              withWebp: true
+            }
           },
-          `gatsby-remark-prismjs`,
-        ],
-      },
+          `gatsby-remark-prismjs`
+        ]
+      }
     },
     `gatsby-plugin-catch-links`,
     {
@@ -69,7 +69,7 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map((edge) => {
+              return allMarkdownRemark.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.frontmatter.description,
                   date: edge.node.frontmatter.date,
@@ -77,13 +77,13 @@ module.exports = {
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   custom_elements: [
                     {
-                      "content:encoded":
-                        "<p>" +
+                      'content:encoded':
+                        '<p>' +
                         edge.node.frontmatter.description +
-                        "</p>" +
-                        edge.node.html,
-                    },
-                  ],
+                        '</p>' +
+                        edge.node.html
+                    }
+                  ]
                 })
               })
             },
@@ -106,11 +106,11 @@ module.exports = {
                 }
               }
             `,
-            output: "/feed.xml",
-            title: "Daniel Soares",
-          },
-        ],
-      },
+            output: '/feed.xml',
+            title: 'Daniel Soares'
+          }
+        ]
+      }
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -121,28 +121,28 @@ module.exports = {
         background_color: `#E61F5B`,
         theme_color: `#E61F5B`,
         display: `fullscreen`,
-        icon: `static/images/icon.png`,
-      },
+        icon: `static/images/icon.png`
+      }
     },
     {
       resolve: `gatsby-plugin-typography`,
       options: {
-        pathToConfigModule: `src/components/Layout/typography`,
-      },
+        pathToConfigModule: `src/components/Layout/typography`
+      }
     },
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
           {
-            family: `Rubik Mono One`,
+            family: `Rubik Mono One`
           },
           {
             family: `Rubik`,
-            variants: [`400`, `400i`, `700`, `700i`],
-          },
-        ],
-      },
+            variants: [`400`, `400i`, `700`, `700i`]
+          }
+        ]
+      }
     },
     `gatsby-plugin-offline`,
     {
@@ -150,14 +150,14 @@ module.exports = {
       options: {
         enableIdentityWidget: false,
         htmlTitle: `Gestor de conteúdo`,
-        htmlFavicon: `static/images/icon.png`,
-      },
+        htmlFavicon: `static/images/icon.png`
+      }
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-156483158-3",
-      },
-    },
-  ],
+        trackingId: 'UA-156483158-3'
+      }
+    }
+  ]
 }

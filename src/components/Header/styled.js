@@ -1,8 +1,8 @@
-import styled from "styled-components"
-import media from "styled-media-query"
-import { Link } from "gatsby"
+import styled from 'styled-components'
+import media from 'styled-media-query'
+import { Link } from 'gatsby'
 
-import { Sun } from "@styled-icons/evaicons-solid/Sun"
+import { Sun } from '@styled-icons/evaicons-solid/Sun'
 
 export const Header = styled.header`
   display: flex;
@@ -13,7 +13,7 @@ export const Header = styled.header`
   margin-bottom: 40px;
   border-top: 10px solid var(--highLight);
 
-  ${media.lessThan("600px")`
+  ${media.lessThan('600px')`
     flex-direction: column;
     justify-content: space-around;
     height: 140px;
@@ -23,7 +23,7 @@ export const Header = styled.header`
 `
 
 export const Logo = styled.div`
-  font-family: "Rubik Mono One", sans-serif;
+  font-family: 'Rubik Mono One', sans-serif;
   font-size: 20px;
 `
 
@@ -45,7 +45,7 @@ export const NavLinksItem = styled.li`
     text-decoration-line: line-through;
   }
 
-  ${media.lessThan("600px")`
+  ${media.lessThan('600px')`
     margin: 0 10px;
   `}
 `

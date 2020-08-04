@@ -18,7 +18,7 @@ Antes de mais nada, é preciso deixar claro alguns pontos:
 
 > O ~~Google~~ [Duck Duck Go](https://duckduckgo.com/) é seu pastor, nada lhe faltará (autor desconhecido).
 
-Esclarecidos esses pontos, vamos ao que interessa. [Aqui tem um modelo](/artigo_ABNT_NBR-6022.zip "Modelo de artigo com a NBR 6022 de 2018") de artigo com todos os elementos, obrigatórios e opcionais, de acordo com a ABNT.
+Esclarecidos esses pontos, vamos ao que interessa. [Aqui tem um modelo](/artigo_ABNT_NBR-6022.zip 'Modelo de artigo com a NBR 6022 de 2018') de artigo com todos os elementos, obrigatórios e opcionais, de acordo com a ABNT.
 
 ## Elementos obrigatórios e opcionais de um artigo científico
 

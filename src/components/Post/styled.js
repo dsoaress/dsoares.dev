@@ -1,7 +1,7 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
-import { Calendar } from "@styled-icons/boxicons-solid/Calendar"
-import { ClockOutline } from "@styled-icons/evaicons-outline/ClockOutline"
+import { Calendar } from '@styled-icons/boxicons-solid/Calendar'
+import { ClockOutline } from '@styled-icons/evaicons-outline/ClockOutline'
 
 export const PostWrapper = styled.article`
   display: block;

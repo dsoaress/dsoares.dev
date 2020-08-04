@@ -1,6 +1,6 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
-import { Heart } from "@styled-icons/typicons/Heart"
+import { Heart } from '@styled-icons/typicons/Heart'
 
 export const Footer = styled.footer`
   display: flex;

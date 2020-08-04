@@ -1,10 +1,10 @@
-import styled from "styled-components"
-import media from "styled-media-query"
-import Img from "gatsby-image"
+import styled from 'styled-components'
+import media from 'styled-media-query'
+import Img from 'gatsby-image'
 
-import { Calendar } from "@styled-icons/boxicons-solid/Calendar"
-import { ClockOutline } from "@styled-icons/evaicons-outline/ClockOutline"
-import { ArrowForward as Arrow } from "@styled-icons/material-rounded/ArrowForward"
+import { Calendar } from '@styled-icons/boxicons-solid/Calendar'
+import { ClockOutline } from '@styled-icons/evaicons-outline/ClockOutline'
+import { ArrowForward as Arrow } from '@styled-icons/material-rounded/ArrowForward'
 
 export const BlogWrapper = styled.div`
   display: block;
@@ -14,7 +14,7 @@ export const PostItemWrapper = styled.div`
   display: flex;
   padding-bottom: 20px;
 
-  ${media.lessThan("600px")`
+  ${media.lessThan('600px')`
     flex-direction: column;
   `}
 `
@@ -24,7 +24,7 @@ export const PostItemImage = styled(Img)`
   margin-right: 20px;
   border-radius: 4px;
 
-  ${media.lessThan("600px")`
+  ${media.lessThan('600px')`
     margin-right: 0;
   `}
 `

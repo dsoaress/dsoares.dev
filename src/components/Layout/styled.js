@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import media from "styled-media-query"
+import styled from 'styled-components'
+import media from 'styled-media-query'
 
 export const LayoutWrapper = styled.section`
   display: flex;
@@ -14,7 +14,7 @@ export const MainWrapper = styled.main`
   display: flex;
   flex: 1;
 
-  ${media.lessThan("600px")`
+  ${media.lessThan('600px')`
     padding: 0 20px;
   `}
 `

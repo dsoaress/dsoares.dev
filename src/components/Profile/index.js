@@ -1,7 +1,7 @@
-import React from "react"
+import React from 'react'
 
-import * as S from "./styled"
-import SocialLinks from "../SocialLinks"
+import * as S from './styled'
+import SocialLinks from '../SocialLinks'
 
 const Profile = ({ greeting, text, image }) => (
   <S.ProfileWrapper>

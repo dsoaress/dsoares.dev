@@ -1,7 +1,7 @@
-import styled from "styled-components"
-import media from "styled-media-query"
+import styled from 'styled-components'
+import media from 'styled-media-query'
 
-import Img from "gatsby-image"
+import Img from 'gatsby-image'
 
 export const ProfileWrapper = styled.div`
   display: flex;
@@ -15,11 +15,11 @@ export const ProfileImage = styled(Img)`
   border-radius: 3px;
   margin-right: 5%;
 
-  ${media.lessThan("780px")`
+  ${media.lessThan('780px')`
   width: 40%;
   `}
 
-  ${media.lessThan("600px")`
+  ${media.lessThan('600px')`
     display: none;
   `}
 `
@@ -27,11 +27,11 @@ export const ProfileImage = styled(Img)`
 export const ProfileDesc = styled.div`
   width: 65%;
 
-  ${media.lessThan("780px")`
+  ${media.lessThan('780px')`
   width: 55%;
   `}
 
-  ${media.lessThan("600px")`
+  ${media.lessThan('600px')`
     width: 100%;
   `}
 `

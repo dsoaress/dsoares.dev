@@ -1,10 +1,10 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from 'react'
+import { graphql } from 'gatsby'
 
-import Layout from "../components/Layout"
-import SEO from "../components/SEO"
+import Layout from '../components/Layout'
+import SEO from '../components/SEO'
 
-import * as S from "../components/Post/styled"
+import * as S from '../components/Post/styled'
 
 const BlogPost = ({ data }) => {
   const post = data.markdownRemark
@@ -22,7 +22,7 @@ const BlogPost = ({ data }) => {
         <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
         <S.MainContent
           dangerouslySetInnerHTML={{
-            __html: "<p>" + post.frontmatter.description + "</p>" + post.html,
+            __html: '<p>' + post.frontmatter.description + '</p>' + post.html
           }}
         />
       </S.PostWrapper>

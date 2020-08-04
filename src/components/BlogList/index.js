@@ -1,7 +1,7 @@
-import React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import React from 'react'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 
-import * as S from "./styled"
+import * as S from './styled'
 
 const BlogList = () => {
   const { allMarkdownRemark } = useStaticQuery(graphql`
@@ -60,7 +60,7 @@ const BlogList = () => {
             </Link>
 
             <S.PostDescription>
-              {blogItem.frontmatter.description}{" "}
+              {blogItem.frontmatter.description}{' '}
               <Link to={blogItem.fields.slug}>
                 <S.ArrowIcon />
               </Link>

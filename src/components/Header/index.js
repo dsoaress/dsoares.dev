@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect } from 'react'
 
-import * as S from "./styled"
+import * as S from './styled'
 
 const Header = () => {
   const [theme, setTheme] = useState(null)
 
-  const isDarkMode = theme === "dark"
+  const isDarkMode = theme === 'dark'
 
   useEffect(() => {
     setTheme(window.__theme)
@@ -37,7 +37,7 @@ const Header = () => {
           <S.NavLinksItem
             title="Mudar o tema"
             onClick={() => {
-              window.__setPreferredTheme(isDarkMode ? "light" : "dark")
+              window.__setPreferredTheme(isDarkMode ? 'light' : 'dark')
             }}
             className={theme}
           >

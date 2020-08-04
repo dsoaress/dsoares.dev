@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import media from "styled-media-query"
+import styled from 'styled-components'
+import media from 'styled-media-query'
 
 export const SocialLinksList = styled.ul`
   list-style: none;
@@ -7,7 +7,7 @@ export const SocialLinksList = styled.ul`
   display: flex;
   justify-content: space-between;
 
-  ${media.lessThan("medium")`
+  ${media.lessThan('medium')`
     margin-top: 20px;
   `}
 `
@@ -29,7 +29,7 @@ export const IconWrapper = styled.div`
   .instagram {
     width: 33px;
 
-    ${media.lessThan("medium")`
+    ${media.lessThan('medium')`
       width: 28px;
     `}
   }
@@ -37,7 +37,7 @@ export const IconWrapper = styled.div`
   .academia {
     width: 24px;
 
-    ${media.lessThan("medium")`
+    ${media.lessThan('medium')`
       width: 21px;
     `}
   }
@@ -46,7 +46,7 @@ export const IconWrapper = styled.div`
     width: 27px;
     margin-top: 2px;
 
-    ${media.lessThan("medium")`
+    ${media.lessThan('medium')`
       width: 23px;
       margin-top: 3px;
     `}
@@ -55,12 +55,12 @@ export const IconWrapper = styled.div`
   .whatsapp {
     width: 32px;
 
-    ${media.lessThan("medium")`
+    ${media.lessThan('medium')`
       width: 28px;
     `}
   }
 
-  ${media.lessThan("medium")`
+  ${media.lessThan('medium')`
     width: 25px;
   `}
 `

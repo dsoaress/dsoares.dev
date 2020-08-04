@@ -1,10 +1,9 @@
-import React from "react"
+import React from 'react'
 
-import * as S from "./styled"
-import SocialLinks from "../SocialLinks"
+import * as S from './styled'
+import SocialLinks from '../SocialLinks'
 
 const About = ({ title, text, image }) => (
-
   <S.AboutWrapper>
     <h1>{title}</h1>
     <S.AboutFlex>

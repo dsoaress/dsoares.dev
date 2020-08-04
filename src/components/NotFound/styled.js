@@ -1,6 +1,6 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
-import { MessageSquareError } from "@styled-icons/boxicons-solid/MessageSquareError"
+import { MessageSquareError } from '@styled-icons/boxicons-solid/MessageSquareError'
 
 export const NotFoundWrapper = styled.div`
   display: flex;
