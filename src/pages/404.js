@@ -2,12 +2,12 @@ import React from 'react'
 
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import NotFound from '../components/NotFound'
 
 const NotFoundPage = () => (
   <Layout>
-    <SEO title="Não encontrado" />
-    <NotFound />
+    <SEO title="404: Not found" />
+    <h1>Não encontrado</h1>
+    <p>O que você está buscando não existe.</p>
   </Layout>
 )
 
