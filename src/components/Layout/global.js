@@ -29,6 +29,14 @@ const GlobalStyles = createGlobalStyle`
     }
   }
 
+  p {
+    margin-bottom: 1rem;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
   h1,
   h2,
   h3,
