@@ -13,6 +13,7 @@ export const Logo = styled.h1`
   font-size: 20px;
   font-weight: normal;
   text-transform: uppercase;
+  margin: 0;
 
   span {
     color: var(--highLight);
