@@ -1,12 +1,4 @@
 module.exports = {
-  siteMetadata: {
-    title: `Daniel Soares`,
-    description: `Estudante de Ciência Política e Sociologia na Universidade
-    Federal da Integração Latino-America (UNILA), em Foz do Iguaçu, atualmente
-    cursando o último ano da graduação. Aqui tem um pouco sobre mim e um blog
-    blog onde abordo assuntos do meu interesse.`,
-    siteUrl: 'https://dsoares.me'
-  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
@@ -57,8 +49,8 @@ module.exports = {
         start_url: `/`,
         background_color: `#E61F5B`,
         theme_color: `#E61F5B`,
-        display: `fullscreen`
-        // icon: `static/images/icon.png`
+        display: `minimal-ui`,
+        icon: `static/images/icon.png`
       }
     },
     `gatsby-plugin-offline`
