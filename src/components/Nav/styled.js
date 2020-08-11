@@ -11,4 +11,18 @@ export const NavList = styled.ul`
 
 export const NavItem = styled.li``
 
-export const NavLink = styled(Link)``
+export const NavLink = styled(Link)`
+  color: var(--default);
+  text-decoration: none;
+  border: none;
+
+  &:hover {
+    color: var(--highLight);
+    text-decoration-line: line-through;
+  }
+
+  &.active {
+    color: var(--highLight);
+    text-decoration-line: line-through;
+  }
+`

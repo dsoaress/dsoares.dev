@@ -1,19 +1,18 @@
 import React from 'react'
 
+import links from './content'
 import * as S from './styled'
 
 const Nav = () => (
   <S.NavWrapper>
     <S.NavList>
-      <S.NavItem>
-        <S.NavLink to="/">home</S.NavLink>
-      </S.NavItem>
-      <S.NavItem>
-        <S.NavLink to="/">sobre</S.NavLink>
-      </S.NavItem>
-      <S.NavItem>
-        <S.NavLink to="/">blog</S.NavLink>
-      </S.NavItem>
+      {links.map((link, i) => (
+        <S.NavItem key={i}>
+          <S.NavLink to={link.url} activeClassName="active">
+            {link.label}
+          </S.NavLink>
+        </S.NavItem>
+      ))}
     </S.NavList>
   </S.NavWrapper>
 )
