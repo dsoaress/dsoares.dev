@@ -55,6 +55,16 @@ const GlobalStyles = createGlobalStyle`
   ul,
   ol {
     list-style-position: inside;
+    margin-bottom: 1rem;
+
+    li {
+      margin-bottom: 1rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
   }
 
   a {

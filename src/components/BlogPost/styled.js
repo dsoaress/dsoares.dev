@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const BlogPostWrapper = styled.div`
   max-width: 1200px;
+  padding: 0 20px;
   margin: auto;
 
   h1,
@@ -17,22 +18,23 @@ export const BlogPostWrapper = styled.div`
   .footnotes {
     margin-left: 150px;
     margin-right: 150px;
-  }
 
-  .footnotes ol {
-    margin: 0;
+    ol {
+      margin: 0;
 
-    li {
-      font-size: 0.75rem;
-      margin-bottom: 0.5rem;
+      li {
+        font-size: 0.75rem;
+        margin-bottom: 0.5rem;
 
-      p {
-        display: contents;
+        p {
+          display: contents;
+        }
       }
     }
   }
 
   figcaption {
+    font-size: 0.75rem;
     text-align: center;
   }
 `
