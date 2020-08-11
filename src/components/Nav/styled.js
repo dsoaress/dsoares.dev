@@ -7,9 +7,12 @@ export const NavList = styled.ul`
   display: inline-flex;
   gap: 40px;
   list-style: none;
+  margin: 0;
 `
 
-export const NavItem = styled.li``
+export const NavItem = styled.li`
+  margin: 0;
+`
 
 export const NavLink = styled(Link)`
   color: var(--default);
