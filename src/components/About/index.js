@@ -1,6 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
+import Social from '../Social'
 import * as S from './styled'
 
 const About = () => {
@@ -27,12 +28,15 @@ const About = () => {
   return (
     <S.AboutWrapper>
       <h2>{markdownRemark.frontmatter.title}</h2>
-      <S.AboutTextWrapper>
-        <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
+      <S.AboutGrid>
+        <S.AboutTextWrapper>
+          <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
+          <Social />
+        </S.AboutTextWrapper>
         <S.AboutImage
           fluid={markdownRemark.frontmatter.image.childImageSharp.fluid}
         />
-      </S.AboutTextWrapper>
+      </S.AboutGrid>
     </S.AboutWrapper>
   )
 }

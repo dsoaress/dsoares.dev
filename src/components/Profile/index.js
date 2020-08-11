@@ -1,6 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
+import Social from '../Social'
 import * as S from './styled'
 
 const Profile = () => {
@@ -32,6 +33,7 @@ const Profile = () => {
       <S.ProfileTextWrapper>
         <h2>{markdownRemark.frontmatter.title}</h2>
         <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
+        <Social />
       </S.ProfileTextWrapper>
     </S.ProfileWrapper>
   )
