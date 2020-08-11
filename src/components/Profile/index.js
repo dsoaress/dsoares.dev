@@ -31,7 +31,7 @@ const Profile = () => {
         fluid={markdownRemark.frontmatter.image.childImageSharp.fluid}
       />
       <S.ProfileTextWrapper>
-        <h2>{markdownRemark.frontmatter.title}</h2>
+        <h1>{markdownRemark.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
         <Social />
       </S.ProfileTextWrapper>

@@ -8,12 +8,11 @@ export const HeaderWrapper = styled.header`
   border-top: 10px solid var(--highLight);
 `
 
-export const Logo = styled.h1`
+export const Logo = styled.div`
   font-family: 'Rubik Mono One', sans-serif;
   font-size: 20px;
   font-weight: normal;
   text-transform: uppercase;
-  margin: 0;
 
   span {
     color: var(--highLight);

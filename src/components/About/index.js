@@ -27,7 +27,7 @@ const About = () => {
 
   return (
     <S.AboutWrapper>
-      <h2>{markdownRemark.frontmatter.title}</h2>
+      <h1>{markdownRemark.frontmatter.title}</h1>
       <S.AboutGrid>
         <S.AboutTextWrapper>
           <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />

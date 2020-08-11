@@ -48,7 +48,7 @@ const GlobalStyles = createGlobalStyle`
     margin-bottom: 1.8rem;
   }
 
-  h2 {
+  h1 {
     font-size: 3rem;
   }
 
