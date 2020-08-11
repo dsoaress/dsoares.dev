@@ -1,4 +1,17 @@
 import styled from 'styled-components'
+import BackgroundImage from 'gatsby-background-image'
+
+export const BlogPostImage = styled(BackgroundImage)``
+
+export const BlogPostTitle = styled.div`
+  background: rgba(0, 0, 0, 0.5);
+  padding: 250px 0;
+
+  h1 {
+    color: white;
+    text-align: center;
+  }
+`
 
 export const BlogPostWrapper = styled.div`
   max-width: 1200px;
