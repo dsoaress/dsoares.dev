@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 import Img from 'gatsby-image'
 
 export const ProfileWrapper = styled.div`
@@ -9,11 +10,19 @@ export const ProfileWrapper = styled.div`
   max-width: 900px;
   height: 100%;
   margin: auto;
-  padding: 0 20px;
+  padding: 0 30px;
+
+  ${media.lessThan('small')`
+    grid-template-columns: 1fr;
+  `}
 `
 
 export const ProfileImage = styled(Img)`
   border-radius: 3px;
+
+  ${media.lessThan('small')`
+    display: none;
+  `}
 `
 
 export const ProfileTextWrapper = styled.div``

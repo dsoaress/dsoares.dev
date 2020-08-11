@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 
 export const HeaderWrapper = styled.header`
   display: flex;
@@ -6,6 +7,12 @@ export const HeaderWrapper = styled.header`
   justify-content: space-between;
   padding: 0 5%;
   border-top: 10px solid var(--highLight);
+
+  ${media.lessThan('small')`
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  `}
 `
 
 export const Logo = styled.div`
