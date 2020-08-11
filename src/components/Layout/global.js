@@ -45,11 +45,32 @@ const GlobalStyles = createGlobalStyle`
   h6 {
     font-weight: normal;
     line-height: 1;
-    margin-bottom: 1.8rem;
+    margin: 3rem 0 1.8rem;
   }
 
   h1 {
     font-size: 3rem;
+    margin-top: 0;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 2.1rem;
+  }
+
+  h4 {
+    font-size: 1.8rem;
+  }
+
+  h5 {
+    font-size: 1.3rem;
+  }
+
+  h6 {
+    font-size: 1.1rem;
   }
 
   ul,
