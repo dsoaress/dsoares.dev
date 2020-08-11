@@ -5,7 +5,7 @@ import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import * as S from '../components/BlogPost/styled.js'
 
-const Post = ({ data }) => {
+const BlogPost = ({ data }) => {
   const post = data.markdownRemark
 
   return (
@@ -38,4 +38,4 @@ export const query = graphql`
   }
 `
 
-export default Post
+export default BlogPost

@@ -1,9 +1,9 @@
 ---
-key: post
+key: blogPost
 date: 2020-04-19 18:00:00
 title: Gerenciando referências bibliográficas
 description: Pode parecer algo simples e trivial para muitos acadêmicos e pesquisadores o uso de gerenciadores de referências bibliográficas, mas para muitos outros esse é um assunto bem obscuro (ou até mesmo desconhecido). Se você se encontra nesse segundo grupo, esse texto é para você.
-image: /images/zotero_artigo.jpg
+image: zotero_artigo.jpg
 tags: referências bibliográficas, escrita acadêmica
 ---
 
@@ -21,7 +21,7 @@ Vamos iniciar [criando uma conta gratuita](https://www.zotero.org/user/register)
 
 Após a criação da conta, é hora de [baixar e instalar o Zotero](https://www.zotero.org/download/). Se você usa Ubuntu ou outra distro baseada nele, siga [esse tutorial](http://www.ubuntubuzz.com/2018/06/complete-guide-to-install-zotero-on-ubuntu-1804.html). É importante que você já tenha instalado no seu computador o Microsoft Word ou o LibreOffice Writer para que o Zotero se integre a eles já na instalação, fazer essa integração posteriormente é bem mais complexo. Instale também o [Connetor para Chrome](https://chrome.google.com/webstore/detail/ekhagklcjbdpajgpjgmbionohlpdbjgc), é uma extensão que te permitirá adicionar itens diretamente de indexadores como o Google Scholar e SciELO à sua biblioteca.
 
-![Apresentando o Zotero](/images/zotero.png)
+![Apresentando o Zotero](zotero.png)
 
 Usar o software é bastante intuitivo. Na parte lateral esquerda temos nossa biblioteca e biblioteca de grupos (muito útil para grupos de pesquisa), na parte central temos as referências em si e, na lateral direita, os detalhes sobre a referência selecionada. Você pode organizar sua biblioteca da forma que achar melhor criando pastas e subpastas.
 
@@ -31,7 +31,7 @@ Uma observação: o Connector para Chrome só funciona se o Zotero no seu comput
 
 Por padrão, o software não irá sincronizar seus PDFs com a nuvem deles, sincronizando apenas os dados dos itens que compõe sua biblioteca. Isso porque armazenamento em nuvem custa dinheiro e como o Zotero não tem uma grande empresa por trás e nem usa seus dados para ganhar dinheiro (sim Google, estou falando de vocês), é um custo com o qual eles não podem arcar.
 
-![Preferências do Zotero](/images/zotero_sync.png)
+![Preferências do Zotero](zotero_sync.png)
 
 Existem [planos pagos](https://www.zotero.org/settings/storage) que expandem o armazenamento para além dos 300MB da versão gratuita. São US$20/ano por 2GB de armazenamento, US$60/ano por 6GB e US\$120/ano por armazenamento ilimitado (preços consultados em abril de 2020). Apesar de um pouco caros, esses planos valem a pena por dois motivos: (i) é muito mais prático que qualquer outra solução e (ii) você apoiará o trabalho dos desenvolvedores. Uma outra alternativa é usar [WebDAV](https://pt.wikipedia.org/wiki/WebDAV) como armazenamento, esse [artigo de suporte](https://www.zotero.org/support/sync#webdav) fala mais sobre essa funcionalidade e [aqui tem uma lista de serviços WebDAV gratuitos](https://www.zotero.org/support/kb/webdav_services). Você pode também escolher não usar nem o plano pago e nem WebDAV, mas é por sua conta e risco.
 
@@ -39,7 +39,7 @@ Se você é um usuário mais avançado deve ter notado que o Zotero cria uma pas
 
 Outro passo que precisando dar é ajustar o nosso Zotero para gerar referências em ABNT. Para isso basta ir na aba Citação, clicar no botão + e [adicionar esse arquivo](/abnt.csl) feito pelo pessoal da UFRGS.
 
-![Preferências de Citação](/images/zotero_abnt.png)
+![Preferências de Citação](zotero_abnt.png)
 
 ## Utilizando o Zotero em conjunto com o Microsoft Word
 
@@ -49,11 +49,11 @@ O processo todo não poderia ser mais simples. Ao abrir o Word, você notará um
 
 O primeiro, _Add/edit Citation_, vai fazer aparecer uma caixa flutuante onde nos permite escolher o autor a ser citado.
 
-![Adicionar citação](/images/02.png)
+![Adicionar citação](02.png)
 
 O segundo, _Add/edit Bibliography_, é para ser usado ao final do seu texto para gerar a lista de referências bibliográficas já devidamente formatas e em ordem alfabética.
 
-![Bibliografia gerada automaticamente](/images/03.png)
+![Bibliografia gerada automaticamente](03.png)
 
 Por fim, o último botão que usaremos com alguma frequência é o _Refresh_. Ele serve para atualizar a bibliografia gerada ao final do seu texto depois de uma modificação.
 

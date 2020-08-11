@@ -1,0 +1,65 @@
+backend:
+  name: git-gateway
+  branch: dev
+
+commit_messages:
+  create: ':pencil: create {{title}}'
+  update: ':pencil: update {{title}}'
+  delete: ':fire: delete {{title}}'
+  uploadMedia: '[skip ci] :bento: upload {{path}}'
+  deleteMedia: '[skip ci] :fire: delete {{path}}'
+
+media_folder: content/images
+public_folder: /images
+locale: 'pt'
+
+collections:
+  - name: 'blog'
+    label: 'Blog'
+    label_singular: 'post'
+    folder: 'content/blog'
+    create: true
+    media_folder: ''
+    public_folder: ''
+    path: '{{year}}-{{month}}-{{day}}-{{title}}/index'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Key', name: 'key', widget: 'hidden', default: 'blogPost' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - {
+          label: 'Data',
+          name: 'date',
+          widget: 'datetime',
+          dateFormat: 'DD/MM/YYYY',
+          timeFormat: 'HH:mm',
+          format: 'YYYY-MM-DD HH:mm:ss',
+        }
+      - {
+          label: 'Imagem',
+          name: 'image',
+          widget: 'image',
+          media_library:
+            {
+              config:
+                {
+                  media_folder: '/{{media_folder}}/blog/{{title}}',
+                  public_folder: '{{public_folder}}/blog/{{title}}',
+                },
+            },
+        }
+      - { label: 'Descrição', name: 'description', widget: 'string' }
+      - { label: 'Categoria', name: 'tags', widget: 'string' }
+      - {
+          label: 'Corpo',
+          name: 'body',
+          widget: 'markdown',
+          media_library:
+            {
+              config:
+                {
+                  media_folder: '/{{media_folder}}/blog/{{title}}',
+                  public_folder: '{{public_folder}}/blog/{{title}}',
+                },
+            },
+        }

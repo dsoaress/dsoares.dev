@@ -1,9 +1,9 @@
 ---
-key: post
+key: blogPost
 date: 2020-04-20 19:14:00
 title: O iPad pode substituir meu computador?
 description: Esse será um texto bastante diferente dos dois anteriores. Quero falar um pouco da minha experiência com o iPad para estudar.
-image: /images/iPad.jpg
+image: iPad.jpg
 tags: estudo, escrita acadêmica
 ---
 
@@ -21,7 +21,7 @@ Eu comprei meu atual iPad na tentativa de fazê-lo ser esse substituto que a App
 
 Uma analogia que resumiria bem o iPad como substituto de um computador seria compará-lo com um pato (pode andar, voar e nadar, mas não faz nenhuma das três coisas bem).
 
-![Foto por Dose Media / Unsplash](/images/iPad2.jpg)
+![Foto por Dose Media / Unsplash](iPad2.jpg)
 
 No meu uso, o iPad se destaca apenas num ponto: leitura. Nisso ele é imbatível. Apesar de ainda preferir ler no papel, se tornou inviável imprimir tudo que preciso ler, mesmo imprimindo frente e verso e com quatro páginas por face, como vim fazendo nos últimos por anos por motivos de “não há mais espaço físico na minha casa”, isso sem entrar no mérito de que é ecologicamente imoral.
 
@@ -31,7 +31,7 @@ Outro ponto que o iPad se tornou bastante útil foi como substituto do caderno. 
 
 Para esses dois casos, eu utilizo um aplicativo chamado [GoodNotes](https://www.goodnotes.com/) que é incrivelmente bom (apesar de incrivelmente caro).
 
-![GoodNotes: imagem do site do aplicativo (jamais você conseguirá ter anotações bonitas como nas imagens promocionais)](/images/GoodNotes.png)
+![GoodNotes: imagem do site do aplicativo (jamais você conseguirá ter anotações bonitas como nas imagens promocionais)](GoodNotes.png)
 
 Ainda utilizo um caderno de verdade em certas ocasiões como reuniões rápidas onde o uso do iPad roubaria a atenção ou sentado no fundo de um auditório lotado ouvindo uma palestra. Para esses casos um caderno tamanho A5 de capa dura ainda é um bom companheiro (e muito mais charmoso).
 

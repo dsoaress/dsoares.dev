@@ -1,9 +1,9 @@
 ---
-key: post
+key: blogPost
 date: 2020-04-02 21:00:00
 title: Artigos científicos com a nova norma
 description: Como “post inaugural” desse blog vou falar um pouco sobre a NBR 6022, norma que define as regras para a elaboração e apresentação de artigos científicos e que foi atualizada em 2018 pela Associação Brasileira de Normas Técnicas (ABNT).
-image: /images/foto.jpg
+image: foto.jpg
 tags: normas abnt, escrita acadêmica
 ---
 
@@ -38,7 +38,7 @@ O título em outro idioma (elemento opcional) vem logo abaixo do título no idio
 
 A ABNT não define os espaçamentos, alinhamento (se justificado, centralizado ou alinhado à esquerda) fonte, tamanho e peso (se normal ou negrito) do título. Fica a seu critério.
 
-![Exemplo de título](/images/titulo.jpg)
+![Exemplo de título](titulo.jpg)
 
 O elemento seguinte é o **autor** do documento: ele deve ser grafado de forma direta com prenome (abreviado ou não) e sobrenome. Caso haja mais de um autor, os nomes podem ser escritos na mesma linha, separados por vírgula, ou apresentando um autor por linha. Aqui, também, não tem a especificação tipográfica, fica a seu critério definir o peso e alinhamento.
 
@@ -52,7 +52,7 @@ Abaixo do resumo, separado por um espaço simples, vêm as **palavras-chave** qu
 
 Normalmente, o termo **Palavras-chave** vem grafado em negrito, mas isso não é uma regra definida. Também não existe uma regra que defina número mínimo e máximo de palavras-chave.
 
-![Exemplo de resumo](/images/resumo.jpg)
+![Exemplo de resumo](resumo.jpg)
 
 A seguir, temos, opcionalmente, o resumo em outro idioma, seguindo as mesmas regras do resumo principal.
 
@@ -92,7 +92,7 @@ Os títulos dos elementos pós-textuais devem ser grafados da mesma forma que os
 
 Os títulos dos apêndices devem ter ser apresentados na seguinte ordem: **APÊNDICE A — TÍTULO DO APÊNDICE**. O mesmo vale para os anexos: **ANEXO A — TÍTULO DO ANEXO**. As palavras “apêndice” e “anexo” devem sempre ser grafadas com letras maiúsculas. Já os títulos devem receber, como mencionado no parágrafo anterior, o mesmo destaque tipográfico dos títulos das sessões primárias. Então, se serão apresentados em letras maiúsculas ou não, vai depender disso. A norma não menciona se a identificação (A, B, C…) deve permanecer em textos com apenas um apêndice e/ou um anexo.
 
-![Exemplo de apêndice](/images/apendice.jpg)
+![Exemplo de apêndice](apendice.jpg)
 
 Por fim, temos os **agradecimentos**, elemento opcional que deve ser um texto curto e é o último elemento do seu trabalho.
 
@@ -110,7 +110,7 @@ Nesse pequeno parágrafo temos a desmistificação dos principais pontos defendi
 4. Não tem uma definição de onde deverá ficar a paginação (os números das páginas). A NBR 14724 diz que ela deve ficar no canto superior direito, mas essa regra não vale aqui. Você pode usar dessa forma, contudo, nos modelos que disponibilizei para _download_ acima decidi por coloca-la centralizada na margem inferior pois é a forma mais comum em artigos publicados fora do Brasil;
 5. As citações diretas com mais de três linhas, como você já deve saber, devem ter a fonte menor que o restante do texto (o mesmo vale para as notas de rodapé), normalmente tamanho 10, e devem ter recuo de 4cm à esquerda.
 
-![Exemplo de referências](/images/referencias.jpg)
+![Exemplo de referências](referencias.jpg)
 
 Como pode ter ficado claro (ou não), as normas da ABNT são cercadas de mitos e poucos as dominam. Certas convenções ganharam peso de regra e, para piorar, os periódicos científicos, eventos e universidades teimam em criar suas próprias regras, lembrando que essas “normas” à parte sobrescrevem as oficiais por algum motivo que nunca vou conseguir entender, então é sempre bom conferir antes de submeter um artigo. Como se já não bastasse a desordem e a desinformação, existem certas inconsistências nas normas oficiais, sobretudo na NBR 6023 (regras para elaboração de referências) e na NBR 10520 (regras para citações), duas das mais importantes e que costumam ser exigidas rigorosamente.
 

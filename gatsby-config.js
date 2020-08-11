@@ -4,13 +4,6 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `uploads`,
-        path: `${__dirname}/static/images`
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         name: `content`,
         path: `${__dirname}/content`
       }
@@ -21,12 +14,6 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          {
-            resolve: 'gatsby-remark-relative-images',
-            options: {
-              name: 'uploads'
-            }
-          },
           {
             resolve: 'gatsby-remark-images',
             options: {
@@ -64,9 +51,10 @@ module.exports = {
         background_color: `#E61F5B`,
         theme_color: `#E61F5B`,
         display: `minimal-ui`,
-        icon: `static/images/icon.png`
+        icon: `content/images/icon.png`
       }
     },
-    `gatsby-plugin-offline`
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-netlify-cms`
   ]
 }

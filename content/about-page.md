@@ -1,7 +1,7 @@
 ---
 key: 'about-page'
 title: 'Olá, de novo'
-image: '/images/about.jpg'
+image: 'images/about.jpg'
 ---
 
 Como já deve ter ficado claro, me chamo Daniel Soares. Um sociólogo em formação, além de desenvolvedor web _hobbista_. Uma combinação pouco convencional.
