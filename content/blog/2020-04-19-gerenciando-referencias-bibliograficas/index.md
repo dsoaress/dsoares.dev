@@ -4,7 +4,9 @@ date: 2020-04-19 18:00:00
 title: Gerenciando referências bibliográficas
 description: Pode parecer algo simples e trivial para muitos acadêmicos e pesquisadores o uso de gerenciadores de referências bibliográficas, mas para muitos outros esse é um assunto bem obscuro (ou até mesmo desconhecido). Se você se encontra nesse segundo grupo, esse texto é para você.
 image: zotero_artigo.jpg
-tags: referências bibliográficas, escrita acadêmica
+tags:
+  - referências bibliográficas
+  - escrita acadêmica
 ---
 
 Para começar, vamos falar um pouco sobre gerenciadores de forma geral. Eles são softwares que nos livram do tédio de organizar dezenas (ou centenas) de referências manualmente, as concentrando numa única interface e podendo, com menos de três cliques, adicionar todas as obras citadas ao final de nossos trabalhos já formatados em ABNT (ou APA, Chicago, Harvard, etc.). É fundamental o uso desse tipo de software? De forma alguma, mas dificilmente alguém volta atrás depois que começa a utilizá-los.

@@ -4,7 +4,9 @@ date: 2020-04-20 19:14:00
 title: O iPad pode substituir meu computador?
 description: Esse será um texto bastante diferente dos dois anteriores. Quero falar um pouco da minha experiência com o iPad para estudar.
 image: iPad.jpg
-tags: estudo, escrita acadêmica
+tags:
+  - estudo
+  - escrita acadêmica
 ---
 
 Esse é um tema bastante comum entre estudantes universitários: o iPad substitui o meu computador/notebook? A resposta curta é **não**.

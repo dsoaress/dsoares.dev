@@ -48,8 +48,8 @@ collections:
                 },
             },
         }
-      - { label: 'Descrição', name: 'description', widget: 'string' }
-      - { label: 'Categoria', name: 'tags', widget: 'string' }
+      - { label: 'Descrição', name: 'description', widget: 'text' }
+      - { label: 'Tags', name: 'tags', widget: 'list' }
       - {
           label: 'Corpo',
           name: 'body',
