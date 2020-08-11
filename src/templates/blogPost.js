@@ -11,13 +11,13 @@ const BlogPost = ({ data }) => {
   return (
     <Layout>
       <SEO title={post.frontmatter.title} />
-      <S.BlogPostImage fluid={post.frontmatter.image.childImageSharp.fluid}>
-        <S.BlogPostTitle>
-          <h1>{post.frontmatter.title}</h1>
-        </S.BlogPostTitle>
-      </S.BlogPostImage>
       <S.BlogPostWrapper>
-        <div
+        <S.BlogPostImage fluid={post.frontmatter.image.childImageSharp.fluid}>
+          <S.BlogPostTitle>
+            <h1>{post.frontmatter.title}</h1>
+          </S.BlogPostTitle>
+        </S.BlogPostImage>
+        <S.BlogPostText
           dangerouslySetInnerHTML={{
             __html: '<p>' + post.frontmatter.description + '</p>' + post.html
           }}

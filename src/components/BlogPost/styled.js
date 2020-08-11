@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import BackgroundImage from 'gatsby-background-image'
 
+export const BlogPostWrapper = styled.article``
+
 export const BlogPostImage = styled(BackgroundImage)``
 
 export const BlogPostTitle = styled.div`
@@ -10,12 +12,13 @@ export const BlogPostTitle = styled.div`
   h1 {
     color: white;
     text-align: center;
+    margin: 0;
   }
 `
 
-export const BlogPostWrapper = styled.div`
+export const BlogPostText = styled.div`
   max-width: 1200px;
-  padding: 0 20px;
+  padding-top: 3rem;
   margin: auto;
 
   h1,
@@ -29,8 +32,8 @@ export const BlogPostWrapper = styled.div`
   ol,
   blockquote,
   .footnotes {
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 165px;
+    margin-right: 165px;
 
     ol {
       margin: 0;
