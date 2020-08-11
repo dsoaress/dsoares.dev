@@ -7,8 +7,6 @@ image: /images/foto.jpg
 tags: normas abnt, escrita acadêmica
 ---
 
-![Foto por ijeab / Freepik](/images/foto.jpg)
-
 Antes de mais nada, é preciso deixar claro alguns pontos:
 
 1. As normas da ABNT abrangem um sem número de áreas, não estão restritas à escrita acadêmica. Sabe o padrão recente de tomadas elétricas? Pois é, agradeça à ABNT e à norma NBR 14136;

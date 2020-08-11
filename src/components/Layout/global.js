@@ -33,7 +33,7 @@ const GlobalStyles = createGlobalStyle`
     margin-bottom: 1rem;
 
     &:last-child {
-      margin: 0;
+      margin-bottom: 0;
     }
   }
 
@@ -50,6 +50,11 @@ const GlobalStyles = createGlobalStyle`
 
   h2 {
     font-size: 3rem;
+  }
+
+  ul,
+  ol {
+    list-style-position: inside;
   }
 
   a {
