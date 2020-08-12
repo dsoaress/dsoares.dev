@@ -9,8 +9,6 @@ commit_messages:
   uploadMedia: '[skip ci] :bento: upload {{path}}'
   deleteMedia: '[skip ci] :fire: delete {{path}}'
 
-media_folder: content/images
-public_folder: /images
 locale: 'pt'
 
 collections:
