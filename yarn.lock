@@ -2023,10 +2023,10 @@
     "@babel/runtime" "^7.10.5"
     "@styled-icons/styled-icon" "^10.6.0"
 
-"@styled-icons/simple-icons@^10.13.0":
-  version "10.14.1"
-  resolved "https://registry.yarnpkg.com/@styled-icons/simple-icons/-/simple-icons-10.14.1.tgz#da9be7be86056d78eb4cfd4a3ac85ece24000186"
-  integrity sha512-ht+HvnuXZb0slt0Dy8EBNyb5qlRDcHz5DBZPt6IMDz2c7t701V3+CHIzPTRIF2eTixdz155dRMfMyglhlAMqzw==
+"@styled-icons/simple-icons@^10.15.0":
+  version "10.15.0"
+  resolved "https://registry.yarnpkg.com/@styled-icons/simple-icons/-/simple-icons-10.15.0.tgz#f46d34ab1b854ed2f6cd3a01eb0160469eeaf3ca"
+  integrity sha512-WHNwWIxK+C6LvhLtmfpx/bsLxFNXcKKjyCzIVb1enhR10ESLZwMTsSiS0sVqkK4IiVsdzgu1eeqPjDTUu0wx/Q==
   dependencies:
     "@babel/runtime" "^7.10.5"
     "@styled-icons/styled-icon" "^10.6.0"
@@ -14409,7 +14409,7 @@ semver-truncate@^1.1.2:
   dependencies:
     semver "^5.3.0"
 
-"semver@2 || 3 || 4 || 5", semver@^5.3.0, semver@^5.4.1, semver@^5.5.0, semver@^5.5.1, semver@^5.6.0, semver@^5.7.1:
+"semver@2 || 3 || 4 || 5", semver@^5.3.0, semver@^5.4.1, semver@^5.5.0, semver@^5.5.1, semver@^5.6.0:
   version "5.7.1"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.7.1.tgz#a954f931aeba508d307bbf069eff0c01c96116f7"
   integrity sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==
@@ -15435,10 +15435,10 @@ styled-components@5.1.1:
     shallowequal "^1.1.0"
     supports-color "^5.5.0"
 
-styled-icons@10.14.1:
-  version "10.14.1"
-  resolved "https://registry.yarnpkg.com/styled-icons/-/styled-icons-10.14.1.tgz#9f45610db21405e3b1ec314935157afd14f4507b"
-  integrity sha512-UpAX+t0NVXw1fG6e2aZ86w7L8jR+6oaVmsSaPWbepL+EVgmyzAoyIYs2LMZBcQMdSgBHD+zUjbckP7cIKToK4w==
+styled-icons@10.15.0:
+  version "10.15.0"
+  resolved "https://registry.yarnpkg.com/styled-icons/-/styled-icons-10.15.0.tgz#d290d9a9c700a18e772442f536b073305a46ad2d"
+  integrity sha512-JZZ4WA4kWuDotL3/YGk2mtFSTcQv8kIxpo7ScoapaseYnb8PzsNzexcTUhmnswuXU5nXoFNNqYPf/yiQZcK/Qg==
   dependencies:
     "@babel/runtime" "^7.10.5"
     "@styled-icons/bootstrap" "^10.14.0"
@@ -15471,7 +15471,7 @@ styled-icons@10.14.1:
     "@styled-icons/open-iconic" "^10.6.0"
     "@styled-icons/remix-fill" "^10.6.0"
     "@styled-icons/remix-line" "^10.6.0"
-    "@styled-icons/simple-icons" "^10.13.0"
+    "@styled-icons/simple-icons" "^10.15.0"
     "@styled-icons/styled-icon" "^10.6.0"
     "@styled-icons/typicons" "^10.6.0"
     "@styled-icons/zondicons" "^10.6.0"
