@@ -5,7 +5,7 @@
   "version": "1.1.1",
   "author": "Daniel Soares <daniel.soares@me.com>",
   "dependencies": {
-    "@types/react": "16.9.44",
+    "@types/react": "16.9.46",
     "babel-plugin-styled-components": "1.11.1",
     "codemirror": "5.56.0",
     "gatsby": "2.24.47",
