@@ -30,7 +30,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   p {
-    margin-bottom: 1rem;
+    margin-bottom: 1.8rem;
 
     &:last-child {
       margin-bottom: 0;
@@ -76,10 +76,14 @@ const GlobalStyles = createGlobalStyle`
   ul,
   ol {
     list-style-position: inside;
-    margin-bottom: 1rem;
+    margin: 0 0 1.8rem;
 
     li {
-      margin-bottom: 1rem;
+      margin-bottom: calc(1.8rem / 2);
+
+      p {
+          display: contents;
+      }
 
       &:last-child {
         margin-bottom: 0;
@@ -97,6 +101,19 @@ const GlobalStyles = createGlobalStyle`
     &:hover {
       color: var(--default);
     }
+  }
+
+  blockquote {
+    margin: 0 0 1.8rem 8rem;
+    padding: 0;
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  figcaption {
+    font-size: 0.75rem;
+    font-style: italic;
+    text-align: center;
   }
 `
 export default GlobalStyles

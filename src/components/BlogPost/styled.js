@@ -35,22 +35,22 @@ export const BlogPostText = styled.div`
     margin-left: 165px;
     margin-right: 165px;
 
+    hr {
+      width: 8rem;
+      margin-bottom: 1rem;
+    }
+
     ol {
       margin: 0;
+      font-style: italic;
 
       li {
         font-size: 0.75rem;
-        margin-bottom: 0.5rem;
-
-        p {
-          display: contents;
-        }
       }
     }
   }
 
-  figcaption {
-    font-size: 0.75rem;
-    text-align: center;
+  blockquote {
+    margin: 0 0 1.8rem 8rem;
   }
 `
