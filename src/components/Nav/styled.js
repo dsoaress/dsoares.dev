@@ -5,13 +5,20 @@ export const NavWrapper = styled.nav``
 
 export const NavList = styled.ul`
   display: inline-flex;
-  gap: 40px;
   list-style: none;
   margin: 0;
 `
 
 export const NavItem = styled.li`
-  margin: 0;
+  margin: 0 20px;
+
+  &:nth-child(1) {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
 `
 
 export const NavLink = styled(Link)`

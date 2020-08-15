@@ -6,18 +6,24 @@ export const SocialWrapper = styled.div`
 `
 export const SocialList = styled.ul`
   display: flex;
-  gap: 40px;
   margin: 0;
   list-style: none;
 
   ${media.lessThan('small')`
     justify-content: space-around;
-    gap: 0;
   `}
 `
 
 export const SocialItem = styled.li`
-  margin: 0;
+  margin: 0 20px;
+
+  &:nth-child(1) {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
 `
 
 export const SocialLink = styled.a`
