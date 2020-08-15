@@ -160,7 +160,22 @@ collections:
               - label: 'Opção'
                 name: 'label'
                 widget: 'select'
-                options: ['Instagram', 'Github', 'Whatsapp', 'Email']
+                options:
+                  [
+                    'Facebook',
+                    'Messenger',
+                    'Behance',
+                    'Dribbble',
+                    'Twitter',
+                    'Snapchat',
+                    'Tiktok',
+                    'Telegram',
+                    'Wechat',
+                    'Instagram',
+                    'Github',
+                    'Whatsapp',
+                    'Email',
+                  ]
 
               - label: 'URL'
                 name: 'url'
