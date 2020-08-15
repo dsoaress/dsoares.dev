@@ -48,6 +48,11 @@ collections:
                 },
             },
         }
+      - label: 'Arquivo(s)'
+        name: 'files'
+        widget: 'list'
+        summary: '{{fields.file}}'
+        field: { label: Arquivo, name: file, widget: file }
       - { label: 'Descrição', name: 'description', widget: 'text' }
       - { label: 'Tags', name: 'tags', widget: 'list' }
       - {
