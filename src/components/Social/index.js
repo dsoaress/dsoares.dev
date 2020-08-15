@@ -1,32 +1,51 @@
 import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 
 import Icons from './Icons'
-import links from './content'
 import * as S from './styled'
 
-const Social = () => (
-  <S.SocialWrapper>
-    <S.SocialList>
-      {links.map((link, i) => {
-        const Icon = Icons[link.label]
+const Social = () => {
+  const { markdownRemark } = useStaticQuery(
+    graphql`
+      query {
+        markdownRemark(frontmatter: { key: { eq: "settings" } }) {
+          frontmatter {
+            social {
+              label
+              url
+            }
+          }
+        }
+      }
+    `
+  )
 
-        return (
-          <S.SocialItem key={i}>
-            <S.SocialLink
-              href={link.url}
-              title={link.label}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <S.IconWrapper>
-                <Icon />
-              </S.IconWrapper>
-            </S.SocialLink>
-          </S.SocialItem>
-        )
-      })}
-    </S.SocialList>
-  </S.SocialWrapper>
-)
+  return (
+    <S.SocialWrapper>
+      <S.SocialList>
+        {markdownRemark.frontmatter.social.map((social, i) => {
+          const Icon = Icons[social.label]
+
+          return (
+            <S.SocialItem key={i}>
+              {social.value && (
+                <S.SocialLink
+                  href={social.url}
+                  title={social.label}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <S.IconWrapper>
+                    <Icon />
+                  </S.IconWrapper>
+                </S.SocialLink>
+              )}
+            </S.SocialItem>
+          )
+        })}
+      </S.SocialList>
+    </S.SocialWrapper>
+  )
+}
 
 export default Social

@@ -152,7 +152,17 @@ collections:
             name: 'lang'
             widget: 'string'
 
-          - { label: 'Key', name: 'key', widget: 'hidden', default: 'settings' }
-          - { label: 'Título', name: 'title', widget: 'string' }
-          - { label: 'Descrição', name: 'description', widget: 'text' }
-          - { label: 'Idioma', name: 'lang', widget: 'string' }
+          - label: 'Perfis sociais'
+            label_singular: 'perfil'
+            name: 'social'
+            widget: 'list'
+            fields:
+              - label: 'Opção'
+                name: 'label'
+                widget: 'select'
+                options: ['Instagram', 'Github', 'Whatsapp', 'Email']
+
+              - label: 'URL'
+                name: 'url'
+                widget: 'string'
+                hint: 'Ex.: https://facebook.com/seu.usuario OU mailto:seu.nome@mail.com OU https://api.whatsapp.com/send?phone=5545999999999 (com DDI e DDD)'
