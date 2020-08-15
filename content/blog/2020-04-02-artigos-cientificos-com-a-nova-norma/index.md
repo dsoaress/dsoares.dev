@@ -1,9 +1,14 @@
 ---
 key: blogPost
-date: 2020-04-02 21:00:00
 title: Artigos científicos com a nova norma
-description: Como “post inaugural” desse blog vou falar um pouco sobre a NBR 6022, norma que define as regras para a elaboração e apresentação de artigos científicos e que foi atualizada em 2018 pela Associação Brasileira de Normas Técnicas (ABNT).
+date: 2020-04-02 21:00:00
 image: foto.jpg
+files:
+  - artigo_ABNT_NBR-6022.zip
+description: Como “post inaugural” desse blog vou falar um pouco sobre a NBR
+  6022, norma que define as regras para a elaboração e apresentação de artigos
+  científicos e que foi atualizada em 2018 pela Associação Brasileira de Normas
+  Técnicas (ABNT).
 tags:
   - normas abnt
   - escrita acadêmica
@@ -18,7 +23,7 @@ Antes de mais nada, é preciso deixar claro alguns pontos:
 
 > O ~~Google~~ [Duck Duck Go](https://duckduckgo.com/) é seu pastor, nada lhe faltará (autor desconhecido).
 
-Esclarecidos esses pontos, vamos ao que interessa. [Aqui tem um modelo](/artigo_ABNT_NBR-6022.zip 'Modelo de artigo com a NBR 6022 de 2018') de artigo com todos os elementos, obrigatórios e opcionais, de acordo com a ABNT.
+Esclarecidos esses pontos, vamos ao que interessa. [Aqui tem um modelo](artigo_ABNT_NBR-6022.zip) de artigo com todos os elementos, obrigatórios e opcionais, de acordo com a ABNT.
 
 ## Elementos obrigatórios e opcionais de um artigo científico
 

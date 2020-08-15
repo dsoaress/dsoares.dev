@@ -15,13 +15,19 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-images',
+            resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 1200,
               linkImagesToOriginal: false,
               showCaptions: true,
               quality: 80,
               withWebp: true
+            }
+          },
+          {
+            resolve: `gatsby-remark-copy-linked-files`,
+            options: {
+              destinationDir: f => `static/${f.hash}/${f.name}`
             }
           }
         ]

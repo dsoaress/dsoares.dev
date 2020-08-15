@@ -1,9 +1,14 @@
 ---
 key: blogPost
-date: 2020-04-19 18:00:00
 title: Gerenciando referências bibliográficas
-description: Pode parecer algo simples e trivial para muitos acadêmicos e pesquisadores o uso de gerenciadores de referências bibliográficas, mas para muitos outros esse é um assunto bem obscuro (ou até mesmo desconhecido). Se você se encontra nesse segundo grupo, esse texto é para você.
+date: 2020-04-19 18:00:00
 image: zotero_artigo.jpg
+files:
+  - abnt.csl
+description: Pode parecer algo simples e trivial para muitos acadêmicos e
+  pesquisadores o uso de gerenciadores de referências bibliográficas, mas para
+  muitos outros esse é um assunto bem obscuro (ou até mesmo desconhecido). Se
+  você se encontra nesse segundo grupo, esse texto é para você.
 tags:
   - referências bibliográficas
   - escrita acadêmica
@@ -39,7 +44,7 @@ Existem [planos pagos](https://www.zotero.org/settings/storage) que expandem o a
 
 Se você é um usuário mais avançado deve ter notado que o Zotero cria uma pasta dentro da sua pasta de usuário com a sua biblioteca (banco de dados e anexos) e pode ter pensado: “hm, eu poderia por essa pasta dentro do Dropbox ou do Google Drive e economizar uns trocados”. Infelizmente, isso é altamente desaconselhável. A forma como esses serviços em nuvem sincronizam os arquivos pode corromper sua base de dados de forma irreparável. Mas você pode, no entanto, fazer backup manualmente copiando essa pasta inteira para um HD externo ou mesmo para serviços de nuvem como os já citado, mas faça isso com o Zotero fechado para garantir que ele não estará escrevendo na base de dados no momento da cópia.
 
-Outro passo que precisando dar é ajustar o nosso Zotero para gerar referências em ABNT. Para isso basta ir na aba Citação, clicar no botão + e [adicionar esse arquivo](/abnt.csl) feito pelo pessoal da UFRGS.
+Outro passo que precisando dar é ajustar o nosso Zotero para gerar referências em ABNT. Para isso basta ir na aba Citação, clicar no botão + e [adicionar esse arquivo](abnt.csl) feito pelo pessoal da UFRGS.
 
 ![Preferências de Citação](zotero_abnt.png)
 
