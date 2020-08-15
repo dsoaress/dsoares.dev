@@ -68,3 +68,68 @@ collections:
                 },
             },
         }
+  - name: 'pages'
+    label: 'Páginas'
+    media_folder: ''
+    public_folder: ''
+    editor:
+      preview: false
+    files:
+      - file: 'content/index-page/index.md'
+        label: 'Home'
+        name: 'home'
+        fields:
+          - {
+              label: 'Key',
+              name: 'key',
+              widget: 'hidden',
+              default: 'index-page',
+            }
+          - { label: 'Título', name: 'title', widget: 'string' }
+          - {
+              label: 'Imagem',
+              name: 'image',
+              widget: 'image',
+              media_library:
+                {
+                  config:
+                    {
+                      media_folder: '/{{media_folder}}/{{key}}',
+                      public_folder: '{{public_folder}}/{{key}}',
+                    },
+                },
+            }
+          - { label: 'Corpo', name: 'body', widget: 'markdown' }
+      - file: 'content/about-page/index.md'
+        label: 'Sobre mim'
+        name: 'about'
+        fields:
+          - {
+              label: 'Key',
+              name: 'key',
+              widget: 'hidden',
+              default: 'about-page',
+            }
+          - { label: 'Título', name: 'title', widget: 'string' }
+          - {
+              label: 'Imagem',
+              name: 'image',
+              widget: 'image',
+              media_library:
+                {
+                  config:
+                    {
+                      media_folder: '/{{media_folder}}/{{key}}',
+                      public_folder: '{{public_folder}}/{{key}}',
+                    },
+                },
+            }
+          - { label: 'Corpo', name: 'body', widget: 'markdown' }
+      - file: 'content/settings/index.md'
+        label: 'Configurações'
+        name: 'settings'
+        fields:
+          - { label: 'Key', name: 'key', widget: 'hidden', default: 'settings' }
+          - { label: 'Título', name: 'title', widget: 'string' }
+          - { label: 'Descrição', name: 'description', widget: 'text' }
+          - { label: 'Idioma', name: 'lang', widget: 'string' }
