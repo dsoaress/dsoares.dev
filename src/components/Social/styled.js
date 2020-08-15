@@ -1,11 +1,10 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
-export const SocialWrapper = styled.div`
-  margin-top: 1.8rem;
-`
+export const SocialWrapper = styled.div``
 export const SocialList = styled.ul`
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   list-style: none;
 
@@ -15,15 +14,7 @@ export const SocialList = styled.ul`
 `
 
 export const SocialItem = styled.li`
-  margin: 0 20px;
-
-  &:nth-child(1) {
-    margin-left: 0;
-  }
-
-  &:last-child {
-    margin-right: 0;
-  }
+  margin: 0;
 `
 
 export const SocialLink = styled.a`
@@ -36,4 +27,9 @@ export const SocialLink = styled.a`
 
 export const IconWrapper = styled.div`
   width: 30px;
+  margin: 1.8rem 1.8rem 0 0;
+
+  ${media.lessThan('small')`
+    margin: 1.8rem 0.5rem 0 0;
+  `}
 `
