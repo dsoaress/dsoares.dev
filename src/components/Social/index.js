@@ -28,7 +28,7 @@ const Social = () => {
 
           return (
             <S.SocialItem key={i}>
-              {social.value && (
+              {social.url && (
                 <S.SocialLink
                   href={social.url}
                   title={social.label}
