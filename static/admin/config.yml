@@ -2,12 +2,12 @@ backend:
   name: git-gateway
   branch: dev
 
-commit_messages:
-  create: ':pencil: create {{title}}'
-  update: ':pencil: update {{title}}'
-  delete: ':fire: delete {{title}}'
-  uploadMedia: '[skip ci] :bento: upload {{path}}'
-  deleteMedia: '[skip ci] :fire: delete {{path}}'
+  commit_messages:
+    create: ':pencil: create {{title}}'
+    update: ':pencil: update {{title}}'
+    delete: ':fire: delete {{title}}'
+    uploadMedia: ':bento: upload {{path}}'
+    deleteMedia: ':fire: delete {{path}}'
 
 media_folder: 'content/assets'
 public_folder: '/assets'
