@@ -6,12 +6,23 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    --highLight: #bc2d57;
-    --default: #222;
-    --sun: #222;
+    --highLight: #BC2D57;
+    --default: #dadada;
+    --sun: yellow;
     --medium: #888;
-    --background: #fff;
-    --backgroundMedium: #ebebeb;
+    --background: #1A1D23;
+    --backgroundMedium: #2d313a;
+  }
+
+  @media screen and (prefers-color-scheme: light) {
+    * {
+      --highLight: #BC2D57;
+      --default: #222;
+      --sun: #222;
+      --medium: #888;
+      --background: #fff;
+      --backgroundMedium: #EBEBEB;
+    }
   }
 
   body {
