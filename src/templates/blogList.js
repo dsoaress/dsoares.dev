@@ -7,7 +7,7 @@ import SEO from '../components/SEO'
 import PostItem from '../components/PostItem'
 import Pagination from '../components/Pagination'
 
-const BlogListWrapper = styled.div`
+const Wrapper = styled.div`
   max-width: 900px;
   margin: auto;
   padding: 0 30px;
@@ -24,7 +24,7 @@ const BlogList = props => {
   return (
     <Layout>
       <SEO title="Blog" />
-      <BlogListWrapper>
+      <Wrapper>
         <h1>Blog</h1>
         {posts.map(({ node }, i) => (
           <PostItem
@@ -46,7 +46,7 @@ const BlogList = props => {
           prevPage={prevPage}
           nextPage={nextPage}
         />
-      </BlogListWrapper>
+      </Wrapper>
     </Layout>
   )
 }

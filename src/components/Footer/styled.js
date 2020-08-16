@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import { Heart } from '@styled-icons/typicons/Heart'
 
-export const FooterWrapper = styled.footer`
+export const Wrapper = styled.footer`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,7 +10,7 @@ export const FooterWrapper = styled.footer`
   font-size: 0.75rem;
 `
 
-export const FooterItens = styled.p`
+export const Item = styled.p`
   margin: 0;
   line-height: 1;
 `

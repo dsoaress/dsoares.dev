@@ -26,16 +26,14 @@ const Profile = () => {
   )
 
   return (
-    <S.ProfileWrapper>
-      <S.ProfileImage
-        fluid={markdownRemark.frontmatter.image.childImageSharp.fluid}
-      />
-      <S.ProfileTextWrapper>
+    <S.Wrapper>
+      <S.Image fluid={markdownRemark.frontmatter.image.childImageSharp.fluid} />
+      <S.TextWrapper>
         <h1>{markdownRemark.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
         <Social />
-      </S.ProfileTextWrapper>
-    </S.ProfileWrapper>
+      </S.TextWrapper>
+    </S.Wrapper>
   )
 }
 

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 import Img from 'gatsby-image'
 
-export const ProfileWrapper = styled.div`
+export const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 2fr;
   align-items: center;
@@ -17,7 +17,7 @@ export const ProfileWrapper = styled.div`
   `}
 `
 
-export const ProfileImage = styled(Img)`
+export const Image = styled(Img)`
   border-radius: 3px;
 
   ${media.lessThan('small')`
@@ -25,4 +25,4 @@ export const ProfileImage = styled(Img)`
   `}
 `
 
-export const ProfileTextWrapper = styled.div``
+export const TextWrapper = styled.div``

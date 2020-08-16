@@ -26,18 +26,18 @@ const About = () => {
   )
 
   return (
-    <S.AboutWrapper>
+    <S.Wrapper>
       <h1>{markdownRemark.frontmatter.title}</h1>
-      <S.AboutGrid>
-        <S.AboutTextWrapper>
+      <S.Grid>
+        <S.TextWrapper>
           <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
           <Social />
-        </S.AboutTextWrapper>
-        <S.AboutImage
+        </S.TextWrapper>
+        <S.Image
           fluid={markdownRemark.frontmatter.image.childImageSharp.fluid}
         />
-      </S.AboutGrid>
-    </S.AboutWrapper>
+      </S.Grid>
+    </S.Wrapper>
   )
 }
 

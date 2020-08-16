@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 
-const NotFoundWrapper = styled.div`
+const Wrapper = styled.div`
   display: grid;
   align-content: center;
   height: 100%;
@@ -14,7 +14,7 @@ const NotFoundWrapper = styled.div`
 const NotFoundPage = () => (
   <Layout>
     <SEO title="404: não encontrado" />
-    <NotFoundWrapper>
+    <Wrapper>
       <h1>
         Não encontrado{' '}
         <span role="img" aria-label="sed">
@@ -22,7 +22,7 @@ const NotFoundPage = () => (
         </span>
       </h1>
       <p>O que você está buscando não existe.</p>
-    </NotFoundWrapper>
+    </Wrapper>
   </Layout>
 )
 

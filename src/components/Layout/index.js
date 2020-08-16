@@ -7,12 +7,12 @@ import GlobalStyles from './global'
 import * as S from './styled'
 
 const Layout = ({ children }) => (
-  <S.LayoutWrapper>
+  <S.Wrapper>
     <GlobalStyles />
     <Header />
-    <main>{children}</main>
+    <S.Main>{children}</S.Main>
     <Footer />
-  </S.LayoutWrapper>
+  </S.Wrapper>
 )
 
 Layout.propTypes = {

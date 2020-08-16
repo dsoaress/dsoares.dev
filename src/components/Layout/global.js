@@ -32,7 +32,6 @@ const GlobalStyles = createGlobalStyle`
     text-rendering: optimizeLegibility;
     color: var(--default);
     background: var(--background);
-    transition: color 1s;
     overflow: -moz-scrollbars-none;
     -ms-overflow-style: none;
 

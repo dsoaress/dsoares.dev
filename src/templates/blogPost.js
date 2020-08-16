@@ -12,22 +12,22 @@ const BlogPost = ({ data }) => {
   return (
     <Layout>
       <SEO title={post.frontmatter.title} />
-      <S.PostWrapper>
-        <S.PostImage fluid={post.frontmatter.image.childImageSharp.fluid}>
-          <S.PostTitle>
+      <S.Wrapper>
+        <S.Image fluid={post.frontmatter.image.childImageSharp.fluid}>
+          <S.Title>
             <PostMeta
               date={post.frontmatter.date}
               timeToRead={post.timeToRead}
             />
             <h1>{post.frontmatter.title}</h1>
-          </S.PostTitle>
-        </S.PostImage>
-        <S.PostText
+          </S.Title>
+        </S.Image>
+        <S.Text
           dangerouslySetInnerHTML={{
             __html: '<p>' + post.frontmatter.description + '</p>' + post.html
           }}
         />
-      </S.PostWrapper>
+      </S.Wrapper>
     </Layout>
   )
 }

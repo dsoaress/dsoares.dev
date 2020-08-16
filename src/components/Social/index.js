@@ -21,15 +21,15 @@ const Social = () => {
   )
 
   return (
-    <S.SocialWrapper>
-      <S.SocialList>
+    <S.Wrapper>
+      <S.List>
         {markdownRemark.frontmatter.social.map((social, i) => {
           const Icon = Icons[social.label]
 
           return (
-            <S.SocialItem key={i}>
+            <S.Item key={i}>
               {social.url && (
-                <S.SocialLink
+                <S.Link
                   href={social.url}
                   title={social.label}
                   target="_blank"
@@ -38,13 +38,13 @@ const Social = () => {
                   <S.IconWrapper>
                     <Icon />
                   </S.IconWrapper>
-                </S.SocialLink>
+                </S.Link>
               )}
-            </S.SocialItem>
+            </S.Item>
           )
         })}
-      </S.SocialList>
-    </S.SocialWrapper>
+      </S.List>
+    </S.Wrapper>
   )
 }
 

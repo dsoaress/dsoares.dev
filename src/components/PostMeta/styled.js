@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Calendar } from '@styled-icons/boxicons-regular/Calendar'
 import { TimeFive as Clock } from '@styled-icons/boxicons-regular/TimeFive'
 
-export const PostMeta = styled.span`
+export const Meta = styled.span`
   color: var(--medium);
   font-style: italic;
   font-size: 0.75rem;

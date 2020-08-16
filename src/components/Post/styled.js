@@ -2,11 +2,11 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 import BackgroundImage from 'gatsby-background-image'
 
-export const PostWrapper = styled.article``
+export const Wrapper = styled.article``
 
-export const PostImage = styled(BackgroundImage)``
+export const Image = styled(BackgroundImage)``
 
-export const PostTitle = styled.div`
+export const Title = styled.div`
   background: rgba(0, 0, 0, 0.6);
   padding: 250px 30px;
   text-align: center;
@@ -21,7 +21,7 @@ export const PostTitle = styled.div`
   `}
 `
 
-export const PostText = styled.div`
+export const Text = styled.div`
   max-width: 1200px;
   padding-top: 3rem;
   margin: auto;

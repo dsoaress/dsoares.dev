@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 import Img from 'gatsby-image'
 
-export const PostItemWrapper = styled.div`
+export const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 220px 1fr;
   gap: 40px;
@@ -14,11 +14,11 @@ export const PostItemWrapper = styled.div`
   `}
 `
 
-export const PostItemImage = styled(Img)`
+export const Image = styled(Img)`
   border-radius: 3px;
 `
 
-export const PostItemText = styled.div`
+export const TextWrapper = styled.div`
   margin: 1.8rem 0;
 
   ${media.lessThan('small')`
@@ -26,7 +26,7 @@ export const PostItemText = styled.div`
   `}
 `
 
-export const PostItemTitle = styled.h2`
+export const Title = styled.h2`
   font-size: 1.6rem;
   margin: 0.5rem 0;
 `

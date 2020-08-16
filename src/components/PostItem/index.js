@@ -5,16 +5,16 @@ import PostMeta from '../PostMeta'
 import * as S from './styled'
 
 const PostItem = ({ slug, date, timeToRead, title, description, image }) => (
-  <S.PostItemWrapper>
-    <S.PostItemImage fluid={image} />
-    <S.PostItemText>
+  <S.Wrapper>
+    <S.Image fluid={image} />
+    <S.TextWrapper>
       <PostMeta date={date} timeToRead={timeToRead} />
       <Link to={slug} alt={title}>
-        <S.PostItemTitle>{title}</S.PostItemTitle>
+        <S.Title>{title}</S.Title>
       </Link>
       <p>{description}</p>
-    </S.PostItemText>
-  </S.PostItemWrapper>
+    </S.TextWrapper>
+  </S.Wrapper>
 )
 
 export default PostItem

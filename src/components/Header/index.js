@@ -21,13 +21,13 @@ const Header = () => {
     .filter(e => e.trim().length > 0)
 
   return (
-    <S.HeaderWrapper>
+    <S.Wrapper>
       <S.Logo>
         {title[0]}
         <span>{title[1]}</span>
       </S.Logo>
       <Nav />
-    </S.HeaderWrapper>
+    </S.Wrapper>
   )
 }
 

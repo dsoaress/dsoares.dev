@@ -4,17 +4,17 @@ import links from './content'
 import * as S from './styled'
 
 const Nav = () => (
-  <S.NavWrapper>
-    <S.NavList>
+  <S.Wrapper>
+    <S.List>
       {links.map((link, i) => (
-        <S.NavItem key={i}>
-          <S.NavLink to={link.url} activeClassName="active">
+        <S.Item key={i}>
+          <S.LinkItem to={link.url} activeClassName="active">
             {link.label}
-          </S.NavLink>
-        </S.NavItem>
+          </S.LinkItem>
+        </S.Item>
       ))}
-    </S.NavList>
-  </S.NavWrapper>
+    </S.List>
+  </S.Wrapper>
 )
 
 export default Nav

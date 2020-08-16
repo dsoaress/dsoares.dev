@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
-export const SocialWrapper = styled.div``
-export const SocialList = styled.ul`
+export const Wrapper = styled.div``
+export const List = styled.ul`
   display: flex;
   flex-wrap: wrap;
   margin: 0;
@@ -13,11 +13,11 @@ export const SocialList = styled.ul`
   `}
 `
 
-export const SocialItem = styled.li`
+export const Item = styled.li`
   margin: 0;
 `
 
-export const SocialLink = styled.a`
+export const Link = styled.a`
   color: var(--default);
 
   &:hover {

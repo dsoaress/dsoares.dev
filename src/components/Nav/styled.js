@@ -1,15 +1,15 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 
-export const NavWrapper = styled.nav``
+export const Wrapper = styled.nav``
 
-export const NavList = styled.ul`
+export const List = styled.ul`
   display: inline-flex;
   list-style: none;
   margin: 0;
 `
 
-export const NavItem = styled.li`
+export const Item = styled.li`
   margin: 0 20px;
 
   &:nth-child(1) {
@@ -21,7 +21,7 @@ export const NavItem = styled.li`
   }
 `
 
-export const NavLink = styled(Link)`
+export const LinkItem = styled(Link)`
   color: var(--default);
   text-decoration: none;
   border: none;
