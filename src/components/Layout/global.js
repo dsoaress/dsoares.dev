@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import media from 'styled-media-query'
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -51,26 +52,50 @@ const GlobalStyles = createGlobalStyle`
   h1 {
     font-size: 3rem;
     margin-top: 0;
+
+    ${media.lessThan('small')`
+      font-size: 2rem;
+    `}
   }
 
   h2 {
     font-size: 2.5rem;
+
+    ${media.lessThan('small')`
+      font-size: 1.5rem;
+    `}
   }
 
   h3 {
     font-size: 2.1rem;
+
+    ${media.lessThan('small')`
+      font-size: 1.1rem;
+    `}
   }
 
   h4 {
     font-size: 1.8rem;
+
+    ${media.lessThan('small')`
+      font-size: 1rem;
+    `}
   }
 
   h5 {
     font-size: 1.3rem;
+
+    ${media.lessThan('small')`
+      font-size: 1rem;
+    `}
   }
 
   h6 {
     font-size: 1.1rem;
+
+    ${media.lessThan('small')`
+      font-size: 1rem;
+    `}
   }
 
   ul,
@@ -114,6 +139,8 @@ const GlobalStyles = createGlobalStyle`
     font-size: 0.75rem;
     font-style: italic;
     text-align: center;
+    margin-top: 1rem;
+    padding: 0 30px;
   }
 `
 export default GlobalStyles

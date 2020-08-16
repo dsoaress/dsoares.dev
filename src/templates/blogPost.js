@@ -3,7 +3,8 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import * as S from '../components/BlogPost/styled.js'
+import PostMeta from '../components/PostMeta'
+import * as S from '../components/Post/styled.js'
 
 const BlogPost = ({ data }) => {
   const post = data.markdownRemark
@@ -11,25 +12,29 @@ const BlogPost = ({ data }) => {
   return (
     <Layout>
       <SEO title={post.frontmatter.title} />
-      <S.BlogPostWrapper>
-        <S.BlogPostImage fluid={post.frontmatter.image.childImageSharp.fluid}>
-          <S.BlogPostTitle>
+      <S.PostWrapper>
+        <S.PostImage fluid={post.frontmatter.image.childImageSharp.fluid}>
+          <S.PostTitle>
+            <PostMeta
+              date={post.frontmatter.date}
+              timeToRead={post.timeToRead}
+            />
             <h1>{post.frontmatter.title}</h1>
-          </S.BlogPostTitle>
-        </S.BlogPostImage>
-        <S.BlogPostText
+          </S.PostTitle>
+        </S.PostImage>
+        <S.PostText
           dangerouslySetInnerHTML={{
             __html: '<p>' + post.frontmatter.description + '</p>' + post.html
           }}
         />
-      </S.BlogPostWrapper>
+      </S.PostWrapper>
     </Layout>
   )
 }
 
 export const query = graphql`
-  query Post($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+  query Post($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
         description
@@ -42,7 +47,6 @@ export const query = graphql`
           }
         }
       }
-      id
       html
       timeToRead
     }
