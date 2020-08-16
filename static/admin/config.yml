@@ -3,11 +3,11 @@ backend:
   branch: master
 
   commit_messages:
-    create: ':pencil: create {{title}}'
-    update: ':pencil: update {{title}}'
-    delete: ':fire: delete {{title}}'
-    uploadMedia: ':bento: upload {{path}}'
-    deleteMedia: ':fire: delete {{path}}'
+    create: ':pencil: create content'
+    update: ':pencil: update content'
+    delete: ':fire: delete content'
+    uploadMedia: ':bento: upload asset'
+    deleteMedia: ':fire: delete asset'
 
 media_folder: 'content/assets'
 public_folder: '/assets'
