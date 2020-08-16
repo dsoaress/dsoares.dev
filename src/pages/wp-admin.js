@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import SEO from '../components/SEO'
 import video from '../../content/assets/wp-admin.mp4'
 
-export const WPAdminWrapper = styled.video`
+const WPAdminWrapper = styled.video`
   position: fixed;
   right: 0;
   bottom: 0;
@@ -13,7 +14,8 @@ export const WPAdminWrapper = styled.video`
 `
 
 const WPAdminPage = () => (
-  <WPAdminWrapper autoPlay muted loop>
+  <WPAdminWrapper autoPlay playsInline muted loop>
+    <SEO title="Hey you 😘" />
     <source src={video} type="video/mp4" />
   </WPAdminWrapper>
 )
