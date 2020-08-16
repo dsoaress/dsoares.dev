@@ -2,17 +2,17 @@ import styled from 'styled-components'
 
 import { Heart } from '@styled-icons/typicons/Heart'
 
-export const Footer = styled.footer`
+export const FooterWrapper = styled.footer`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 80px;
   font-size: 0.75rem;
 `
 
 export const FooterItens = styled.p`
-  margin: -2px 0;
+  margin: 0;
+  line-height: 1;
 `
 
 export const HeartIcon = styled(Heart)`

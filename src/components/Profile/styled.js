@@ -1,37 +1,28 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
-
 import Img from 'gatsby-image'
 
 export const ProfileWrapper = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   align-items: center;
+  gap: 40px;
+  max-width: 900px;
+  height: 100%;
+  margin: auto;
+  padding: 0 30px;
+
+  ${media.lessThan('small')`
+    grid-template-columns: 1fr;
+  `}
 `
 
 export const ProfileImage = styled(Img)`
-  width: 30%;
-  height: 45vh;
-  min-height: 310px;
   border-radius: 3px;
-  margin-right: 5%;
 
-  ${media.lessThan('780px')`
-  width: 40%;
-  `}
-
-  ${media.lessThan('600px')`
+  ${media.lessThan('small')`
     display: none;
   `}
 `
 
-export const ProfileDesc = styled.div`
-  width: 65%;
-
-  ${media.lessThan('780px')`
-  width: 55%;
-  `}
-
-  ${media.lessThan('600px')`
-    width: 100%;
-  `}
-`
+export const ProfileTextWrapper = styled.div``

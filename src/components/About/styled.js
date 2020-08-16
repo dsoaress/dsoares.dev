@@ -1,45 +1,26 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
-
 import Img from 'gatsby-image'
 
 export const AboutWrapper = styled.div`
-  display: block;
+  max-width: 900px;
+  margin: auto;
+  padding: 0 30px;
 `
 
-export const AboutFlex = styled.div`
-  display: flex;
+export const AboutGrid = styled.div`
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
 
-  ${media.lessThan('600px')`
-    flex-direction: column;
+  ${media.lessThan('small')`
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
   `}
 `
 
-export const AboutDesc = styled.div`
-  width: 65%;
-  padding-bottom: 30px;
-
-  ${media.lessThan('780px')`
-  width: 55%;
-  `}
-
-  ${media.lessThan('600px')`
-    width: 100%;
-  `}
-`
+export const AboutTextWrapper = styled.div``
 
 export const AboutImage = styled(Img)`
-  width: 30%;
-  height: 450px;
   border-radius: 3px;
-  margin-left: 5%;
-
-  ${media.lessThan('780px')`
-  width: 40%;
-  `}
-
-  ${media.lessThan('600px')`
-  width: 100%;
-  margin-left: 0;
-  `}
 `

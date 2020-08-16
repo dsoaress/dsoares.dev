@@ -1,51 +1,33 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 
+import Nav from '../Nav'
 import * as S from './styled'
 
 const Header = () => {
-  const [theme, setTheme] = useState(null)
-
-  const isDarkMode = theme === 'dark'
-
-  useEffect(() => {
-    setTheme(window.__theme)
-    window.__onThemeChange = () => setTheme(window.__theme)
-  }, [])
+  const { markdownRemark } = useStaticQuery(
+    graphql`
+      query {
+        markdownRemark(frontmatter: { key: { eq: "settings" } }) {
+          frontmatter {
+            title
+          }
+        }
+      }
+    `
+  )
+  const title = markdownRemark.frontmatter.title
+    .split(/(\s+)/)
+    .filter(e => e.trim().length > 0)
 
   return (
-    <S.Header>
+    <S.HeaderWrapper>
       <S.Logo>
-        Daniel<S.LastName>Soares</S.LastName>
+        {title[0]}
+        <span>{title[1]}</span>
       </S.Logo>
-      <S.NavLinks>
-        <S.NavLinksList>
-          <S.NavLinksItem>
-            <S.NavLinksLink to="/" activeClassName="active">
-              home
-            </S.NavLinksLink>
-          </S.NavLinksItem>
-          <S.NavLinksItem>
-            <S.NavLinksLink to="/sobre-mim" activeClassName="active">
-              sobre mim
-            </S.NavLinksLink>
-          </S.NavLinksItem>
-          <S.NavLinksItem>
-            <S.NavLinksLink to="/blog" activeClassName="active">
-              blog
-            </S.NavLinksLink>
-          </S.NavLinksItem>
-          <S.NavLinksItem
-            title="Mudar o tema"
-            onClick={() => {
-              window.__setPreferredTheme(isDarkMode ? 'light' : 'dark')
-            }}
-            className={theme}
-          >
-            <S.SunIcon />
-          </S.NavLinksItem>
-        </S.NavLinksList>
-      </S.NavLinks>
-    </S.Header>
+      <Nav />
+    </S.HeaderWrapper>
   )
 }
 

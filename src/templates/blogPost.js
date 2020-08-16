@@ -3,24 +3,26 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-
-import * as S from '../components/Post/styled'
+import PostMeta from '../components/PostMeta'
+import * as S from '../components/Post/styled.js'
 
 const BlogPost = ({ data }) => {
   const post = data.markdownRemark
 
   return (
     <Layout>
+      <SEO title={post.frontmatter.title} />
       <S.PostWrapper>
-        <SEO title={post.frontmatter.title} />
-        <S.Meta>
-          <S.CalendarIcon />
-          {post.frontmatter.date}
-          <S.ClockIcon />
-          {post.timeToRead} min de leitura
-        </S.Meta>
-        <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
-        <S.MainContent
+        <S.PostImage fluid={post.frontmatter.image.childImageSharp.fluid}>
+          <S.PostTitle>
+            <PostMeta
+              date={post.frontmatter.date}
+              timeToRead={post.timeToRead}
+            />
+            <h1>{post.frontmatter.title}</h1>
+          </S.PostTitle>
+        </S.PostImage>
+        <S.PostText
           dangerouslySetInnerHTML={{
             __html: '<p>' + post.frontmatter.description + '</p>' + post.html
           }}
@@ -31,14 +33,20 @@ const BlogPost = ({ data }) => {
 }
 
 export const query = graphql`
-  query Post($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+  query Post($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
         description
         date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
+        image {
+          childImageSharp {
+            fluid(maxWidth: 1920, quality: 90) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
       }
-      id
       html
       timeToRead
     }

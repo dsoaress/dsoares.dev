@@ -1,31 +1,32 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
-function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
+function SEO({ description, meta, title }) {
+  const { markdownRemark } = useStaticQuery(
     graphql`
       query {
-        site {
-          siteMetadata {
+        markdownRemark(frontmatter: { key: { eq: "settings" } }) {
+          frontmatter {
             title
             description
+            lang
           }
         }
       }
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || markdownRemark.frontmatter.description
 
   return (
     <Helmet
       htmlAttributes={{
-        lang
+        lang: markdownRemark.frontmatter.lang
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s | ${markdownRemark.frontmatter.title}`}
       meta={[
         {
           name: `description`,
@@ -61,14 +62,13 @@ function SEO({ description, lang, meta, title }) {
 }
 
 SEO.defaultProps = {
-  lang: `pt-br`,
+  lang: `en`,
   meta: [],
   description: ``
 }
 
 SEO.propTypes = {
   description: PropTypes.string,
-  lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired
 }

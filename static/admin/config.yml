@@ -1,119 +1,183 @@
 backend:
-  name: github
-  repo: dsoaress/dsoares.me
-  branch: master
+  name: git-gateway
+  branch: dev
 
   commit_messages:
-    create: ":pencil: Creating {{slug}}"
-    update: ":pencil: Updating {{slug}}"
-    delete: ":fire: Deleting {{slug}}"
-    uploadMedia: "[skip ci] :bento: Uploading {{path}}"
-    deleteMedia: "[skip ci] :fire: Deleting {{path}}"
+    create: ':pencil: create {{title}}'
+    update: ':pencil: update {{title}}'
+    delete: ':fire: delete {{title}}'
+    uploadMedia: ':bento: upload {{path}}'
+    deleteMedia: ':fire: delete {{path}}'
 
-media_folder: "/static/images"
-public_folder: "/images"
-
-locale: "pt"
+media_folder: 'content/assets'
+public_folder: '/assets'
+locale: 'pt'
 
 collections:
-  - name: "posts"
-    label: "Posts"
-    label_singular: "Post"
-    folder: "src/pages/blog"
+  - name: 'blog'
+    label: 'Blog'
+    label_singular: 'post'
+    folder: 'content/blog'
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    media_folder: ''
+    public_folder: ''
+    path: '{{year}}-{{month}}-{{day}}-{{title}}/index'
     editor:
       preview: false
     fields:
-      - label: "Template Key"
-        name: "templateKey"
-        widget: "hidden"
-        default: "blogPost"
+      - label: 'Key'
+        name: 'key'
+        widget: 'hidden'
+        default: 'blogPost'
 
-      - label: "Título"
-        name: "title"
-        widget: "string"
+      - label: 'Title'
+        name: 'title'
+        widget: 'string'
 
-      - label: "Descrição"
-        name: "description"
-        widget: "text"
+      - label: 'Data'
+        name: 'date'
+        widget: 'datetime'
+        dateFormat: 'DD/MM/YYYY'
+        timeFormat: 'HH:mm'
+        format: 'YYYY-MM-DD HH:mm:ss'
 
-      - label: "Imagem em destaque"
-        name: "image"
-        widget: "image"
+      - label: 'Imagem'
+        name: 'image'
+        widget: 'image'
         media_library:
           config:
-            multiple: false
+            media_folder: '/{{media_folder}}/blog/{{title}}'
+            public_folder: '{{public_folder}}/blog/{{title}}'
 
-      - label: "Data"
-        name: "date"
-        widget: "datetime"
-        dateFormat: "DD/MM/YYYY"
-        timeFormat: "HH:mm"
-        format: "YYYY-MM-DD HH:mm:ss"
+      - label: 'Arquivo(s)'
+        name: 'files'
+        widget: 'list'
+        summary: '{{fields.file}}'
+        field:
+          label: 'Arquivo'
+          name: 'file'
+          widget: 'file'
 
-      - label: "Tags"
-        name: "tags"
-        widget: "list"
+      - label: 'Descrição'
+        name: 'description'
+        widget: 'text'
 
-      - label: "Texto"
-        name: "body"
-        widget: "markdown"
+      - label: 'Tags'
+        name: 'tags'
+        widget: 'list'
 
-  - name: "pages"
-    label: "Páginas"
+      - label: 'Corpo'
+        name: 'body'
+        widget: 'markdown'
+        media_library:
+          config:
+            media_folder: '/{{media_folder}}/blog/{{title}}'
+            public_folder: '{{public_folder}}/blog/{{title}}'
+
+  - name: 'pages'
+    label: 'Páginas'
+    media_folder: ''
+    public_folder: ''
     editor:
       preview: false
     files:
-      - file: "src/pages/index.md"
-        label: "Home"
-        name: "home"
+      - file: 'content/index-page/index.md'
+        label: 'Home'
+        name: 'home'
         fields:
-          - label: "Template Key"
-            name: "templateKey"
-            widget: "hidden"
-            default: "indexPage"
+          - label: 'Key'
+            name: 'key'
+            widget: 'hidden'
+            default: 'index-page'
 
-          - label: "Título"
-            name: "title"
-            widget: "hidden"
-            default: "Home"
+          - label: 'Título'
+            name: 'title'
+            widget: 'string'
 
-          - label: "Saudação"
-            name: "greeting"
-            widget: "string"
-
-          - label: "Imagem"
-            name: "image"
-            widget: "image"
+          - label: 'Imagem'
+            name: 'image'
+            widget: 'image'
             media_library:
               config:
-                multiple: false
+                media_folder: '/{{media_folder}}/{{key}}'
+                public_folder: '{{public_folder}}/{{key}}'
 
-          - label: "Texto"
-            name: "body"
-            widget: "markdown"
+          - label: 'Corpo'
+            name: 'body'
+            widget: 'markdown'
 
-      - file: "src/pages/sobre-mim.md"
-        label: "Sobre mim"
-        name: "sobre-mim"
+      - file: 'content/about-page/index.md'
+        label: 'Sobre mim'
+        name: 'about'
         fields:
-          - label: "Template Key"
-            name: "templateKey"
-            widget: "hidden"
-            default: "aboutPage"
+          - label: 'Key'
+            name: 'key'
+            widget: 'hidden'
+            default: 'about-page'
 
-          - label: "Título"
-            name: "title"
-            widget: "string"
+          - label: 'Título'
+            name: 'title'
+            widget: 'string'
 
-          - label: "Imagem"
-            name: "image"
-            widget: "image"
+          - label: 'Imagem'
+            name: 'image'
+            widget: 'image'
             media_library:
               config:
-                multiple: false
+                media_folder: '/{{media_folder}}/{{key}}'
+                public_folder: '{{public_folder}}/{{key}}'
 
-          - label: "Texto"
-            name: "body"
-            widget: "markdown"
+          - label: 'Corpo'
+            name: 'body'
+            widget: 'markdown'
+
+      - file: 'content/settings/index.md'
+        label: 'Configurações'
+        name: 'settings'
+        fields:
+          - label: 'Key'
+            name: 'key'
+            widget: 'hidden'
+            default: 'settings'
+
+          - label: 'Título'
+            name: 'title'
+            widget: 'string'
+
+          - label: 'Descrição'
+            name: 'description'
+            widget: 'text'
+
+          - label: 'Idioma'
+            name: 'lang'
+            widget: 'string'
+
+          - label: 'Perfis sociais'
+            label_singular: 'perfil'
+            name: 'social'
+            widget: 'list'
+            fields:
+              - label: 'Opção'
+                name: 'label'
+                widget: 'select'
+                options:
+                  [
+                    'Facebook',
+                    'Messenger',
+                    'Behance',
+                    'Dribbble',
+                    'Twitter',
+                    'Snapchat',
+                    'Tiktok',
+                    'Telegram',
+                    'Wechat',
+                    'Instagram',
+                    'Github',
+                    'Whatsapp',
+                    'Email',
+                  ]
+
+              - label: 'URL'
+                name: 'url'
+                widget: 'string'
+                hint: 'Ex.: https://facebook.com/seu.usuario OU mailto:seu.nome@mail.com OU https://api.whatsapp.com/send?phone=5545999999999 (com DDI e DDD)'
