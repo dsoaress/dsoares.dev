@@ -12,6 +12,8 @@ backend:
 media_folder: 'content/assets'
 public_folder: '/assets'
 locale: 'pt'
+display_url: https://dsoares.me
+logo_url: https://dsoares.me/logo.svg
 
 collections:
   - name: 'blog'
@@ -30,7 +32,7 @@ collections:
         widget: 'hidden'
         default: 'blogPost'
 
-      - label: 'Title'
+      - label: 'Título'
         name: 'title'
         widget: 'string'
 
