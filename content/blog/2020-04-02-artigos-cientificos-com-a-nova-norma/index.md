@@ -81,10 +81,10 @@ De acordo com a NBR 6022, as sessões e suas divisões devem respeitar a NBR 602
 4. A numeração indicativa só deve ser utilizada para as sessões dos elementos textuais. Resumos, referências, apêndices, anexos e agradecimentos não devem ser numerados;
 5. Os títulos das sessões devem ser diferenciados tipograficamente para evidenciar a hierarquia. Para isso pode-se utilizar maiúsculas, negrito, itálico e sublinhado[^2]. Exemplo:
 
-**1 TÍTULO DE SESSÃO**
-**1.1 Título de sessão secundária**
-_1.1.1 Título de sessão terciária_
-_1.1.1.1 Título de sessão quaternária_
+**1 TÍTULO DE SESSÃO**  
+**1.1 Título de sessão secundária**  
+_1.1.1 Título de sessão terciária_  
+_1.1.1.1 Título de sessão quaternária_  
 1.1.1.1.1 Título da sessão quinária (não deve-se numerar a partir daqui)
 
 Elementos pós-textuais:
