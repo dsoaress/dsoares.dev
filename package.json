@@ -30,7 +30,7 @@
     "styled-media-query": "^2.1.2"
   },
   "devDependencies": {
-    "prettier": "2.1.0"
+    "prettier": "2.1.1"
   },
   "license": "MIT",
   "scripts": {
