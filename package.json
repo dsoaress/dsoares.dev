@@ -3,6 +3,12 @@
   "private": true,
   "dependencies": {
     "@netlify/plugin-lighthouse": "^1.4.0",
+    "@styled-icons/boxicons-logos": "^10.18.0",
+    "@styled-icons/boxicons-regular": "^10.18.0",
+    "@styled-icons/boxicons-solid": "^10.18.0",
+    "@styled-icons/ionicons-solid": "^10.18.0",
+    "@styled-icons/remix-fill": "^10.18.0",
+    "@styled-icons/typicons": "^10.18.0",
     "babel-plugin-styled-components": "^1.11.1",
     "gatsby": "^2.24.52",
     "gatsby-background-image": "^1.1.2",
@@ -27,7 +33,6 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
     "styled-components": "^5.1.1",
-    "styled-icons": "^10.18.0",
     "styled-media-query": "^2.1.2"
   },
   "devDependencies": {
