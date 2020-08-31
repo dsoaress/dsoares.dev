@@ -36,17 +36,19 @@ module.exports = {
     },
     `gatsby-plugin-catch-links`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-webfonts`,
       options: {
-        fonts: [
-          {
-            family: `Rubik Mono One`
-          },
-          {
-            family: `Rubik`,
-            variants: [`400`, `400i`, `700`, `700i`]
-          }
-        ]
+        fonts: {
+          google: [
+            {
+              family: `Rubik Mono One`
+            },
+            {
+              family: `Rubik`,
+              variants: [`400`, `400i`, `700`, `700i`]
+            }
+          ]
+        }
       }
     },
     {
