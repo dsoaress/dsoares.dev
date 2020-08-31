@@ -2,6 +2,7 @@
   "name": "dsoares-site",
   "private": true,
   "dependencies": {
+    "@netlify/plugin-lighthouse": "^1.4.0",
     "babel-plugin-styled-components": "^1.11.1",
     "gatsby": "^2.24.52",
     "gatsby-background-image": "^1.1.2",
