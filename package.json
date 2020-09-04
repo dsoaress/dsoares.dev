@@ -2,7 +2,7 @@
   "name": "dsoares-site",
   "private": true,
   "dependencies": {
-    "@netlify/plugin-lighthouse": "^1.4.0",
+    "@netlify/plugin-lighthouse": "^1.4.1",
     "@styled-icons/boxicons-logos": "^10.18.0",
     "@styled-icons/boxicons-regular": "^10.18.0",
     "@styled-icons/boxicons-solid": "^10.18.0",
