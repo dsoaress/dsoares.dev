@@ -6745,7 +6745,7 @@ gatsby-cli@^2.12.92:
     yargs "^15.3.1"
     yurnalist "^1.1.2"
 
-gatsby-core-utils@^1.3.18, gatsby-core-utils@^1.3.19:
+gatsby-core-utils@^1.3.19:
   version "1.3.19"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-1.3.19.tgz#d7f9981fbc85affbbc09c96ac84c76c37615fc89"
   integrity sha512-nwiU17m2lihvN7IOkBTj4n2WKc7Eb569Vv7G8dmuwthmjIB6ml98Quno5fRBCz+2DBF6R60boDfc84Qdct1LPw==
@@ -7119,10 +7119,10 @@ gatsby-telemetry@^1.3.31:
     node-fetch "^2.6.0"
     uuid "^8.3.0"
 
-gatsby-transformer-remark@^2.8.33:
-  version "2.8.33"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-2.8.33.tgz#a215c7080653cb76d139a498daa00a267fde0fd8"
-  integrity sha512-eisgyZpJ+T2ckhjDaQ8OhzG/HZZepacqNcayF1tBhshKM1/5Noii2+6SDBD7Ea0F51oTvsH0QvexHSF/CDbT7A==
+gatsby-transformer-remark@^2.8.34:
+  version "2.8.34"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-2.8.34.tgz#0bfa8c0cdfed275ed6734c02b4d76120e6a17bb8"
+  integrity sha512-sTejyQFVgTDVThr/58ZvvB4Rf3YgbMkHUEeE8s2YEYkz4FLQe77cdmqv4T2agD4igUyCNngM1Cg/CKhyRQe80A==
   dependencies:
     "@babel/runtime" "^7.10.3"
     bluebird "^3.7.2"
