@@ -63,7 +63,6 @@ module.exports = {
         icon: `content/assets/icon.png`
       }
     },
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-netlify-cms`
+    `gatsby-plugin-offline`
   ]
 }
