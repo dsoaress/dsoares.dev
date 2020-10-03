@@ -10,7 +10,8 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,yml}\""
   },
   "dependencies": {
-    "emotion-icons": "^2.15.0",
+    "@emotion-icons/boxicons-logos": "^2.10.0",
+    "@emotion-icons/boxicons-solid": "^2.10.0",
     "next": "9.5.3",
     "next-pwa": "^3.1.5",
     "react": "16.13.1",
