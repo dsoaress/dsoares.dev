@@ -1,5 +1,13 @@
 # Changelog
 
+<a name="2.0.0"></a>
+
+## 2.0.0 (2020-10-03)
+
+### Miscellaneous
+
+- 💥 Change Gatsby by Next ([#131](https://github.com/dsoaress/dsoares.me/issues/131)) [[69f0dea](https://github.com/dsoaress/dsoares.me/commit/69f0deabc9dfde244ad61e125ea717f95d79b364)]
+
 <a name="1.4.0"></a>
 
 ## 1.4.0 (2020-10-02)
