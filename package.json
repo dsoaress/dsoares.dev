@@ -4,8 +4,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "backend": "yarn workspace backend develop",
-    "frontend": "yarn workspace frontend develop",
+    "backend": "yarn workspace backend dev",
+    "frontend": "yarn workspace frontend dev",
     "start": "concurrently --kill-others-on-fail \"yarn backend\"  \"yarn frontend\"",
     "build": "yarn workspace frontend build",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,yml}\""
