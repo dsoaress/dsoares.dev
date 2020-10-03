@@ -1,10 +1,12 @@
 import Link from './link'
 import styles from '../styles/footer.module.scss'
+import { Heart } from '@emotion-icons/entypo/Heart'
 
 const Footer = () => (
   <footer className={styles.wrapper}>
     <span className={styles.item}>
-      Made with ❤ and{' '}
+      Made with{' '}
+      <Heart size="24" title="love" style={{ color: 'var(--highLight)' }} /> and{' '}
       <Link href="https://nextjs.org/" alt="Next.js" rel="">
         Next.js
       </Link>
