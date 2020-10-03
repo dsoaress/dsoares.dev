@@ -10,11 +10,13 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,yml}\""
   },
   "dependencies": {
+    "emotion-icons": "^2.15.0",
     "next": "9.5.3",
     "next-pwa": "^3.1.5",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "sass": "^1.26.11"
+    "sass": "^1.26.11",
+    "theme-ui": "^0.3.1"
   },
   "devDependencies": {
     "prettier": "2.1.2"
