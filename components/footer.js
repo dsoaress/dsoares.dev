@@ -1,6 +1,6 @@
 import Link from './link'
 import styles from '../styles/footer.module.scss'
-import { Heart } from '@emotion-icons/entypo/Heart'
+import { Heart } from '@emotion-icons/boxicons-solid/Heart'
 
 const Footer = () => (
   <footer className={styles.wrapper}>

@@ -1,4 +1,5 @@
 import Layout from '../components/layout'
+import Social from '../components/social'
 
 const Home = () => (
   <Layout title="Daniel Soares">
@@ -34,6 +35,8 @@ const Home = () => (
       Offline você me encontra (provisoriamente) em Foz do Iguaçu e online nas
       redes sociais abaixo:
     </p>
+
+    <Social />
   </Layout>
 )
 

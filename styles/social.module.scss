@@ -1,0 +1,24 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  list-style: none;
+}
+
+.item {
+  margin: 0;
+}
+
+.link {
+  color: var(--default);
+  border: none;
+
+  &:hover {
+    color: var(--highLight);
+  }
+}
+
+.iconWrapper {
+  width: 30px;
+  margin: 0 1.8rem 0 0;
+}
