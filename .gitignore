@@ -67,6 +67,8 @@ yarn-error.log
 # next.js
 .next
 out
+sw.js
+workbox-*.js
 
 # vercel
 .vercel
