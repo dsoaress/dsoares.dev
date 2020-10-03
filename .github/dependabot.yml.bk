@@ -9,26 +9,6 @@ updates:
     commit-message:
       prefix: '⬆️'
 
-  - package-ecosystem: npm
-    directory: 'backend'
-    schedule:
-      interval: 'daily'
-    open-pull-requests-limit: 20
-    target-branch: next
-    versioning-strategy: increase
-    commit-message:
-      prefix: '⬆️'
-
-  - package-ecosystem: npm
-    directory: 'frontend'
-    schedule:
-      interval: 'daily'
-    open-pull-requests-limit: 20
-    target-branch: next
-    versioning-strategy: increase
-    commit-message:
-      prefix: '⬆️'
-
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
