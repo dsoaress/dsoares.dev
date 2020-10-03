@@ -1,4 +1,7 @@
 .cache
+.next
+.vercel
+out
 package.json
 package-lock.json
 public

@@ -54,10 +54,6 @@ typings/
 # dotenv environment variable files
 .env*
 
-# gatsby files
-.cache/
-public
-
 # Mac files
 .DS_Store
 
@@ -68,5 +64,11 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 
-# Local Netlify folder
-.netlify
+# next.js
+.next
+out
+sw.js
+workbox-*.js
+
+# vercel
+.vercel

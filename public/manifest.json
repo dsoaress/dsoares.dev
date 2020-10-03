@@ -1,0 +1,23 @@
+{
+  "name": "Daniel Soares",
+  "short_name": "Daniel Soares",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "theme_color": "#bc2d57",
+  "background_color": "#1a1d23",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
