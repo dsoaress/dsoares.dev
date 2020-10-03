@@ -9,7 +9,6 @@ const SEO = () => (
     />
 
     <title>{data.title}</title>
-    <link rel="icon" href="/favicon.ico" />
 
     <meta name="description" content={data.description} />
     <meta data-react-helmet="true" property="og:title" content={data.title} />
