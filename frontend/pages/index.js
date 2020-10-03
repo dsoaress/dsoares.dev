@@ -1,7 +1,7 @@
 import Layout from '../components/layout'
 
 const Home = () => (
-  <Layout title="Next Boladão">
+  <Layout title="Daniel Soares">
     <h2>Olá,</h2>
 
     <p>
