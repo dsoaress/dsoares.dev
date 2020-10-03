@@ -1,65 +1,40 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Layout from '../components/layout'
 
-export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+const Home = () => (
+  <Layout title="Next Boladão">
+    <h2>Olá,</h2>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+    <p>
+      me chamo Daniel Soares. Um sociólogo em formação, além de desenvolvedor
+      web hobbista. Uma combinação pouco convencional.
+    </p>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+    <p>
+      Na Sociologia pesquiso o mundo do trabalho e a pobreza em economias
+      dependentes. Partindo de um arcabouço teórico marxista e comunista, estudo
+      as contradições do modo de produção capitalista e as formas de amortização
+      dos efeitos agudos da desigualdade social que esse encontrou em sua fase
+      neoliberal.
+    </p>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+    <p>
+      No desenvolvimento meus interesses são dispersos, passando desde a cultura
+      maker, automação, sistemas Linux, DevOps e desenvolvimento web. Defensor
+      do Software Livre, tenho focado bastante em estudar JavaScript e ciência
+      de dados com Python e R no tempo livre. Uma tentativa de unir meus dois
+      mundos, aparentemente inconciliáveis.
+    </p>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+    <p>
+      Ouço sempre as mesmas músicas e só assisto filmes antigos. Fã
+      incondicional de literatura distópica e de sitcons.
+    </p>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+    <p>
+      Offline você me encontra (provisoriamente) em Foz do Iguaçu e online nas
+      redes sociais abaixo:
+    </p>
+  </Layout>
+)
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
-}
+export default Home
