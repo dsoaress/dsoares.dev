@@ -1,0 +1,19 @@
+{
+  "name": "frontend",
+  "private": true,
+  "version": "2.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,yml}\""
+  },
+  "dependencies": {
+    "next": "9.5.3",
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "prettier": "2.1.2"
+  }
+}
