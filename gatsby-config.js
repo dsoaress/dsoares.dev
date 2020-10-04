@@ -63,6 +63,14 @@ module.exports = {
         icon: `content/assets/icon.png`
       }
     },
+    {
+      resolve: `gatsby-plugin-google-tagmanager`,
+      options: {
+        id: `GTM-P595KV5`,
+        includeInDevelopment: false,
+        defaultDataLayer: { platform: `gatsby` }
+      }
+    },
     `gatsby-plugin-offline`
   ]
 }
