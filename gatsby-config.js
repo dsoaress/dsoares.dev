@@ -57,9 +57,9 @@ module.exports = {
         name: `Daniel Soares`,
         short_name: `Daniel Soares`,
         start_url: `/`,
-        background_color: `#E61F5B`,
-        theme_color: `#E61F5B`,
-        display: `minimal-ui`,
+        background_color: `#0e141b`,
+        theme_color: `#ff0a78`,
+        display: `fullscreen`,
         icon: `content/assets/icon.png`
       }
     },

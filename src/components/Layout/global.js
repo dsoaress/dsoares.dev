@@ -6,11 +6,11 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    --highLight: #BC2D57;
+    --highLight: #ff0a78;
     --default: #dadada;
     --sun: yellow;
     --medium: #888;
-    --background: #1A1D23;
+    --background: #0e141b;
     --backgroundMedium: #2d313a;
   }
 
