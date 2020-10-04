@@ -42,7 +42,9 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,yml}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "stage": "vercel",
+    "deploy": "vercel --prod"
   },
   "engines": {
     "node": "12.x"
