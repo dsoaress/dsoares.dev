@@ -1,4 +1,6 @@
 .cache
+.tmp
+build
 package.json
 package-lock.json
 public

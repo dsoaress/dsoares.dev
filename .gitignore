@@ -54,9 +54,19 @@ typings/
 # dotenv environment variable files
 .env*
 
-# gatsby files
-.cache/
-public
+# Cache
+.cache
+
+# Strapi
+.tmp
+*.sql
+*.sqlite
+*.sqlite3
+build
+exports
+
+# Gatsby files
+frontend/public
 
 # Mac files
 .DS_Store
