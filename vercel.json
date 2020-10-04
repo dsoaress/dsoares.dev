@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "github": {
+    "silent": true
+  },
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/wp-login", "destination": "/wp-admin" },
+    { "source": "/wp-login/", "destination": "/wp-admin" },
+    { "source": "/wp-login.php", "destination": "/wp-admin" },
+    { "source": "/wp-admin.php", "destination": "/wp-admin" }
+  ]
+}
