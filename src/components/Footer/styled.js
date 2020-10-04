@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { Heart } from '@styled-icons/typicons/Heart'
+import { Heart } from '@styled-icons/boxicons-solid/Heart'
 
 export const Wrapper = styled.footer`
   display: flex;

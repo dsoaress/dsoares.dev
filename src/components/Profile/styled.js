@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import media from 'styled-media-query'
 import Img from 'gatsby-image'
 
 export const Wrapper = styled.div`
@@ -12,17 +11,17 @@ export const Wrapper = styled.div`
   margin: auto;
   padding: 0 30px;
 
-  ${media.lessThan('small')`
+  @media (max-width: 450px) {
     grid-template-columns: 1fr;
-  `}
+  }
 `
 
 export const Image = styled(Img)`
   border-radius: 3px;
 
-  ${media.lessThan('small')`
+  @media (max-width: 450px) {
     display: none;
-  `}
+  }
 `
 
 export const TextWrapper = styled.div``

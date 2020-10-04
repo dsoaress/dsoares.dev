@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import media from 'styled-media-query'
 import BackgroundImage from 'gatsby-background-image'
 
 export const Wrapper = styled.article``
@@ -16,9 +15,9 @@ export const Title = styled.div`
     margin: 1rem 0;
   }
 
-  ${media.lessThan('small')`
+  @media (max-width: 450px) {
     padding: 150px 30px;
-  `}
+  }
 `
 
 export const Text = styled.div`
@@ -40,11 +39,11 @@ export const Text = styled.div`
     margin-left: 165px;
     margin-right: 165px;
 
-    ${media.lessThan('small')`
+    @media (max-width: 450px) {
       margin-left: 0;
       margin-right: 0;
       padding: 0 30px;
-    `}
+    }
 
     hr {
       width: 8rem;
@@ -65,8 +64,8 @@ export const Text = styled.div`
   blockquote {
     margin: 0 0 1.8rem 8rem;
 
-    ${media.lessThan('small')`
+    @media (max-width: 450px) {
       margin-left: 1rem;
-    `}
+    }
   }
 `

@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import media from 'styled-media-query'
 
 export const Wrapper = styled.div``
 export const List = styled.ul`
@@ -8,9 +7,9 @@ export const List = styled.ul`
   margin: 0;
   list-style: none;
 
-  ${media.lessThan('small')`
+  @media (max-width: 450px) {
     justify-content: space-around;
-  `}
+  }
 `
 
 export const Item = styled.li`
@@ -29,7 +28,7 @@ export const IconWrapper = styled.div`
   width: 30px;
   margin: 1.8rem 1.8rem 0 0;
 
-  ${media.lessThan('small')`
+  @media (max-width: 450px) {
     margin: 1.8rem 0.5rem 0 0;
-  `}
+  }
 `

@@ -6,9 +6,6 @@
     "@styled-icons/boxicons-logos": "^10.18.0",
     "@styled-icons/boxicons-regular": "^10.18.0",
     "@styled-icons/boxicons-solid": "^10.18.0",
-    "@styled-icons/ionicons-solid": "^10.18.0",
-    "@styled-icons/remix-fill": "^10.18.0",
-    "@styled-icons/typicons": "^10.18.0",
     "babel-plugin-styled-components": "^1.11.1",
     "gatsby": "^2.24.67",
     "gatsby-background-image": "^1.1.2",
@@ -25,12 +22,10 @@
     "gatsby-source-filesystem": "^2.3.32",
     "gatsby-transformer-remark": "^2.8.37",
     "gatsby-transformer-sharp": "^2.5.16",
-    "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
-    "styled-components": "^5.2.0",
-    "styled-media-query": "^2.1.2"
+    "styled-components": "^5.2.0"
   },
   "devDependencies": {
     "prettier": "2.1.2"
