@@ -1,7 +1,7 @@
 {
   "name": "dsoares-site",
   "private": true,
-  "version": "1.4.0",
+  "version": "1.4.1",
   "dependencies": {
     "@styled-icons/boxicons-logos": "^10.18.0",
     "@styled-icons/boxicons-regular": "^10.18.0",
