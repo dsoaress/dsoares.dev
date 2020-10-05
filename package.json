@@ -35,12 +35,11 @@
   "scripts": {
     "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,yml}\"",
-    "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "stage": "vercel",
-    "deploy": "vercel --prod"
+    "stage": "yarn build && vercel",
+    "deploy": "yarn stage --prod",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,yml}\""
   },
   "engines": {
     "node": "12.x"
