@@ -1,5 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+import { IconContext } from 'react-icons'
 
 import Icons from './Icons'
 import * as S from './styled'
@@ -36,7 +37,9 @@ const Social = () => {
                   rel="noopener noreferrer"
                 >
                   <S.IconWrapper>
-                    <Icon />
+                    <IconContext.Provider value={{ size: '1.6rem' }}>
+                      <Icon />
+                    </IconContext.Provider>
                   </S.IconWrapper>
                 </S.Link>
               )}

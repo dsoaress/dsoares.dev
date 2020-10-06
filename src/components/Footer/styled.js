@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { Heart } from '@styled-icons/boxicons-solid/Heart'
+import { AiTwotoneHeart } from 'react-icons/ai'
 
 export const Wrapper = styled.footer`
   display: flex;
@@ -15,9 +15,10 @@ export const Item = styled.p`
   line-height: 1;
 `
 
-export const HeartIcon = styled(Heart)`
+export const HeartIcon = styled(AiTwotoneHeart)`
   width: 20px;
   height: 20px;
+  vertical-align: middle;
   margin-bottom: 5px;
   fill: var(--highLight);
 `
