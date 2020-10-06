@@ -1,7 +1,9 @@
-import { Instagram } from '@styled-icons/boxicons-logos/Instagram'
-import { Github } from '@styled-icons/boxicons-logos/Github'
-import { Whatsapp } from '@styled-icons/boxicons-logos/Whatsapp'
-import { Envelope as Email } from '@styled-icons/boxicons-solid/Envelope'
+import {
+  FaInstagram as Instagram,
+  FaGithub as Github,
+  FaWhatsapp as Whatsapp,
+  FaRegEnvelope as Email
+} from 'react-icons/fa'
 
 const Icons = {
   Instagram,

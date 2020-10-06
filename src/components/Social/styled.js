@@ -25,7 +25,7 @@ export const Link = styled.a`
 `
 
 export const IconWrapper = styled.div`
-  width: 30px;
+  /* width: 30px; */
   margin: 1.8rem 1.8rem 0 0;
 
   @media (max-width: 450px) {

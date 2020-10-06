@@ -1,6 +1,5 @@
 import styled from 'styled-components'
-import { Calendar } from '@styled-icons/boxicons-regular/Calendar'
-import { TimeFive as Clock } from '@styled-icons/boxicons-regular/TimeFive'
+import { BiCalendar, BiTimeFive } from 'react-icons/bi'
 
 export const Meta = styled.span`
   color: var(--medium);
@@ -8,14 +7,18 @@ export const Meta = styled.span`
   font-size: 0.75rem;
 `
 
-export const CalendarIcon = styled(Calendar)`
+export const CalendarIcon = styled(BiCalendar)`
   color: var(--highLight);
   width: 15px;
+  height: 15px;
+  vertical-align: middle;
   margin: -2px 2px 0 0;
 `
 
-export const ClockIcon = styled(Clock)`
+export const ClockIcon = styled(BiTimeFive)`
   color: var(--highLight);
   width: 15px;
+  height: 15px;
+  vertical-align: middle;
   margin: -2px 2px 0 20px;
 `

@@ -3,9 +3,6 @@
   "private": true,
   "version": "1.4.1",
   "dependencies": {
-    "@styled-icons/boxicons-logos": "^10.18.0",
-    "@styled-icons/boxicons-regular": "^10.18.0",
-    "@styled-icons/boxicons-solid": "^10.18.0",
     "babel-plugin-styled-components": "^1.11.1",
     "gatsby": "^2.24.67",
     "gatsby-background-image": "^1.1.2",
@@ -26,6 +23,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
+    "react-icons": "^3.11.0",
     "styled-components": "^5.2.0"
   },
   "devDependencies": {
