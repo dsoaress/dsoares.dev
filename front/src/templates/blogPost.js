@@ -11,7 +11,10 @@ const BlogPost = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title={post.frontmatter.title} description={post.frontmatter.description} />
+      <SEO
+        title={post.frontmatter.title}
+        description={post.frontmatter.description}
+      />
       <S.Wrapper>
         <S.Image fluid={post.frontmatter.image.childImageSharp.fluid}>
           <S.Title>

@@ -1,16 +1,40 @@
 export default {
   name: 'siteSettings',
+  title: 'Configurações',
   type: 'document',
   __experimental_actions: [/*'create',*/ 'update', /*'delete',*/ 'publish'],
   fields: [
     {
-      name: 'name',
-      title: 'Name',
+      name: 'title',
+      title: 'Título do site',
       type: 'string'
     },
     {
+      name: 'description',
+      title: 'Descrição',
+      type: 'text'
+    },
+    {
+      name: 'lang',
+      title: 'Idioma',
+      type: 'string'
+    },
+    {
+      name: 'gtm',
+      title: 'Id do Google Tag Manager',
+      type: 'string'
+    },
+    {
+      name: 'favicon',
+      title: 'Favicon',
+      type: 'image',
+      options: {
+        hotspot: true
+      }
+    },
+    {
       name: 'image',
-      title: 'Image',
+      title: 'Foto de perfil',
       type: 'image',
       options: {
         hotspot: true
