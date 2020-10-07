@@ -1,7 +1,10 @@
+import { BsFileEarmarkText } from 'react-icons/bs'
+
 export default {
   name: 'post',
-  title: '💌 Post',
+  title: 'Post',
   type: 'document',
+  icon: BsFileEarmarkText,
   fields: [
     {
       name: 'title',
