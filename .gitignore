@@ -8,7 +8,7 @@ yarn-error.log*
 node_modules
 
 # Dotenv environment variable files
-.env*
+.env
 
 # Sanity files
 dist
