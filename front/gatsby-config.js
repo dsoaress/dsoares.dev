@@ -1,3 +1,4 @@
+require('dotenv').config()
 const {
   api: { projectId, dataset }
 } = requireConfig('../back/sanity.json')

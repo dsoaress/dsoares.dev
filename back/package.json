@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@sanity/base": "^2.0.1",
+    "@sanity/cli": "^2.0.1",
     "@sanity/components": "^2.0.1",
     "@sanity/core": "^2.0.1",
     "@sanity/default-layout": "^2.0.1",
