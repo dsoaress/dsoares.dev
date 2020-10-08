@@ -1,8 +1,7 @@
 export default {
   name: 'siteSettings',
-  title: 'Configurações',
   type: 'document',
-  __experimental_actions: [/*'create',*/ 'update', /*'delete',*/ 'publish'],
+  __experimental_actions: ['update', 'publish'],
   fields: [
     {
       name: 'title',
@@ -74,8 +73,7 @@ export default {
   ],
   preview: {
     select: {
-      title: 'name',
-      media: 'image'
+      title: 'title'
     }
   }
 }
