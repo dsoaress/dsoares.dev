@@ -29,8 +29,13 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile
 
-      - name: Build
-        run: yarn build
+      - name: Test backend
+        run: yarn back:test
+
+      - name: Test frontend
+        run: yarn front:build
+        env:
+          SANITY_TOKEN: ${{ secrets.SANITY_TOKEN }}
 
       - name: Merge
         uses: pascalgn/automerge-action@v0.12.0
