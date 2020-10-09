@@ -32,8 +32,8 @@ const BlogList = props => {
             title={node.title}
             date={node.date}
             description={node.description}
-            image={node.mainImage.asset.fluid}
-            slug={node.slug.current}
+            image={node.mainImage?.asset.fluid}
+            slug={node.slug?.current}
           />
         ))}
 
