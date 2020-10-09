@@ -36,7 +36,7 @@ const About = () => {
           )}
           <Social />
         </S.TextWrapper>
-        <S.Image fluid={sanitySiteSettings.bio.image.asset.fluid} />
+        <S.Image fluid={sanitySiteSettings.bio.image?.asset.fluid} />
       </S.Grid>
     </S.Wrapper>
   )

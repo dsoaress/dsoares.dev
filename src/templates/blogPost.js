@@ -14,7 +14,7 @@ const BlogPost = ({ data }) => {
     <Layout>
       <SEO title={post.title} description={post.description} />
       <S.Wrapper>
-        <S.Image fluid={post.mainImage.asset.fluid}>
+        <S.Image fluid={post.mainImage?.asset.fluid}>
           <S.Title>
             <PostMeta date={post.date} />
             <h1>{post.title}</h1>

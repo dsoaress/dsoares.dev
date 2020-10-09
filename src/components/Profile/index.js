@@ -28,7 +28,7 @@ const Profile = () => {
 
   return (
     <S.Wrapper>
-      <S.Image fluid={sanitySiteSettings.bioShort.image.asset.fluid} />
+      <S.Image fluid={sanitySiteSettings.bioShort.image?.asset.fluid} />
       <S.TextWrapper>
         <h1>{sanitySiteSettings.bioShort.title}</h1>
         {sanitySiteSettings.bioShort._rawText && (
