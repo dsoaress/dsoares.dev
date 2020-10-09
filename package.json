@@ -12,7 +12,7 @@
     "back:test": "yarn workspace back test",
     "front:clean": "yarn workspace front clean",
     "front:dev": "yarn workspace front dev",
-    "front:build": "yarn workspace frond build",
+    "front:build": "yarn workspace front build",
     "dev": "npm-run-all --parallel back:dev front:dev",
     "build": "npm-run-all back:build front:build",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,yml}\""

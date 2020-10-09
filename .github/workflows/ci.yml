@@ -30,10 +30,10 @@ jobs:
         run: yarn --frozen-lockfile
 
       - name: Test backend
-        run: yarn back-test
+        run: yarn back:test
 
       - name: Test frontend
-        run: yarn front-build
+        run: yarn front:build
 
       - name: Merge
         uses: pascalgn/automerge-action@v0.12.0
