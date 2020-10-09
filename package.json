@@ -1,6 +1,7 @@
 {
   "name": "dsoares-site",
   "private": true,
+  "version": "1.4.3",
   "workspaces": [
     "back",
     "front"
