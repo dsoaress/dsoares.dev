@@ -1,25 +1,26 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
+import BlockContent from '../BlockContent'
 import Social from '../Social'
 import * as S from './styled'
 
 const About = () => {
-  const { markdownRemark } = useStaticQuery(
+  const { sanitySiteSettings } = useStaticQuery(
     graphql`
       query {
-        markdownRemark(frontmatter: { key: { eq: "about-page" } }) {
-          frontmatter {
+        sanitySiteSettings {
+          bio {
             title
             image {
-              childImageSharp {
-                fluid(maxWidth: 420, quality: 80) {
-                  ...GatsbyImageSharpFluid_withWebp
+              asset {
+                fluid(maxWidth: 420) {
+                  ...GatsbySanityImageFluid
                 }
               }
             }
+            _rawText
           }
-          html
         }
       }
     `
@@ -27,15 +28,15 @@ const About = () => {
 
   return (
     <S.Wrapper>
-      <h1>{markdownRemark.frontmatter.title}</h1>
+      <h1>{sanitySiteSettings.bio.title}</h1>
       <S.Grid>
         <S.TextWrapper>
-          <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
+          {sanitySiteSettings.bio._rawText && (
+            <BlockContent blocks={sanitySiteSettings.bio._rawText} />
+          )}
           <Social />
         </S.TextWrapper>
-        <S.Image
-          fluid={markdownRemark.frontmatter.image.childImageSharp.fluid}
-        />
+        <S.Image fluid={sanitySiteSettings.bio.image.asset.fluid} />
       </S.Grid>
     </S.Wrapper>
   )

@@ -6,15 +6,13 @@ import Icons from './Icons'
 import * as S from './styled'
 
 const Social = () => {
-  const { markdownRemark } = useStaticQuery(
+  const { sanitySiteSettings } = useStaticQuery(
     graphql`
       query {
-        markdownRemark(frontmatter: { key: { eq: "settings" } }) {
-          frontmatter {
-            social {
-              label
-              url
-            }
+        sanitySiteSettings {
+          links {
+            label
+            url
           }
         }
       }
@@ -24,15 +22,15 @@ const Social = () => {
   return (
     <S.Wrapper>
       <S.List>
-        {markdownRemark.frontmatter.social.map((social, i) => {
-          const Icon = Icons[social.label]
+        {sanitySiteSettings.links.map((link, i) => {
+          const Icon = Icons[link.label]
 
           return (
             <S.Item key={i}>
-              {social.url && (
+              {link.url && (
                 <S.Link
-                  href={social.url}
-                  title={social.label}
+                  href={link.url}
+                  title={link.label}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

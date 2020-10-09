@@ -20,6 +20,11 @@ export default {
         maxLength: 96
       }
     },
+    {
+      name: 'description',
+      title: 'Descrição',
+      type: 'text'
+    },
     // {
     //   name: 'author',
     //   title: 'Author',

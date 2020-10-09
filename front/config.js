@@ -1,11 +1,17 @@
-const fetch = require('node-fetch')
-const url =
-  'https://gpnzjmky.api.sanity.io/v1/data/query/production?query=*[_id%20==%20$id]&$id=%22siteSettings%22'
+async function fetchData(graphql) {
+  const result = await graphql(`
+    query {
+      sanitySiteSettings {
+        title
+      }
+    }
+  `)
 
-const config = fetch(url)
-  .then(response => response.json())
-  .then(data => {
-    console.log(data)
-  })
+  if (result.errors) throw result.errors
 
-module.exports = config
+  const postEdges = (result.data.sanitySiteSettings || {}).edges || []
+}
+
+exports.config = async ({ graphql }) => {
+  await fetchData(graphql)
+}

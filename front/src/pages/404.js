@@ -1,4 +1,5 @@
 import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
 import Layout from '../components/Layout'
@@ -11,19 +12,29 @@ const Wrapper = styled.div`
   text-align: center;
 `
 
-const NotFoundPage = () => (
-  <Layout>
-    <SEO title="404: não encontrado" />
-    <Wrapper>
-      <h1>
-        Não encontrado{' '}
-        <span role="img" aria-label="sed">
-          😥
-        </span>
-      </h1>
-      <p>O que você está buscando não existe.</p>
-    </Wrapper>
-  </Layout>
-)
+const NotFoundPage = () => {
+  const { sanitySiteSettings } = useStaticQuery(
+    graphql`
+      query {
+        sanitySiteSettings {
+          notFoundPage {
+            message
+            title
+          }
+        }
+      }
+    `
+  )
+
+  return (
+    <Layout>
+      <SEO title={sanitySiteSettings.notFoundPage.title} />
+      <Wrapper>
+        <h1>{sanitySiteSettings.notFoundPage.title}</h1>
+        <p>{sanitySiteSettings.notFoundPage.message}</p>
+      </Wrapper>
+    </Layout>
+  )
+}
 
 export default NotFoundPage

@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 `
 
 const BlogList = props => {
-  const posts = props.data.allMarkdownRemark.edges
+  const posts = props.data.allSanityPost.edges
   const { currentPage, numPages } = props.pageContext
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
@@ -29,12 +29,11 @@ const BlogList = props => {
         {posts.map(({ node }, i) => (
           <PostItem
             key={i}
-            title={node.frontmatter.title}
-            date={node.frontmatter.date}
-            description={node.frontmatter.description}
-            image={node.frontmatter.image.childImageSharp.fluid}
-            timeToRead={node.timeToRead}
-            slug={node.fields.slug}
+            title={node.title}
+            date={node.date}
+            description={node.description}
+            image={node.mainImage.asset.fluid}
+            slug={node.slug.current}
           />
         ))}
 
@@ -55,30 +54,26 @@ export default BlogList
 
 export const PostListQuery = graphql`
   query PostListQuery($skip: Int!, $limit: Int!) {
-    allMarkdownRemark(
-      sort: { fields: frontmatter___date, order: DESC }
-      filter: { frontmatter: { key: { eq: "blogPost" } } }
+    allSanityPost(
+      sort: { fields: date, order: DESC }
       limit: $limit
       skip: $skip
     ) {
       edges {
         node {
-          fields {
-            slug
+          slug {
+            current
           }
-          frontmatter {
-            date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
-            description
-            title
-            image {
-              childImageSharp {
-                fluid(maxWidth: 300, quality: 80) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+          date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
+          description
+          title
+          mainImage {
+            asset {
+              fluid(maxWidth: 300) {
+                ...GatsbySanityImageFluid
               }
             }
           }
-          timeToRead
         }
       }
     }

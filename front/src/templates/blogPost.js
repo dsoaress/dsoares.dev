@@ -4,54 +4,45 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import PostMeta from '../components/PostMeta'
+import BlockContent from '../components/BlockContent'
 import * as S from '../components/Post/styled.js'
 
 const BlogPost = ({ data }) => {
-  const post = data.markdownRemark
-
+  const post = data.post
+  console.log(post._rawBody)
   return (
     <Layout>
-      <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description}
-      />
+      <SEO title={post.title} description={post.description} />
       <S.Wrapper>
-        <S.Image fluid={post.frontmatter.image.childImageSharp.fluid}>
+        <S.Image fluid={post.mainImage.asset.fluid}>
           <S.Title>
-            <PostMeta
-              date={post.frontmatter.date}
-              timeToRead={post.timeToRead}
-            />
-            <h1>{post.frontmatter.title}</h1>
+            <PostMeta date={post.date} />
+            <h1>{post.title}</h1>
           </S.Title>
         </S.Image>
-        <S.Text
-          dangerouslySetInnerHTML={{
-            __html: '<p>' + post.frontmatter.description + '</p>' + post.html
-          }}
-        />
+        <S.Text>
+          {post._rawBody && <BlockContent blocks={post._rawBody} />}
+        </S.Text>
       </S.Wrapper>
     </Layout>
   )
 }
 
 export const query = graphql`
-  query Post($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      frontmatter {
-        title
-        description
-        date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
-        image {
-          childImageSharp {
-            fluid(maxWidth: 1920, quality: 90) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
+  query Post($id: String!) {
+    post: sanityPost(id: { eq: $id }) {
+      id
+      title
+      date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
+      description
+      mainImage {
+        asset {
+          fluid(maxWidth: 1920) {
+            ...GatsbySanityImageFluid
           }
         }
       }
-      html
-      timeToRead
+      _rawBody
     }
   }
 `

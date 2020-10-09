@@ -3,29 +3,27 @@ import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
 function SEO({ description, meta, title }) {
-  const { markdownRemark } = useStaticQuery(
+  const { sanitySiteSettings } = useStaticQuery(
     graphql`
       query {
-        markdownRemark(frontmatter: { key: { eq: "settings" } }) {
-          frontmatter {
-            title
-            description
-            lang
-          }
+        sanitySiteSettings {
+          title
+          description
+          lang
         }
       }
     `
   )
 
-  const metaDescription = description || markdownRemark.frontmatter.description
+  const metaDescription = description || sanitySiteSettings.description
 
   return (
     <Helmet
       htmlAttributes={{
-        lang: markdownRemark.frontmatter.lang
+        lang: sanitySiteSettings.lang
       }}
       title={title}
-      titleTemplate={`%s | ${markdownRemark.frontmatter.title}`}
+      titleTemplate={`%s | ${sanitySiteSettings.title}`}
       meta={[
         {
           name: `description`,

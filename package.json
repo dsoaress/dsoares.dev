@@ -6,19 +6,19 @@
     "front"
   ],
   "scripts": {
-    "back-dev": "yarn workspace back dev",
-    "back-build": "yarn workspace back build",
-    "back-test": "yarn workspace back test",
-    "front-dev": "yarn workspace front dev",
-    "front-build": "yarn workspace frond build",
-    "dev": "npm-run-all --parallel back-dev front-dev",
-    "build": "npm-run-all back-build front-build",
+    "back:dev": "yarn workspace back dev",
+    "back:build": "yarn workspace back build",
+    "back:deploy": "yarn workspace back deploy",
+    "back:test": "yarn workspace back test",
+    "front:clean": "yarn workspace front clean",
+    "front:dev": "yarn workspace front dev",
+    "front:build": "yarn workspace frond build",
+    "dev": "npm-run-all --parallel back:dev front:dev",
+    "build": "npm-run-all back:build front:build",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,yml}\""
   },
   "devDependencies": {
-    "prettier": "^2.1.2"
-  },
-  "dependencies": {
+    "prettier": "^2.1.2",
     "yarn-run-all": "^3.1.1"
   }
 }

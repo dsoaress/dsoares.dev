@@ -7,39 +7,8 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `content`,
-        path: `${__dirname}/content`
-      }
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 1200,
-              linkImagesToOriginal: false,
-              showCaptions: true,
-              quality: 80,
-              withWebp: true
-            }
-          },
-          {
-            resolve: `gatsby-remark-copy-linked-files`,
-            options: {
-              destinationDir: f => `static/${f.hash}/${f.name}`
-            }
-          }
-        ]
-      }
-    },
-    `gatsby-plugin-catch-links`,
     {
       resolve: 'gatsby-source-sanity',
       options: {
@@ -75,7 +44,7 @@ module.exports = {
         background_color: `#0e141b`,
         theme_color: `#ff0a78`,
         display: `fullscreen`,
-        icon: `content/assets/icon.png`
+        icon: `src/assets/icon.png`
       }
     },
     {

@@ -1,8 +1,8 @@
 import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
 import SEO from '../components/SEO'
-import video from '../../content/assets/wp-admin.mp4'
 
 const Wrapper = styled.video`
   position: fixed;
@@ -13,11 +13,33 @@ const Wrapper = styled.video`
   background: black;
 `
 
-const WPAdminPage = () => (
-  <Wrapper autoPlay playsInline muted loop>
-    <SEO title="Hey you 😘" />
-    <source src={video} type="video/mp4" />
-  </Wrapper>
-)
+const WPAdminPage = () => {
+  const { sanitySiteSettings } = useStaticQuery(
+    graphql`
+      query {
+        sanitySiteSettings {
+          easterEgg {
+            title
+            video {
+              asset {
+                url
+              }
+            }
+          }
+        }
+      }
+    `
+  )
+
+  return (
+    <Wrapper autoPlay playsInline muted loop>
+      <SEO title={sanitySiteSettings.easterEgg.title} />
+      <source
+        src={sanitySiteSettings.easterEgg.video.asset.url}
+        type="video/mp4"
+      />
+    </Wrapper>
+  )
+}
 
 export default WPAdminPage

@@ -1,25 +1,26 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
+import BlockContent from '../BlockContent'
 import Social from '../Social'
 import * as S from './styled'
 
 const Profile = () => {
-  const { markdownRemark } = useStaticQuery(
+  const { sanitySiteSettings } = useStaticQuery(
     graphql`
       query {
-        markdownRemark(frontmatter: { key: { eq: "index-page" } }) {
-          frontmatter {
+        sanitySiteSettings {
+          bioShort {
             title
             image {
-              childImageSharp {
-                fluid(maxWidth: 340, quality: 80) {
-                  ...GatsbyImageSharpFluid_withWebp
+              asset {
+                fluid(maxWidth: 340) {
+                  ...GatsbySanityImageFluid
                 }
               }
             }
+            _rawText
           }
-          html
         }
       }
     `
@@ -27,10 +28,12 @@ const Profile = () => {
 
   return (
     <S.Wrapper>
-      <S.Image fluid={markdownRemark.frontmatter.image.childImageSharp.fluid} />
+      <S.Image fluid={sanitySiteSettings.bioShort.image.asset.fluid} />
       <S.TextWrapper>
-        <h1>{markdownRemark.frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
+        <h1>{sanitySiteSettings.bioShort.title}</h1>
+        {sanitySiteSettings.bioShort._rawText && (
+          <BlockContent blocks={sanitySiteSettings.bioShort._rawText} />
+        )}
         <Social />
       </S.TextWrapper>
     </S.Wrapper>

@@ -5,18 +5,16 @@ import Nav from '../Nav'
 import * as S from './styled'
 
 const Header = () => {
-  const { markdownRemark } = useStaticQuery(
+  const { sanitySiteSettings } = useStaticQuery(
     graphql`
       query {
-        markdownRemark(frontmatter: { key: { eq: "settings" } }) {
-          frontmatter {
-            title
-          }
+        sanitySiteSettings {
+          title
         }
       }
     `
   )
-  const title = markdownRemark.frontmatter.title
+  const title = sanitySiteSettings.title
     .split(/(\s+)/)
     .filter(e => e.trim().length > 0)
 

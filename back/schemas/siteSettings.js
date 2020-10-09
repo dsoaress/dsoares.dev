@@ -32,43 +32,29 @@ export default {
       }
     },
     {
-      name: 'image',
-      title: 'Foto de perfil',
-      type: 'image',
-      options: {
-        hotspot: true
-      }
-    },
-    {
       title: 'Links',
       name: 'links',
       type: 'links'
     },
     {
-      name: 'shortBio',
       title: 'Bio curta',
-      type: 'array',
-      of: [
-        {
-          title: 'Block',
-          type: 'block',
-          styles: [{ title: 'Normal', value: 'normal' }],
-          lists: []
-        }
-      ]
+      name: 'bioShort',
+      type: 'bioShort'
     },
     {
-      name: 'bio',
       title: 'Bio longa',
-      type: 'array',
-      of: [
-        {
-          title: 'Block',
-          type: 'block',
-          styles: [{ title: 'Normal', value: 'normal' }],
-          lists: []
-        }
-      ]
+      name: 'bio',
+      type: 'bio'
+    },
+    {
+      title: 'Página 404',
+      name: 'notFoundPage',
+      type: 'notFoundPage'
+    },
+    {
+      title: 'Easter egg',
+      name: 'easterEgg',
+      type: 'easterEgg'
     }
   ],
   preview: {
