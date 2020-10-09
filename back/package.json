@@ -4,7 +4,7 @@
   "version": "0.0.8",
   "license": "MIT",
   "scripts": {
-    "build": "sanity build",
+    "build": "sanity build public -y",
     "dev": "sanity start",
     "deploy:graphql": "sanity graphql deploy",
     "deploy:studio": "sanity deploy",
