@@ -1,7 +1,4 @@
 require('dotenv').config()
-const {
-  api: { projectId, dataset }
-} = requireConfig('../back/sanity.json')
 
 module.exports = {
   plugins: [
@@ -12,8 +9,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-sanity',
       options: {
-        projectId,
-        dataset,
+        projectId: process.env.SANITY_ID,
+        dataset: process.env.SANITY_DATASET,
         token: process.env.SANITY_TOKEN,
         watchMode: false,
         overlayDrafts: false
@@ -57,20 +54,4 @@ module.exports = {
     },
     `gatsby-plugin-offline`
   ]
-}
-
-function requireConfig(path) {
-  try {
-    return require(path)
-  } catch (e) {
-    console.error(
-      'Failed to require sanity.json. Fill in projectId and dataset name manually in gatsby-config.js'
-    )
-    return {
-      api: {
-        projectId: process.env.SANITY_PROJECT_ID || '',
-        dataset: process.env.SANITY_DATASET || ''
-      }
-    }
-  }
 }

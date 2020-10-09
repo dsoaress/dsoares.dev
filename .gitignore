@@ -10,9 +10,6 @@ node_modules
 # Dotenv environment variable files
 .env
 
-# Sanity files
-dist
-
 # Gatsby files
 .cache
 public

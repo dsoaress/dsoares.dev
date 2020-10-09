@@ -29,12 +29,11 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile
 
-      - name: Test backend
-        run: yarn back:test
-
       - name: Test frontend
-        run: yarn front:build
+        run: yarn build
         env:
+          SANITY_ID: ${{ secrets.SANITY_ID }}
+          SANITY_DATASET: ${{ secrets.SANITY_DATASET }}
           SANITY_TOKEN: ${{ secrets.SANITY_TOKEN }}
 
       - name: Merge
