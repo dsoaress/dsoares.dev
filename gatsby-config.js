@@ -1,4 +1,4 @@
-require('dotenv').config()
+require(`dotenv`).config()
 
 module.exports = {
   plugins: [
@@ -7,10 +7,10 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: 'gatsby-source-sanity',
+      resolve: `gatsby-source-sanity`,
       options: {
-        projectId: process.env.SANITY_ID,
-        dataset: process.env.SANITY_DATASET,
+        projectId: `gpnzjmky`,
+        dataset: `production`,
         token: process.env.SANITY_TOKEN,
         watchMode: process.env.OVERLAY_DRAFTS,
         overlayDrafts: process.env.OVERLAY_DRAFTS

@@ -27,7 +27,7 @@ async function createBlogPostPages(graphql, actions, reporter) {
 
     createPage({
       path,
-      component: require.resolve('./src/templates/blogPost.js'),
+      component: require.resolve(`./src/templates/blogPost.js`),
       context: { id }
     })
   })
@@ -38,7 +38,7 @@ async function createBlogPostPages(graphql, actions, reporter) {
   Array.from({ length: numPages }).forEach((_, i) => {
     createPage({
       path: i === 0 ? `/blog` : `/blog/${i + 1}`,
-      component: require.resolve('./src/templates/blogList.js'),
+      component: require.resolve(`./src/templates/blogList.js`),
       context: {
         limit: postsPerPage,
         skip: i * postsPerPage,
