@@ -1,8 +1,10 @@
 import React from 'react'
 import BaseBlockContent from '@sanity/block-content-to-react'
+import Image from '../Image'
 
 const serializers = {
   types: {
+    imageBlock: Image,
     block(props) {
       switch (props.node.style) {
         case 'h1':

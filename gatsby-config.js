@@ -1,4 +1,6 @@
 require(`dotenv`).config()
+const clientConfig = require(`./client-config`)
+const isProd = process.env.NODE_ENV === `production`
 
 module.exports = {
   plugins: [
@@ -9,11 +11,10 @@ module.exports = {
     {
       resolve: `gatsby-source-sanity`,
       options: {
-        projectId: `gpnzjmky`,
-        dataset: `production`,
+        ...clientConfig.sanity,
         token: process.env.SANITY_TOKEN,
-        watchMode: process.env.OVERLAY_DRAFTS,
-        overlayDrafts: process.env.OVERLAY_DRAFTS
+        watchMode: !isProd,
+        overlayDrafts: !isProd
       }
     },
     {
