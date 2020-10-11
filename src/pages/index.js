@@ -1,10 +1,11 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import Layout from '../components/layout'
-import SEO from '../components/seo'
-import BioShort from '../components/bio-short'
-import PostItem from '../components/post-item'
+import Layout from '@components/layout'
+import SEO from '@components/seo'
+import Container from '@components/container'
+import BioShort from '@components/bio-short'
+import PostItem from '@components/post-item'
 
 const IndexPage = () => {
   const data = useStaticQuery(
@@ -52,7 +53,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Blog" />
-      <div>
+      <Container>
         <BioShort
           image={bioShort.image?.asset.fluid}
           text={bioShort._rawText}
@@ -69,7 +70,7 @@ const IndexPage = () => {
             slug={`/${node.slug?.current}/`}
           />
         ))}
-      </div>
+      </Container>
     </Layout>
   )
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 
-import PostMeta from './post-meta'
+import PostMeta from '@components/post-meta'
 
 const PostItem = ({ date, image, slug, title }) => (
   <div>

@@ -19,6 +19,12 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: { '@components': 'src/components' }
+      }
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Daniel Soares`,

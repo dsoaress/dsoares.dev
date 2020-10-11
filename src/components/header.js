@@ -1,5 +1,5 @@
-import React from 'react'
-import { useStaticQuery, graphql, Link } from 'gatsby'
+import Container from '@components/container'
+import Link from '@components/link'
 
 const Header = () => {
   const { sanitySiteSettings } = useStaticQuery(

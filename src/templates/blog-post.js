@@ -2,10 +2,10 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 
-import Layout from '../components/layout'
-import SEO from '../components/seo'
-import PostMeta from '../components/post-meta'
-import BlockContent from '../components/block-content'
+import Layout from '@components/layout'
+import SEO from '@components/seo'
+import PostMeta from '@components/post-meta'
+import BlockContent from '@components/block-content'
 
 const BlogPost = ({ data }) => {
   const post = data.post
