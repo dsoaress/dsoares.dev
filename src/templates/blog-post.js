@@ -1,11 +1,11 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import BackgroundImage from 'gatsby-background-image'
 
-import Layout from '../components/Layout'
-import SEO from '../components/SEO'
-import PostMeta from '../components/PostMeta'
-import BlockContent from '../components/BlockContent'
-import * as S from '../components/Post/styled.js'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import PostMeta from '../components/post-meta'
+import BlockContent from '../components/block-content'
 
 const BlogPost = ({ data }) => {
   const post = data.post
@@ -13,17 +13,15 @@ const BlogPost = ({ data }) => {
   return (
     <Layout>
       <SEO title={post.title} description={post.description} />
-      <S.Wrapper>
-        <S.Image fluid={post.mainImage?.asset.fluid}>
-          <S.Title>
+      <div>
+        <BackgroundImage fluid={post.mainImage?.asset.fluid}>
+          <div>
             <PostMeta date={post.date} />
             <h1>{post.title}</h1>
-          </S.Title>
-        </S.Image>
-        <S.Text>
-          {post._rawBody && <BlockContent blocks={post._rawBody} />}
-        </S.Text>
-      </S.Wrapper>
+          </div>
+        </BackgroundImage>
+        {post._rawBody && <BlockContent blocks={post._rawBody} />}
+      </div>
     </Layout>
   )
 }

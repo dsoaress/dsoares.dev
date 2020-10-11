@@ -1,9 +1,19 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { IconContext } from 'react-icons'
+import {
+  FaInstagram as Instagram,
+  FaGithub as Github,
+  FaWhatsapp as Whatsapp,
+  FaRegEnvelope as Email
+} from 'react-icons/fa'
 
-import Icons from './Icons'
-import * as S from './styled'
+const Icons = {
+  Instagram,
+  Github,
+  Whatsapp,
+  Email
+}
 
 const Social = () => {
   const { sanitySiteSettings } = useStaticQuery(
@@ -20,32 +30,32 @@ const Social = () => {
   )
 
   return (
-    <S.Wrapper>
-      <S.List>
+    <div>
+      <ul>
         {sanitySiteSettings.links.map((link, i) => {
           const Icon = Icons[link.label]
 
           return (
-            <S.Item key={i}>
+            <li key={i}>
               {link.url && (
-                <S.Link
+                <a
                   href={link.url}
                   title={link.label}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <S.IconWrapper>
+                  <div>
                     <IconContext.Provider value={{ size: '1.6rem' }}>
                       <Icon />
                     </IconContext.Provider>
-                  </S.IconWrapper>
-                </S.Link>
+                  </div>
+                </a>
               )}
-            </S.Item>
+            </li>
           )
         })}
-      </S.List>
-    </S.Wrapper>
+      </ul>
+    </div>
   )
 }
 

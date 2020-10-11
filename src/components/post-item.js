@@ -1,20 +1,20 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import Img from 'gatsby-image'
 
-import PostMeta from '../PostMeta'
-import * as S from './styled'
+import PostMeta from './post-meta'
 
 const PostItem = ({ slug, date, timeToRead, title, description, image }) => (
-  <S.Wrapper>
-    <S.Image fluid={image} />
-    <S.TextWrapper>
+  <div>
+    <Img fluid={image} />
+    <div>
       <PostMeta date={date} timeToRead={timeToRead} />
       <Link to={slug} alt={title}>
-        <S.Title>{title}</S.Title>
+        <h2>{title}</h2>
       </Link>
       <p>{description}</p>
-    </S.TextWrapper>
-  </S.Wrapper>
+    </div>
+  </div>
 )
 
 export default PostItem

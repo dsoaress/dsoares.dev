@@ -1,9 +1,9 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
-import BlockContent from '../BlockContent'
-import Social from '../Social'
-import * as S from './styled'
+import BlockContent from './block-content'
+import Social from './social'
 
 const Profile = () => {
   const { sanitySiteSettings } = useStaticQuery(
@@ -27,16 +27,16 @@ const Profile = () => {
   )
 
   return (
-    <S.Wrapper>
-      <S.Image fluid={sanitySiteSettings.bioShort.image?.asset.fluid} />
-      <S.TextWrapper>
+    <div>
+      <Img fluid={sanitySiteSettings.bioShort.image?.asset.fluid} />
+      <div>
         <h1>{sanitySiteSettings.bioShort.title}</h1>
         {sanitySiteSettings.bioShort._rawText && (
           <BlockContent blocks={sanitySiteSettings.bioShort._rawText} />
         )}
         <Social />
-      </S.TextWrapper>
-    </S.Wrapper>
+      </div>
+    </div>
   )
 }
 

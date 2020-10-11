@@ -1,17 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import styled from 'styled-components'
 
-import SEO from '../components/SEO'
-
-const Wrapper = styled.video`
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: calc(var(--vh, 1vh) * 100);
-  background: black;
-`
+import SEO from '../components/seo'
 
 const WPAdminPage = () => {
   const { sanitySiteSettings } = useStaticQuery(
@@ -32,13 +22,26 @@ const WPAdminPage = () => {
   )
 
   return (
-    <Wrapper autoPlay playsInline muted loop>
+    <video
+      autoPlay
+      playsInline
+      muted
+      loop
+      style={{
+        position: 'fixed',
+        right: 0,
+        bottom: 0,
+        minWidth: '100%',
+        minHeight: '100vh',
+        background: 'black'
+      }}
+    >
       <SEO title={sanitySiteSettings.easterEgg.title} />
       <source
         src={sanitySiteSettings.easterEgg.video.asset.url}
         type="video/mp4"
       />
-    </Wrapper>
+    </video>
   )
 }
 

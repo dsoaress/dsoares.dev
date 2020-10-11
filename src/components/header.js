@@ -1,8 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import Nav from '../Nav'
-import * as S from './styled'
+import Nav from './nav'
 
 const Header = () => {
   const { sanitySiteSettings } = useStaticQuery(
@@ -19,13 +18,13 @@ const Header = () => {
     .filter(e => e.trim().length > 0)
 
   return (
-    <S.Wrapper>
-      <S.Logo>
+    <header>
+      <div>
         {title[0]}
         <span>{title[1]}</span>
-      </S.Logo>
+      </div>
       <Nav />
-    </S.Wrapper>
+    </header>
   )
 }
 

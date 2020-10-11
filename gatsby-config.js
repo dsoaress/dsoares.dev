@@ -5,7 +5,7 @@ const isProd = process.env.NODE_ENV === `production`
 module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-offline`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -52,7 +52,6 @@ module.exports = {
         includeInDevelopment: false,
         defaultDataLayer: { platform: `gatsby` }
       }
-    },
-    `gatsby-plugin-offline`
+    }
   ]
 }

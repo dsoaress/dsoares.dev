@@ -1,17 +1,10 @@
 import React from 'react'
-import styled from 'styled-components'
 import { graphql } from 'gatsby'
 
-import Layout from '../components/Layout/'
-import SEO from '../components/SEO'
-import PostItem from '../components/PostItem'
-import Pagination from '../components/Pagination'
-
-const Wrapper = styled.div`
-  max-width: 900px;
-  margin: auto;
-  padding: 0 30px;
-`
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import PostItem from '../components/post-item'
+import Pagination from '../components/pagination'
 
 const BlogList = props => {
   const posts = props.data.allSanityPost.edges
@@ -24,7 +17,7 @@ const BlogList = props => {
   return (
     <Layout>
       <SEO title="Blog" />
-      <Wrapper>
+      <div>
         <h1>Blog</h1>
         {posts.map(({ node }, i) => (
           <PostItem
@@ -45,7 +38,7 @@ const BlogList = props => {
           prevPage={prevPage}
           nextPage={nextPage}
         />
-      </Wrapper>
+      </div>
     </Layout>
   )
 }

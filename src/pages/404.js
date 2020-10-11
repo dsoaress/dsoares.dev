@@ -1,16 +1,8 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import styled from 'styled-components'
 
-import Layout from '../components/Layout'
-import SEO from '../components/SEO'
-
-const Wrapper = styled.div`
-  display: grid;
-  align-content: center;
-  height: 100%;
-  text-align: center;
-`
+import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 const NotFoundPage = () => {
   const { sanitySiteSettings } = useStaticQuery(
@@ -29,10 +21,10 @@ const NotFoundPage = () => {
   return (
     <Layout>
       <SEO title={sanitySiteSettings.notFoundPage.title} />
-      <Wrapper>
+      <div>
         <h1>{sanitySiteSettings.notFoundPage.title}</h1>
         <p>{sanitySiteSettings.notFoundPage.message}</p>
-      </Wrapper>
+      </div>
     </Layout>
   )
 }
