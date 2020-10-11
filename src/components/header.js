@@ -1,7 +1,5 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
-
-import Nav from './nav'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 
 const Header = () => {
   const { sanitySiteSettings } = useStaticQuery(
@@ -19,11 +17,15 @@ const Header = () => {
 
   return (
     <header>
-      <div>
+      <Link to="/" alt="Home">
         {title[0]}
         <span>{title[1]}</span>
-      </div>
-      <Nav />
+      </Link>
+      <nav>
+        <Link to="/sobre-mim" alt="Sobre mim" activeClassName="active">
+          Sobre mim
+        </Link>
+      </nav>
     </header>
   )
 }
