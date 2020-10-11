@@ -1,5 +1,8 @@
-name: Test and merge
-on: [pull_request]
+name: Test main branch
+on:
+  pull_request:
+    branches:
+      - main
 
 jobs:
   test-and-merge:
@@ -41,11 +44,10 @@ jobs:
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
           MERGE_LABELS: ''
-          MERGE_METHOD: 'squash'
+          MERGE_METHOD: 'rebase'
           MERGE_FORKS: 'false'
           MERGE_RETRIES: '10'
           MERGE_RETRY_SLEEP: '200000'
-          MERGE_DELETE_BRANCH: 'true'
           UPDATE_LABELS: ''
           UPDATE_METHOD: 'merge'
           UPDATE_RETRIES: '10'
