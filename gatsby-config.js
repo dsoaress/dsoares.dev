@@ -19,22 +19,6 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-webfonts`,
-      options: {
-        fonts: {
-          google: [
-            {
-              family: `Rubik Mono One`
-            },
-            {
-              family: `Rubik`,
-              variants: [`400`, `400i`, `700`, `700i`]
-            }
-          ]
-        }
-      }
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Daniel Soares`,
