@@ -4,7 +4,6 @@ const isProd = process.env.NODE_ENV === `production`
 
 module.exports = {
   plugins: [
-    `gatsby-plugin-theme-ui`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-offline`,
     `gatsby-transformer-sharp`,
@@ -21,7 +20,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
-        alias: { '@components': 'src/components' }
+        alias: {
+          '@components': 'src/components',
+          '@theme': 'src/theme'
+        }
       }
     },
     {
