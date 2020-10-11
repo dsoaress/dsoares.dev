@@ -1,17 +1,14 @@
 import React from 'react'
-import Img from 'gatsby-image'
 
+import { H1 } from '@components/typography'
 import BlockContent from '@components/block-content'
 import Social from '@components/social'
 
-const BioShort = ({ image, text, title }) => (
+const BioShort = ({ text, title }) => (
   <div>
-    <Img fluid={image} />
-    <div>
-      <h1>{title}</h1>
-      {text && <BlockContent blocks={text} />}
-      <Social />
-    </div>
+    <H1>{title}</H1>
+    {text && <BlockContent blocks={text} />}
+    <Social />
   </div>
 )
 

@@ -4,8 +4,9 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Layout from '@layout'
 import SEO from '@seo'
 import Container from '@components/container'
+import { H2 } from '@components/typography'
 import BioShort from '@components/bio-short'
-import PostItem from '@components/post-item'
+import Posts from '@components/posts'
 
 const IndexPage = () => {
   const data = useStaticQuery(
@@ -14,13 +15,6 @@ const IndexPage = () => {
         sanitySiteSettings {
           bioShort {
             title
-            image {
-              asset {
-                fluid(maxWidth: 340) {
-                  ...GatsbySanityImageFluid
-                }
-              }
-            }
             _rawText
           }
         }
@@ -35,7 +29,7 @@ const IndexPage = () => {
               title
               mainImage {
                 asset {
-                  fluid(maxWidth: 300) {
+                  fluid(maxWidth: 600) {
                     ...GatsbySanityImageFluid
                   }
                 }
@@ -54,22 +48,9 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Blog" />
       <Container>
-        <BioShort
-          image={bioShort.image?.asset.fluid}
-          text={bioShort._rawText}
-          title={bioShort.title}
-        />
-        <h1>Posts ↓</h1>
-        {posts.map(({ node }, i) => (
-          <PostItem
-            key={i}
-            title={node.title}
-            date={node.date}
-            description={node.description}
-            image={node.mainImage?.asset.fluid}
-            slug={`/${node.slug?.current}/`}
-          />
-        ))}
+        <BioShort text={bioShort._rawText} title={bioShort.title} />
+        <H2>Posts ↓</H2>
+        <Posts data={posts} />
       </Container>
     </Layout>
   )

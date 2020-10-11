@@ -4,7 +4,6 @@ import BackgroundImage from 'gatsby-background-image'
 
 import Layout from '@layout'
 import SEO from '@seo'
-import PostMeta from '@components/post-meta'
 import BlockContent from '@components/block-content'
 
 const BlogPost = ({ data }) => {
@@ -16,7 +15,7 @@ const BlogPost = ({ data }) => {
       <div>
         <BackgroundImage fluid={post.mainImage?.asset.fluid}>
           <div>
-            <PostMeta date={post.date} />
+            <div date={post.date} />
             <h1>{post.title}</h1>
           </div>
         </BackgroundImage>

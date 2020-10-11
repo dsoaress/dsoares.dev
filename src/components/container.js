@@ -1,6 +1,13 @@
-/** @jsx jsx */
-import { jsx, Container as ContainerThemeUI } from 'theme-ui'
+import styled from 'styled-components'
+import { layout, space } from 'styled-system'
 
-const Container = props => <ContainerThemeUI {...props} sx={{ p: 4 }} />
+const Container = styled('div')(layout, space)
+
+Container.defaultProps = {
+  px: 4,
+  my: 5,
+  mx: 'auto',
+  maxWidth: 'container'
+}
 
 export default Container
