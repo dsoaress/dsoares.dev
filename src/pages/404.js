@@ -1,8 +1,8 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import Layout from '@components/layout'
-import SEO from '@components/seo'
+import Layout from '@layout'
+import SEO from '@seo'
 
 const NotFoundPage = () => {
   const { sanitySiteSettings } = useStaticQuery(

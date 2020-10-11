@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Layout from '@components/layout'
-import SEO from '@components/seo'
+import Layout from '@layout'
+import SEO from '@seo'
 import About from '@components/about'
 
 const AboutPage = () => (

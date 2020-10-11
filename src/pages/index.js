@@ -1,8 +1,8 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import Layout from '@components/layout'
-import SEO from '@components/seo'
+import Layout from '@layout'
+import SEO from '@seo'
 import Container from '@components/container'
 import BioShort from '@components/bio-short'
 import PostItem from '@components/post-item'

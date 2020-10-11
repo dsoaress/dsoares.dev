@@ -22,6 +22,8 @@ module.exports = {
       options: {
         alias: {
           '@components': 'src/components',
+          '@layout': 'src/components/layout',
+          '@seo': 'src/components/seo',
           '@theme': 'src/theme'
         }
       }

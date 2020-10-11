@@ -2,8 +2,8 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 
-import Layout from '@components/layout'
-import SEO from '@components/seo'
+import Layout from '@layout'
+import SEO from '@seo'
 import PostMeta from '@components/post-meta'
 import BlockContent from '@components/block-content'
 
