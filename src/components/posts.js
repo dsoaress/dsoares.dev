@@ -21,9 +21,13 @@ const TextWrapper = styled('div')(space)
 const Date = styled('span')(color, typography)
 
 const Posts = ({ data }) => (
-  <Grid display="grid" gridGap={4}>
+  <Grid
+    display="grid"
+    gridGap={4}
+    gridTemplateColumns="repeat(auto-fit, minmax(260px, 1fr))"
+  >
     {data.map(({ node }, i) => (
-      <Link to={`/${node.slug?.current}/`} alt={node.title}>
+      <Link to={`/blog/${node.slug?.current}/`} alt={node.title}>
         <Card borderRadius={2} bg="muted" boxShadow="0 0 30px #020204" key={i}>
           <Image
             borderTopLeftRadius={2}
