@@ -17,7 +17,7 @@ const Header = () => (
     borderTopStyle="solid"
   >
     <Container>
-      <Box display="flex" justifyContent="space-between">
+      <Box display="flex" justifyContent="space-between" alignItems="center">
         <Link to="/" alt="Home" fontWeight="heading" fontSize={4} border="none">
           D<Highlight color="primary">Soares</Highlight>
         </Link>
