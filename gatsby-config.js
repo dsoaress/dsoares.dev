@@ -4,7 +4,7 @@ const isProd = process.env.NODE_ENV === `production`
 
 module.exports = {
   plugins: [
-    `gatsby-plugin-theme-ui`,
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-offline`,
     `gatsby-transformer-sharp`,
@@ -19,18 +19,13 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-webfonts`,
+      resolve: `gatsby-plugin-alias-imports`,
       options: {
-        fonts: {
-          google: [
-            {
-              family: `Rubik Mono One`
-            },
-            {
-              family: `Rubik`,
-              variants: [`400`, `400i`, `700`, `700i`]
-            }
-          ]
+        alias: {
+          '@components': 'src/components',
+          '@layout': 'src/components/layout',
+          '@seo': 'src/components/seo',
+          '@theme': 'src/theme'
         }
       }
     },

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import SEO from '../components/seo'
+import SEO from '@seo'
 
 const WPAdminPage = () => {
   const { sanitySiteSettings } = useStaticQuery(

@@ -1,6 +1,6 @@
 import React from 'react'
 import BaseBlockContent from '@sanity/block-content-to-react'
-import Image from './image'
+import Image from '@components/image'
 
 const serializers = {
   types: {

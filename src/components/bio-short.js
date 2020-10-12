@@ -1,18 +1,20 @@
 import React from 'react'
-import Img from 'gatsby-image'
+import styled from 'styled-components'
+import { grid, layout } from 'styled-system'
 
-import BlockContent from './block-content'
-import Social from './social'
+import { H1 } from '@components/typography'
+import BlockContent from '@components/block-content'
+import Social from '@components/social'
 
-const BioShort = ({ image, text, title }) => (
-  <div>
-    <Img fluid={image} />
-    <div>
-      <h1>{title}</h1>
-      {text && <BlockContent blocks={text} />}
-      <Social />
-    </div>
-  </div>
+const Wrapper = styled('div')(grid, layout)
+const Title = styled(H1)(layout)
+
+const BioShort = ({ text, title }) => (
+  <Wrapper display="grid" gridGap={4}>
+    <Title m="0">{title}</Title>
+    {text && <BlockContent blocks={text} />}
+    <Social />
+  </Wrapper>
 )
 
 export default BioShort

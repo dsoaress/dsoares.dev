@@ -5,6 +5,7 @@
   },
   "trailingSlash": true,
   "redirects": [
+    { "source": "/blog", "destination": "/" },
     { "source": "/wp-login", "destination": "/wp-admin" },
     { "source": "/wp-login/", "destination": "/wp-admin" },
     { "source": "/wp-login.php", "destination": "/wp-admin" },

@@ -1,13 +1,16 @@
 import React from 'react'
 
-import Layout from '../components/layout'
-import SEO from '../components/seo'
-import About from '../components/about'
+import Layout from '@layout'
+import SEO from '@seo'
+import Container from '@components/container'
+import About from '@components/about'
 
 const AboutPage = () => (
   <Layout>
     <SEO title="Sobre mim" />
-    <About />
+    <Container bg="pink">
+      <About />
+    </Container>
   </Layout>
 )
 

@@ -2,8 +2,8 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-import BlockContent from './block-content'
-import Social from './social'
+import BlockContent from '@components/block-content'
+import Social from '@components/social'
 
 const About = () => {
   const { sanitySiteSettings } = useStaticQuery(
