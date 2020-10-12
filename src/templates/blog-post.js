@@ -1,10 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import BackgroundImage from 'gatsby-background-image'
 
 import Layout from '@layout'
 import SEO from '@seo'
-import BlockContent from '@components/block-content'
+import Post from '@components/post'
+import Container from '@components/container'
 
 const BlogPost = ({ data }) => {
   const post = data.post
@@ -12,15 +12,9 @@ const BlogPost = ({ data }) => {
   return (
     <Layout>
       <SEO title={post.title} description={post.description} />
-      <div>
-        <BackgroundImage fluid={post.mainImage?.asset.fluid}>
-          <div>
-            <div date={post.date} />
-            <h1>{post.title}</h1>
-          </div>
-        </BackgroundImage>
-        {post._rawBody && <BlockContent blocks={post._rawBody} />}
-      </div>
+      <Container>
+        <Post post={post} />
+      </Container>
     </Layout>
   )
 }

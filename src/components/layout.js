@@ -46,6 +46,26 @@ const GlobalStyles = createGlobalStyle`
       margin: 0;
     }
   }
+
+  ul,
+  ol {
+    list-style-position: inside;
+    margin: ${theme.space[3] + 'px'} ${theme.space[4] + 'px'};
+    margin-right: 0;
+    li {
+      margin-bottom: ${theme.space[3] + 'px'};
+      p {
+          display: contents;
+      }
+    }
+  }
+
+  blockquote {
+    margin: ${theme.space[3] + 'px'} ${theme.space[5] + 'px'};
+    padding-left: ${theme.space[3] + 'px'};
+    font-size: ${theme.fontSizes[1] + 'px'};
+    border-left: 6px solid ${theme.colors.primary};
+  }
 `
 
 const Layout = ({ children }) => (
