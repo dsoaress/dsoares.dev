@@ -18,6 +18,7 @@ const Icons = {
 const List = styled.ul`
   display: flex;
   list-style-type: none;
+  margin: 0;
 `
 
 const Item = styled.li`
