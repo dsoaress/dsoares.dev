@@ -1,36 +1,38 @@
 import React from 'react'
-import { useStaticQuery, graphql, Link } from 'gatsby'
+import { Link as GatsbyLink } from 'gatsby'
+import styled from 'styled-components'
+import { border, color, flexbox, layout, typography } from 'styled-system'
 
 import Container from '@components/container'
 
-const Header = () => {
-  const { sanitySiteSettings } = useStaticQuery(
-    graphql`
-      query {
-        sanitySiteSettings {
-          title
-        }
-      }
-    `
-  )
-  const title = sanitySiteSettings.title
-    .split(/(\s+)/)
-    .filter(e => e.trim().length > 0)
+const Wrapper = styled('header')(border, layout)
+const Box = styled('div')(flexbox, layout)
+const Link = styled(GatsbyLink)(border, typography)
+const Highlight = styled('span')(color)
 
-  return (
-    <header>
-      <Container>
-        <Link to="/" alt="Home">
-          {title[0]}
-          <span>{title[1]}</span>
+const Header = () => (
+  <Wrapper
+    borderTopWidth="10px"
+    borderTopColor="primary"
+    borderTopStyle="solid"
+  >
+    <Container>
+      <Box display="flex" justifyContent="space-between">
+        <Link to="/" alt="Home" fontWeight="heading" fontSize={4} border="none">
+          D<Highlight color="primary">Soares</Highlight>
         </Link>
 
-        <Link to="/sobre-mim" alt="Sobre mim" activeClassName="active">
+        <Link
+          to="/sobre-mim"
+          alt="Sobre mim"
+          activeClassName="active"
+          border="none"
+        >
           Sobre mim
         </Link>
-      </Container>
-    </header>
-  )
-}
+      </Box>
+    </Container>
+  </Wrapper>
+)
 
 export default Header

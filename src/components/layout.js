@@ -29,6 +29,16 @@ const GlobalStyles = createGlobalStyle`
     margin-top: ${theme.space[5] + 'px'};
     margin-bottom: ${theme.space[4] + 'px'};
   }
+
+  a {
+    color: ${theme.colors.text};
+    text-decoration: none;
+    border-bottom: 1px dashed ${theme.colors.primary};
+    transition: color 0.5s;
+    &:hover {
+      color: ${theme.colors.primary};
+    }
+  }
 `
 
 const Layout = ({ children }) => (

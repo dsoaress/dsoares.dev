@@ -9,12 +9,13 @@ import {
   space,
   typography
 } from 'styled-system'
-import { Link } from 'gatsby'
+import { Link as GatsbyLink } from 'gatsby'
 import Img from 'gatsby-image'
 
 import { H3 } from '@components/typography'
 
 const Grid = styled('div')(grid, layout)
+const Link = styled(GatsbyLink)(border)
 const Card = styled('div')(border, color, shadow)
 const Image = styled(Img)(border, layout)
 const TextWrapper = styled('div')(space)
@@ -27,7 +28,7 @@ const Posts = ({ data }) => (
     gridTemplateColumns="repeat(auto-fit, minmax(260px, 1fr))"
   >
     {data.map(({ node }, i) => (
-      <Link to={`/blog/${node.slug?.current}/`} alt={node.title}>
+      <Link to={`/blog/${node.slug?.current}/`} alt={node.title} border="none">
         <Card borderRadius={2} bg="muted" boxShadow="0 0 30px #020204" key={i}>
           <Image
             borderTopLeftRadius={2}

@@ -1,6 +1,6 @@
 import React from 'react'
+import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
-import { IconContext } from 'react-icons'
 import {
   FaInstagram as Instagram,
   FaGithub as Github,
@@ -14,6 +14,19 @@ const Icons = {
   Whatsapp,
   Email
 }
+
+const List = styled.ul`
+  display: flex;
+  list-style-type: none;
+`
+
+const Item = styled.li`
+  margin-right: 1rem;
+
+  &:last-child {
+    margin: 0;
+  }
+`
 
 const Social = () => {
   const { sanitySiteSettings } = useStaticQuery(
@@ -30,32 +43,28 @@ const Social = () => {
   )
 
   return (
-    <div>
-      <ul>
-        {sanitySiteSettings.links.map((link, i) => {
-          const Icon = Icons[link.label]
+    <List>
+      {sanitySiteSettings.links.map((link, i) => {
+        const Icon = Icons[link.label]
 
-          return (
-            <li key={i}>
-              {link.url && (
-                <a
-                  href={link.url}
-                  title={link.label}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div>
-                    <IconContext.Provider value={{ size: '1.6rem' }}>
-                      <Icon />
-                    </IconContext.Provider>
-                  </div>
-                </a>
-              )}
-            </li>
-          )
-        })}
-      </ul>
-    </div>
+        return (
+          <Item key={i}>
+            {link.url && (
+              <a
+                href={link.url}
+                title={link.label}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div>
+                  <Icon size="26px" />
+                </div>
+              </a>
+            )}
+          </Item>
+        )
+      })}
+    </List>
   )
 }
 
