@@ -39,6 +39,13 @@ const GlobalStyles = createGlobalStyle`
       color: ${theme.colors.primary};
     }
   }
+
+  p {
+    margin-bottom: ${theme.space[3] + 'px'};
+    &:last-of-type {
+      margin: 0;
+    }
+  }
 `
 
 const Layout = ({ children }) => (
