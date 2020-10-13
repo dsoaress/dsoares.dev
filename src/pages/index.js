@@ -48,7 +48,6 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Blog" />
       <Container>
-        <p className="text-red-800 py-16">Teste</p>
         <BioShort text={bioShort._rawText} title={bioShort.title} />
         <H2>Posts ↓</H2>
         <Posts data={posts} />
