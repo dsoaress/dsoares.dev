@@ -4,7 +4,6 @@ import { graphql } from 'gatsby'
 import Layout from '@layout'
 import SEO from '@seo'
 import Post from '@components/post'
-import Container from '@components/container'
 
 const BlogPost = ({ data }) => {
   const post = data.post
@@ -12,9 +11,7 @@ const BlogPost = ({ data }) => {
   return (
     <Layout>
       <SEO title={post.title} description={post.description} />
-      <Container>
-        <Post post={post} />
-      </Container>
+      <Post post={post} />
     </Layout>
   )
 }

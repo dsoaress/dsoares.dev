@@ -4,7 +4,6 @@ const isProd = process.env.NODE_ENV === `production`
 
 module.exports = {
   plugins: [
-    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-offline`,
     `gatsby-transformer-sharp`,
@@ -33,8 +32,7 @@ module.exports = {
           '@components': 'src/components',
           '@layout': 'src/components/layout',
           '@seo': 'src/components/seo',
-          '@styles': 'src/styles',
-          '@theme': 'src/theme'
+          '@styles': 'src/styles'
         }
       }
     },
