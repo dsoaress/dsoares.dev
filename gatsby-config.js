@@ -10,6 +10,12 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        postCssPlugins: [require('tailwindcss')]
+      }
+    },
+    {
       resolve: `gatsby-source-sanity`,
       options: {
         ...clientConfig.sanity,
@@ -25,6 +31,7 @@ module.exports = {
           '@components': 'src/components',
           '@layout': 'src/components/layout',
           '@seo': 'src/components/seo',
+          '@styles': 'src/styles',
           '@theme': 'src/theme'
         }
       }
