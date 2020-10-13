@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-.container {
-  @apply my-16;
+@layer base {
+  h1 {
+    @apply text-4xl;
+  }
+  h2 {
+    @apply text-3xl;
+  }
+}
+
+@layer components {
+  .container {
+    @apply my-16;
+  }
 }
