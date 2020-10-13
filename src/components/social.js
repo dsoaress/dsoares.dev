@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
 import {
   FaInstagram as Instagram,
@@ -14,20 +13,6 @@ const Icons = {
   Whatsapp,
   Email
 }
-
-const List = styled.ul`
-  display: flex;
-  list-style-type: none;
-  margin: 0;
-`
-
-const Item = styled.li`
-  margin-right: 1rem;
-
-  &:last-child {
-    margin: 0;
-  }
-`
 
 const Social = () => {
   const { sanitySiteSettings } = useStaticQuery(
@@ -44,12 +29,12 @@ const Social = () => {
   )
 
   return (
-    <List>
+    <ul className="flex">
       {sanitySiteSettings.links.map((link, i) => {
         const Icon = Icons[link.label]
 
         return (
-          <Item key={i}>
+          <li className="mr-4" key={i}>
             {link.url && (
               <a
                 href={link.url}
@@ -62,10 +47,10 @@ const Social = () => {
                 </div>
               </a>
             )}
-          </Item>
+          </li>
         )
       })}
-    </List>
+    </ul>
   )
 }
 

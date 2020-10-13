@@ -3,7 +3,6 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 import Layout from '@layout'
 import SEO from '@seo'
-import Container from '@components/container'
 import About from '@components/about'
 
 const AboutPage = () => {
@@ -32,9 +31,7 @@ const AboutPage = () => {
   return (
     <Layout>
       <SEO title="Sobre mim" />
-      <Container>
-        <About data={data} />
-      </Container>
+      <About data={data} />
     </Layout>
   )
 }

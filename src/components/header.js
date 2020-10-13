@@ -1,38 +1,25 @@
 import React from 'react'
-import { Link as GatsbyLink } from 'gatsby'
-import styled from 'styled-components'
-import { border, color, flexbox, layout, typography } from 'styled-system'
-
-import Container from '@components/container'
-
-const Wrapper = styled('header')(border, layout)
-const Box = styled('div')(flexbox, layout)
-const Link = styled(GatsbyLink)(border, typography)
-const Highlight = styled('span')(color)
+import { Link } from 'gatsby'
 
 const Header = () => (
-  <Wrapper
-    borderTopWidth="10px"
-    borderTopColor="primary"
-    borderTopStyle="solid"
-  >
-    <Container>
-      <Box display="flex" justifyContent="space-between" alignItems="center">
-        <Link to="/" alt="Home" fontWeight="heading" fontSize={4} border="none">
-          D<Highlight color="primary">Soares</Highlight>
+  <header className="border-t-8 border-teal-500">
+    <div className="container">
+      <div className="flex justify-between items-center">
+        <Link to="/" alt="Home" className="font-black text-2xl border-none">
+          D<span className="text-teal-500">Soares</span>
         </Link>
 
         <Link
           to="/sobre-mim"
           alt="Sobre mim"
           activeClassName="active"
-          border="none"
+          className="border-none"
         >
           Sobre mim
         </Link>
-      </Box>
-    </Container>
-  </Wrapper>
+      </div>
+    </div>
+  </header>
 )
 
 export default Header

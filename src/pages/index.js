@@ -3,8 +3,6 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 import Layout from '@layout'
 import SEO from '@seo'
-import Container from '@components/container'
-import { H2 } from '@components/typography'
 import BioShort from '@components/bio-short'
 import Posts from '@components/posts'
 
@@ -47,11 +45,8 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Blog" />
-      <Container>
-        <BioShort text={bioShort._rawText} title={bioShort.title} />
-        <H2>Posts ↓</H2>
-        <Posts data={posts} />
-      </Container>
+      <BioShort text={bioShort._rawText} title={bioShort.title} />
+      <Posts title="Posts ↓" posts={posts} />
     </Layout>
   )
 }
