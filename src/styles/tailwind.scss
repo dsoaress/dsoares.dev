@@ -3,8 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply bg-default font-body text-default leading-relaxed;
+  }
   body {
-    @apply bg-default text-default leading-relaxed;
     overflow: -moz-scrollbars-none;
     -ms-overflow-style: none;
     &::-webkit-scrollbar {
@@ -54,6 +56,19 @@
     &:last-of-type {
       @apply m-0;
     }
+  }
+  ul,
+  ol {
+    @apply my-4 pl-8;
+  }
+  ul {
+    @apply list-disc;
+  }
+  ol {
+    @apply list-decimal;
+  }
+  blockquote {
+    @apply border-l-4 border-solid border-highLight pl-4 my-4 ml-8 text-sm;
   }
 }
 

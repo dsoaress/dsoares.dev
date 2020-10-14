@@ -29,7 +29,7 @@ const Social = () => {
   )
 
   return (
-    <ul className="flex">
+    <ul className="flex m-0 p-0 list-none">
       {sanitySiteSettings.links.map((link, i) => {
         const Icon = Icons[link.label]
 

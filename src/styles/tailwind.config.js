@@ -27,6 +27,9 @@ module.exports = {
         md:
           '0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.2)'
       },
+      fontFamily: {
+        body: 'Rubik, sans-serif'
+      },
       textColor: {
         highLight: '#ff0a78',
         default: '#dadada'
