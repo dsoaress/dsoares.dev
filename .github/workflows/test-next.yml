@@ -32,8 +32,11 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile
 
-      - name: Test frontend
-        run: yarn build
+      - name: Test studio
+        run: yarn test:studio
+
+      - name: Test web
+        run: yarn build:web
         env:
           SANITY_ID: ${{ secrets.SANITY_ID }}
           SANITY_DATASET: ${{ secrets.SANITY_DATASET }}
