@@ -15,7 +15,7 @@ dist
 
 # Gatsby files
 .cache
-web/public
+public
 
 # Mac files
 .DS_Store
