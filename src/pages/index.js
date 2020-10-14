@@ -44,7 +44,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="Blog" />
+      <SEO title="Home" />
       <BioShort text={bioShort._rawText} title={bioShort.title} />
       <Posts title="Posts ↓" posts={posts} />
     </Layout>
