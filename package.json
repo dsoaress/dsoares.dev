@@ -7,7 +7,8 @@
     "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "dev": "gatsby develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "rebase": "git checkout main && git rebase next && git push && git checkout next"
   },
   "dependencies": {
     "@sanity/block-content-to-react": "^2.0.7",
