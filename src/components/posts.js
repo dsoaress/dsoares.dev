@@ -16,7 +16,7 @@ const Posts = ({ posts, title }) => (
             <Img
               fluid={node.mainImage?.asset.fluid}
               alt={node.title}
-              className="rounded-t-xl post-img"
+              className="rounded-t-xl h-56"
             />
             <div className="grid gap-2 p-6">
               <h3 className="text-white text-xl m-0">{node.title}</h3>

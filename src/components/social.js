@@ -29,12 +29,12 @@ const Social = () => {
   )
 
   return (
-    <ul className="flex m-0 p-0 list-none">
+    <ul className="flex space-x-8 m-0 p-0 list-none">
       {sanitySiteSettings.links.map((link, i) => {
         const Icon = Icons[link.label]
 
         return (
-          <li className="mr-8" key={i}>
+          <li key={i}>
             {link.url && (
               <a
                 href={link.url}

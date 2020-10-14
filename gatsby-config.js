@@ -29,6 +29,7 @@ module.exports = {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
         alias: {
+          '@assets': 'src/assets',
           '@components': 'src/components',
           '@layout': 'src/components/layout',
           '@seo': 'src/components/seo',

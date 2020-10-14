@@ -27,14 +27,7 @@ const WPAdminPage = () => {
       playsInline
       muted
       loop
-      style={{
-        position: 'fixed',
-        right: 0,
-        bottom: 0,
-        minWidth: '100%',
-        minHeight: '100vh',
-        background: 'black'
-      }}
+      className="fixed inset-0 min-w-full min-h-screen bg-black"
     >
       <SEO title={sanitySiteSettings.easterEgg.title} />
       <source
