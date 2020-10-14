@@ -48,6 +48,9 @@
   }
   p {
     @apply mb-4;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
     &:last-of-type {
       @apply m-0;
     }
