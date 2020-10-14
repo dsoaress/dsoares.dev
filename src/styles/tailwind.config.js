@@ -15,6 +15,21 @@ module.exports = {
       container: {
         center: true,
         padding: '2rem'
+      },
+      backgroundColor: {
+        muted: 'hsl(230, 25%, 18%)',
+        default: '#0e141b'
+      },
+      borderColor: {
+        highLight: '#ff0a78'
+      },
+      boxShadow: {
+        md:
+          '0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.2)'
+      },
+      textColor: {
+        highLight: '#ff0a78',
+        default: '#dadada'
       }
     },
     screens: {

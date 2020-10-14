@@ -15,10 +15,10 @@ export default ({ node }) => {
   )
 
   return (
-    <figure className="my-4">
-      <Img fluid={fluidProps} alt={node.alt} className="rounded-xl shadow-xl" />
+    <figure className="my-8 md:-mx-16 lg:-mx-40">
+      <Img fluid={fluidProps} alt={node.alt} className="rounded-xl shadow-md" />
       {node.caption && (
-        <figcaption className="text-sm italic center mt-3">
+        <figcaption className="text-sm italic text-center mt-3 md:mx-16 lg:mx-40">
           {node.caption}
         </figcaption>
       )}

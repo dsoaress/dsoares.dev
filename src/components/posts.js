@@ -12,15 +12,15 @@ const Posts = ({ posts, title }) => (
           alt={node.title}
           className="border-none"
         >
-          <div className="rounded-xl bg-teal-900 shadow-xl" key={i}>
+          <div className="rounded-xl bg-muted shadow-md" key={i}>
             <Img
               fluid={node.mainImage?.asset.fluid}
               alt={node.title}
               className="rounded-t-xl post-img"
             />
-            <div className="grid gap-3 p-5">
+            <div className="grid gap-2 p-6">
               <h3 className="text-white text-xl m-0">{node.title}</h3>
-              <span className="text-teal-300 text-sm">{node.date}</span>
+              <span className="text-highLight text-sm">{node.date}</span>
             </div>
           </div>
         </Link>

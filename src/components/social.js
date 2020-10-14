@@ -34,13 +34,14 @@ const Social = () => {
         const Icon = Icons[link.label]
 
         return (
-          <li className="mr-4" key={i}>
+          <li className="mr-8" key={i}>
             {link.url && (
               <a
                 href={link.url}
                 title={link.label}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="text-default hover:text-highLight"
               >
                 <div>
                   <Icon size="26px" />

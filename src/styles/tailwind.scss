@@ -3,13 +3,30 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply bg-default text-default leading-relaxed;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  a {
+    @apply text-highLight border-b border-dashed border-highLight transition-colors duration-500;
+    &:hover {
+      @apply text-default;
+    }
+    &.active {
+      @apply text-highLight line-through;
+    }
+  }
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    @apply mt-8 mb-4 font-extrabold;
+    @apply mt-8 mb-4 font-extrabold leading-tight;
   }
   h1 {
     @apply text-4xl;
@@ -31,9 +48,9 @@
   }
   p {
     @apply mb-4;
-  }
-  p:last-of-type {
-    @apply m-0;
+    &:last-of-type {
+      @apply m-0;
+    }
   }
 }
 
