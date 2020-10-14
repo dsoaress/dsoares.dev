@@ -1,7 +1,7 @@
 {
   "name": "dsoares-site",
   "private": true,
-  "version": "1.5.0",
+  "version": "1.6.0",
   "license": "MIT",
   "scripts": {
     "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
