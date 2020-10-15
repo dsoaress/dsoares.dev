@@ -23,7 +23,7 @@
     "get-youtube-id": "^1.0.1",
     "prop-types": "^15.7",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react-dom": "^16.14.0",
     "react-icons": "^3.11.0",
     "react-youtube": "^7.12.0",
     "sanity-plugin-dark-mode": "^0.0.32"
