@@ -14,7 +14,10 @@ module.exports = {
     extend: {
       container: {
         center: true,
-        padding: '2rem'
+        padding: {
+          default: '1rem',
+          md: '2rem'
+        }
       },
       backgroundColor: {
         muted: 'hsl(230, 25%, 18%)',

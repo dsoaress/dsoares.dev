@@ -18,7 +18,9 @@ const Posts = ({ posts, title }) => (
               className="rounded-t-xl h-56"
             />
             <div className="grid gap-2 p-6">
-              <h3 className="text-white text-xl m-0">{node.title}</h3>
+              <h3 className="text-default hover:text-highLight transition-colors duration-500 text-xl m-0">
+                {node.title}
+              </h3>
               <span className="text-highLight text-sm">{node.date}</span>
             </div>
           </div>
