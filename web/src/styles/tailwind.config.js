@@ -20,11 +20,11 @@ module.exports = {
         }
       },
       backgroundColor: {
-        muted: 'hsl(230, 25%, 18%)',
+        muted: '#1a232e',
         default: '#0e141b'
       },
       borderColor: {
-        highLight: '#ff0a78'
+        highLight: '#ff2b8a'
       },
       boxShadow: {
         md:
@@ -34,7 +34,7 @@ module.exports = {
         body: 'Rubik, sans-serif'
       },
       textColor: {
-        highLight: '#ff0a78',
+        highLight: '#ff2b8a',
         default: '#dadada'
       }
     },
