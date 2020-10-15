@@ -1,6 +1,4 @@
-import React from 'react'
 import { Link } from 'gatsby'
-
 import logo from '@assets/logo.svg'
 
 const Header = () => (

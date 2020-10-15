@@ -1,6 +1,4 @@
-import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-
 import Layout from '@layout'
 import SEO from '@seo'
 import BioShort from '@components/bio-short'

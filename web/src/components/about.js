@@ -1,6 +1,4 @@
-import React from 'react'
 import Img from 'gatsby-image'
-
 import BlockContent from '@components/block-content'
 import Social from '@components/social'
 

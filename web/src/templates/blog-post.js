@@ -1,6 +1,4 @@
-import React from 'react'
 import { graphql } from 'gatsby'
-
 import Layout from '@layout'
 import SEO from '@seo'
 import Post from '@components/post'
