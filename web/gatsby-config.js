@@ -46,7 +46,10 @@ module.exports = {
         background_color: `#0e141b`,
         theme_color: `#ff0a78`,
         display: `fullscreen`,
-        icon: `src/assets/icon.png`
+        icon: `src/assets/icon.png`,
+        icon_options: {
+          purpose: `maskable`
+        }
       }
     },
     {
