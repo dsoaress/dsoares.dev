@@ -10,8 +10,9 @@ const Posts = ({ posts, title }) => (
           to={`/blog/${node.slug?.current}/`}
           alt={node.title}
           className="border-none"
+          key={i}
         >
-          <div className="rounded-xl bg-muted shadow-md" key={i}>
+          <div className="rounded-xl bg-muted shadow-md">
             <Img
               fluid={node.mainImage?.asset.fluid}
               alt={node.title}
