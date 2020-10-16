@@ -2,7 +2,7 @@
   "name": "studio",
   "private": true,
   "version": "0.0.8",
-  "license": "MIT",
+  "license": "0BSD",
   "scripts": {
     "build": "sanity build public -y",
     "dev": "sanity start",

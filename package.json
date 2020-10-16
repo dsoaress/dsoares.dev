@@ -1,9 +1,9 @@
 {
   "name": "dsoares.me",
+  "author": "Daniel Soares <daniel.soares@me.com>",
   "private": true,
   "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
+  "license": "0BSD",
   "workspaces": [
     "studio",
     "web"

@@ -2,7 +2,7 @@
   "name": "web",
   "private": true,
   "version": "1.6.0",
-  "license": "MIT",
+  "license": "0BSD",
   "scripts": {
     "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "dev": "gatsby develop",
