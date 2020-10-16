@@ -6,7 +6,7 @@ const Header = () => (
     <div className="container">
       <div className="flex justify-between items-center">
         <Link to="/" alt="Home" className="font-black text-2xl border-none">
-          <img src={logo} alt="Daniel Soares" className="w-40" />
+          <img src={logo} alt="Daniel Soares" width="160" height="23" />
         </Link>
 
         <Link
