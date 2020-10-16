@@ -25,7 +25,7 @@ const IndexPage = () => {
               title
               mainImage {
                 asset {
-                  fluid(maxWidth: 384, quality: 90) {
+                  fluid(maxWidth: 384) {
                     ...GatsbySanityImageFluid
                   }
                 }

@@ -12,7 +12,7 @@ const AboutPage = () => {
             title
             image {
               asset {
-                fluid(maxWidth: 610, quality: 90) {
+                fluid(maxWidth: 610) {
                   ...GatsbySanityImageFluid
                 }
               }

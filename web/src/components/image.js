@@ -9,7 +9,7 @@ export default ({ node }) => {
 
   const fluidProps = getFluidGatsbyImage(
     node.asset._ref,
-    { maxWidth: 1216, quality: 90 },
+    { maxWidth: 1216 },
     clientConfig.sanity
   )
 
