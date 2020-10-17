@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-default font-body text-default leading-relaxed;
+  }
+  body {
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  a {
+    @apply text-highLight border-b border-dashed border-highLight transition-colors duration-500;
+    &:hover {
+      @apply text-default;
+    }
+    &.active {
+      @apply text-highLight line-through;
+    }
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply mt-8 mb-4 font-extrabold leading-tight;
+  }
+  h1 {
+    @apply text-4xl;
+  }
+  h2 {
+    @apply text-3xl;
+  }
+  h3 {
+    @apply text-2xl;
+  }
+  h4 {
+    @apply text-xl;
+  }
+  h5 {
+    @apply text-lg;
+  }
+  h6 {
+    @apply text-base;
+  }
+  p {
+    @apply mb-4;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    &:last-of-type {
+      @apply m-0;
+    }
+  }
+  ul,
+  ol {
+    @apply my-4 pl-8;
+  }
+  ul {
+    @apply list-disc;
+  }
+  ol {
+    @apply list-decimal;
+  }
+  blockquote {
+    @apply border-l-4 border-solid border-highLight pl-4 my-4 ml-8 text-sm;
+  }
+  figcaption {
+    @apply text-sm italic text-center mt-3;
+  }
+}
+
+@layer components {
+  .container {
+    @apply my-16;
+  }
+}
+
+sup {
+  a {
+    @apply border-none;
+  }
+}
+.footnotes {
+  @apply mt-8 text-sm italic;
+  li {
+    @apply mb-4;
+  }
+  p {
+    @apply inline;
+  }
+  a {
+    @apply border-none;
+  }
+}
