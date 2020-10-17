@@ -4,11 +4,11 @@ updates:
     directory: '/'
     schedule:
       interval: 'daily'
-    open-pull-requests-limit: 20
+    open-pull-requests-limit: 50
     target-branch: main
     versioning-strategy: increase
     commit-message:
-      prefix: '⬆️'
+      prefix: '⬆️ [skip ci]'
 
   - package-ecosystem: 'github-actions'
     directory: '/'
@@ -16,4 +16,4 @@ updates:
       interval: 'daily'
     target-branch: main
     commit-message:
-      prefix: '⬆️'
+      prefix: '⬆️ [skip ci]'

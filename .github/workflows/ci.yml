@@ -1,4 +1,4 @@
-name: Test
+name: CI
 on:
   pull_request:
     branches:
@@ -6,6 +6,7 @@ on:
 
 jobs:
   test-and-merge:
+    name: Test and merge
     runs-on: ubuntu-latest
 
     steps:
@@ -16,18 +17,6 @@ jobs:
         uses: actions/setup-node@v2.1.2
         with:
           node-version: 12.x
-
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-
-      - uses: actions/cache@v2
-        id: yarn-cache
-        with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
 
       - name: Install dependencies
         run: yarn --frozen-lockfile
@@ -49,3 +38,31 @@ jobs:
           UPDATE_METHOD: 'merge'
           UPDATE_RETRIES: '10'
           UPDATE_RETRY_SLEEP: '200000'
+
+  deploy:
+    needs: [test-and-merge]
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: 12.x
+
+      - name: Install dependencies
+        run: yarn --frozen-lockfile
+
+      - name: Build
+        run: yarn build
+
+      - name: Deploy to netlify
+        uses: netlify/actions/cli@master
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        with:
+          args: deploy --dir=public --prod
