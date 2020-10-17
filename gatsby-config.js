@@ -77,6 +77,7 @@ module.exports = {
         includeInDevelopment: false,
         defaultDataLayer: { platform: `gatsby` }
       }
-    }
+    },
+    `gatsby-plugin-netlify-cms`
   ]
 }
