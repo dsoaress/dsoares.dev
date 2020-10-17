@@ -3,183 +3,94 @@ backend:
   branch: main
 
   commit_messages:
-    create: ':pencil: create content'
-    update: ':pencil: update content'
-    delete: ':fire: delete content'
-    uploadMedia: ':bento: upload asset'
-    deleteMedia: ':fire: delete asset'
+    create: ':pencil: Create {{collection}} “{{slug}}”'
+    update: ':pencil: Update {{collection}} “{{slug}}”'
+    delete: ':fire: Delete {{collection}} “{{slug}}”'
+    uploadMedia: ':bento: Upload “{{path}}” [skip ci]'
+    deleteMedia: ':fire: Delete “{{path}}” [skip ci]'
 
-media_folder: 'content/assets'
-public_folder: '/assets'
-locale: 'pt'
+media_folder: content/assets
+public_folder: /assets
+locale: pt
 display_url: https://dsoares.me
 logo_url: https://dsoares.me/logo.svg
 
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    label_singular: 'post'
-    folder: 'content/blog'
+  - name: posts
+    label: Posts
+    label_singular: post
+    folder: content/blog
     create: true
     media_folder: ''
     public_folder: ''
-    path: '{{year}}-{{month}}-{{day}}-{{title}}/index'
-    editor:
-      preview: false
+    path: '{{slug}}/index'
     fields:
-      - label: 'Key'
-        name: 'key'
-        widget: 'hidden'
-        default: 'blogPost'
+      - {
+          label: templateKey,
+          name: templateKey,
+          widget: hidden,
+          default: blog-post,
+        }
+      - { label: Título, name: title, widget: string }
+      - {
+          label: Data,
+          name: date,
+          widget: datetime,
+          format: YYYY-MM-DD HH:mm:ss,
+        }
+      - { label: Imagem em destaque, name: image, widget: image }
+      - { label: Tags, name: tags, widget: string }
+      - { label: Descrição, name: description, widget: text }
+      - { label: Corpo, name: body, widget: markdown }
 
-      - label: 'Título'
-        name: 'title'
-        widget: 'string'
-
-      - label: 'Data'
-        name: 'date'
-        widget: 'datetime'
-        dateFormat: 'DD/MM/YYYY'
-        timeFormat: 'HH:mm'
-        format: 'YYYY-MM-DD HH:mm:ss'
-
-      - label: 'Imagem'
-        name: 'image'
-        widget: 'image'
-        media_library:
-          config:
-            media_folder: '/{{media_folder}}/blog/{{title}}'
-            public_folder: '{{public_folder}}/blog/{{title}}'
-
-      - label: 'Arquivo(s)'
-        name: 'files'
-        widget: 'list'
-        summary: '{{fields.file}}'
-        field:
-          label: 'Arquivo'
-          name: 'file'
-          widget: 'file'
-
-      - label: 'Descrição'
-        name: 'description'
-        widget: 'text'
-
-      - label: 'Tags'
-        name: 'tags'
-        widget: 'list'
-
-      - label: 'Corpo'
-        name: 'body'
-        widget: 'markdown'
-        media_library:
-          config:
-            media_folder: '/{{media_folder}}/blog/{{title}}'
-            public_folder: '{{public_folder}}/blog/{{title}}'
-
-  - name: 'pages'
-    label: 'Páginas'
+  - name: settings
+    label: Settings
     media_folder: ''
     public_folder: ''
+    sortable_fields: []
     editor:
       preview: false
     files:
-      - file: 'content/index-page/index.md'
-        label: 'Home'
-        name: 'home'
+      - file: README.md
+        label: Leia me
+        name: readme
         fields:
-          - label: 'Key'
-            name: 'key'
-            widget: 'hidden'
-            default: 'index-page'
+          - { label: Body, name: body, widget: markdown }
 
-          - label: 'Título'
-            name: 'title'
-            widget: 'string'
-
-          - label: 'Imagem'
-            name: 'image'
-            widget: 'image'
-            media_library:
-              config:
-                media_folder: '/{{media_folder}}/{{key}}'
-                public_folder: '{{public_folder}}/{{key}}'
-
-          - label: 'Corpo'
-            name: 'body'
-            widget: 'markdown'
-
-      - file: 'content/about-page/index.md'
-        label: 'Sobre mim'
-        name: 'about'
+      - file: content/settings/siteMetadata.json
+        label: Metadata
+        name: siteMetadata
         fields:
-          - label: 'Key'
-            name: 'key'
-            widget: 'hidden'
-            default: 'about-page'
-
-          - label: 'Título'
-            name: 'title'
-            widget: 'string'
-
-          - label: 'Imagem'
-            name: 'image'
-            widget: 'image'
-            media_library:
-              config:
-                media_folder: '/{{media_folder}}/{{key}}'
-                public_folder: '{{public_folder}}/{{key}}'
-
-          - label: 'Corpo'
-            name: 'body'
-            widget: 'markdown'
-
-      - file: 'content/settings/index.md'
-        label: 'Configurações'
-        name: 'settings'
-        fields:
-          - label: 'Key'
-            name: 'key'
-            widget: 'hidden'
-            default: 'settings'
-
-          - label: 'Título'
-            name: 'title'
-            widget: 'string'
-
-          - label: 'Descrição'
-            name: 'description'
-            widget: 'text'
-
-          - label: 'Idioma'
-            name: 'lang'
-            widget: 'string'
-
-          - label: 'Perfis sociais'
-            label_singular: 'perfil'
-            name: 'social'
-            widget: 'list'
+          - { label: Título, name: title, widget: string }
+          - { label: Título curto, name: shortTitle, widget: string }
+          - { label: Descrição, name: description, widget: text }
+          - { label: URL do site, name: siteUrl, widget: string }
+          - { label: Favicon, name: favicon, widget: image }
+          - { label: Lang, name: lang, widget: string }
+          - { label: GTM ID, name: gtmID, widget: string }
+          - label: Links sociais
+            label_singular: profile
+            name: socialLinks
+            widget: list
             fields:
-              - label: 'Opção'
-                name: 'label'
-                widget: 'select'
-                options:
-                  [
-                    'Facebook',
-                    'Messenger',
-                    'Behance',
-                    'Dribbble',
-                    'Twitter',
-                    'Snapchat',
-                    'Tiktok',
-                    'Telegram',
-                    'Wechat',
-                    'Instagram',
-                    'Github',
-                    'Whatsapp',
-                    'Email',
-                  ]
+              - {
+                  label: Links sociais,
+                  name: label,
+                  widget: select,
+                  options:
+                    [
+                      Behance,
+                      Dribbble,
+                      Email,
+                      Facebook,
+                      Github,
+                      Instagram,
+                      Medium,
+                      Messenger,
+                      Telegram,
+                      Twitter,
+                      WhatsApp,
+                    ],
+                }
 
-              - label: 'URL'
-                name: 'url'
-                widget: 'string'
-                hint: 'Ex.: https://facebook.com/seu.usuario OU mailto:seu.nome@mail.com OU https://api.whatsapp.com/send?phone=5545999999999 (com DDI e DDD)'
+              - { label: URL, name: url, widget: string }
