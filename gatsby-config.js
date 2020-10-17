@@ -1,4 +1,13 @@
+const settings = require(`./content/settings`)
+
 module.exports = {
+  siteMetadata: {
+    title: settings.title,
+    description: settings.description,
+    siteUrl: settings.siteUrl,
+    lang: settings.lang,
+    socialLinks: settings.socialLinks
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-offline`,
@@ -64,7 +73,7 @@ module.exports = {
         background_color: `#0e141b`,
         theme_color: `#ff0a78`,
         display: `fullscreen`,
-        icon: `content/assets/icon.png`,
+        icon: `content/settings/${settings.favicon}`,
         icon_options: {
           purpose: `maskable`
         }
@@ -73,7 +82,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
-        id: `GTM-P595KV5`,
+        id: settings.gtmID,
         includeInDevelopment: false,
         defaultDataLayer: { platform: `gatsby` }
       }
