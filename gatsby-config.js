@@ -47,7 +47,7 @@ module.exports = {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
         alias: {
-          '@assets': 'src/assets',
+          '@assets': 'content/assets',
           '@components': 'src/components',
           '@layout': 'src/components/layout',
           '@seo': 'src/components/seo',
@@ -64,7 +64,7 @@ module.exports = {
         background_color: `#0e141b`,
         theme_color: `#ff0a78`,
         display: `fullscreen`,
-        icon: `src/assets/icon.png`,
+        icon: `content/assets/icon.png`,
         icon_options: {
           purpose: `maskable`
         }
@@ -77,6 +77,7 @@ module.exports = {
         includeInDevelopment: false,
         defaultDataLayer: { platform: `gatsby` }
       }
-    }
+    },
+    `gatsby-plugin-netlify-cms`
   ]
 }
