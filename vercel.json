@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "redirects": [
+    { "source": "/blog", "destination": "/" },
+    { "source": "/blog/", "destination": "/" },
+    { "source": "/wp-login", "destination": "/wp-admin" },
+    { "source": "/wp-login/", "destination": "/wp-admin" },
+    { "source": "/wp-login.php", "destination": "/wp-admin" },
+    { "source": "/wp-admin.php", "destination": "/wp-admin" }
+  ]
+}
