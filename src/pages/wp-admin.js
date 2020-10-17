@@ -1,6 +1,6 @@
 import React from 'react'
 import SEO from '@seo'
-import video from '../../content/assets/wp-admin.mp4'
+import video from '@assets/wp-admin.mp4'
 
 const WPAdminPage = () => (
   <video
