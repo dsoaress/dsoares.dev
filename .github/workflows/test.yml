@@ -1,4 +1,4 @@
-name: Test next branch
+name: Test
 on:
   pull_request:
     branches:
@@ -32,8 +32,8 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile
 
-      - name: Test web
-        run: yarn web
+      - name: Test
+        run: yarn build
 
       - name: Merge
         uses: pascalgn/automerge-action@v0.12.0
