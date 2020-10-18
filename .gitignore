@@ -10,9 +10,6 @@ node_modules
 # Dotenv environment variable files
 .env
 
-# Sanity files
-dist
-
 # Gatsby files
 .cache
 public
@@ -24,5 +21,5 @@ public
 yarn-error.log
 .yarn-integrity
 
-# Local Vercel folder
-.vercel
+# Local Netlify folder
+.netlify
