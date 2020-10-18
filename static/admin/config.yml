@@ -74,7 +74,7 @@ collections:
             widget: list
             fields:
               - {
-                  label: Links sociais,
+                  label: Rótulo,
                   name: label,
                   widget: select,
                   options:
