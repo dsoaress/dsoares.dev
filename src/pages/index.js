@@ -38,17 +38,31 @@ const IndexPage = () => {
             }
           }
         }
+        site {
+          siteMetadata {
+            socialLinks {
+              label
+              url
+            }
+          }
+        }
       }
     `
   )
 
   const bioShort = data.markdownRemark
+  const body = <div dangerouslySetInnerHTML={{ __html: bioShort.html }} />
   const posts = data.allMarkdownRemark.edges
+  const socialLinks = data.site.siteMetadata.socialLinks
 
   return (
     <Layout>
       <SEO title="Home" />
-      <BioShort text={bioShort.html} title={bioShort.frontmatter.title} />
+      <BioShort
+        body={body}
+        socialLinks={socialLinks}
+        title={bioShort.frontmatter.title}
+      />
       <Posts title="Posts ↓" posts={posts} />
     </Layout>
   )

@@ -23,14 +23,10 @@ collections:
     create: true
     media_folder: ''
     public_folder: ''
+    sortable_fields: [title, date]
     path: '{{slug}}/index'
     fields:
-      - {
-          label: templateKey,
-          name: templateKey,
-          widget: hidden,
-          default: blog-post,
-        }
+      - { label: key, name: key, widget: hidden, default: blog-post }
       - { label: Título, name: title, widget: string }
       - {
           label: Data,
@@ -42,6 +38,30 @@ collections:
       - { label: Tags, name: tags, widget: string }
       - { label: Descrição, name: description, widget: text }
       - { label: Corpo, name: body, widget: markdown }
+
+  - name: pages
+    label: Páginas
+    media_folder: ''
+    public_folder: ''
+    sortable_fields: []
+    files:
+      - file: content/index-page/index.md
+        label: Página principal
+        name: index-page
+        fields:
+          - { label: key, name: key, widget: hidden, default: index-page }
+          - { label: Título, name: title, widget: string }
+          - { label: Imagem, name: image, widget: image }
+          - { label: Body, name: body, widget: markdown }
+
+      - file: content/about-page/index.md
+        label: Sobre mim
+        name: about-page
+        fields:
+          - { label: key, name: key, widget: hidden, default: about-page }
+          - { label: Título, name: title, widget: string }
+          - { label: Imagem, name: image, widget: image }
+          - { label: Body, name: body, widget: markdown }
 
   - name: settings
     label: Configurações
