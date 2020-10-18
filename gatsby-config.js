@@ -87,6 +87,13 @@ module.exports = {
         defaultDataLayer: { platform: `gatsby` }
       }
     },
-    `gatsby-plugin-netlify-cms`
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        htmlTitle: `Content Manager`,
+        htmlFavicon: `content/settings/${settings.favicon}`,
+        modulePath: `${__dirname}/src/cms/cms.js`
+      }
+    }
   ]
 }
