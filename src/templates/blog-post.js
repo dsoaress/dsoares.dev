@@ -6,6 +6,7 @@ import Post from '@components/post'
 
 const BlogPost = ({ data }) => {
   const post = data.markdownRemark
+  const body = <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
   return (
     <Layout>
@@ -13,7 +14,12 @@ const BlogPost = ({ data }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description}
       />
-      <Post post={post} />
+      <Post
+        body={body}
+        date={post.frontmatter.date}
+        image={post.frontmatter.image}
+        title={post.frontmatter.title}
+      />
     </Layout>
   )
 }

@@ -15,12 +15,12 @@ const Icons = {
 }
 
 const Social = () => {
-  const { markdownRemark } = useStaticQuery(
+  const { site } = useStaticQuery(
     graphql`
       query {
-        markdownRemark(frontmatter: { key: { eq: "settings" } }) {
-          frontmatter {
-            social {
+        site {
+          siteMetadata {
+            socialLinks {
               label
               url
             }
@@ -32,7 +32,7 @@ const Social = () => {
 
   return (
     <ul className="flex space-x-8 m-0 p-0 list-none">
-      {markdownRemark.frontmatter.social.map((social, i) => {
+      {site.siteMetadata.socialLinks.map((social, i) => {
         const Icon = Icons[social.label]
 
         return (
