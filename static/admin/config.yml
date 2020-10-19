@@ -3,9 +3,9 @@ backend:
   branch: main
 
   commit_messages:
-    create: ':pencil: Create {{collection}} “{{slug}}”'
-    update: ':pencil: Update {{collection}} “{{slug}}”'
-    delete: ':fire: Delete {{collection}} “{{slug}}”'
+    create: ':pencil: Create “{{slug}}”'
+    update: ':pencil: Update “{{slug}}”'
+    delete: ':fire: Delete “{{slug}}”'
     uploadMedia: ':bento: Upload “{{path}}” [skip ci]'
     deleteMedia: ':fire: Delete “{{path}}” [skip ci]'
 
