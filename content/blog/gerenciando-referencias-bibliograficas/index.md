@@ -14,6 +14,8 @@ tags:
   - escrita acadêmica
 ---
 
+Pode parecer algo simples e trivial para muitos acadêmicos e pesquisadores o uso de gerenciadores de referências bibliográficas, mas para muitos outros esse é um assunto bem obscuro (ou até mesmo desconhecido). Se você se encontra nesse segundo grupo, esse texto é para você.
+
 Para começar, vamos falar um pouco sobre gerenciadores de forma geral. Eles são softwares que nos livram do tédio de organizar dezenas (ou centenas) de referências manualmente, as concentrando numa única interface e podendo, com menos de três cliques, adicionar todas as obras citadas ao final de nossos trabalhos já formatados em ABNT (ou APA, Chicago, Harvard, etc.). É fundamental o uso desse tipo de software? De forma alguma, mas dificilmente alguém volta atrás depois que começa a utilizá-los.
 
 Existem vários gerenciadores: [Zotero](https://www.zotero.org/) (Windows, Mac e Linux), [Mendeley](https://www.mendeley.com/) (Windows, Mac, Linux, iOS e Android), [Papers](https://www.papersapp.com/) (Windows, Mac, iOS e Android), o caríssimo [EndNote](https://endnote.com/) (Windows, Mac, iOS e Android), dentro outros.
