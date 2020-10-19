@@ -12,6 +12,13 @@ const IndexPage = () => {
         markdownRemark(frontmatter: { key: { eq: "index-page" } }) {
           frontmatter {
             title
+            image {
+              childImageSharp {
+                fluid(maxWidth: 384, quality: 90) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
           }
           html
         }
@@ -60,6 +67,7 @@ const IndexPage = () => {
       <SEO title="Home" />
       <BioShort
         body={body}
+        image={bioShort.frontmatter.image}
         socialLinks={socialLinks}
         title={bioShort.frontmatter.title}
       />
