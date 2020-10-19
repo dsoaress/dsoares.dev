@@ -9,7 +9,7 @@ const IndexPage = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        markdownRemark(frontmatter: { key: { eq: "profile" } }) {
+        profile: markdownRemark(frontmatter: { key: { eq: "profile" } }) {
           frontmatter {
             title
             image {
@@ -22,7 +22,7 @@ const IndexPage = () => {
           }
           html
         }
-        allMarkdownRemark(
+        posts: allMarkdownRemark(
           filter: { frontmatter: { key: { eq: "blog-post" } } }
           sort: { fields: frontmatter___date, order: DESC }
         ) {
@@ -45,7 +45,7 @@ const IndexPage = () => {
             }
           }
         }
-        site {
+        socialLinks: site {
           siteMetadata {
             socialLinks {
               label
@@ -57,10 +57,10 @@ const IndexPage = () => {
     `
   )
 
-  const profile = data.markdownRemark
+  const profile = data.profile
   const body = <div dangerouslySetInnerHTML={{ __html: profile.html }} />
-  const posts = data.allMarkdownRemark.edges
-  const socialLinks = data.site.siteMetadata.socialLinks
+  const posts = data.posts.edges
+  const socialLinks = data.socialLinks.siteMetadata.socialLinks
 
   return (
     <Layout>

@@ -8,7 +8,7 @@ const AboutPage = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        markdownRemark(frontmatter: { key: { eq: "about" } }) {
+        about: markdownRemark(frontmatter: { key: { eq: "about" } }) {
           frontmatter {
             title
             image {
@@ -21,7 +21,7 @@ const AboutPage = () => {
           }
           html
         }
-        site {
+        socialLinks: site {
           siteMetadata {
             socialLinks {
               label
@@ -33,9 +33,9 @@ const AboutPage = () => {
     `
   )
 
-  const about = data.markdownRemark
+  const about = data.about
   const body = <div dangerouslySetInnerHTML={{ __html: about.html }} />
-  const socialLinks = data.site.siteMetadata.socialLinks
+  const socialLinks = data.socialLinks.siteMetadata.socialLinks
 
   return (
     <Layout>
