@@ -7,7 +7,7 @@ const IndexPage = ({ entry, getAsset, widgetFor }) => {
   return (
     <BioShort
       body={widgetFor('body')}
-      // image={getAsset(data.image)}
+      image={getAsset(data.image)}
       title={data.title}
     />
   )
