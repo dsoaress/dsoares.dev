@@ -54,9 +54,9 @@ collections:
           - { label: Imagem, name: image, widget: image }
           - { label: Body, name: body, widget: markdown }
 
-      - file: content/pages/about-page/index.md
+      - file: content/pages/about/index.md
         label: Sobre mim
-        name: about-page
+        name: about
         fields:
           - { label: key, name: key, widget: hidden, default: about-page }
           - { label: Título, name: title, widget: string }
