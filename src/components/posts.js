@@ -5,7 +5,7 @@ import Img from 'gatsby-image'
 const Posts = ({ posts, title }) => (
   <section className="container">
     <h2 className="mb-8">{title}</h2>
-    <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="grid gap-4 md:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
       {posts.map(({ node }, i) => (
         <Link
           to={node.fields.slug}
