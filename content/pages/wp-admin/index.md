@@ -1,5 +1,5 @@
 ---
 key: wp-admin
 title: Hey you 😘
-video: wp-admin.mp4
+video: ezgif.com-gif-maker.mp4
 ---
