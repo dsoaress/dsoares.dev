@@ -1,20 +1,31 @@
 import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 import Layout from '@layout'
 import SEO from '@seo'
+import NotFound from '@components/not-found'
 
-const NotFoundPage = () => (
-  <Layout>
-    <SEO title="Não encontrado" />
-    <div className="container text-center my-56">
-      <h1>
-        Não encontrado{' '}
-        <span role="img" aria-label="triste">
-          😥
-        </span>
-      </h1>
-      <p>O que você está buscando não existe.</p>
-    </div>
-  </Layout>
-)
+const NotFoundPage = () => {
+  const { markdownRemark } = useStaticQuery(
+    graphql`
+      query {
+        markdownRemark(frontmatter: { key: { eq: "not-found" } }) {
+          frontmatter {
+            title
+            message
+          }
+        }
+      }
+    `
+  )
+
+  const notFound = markdownRemark.frontmatter
+
+  return (
+    <Layout>
+      <SEO title={notFound.title} />
+      <NotFound message={notFound.message} title={notFound.title} />
+    </Layout>
+  )
+}
 
 export default NotFoundPage

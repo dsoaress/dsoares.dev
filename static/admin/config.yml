@@ -45,16 +45,16 @@ collections:
     public_folder: ''
     sortable_fields: []
     files:
-      - file: content/index-page/index.md
+      - file: content/pages/index/index.md
         label: Página principal
-        name: index-page
+        name: index
         fields:
           - { label: key, name: key, widget: hidden, default: index-page }
           - { label: Título, name: title, widget: string }
           - { label: Imagem, name: image, widget: image }
           - { label: Body, name: body, widget: markdown }
 
-      - file: content/about-page/index.md
+      - file: content/pages/about-page/index.md
         label: Sobre mim
         name: about-page
         fields:
@@ -62,6 +62,22 @@ collections:
           - { label: Título, name: title, widget: string }
           - { label: Imagem, name: image, widget: image }
           - { label: Body, name: body, widget: markdown }
+
+      - file: content/pages/not-found/index.md
+        label: '404'
+        name: not-found
+        fields:
+          - { label: key, name: key, widget: hidden, default: not-found-page }
+          - { label: Título, name: title, widget: string }
+          - { label: Mensagem, name: message, widget: string }
+
+      - file: content/pages/wp-admin/index.md
+        label: 'wp-admin'
+        name: wp-admin
+        fields:
+          - { label: key, name: key, widget: hidden, default: wp-admin-page }
+          - { label: Título, name: title, widget: string }
+          - { label: Vídeo, name: video, widget: image }
 
   - name: settings
     label: Configurações

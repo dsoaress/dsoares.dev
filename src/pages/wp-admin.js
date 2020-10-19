@@ -1,18 +1,31 @@
 import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 import SEO from '@seo'
-import video from '@assets/wp-admin.mp4'
+import WPAdmin from '@components/wp-admin'
 
-const WPAdminPage = () => (
-  <video
-    autoPlay
-    playsInline
-    muted
-    loop
-    className="fixed inset-0 min-w-full min-h-screen bg-black"
-  >
-    <SEO title="Hey you 😘" />
-    <source src={video} type="video/mp4" />
-  </video>
-)
+const WPAdminPage = () => {
+  const { markdownRemark } = useStaticQuery(
+    graphql`
+      query {
+        markdownRemark(frontmatter: { key: { eq: "wp-admin" } }) {
+          frontmatter {
+            title
+            video {
+              publicURL
+            }
+          }
+        }
+      }
+    `
+  )
+
+  const data = markdownRemark.frontmatter
+  return (
+    <>
+      <SEO title={data.title} />
+      <WPAdmin video={data.video.publicURL} />
+    </>
+  )
+}
 
 export default WPAdminPage

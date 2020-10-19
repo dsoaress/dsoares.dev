@@ -1,9 +1,11 @@
 import CMS from 'netlify-cms-app'
 import IndexPage from './templates/index-page'
 import AboutPage from './templates/about-page'
+import NotFoundPage from './templates/not-found-page'
 import BlogPost from './templates/blog-post'
 import '@styles/tailwind.scss'
 
-CMS.registerPreviewTemplate('index-page', IndexPage)
-CMS.registerPreviewTemplate('about-page', AboutPage)
+CMS.registerPreviewTemplate('index', IndexPage)
+CMS.registerPreviewTemplate('about', AboutPage)
+CMS.registerPreviewTemplate('not-found', NotFoundPage)
 CMS.registerPreviewTemplate('posts', BlogPost)
