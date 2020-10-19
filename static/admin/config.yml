@@ -71,14 +71,6 @@ collections:
           - { label: Título, name: title, widget: string }
           - { label: Mensagem, name: message, widget: string }
 
-      - file: content/pages/wp-admin/index.md
-        label: 'wp-admin'
-        name: wp-admin
-        fields:
-          - { label: key, name: key, widget: hidden, default: wp-admin-page }
-          - { label: Título, name: title, widget: string }
-          - { label: Vídeo, name: video, widget: file }
-
   - name: settings
     label: Configurações
     media_folder: ''
