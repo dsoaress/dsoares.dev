@@ -77,7 +77,7 @@ collections:
         fields:
           - { label: key, name: key, widget: hidden, default: wp-admin-page }
           - { label: Título, name: title, widget: string }
-          - { label: Vídeo, name: video, widget: image }
+          - { label: Vídeo, name: video, widget: file }
 
   - name: settings
     label: Configurações
