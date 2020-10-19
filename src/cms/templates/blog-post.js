@@ -1,7 +1,7 @@
 import React from 'react'
 import Post from '@components/post'
 
-const BlogPost = ({ entry, getAsset, widgetFor }) => {
+const BlogPostPreview = ({ entry, getAsset, widgetFor }) => {
   const data = entry.getIn(['data']).toJS()
 
   return (
@@ -13,4 +13,4 @@ const BlogPost = ({ entry, getAsset, widgetFor }) => {
   )
 }
 
-export default BlogPost
+export default BlogPostPreview

@@ -1,5 +1,5 @@
 ---
-key: index-page
+key: profile
 title: Olá,
 image: profile.jpg
 ---

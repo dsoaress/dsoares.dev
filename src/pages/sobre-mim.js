@@ -8,7 +8,7 @@ const AboutPage = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        markdownRemark(frontmatter: { key: { eq: "about-page" } }) {
+        markdownRemark(frontmatter: { key: { eq: "about" } }) {
           frontmatter {
             title
             image {

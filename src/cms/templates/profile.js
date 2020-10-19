@@ -1,11 +1,11 @@
 import React from 'react'
-import About from '@components/about'
+import Profile from '@components/profile'
 
-const AboutPage = ({ entry, getAsset, widgetFor }) => {
+const ProfilePreview = ({ entry, getAsset, widgetFor }) => {
   const data = entry.getIn(['data']).toJS()
 
   return (
-    <About
+    <Profile
       body={widgetFor('body')}
       image={getAsset(data.image)}
       title={data.title}
@@ -13,4 +13,4 @@ const AboutPage = ({ entry, getAsset, widgetFor }) => {
   )
 }
 
-export default AboutPage
+export default ProfilePreview

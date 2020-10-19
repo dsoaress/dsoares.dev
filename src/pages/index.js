@@ -2,14 +2,14 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Layout from '@layout'
 import SEO from '@seo'
-import BioShort from '@components/bio-short'
+import Profile from '@components/profile'
 import Posts from '@components/posts'
 
 const IndexPage = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        markdownRemark(frontmatter: { key: { eq: "index-page" } }) {
+        markdownRemark(frontmatter: { key: { eq: "profile" } }) {
           frontmatter {
             title
             image {
@@ -57,21 +57,21 @@ const IndexPage = () => {
     `
   )
 
-  const bioShort = data.markdownRemark
-  const body = <div dangerouslySetInnerHTML={{ __html: bioShort.html }} />
+  const profile = data.markdownRemark
+  const body = <div dangerouslySetInnerHTML={{ __html: profile.html }} />
   const posts = data.allMarkdownRemark.edges
   const socialLinks = data.site.siteMetadata.socialLinks
 
   return (
     <Layout>
       <SEO title="Home" />
-      <BioShort
+      <Profile
         body={body}
-        image={bioShort.frontmatter.image}
+        image={profile.frontmatter.image}
         socialLinks={socialLinks}
-        title={bioShort.frontmatter.title}
+        title={profile.frontmatter.title}
       />
-      <Posts title="Posts ↓" posts={posts} />
+      <Posts title="Posts" posts={posts} />
     </Layout>
   )
 }

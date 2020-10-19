@@ -1,5 +1,5 @@
 ---
-key: 'about-page'
+key: 'about'
 title: 'Olá, de novo'
 image: 'about.jpg'
 ---

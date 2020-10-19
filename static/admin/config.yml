@@ -45,11 +45,11 @@ collections:
     public_folder: ''
     sortable_fields: []
     files:
-      - file: content/pages/index/index.md
-        label: Página principal
-        name: index
+      - file: content/pages/profile/index.md
+        label: Perfil
+        name: profile
         fields:
-          - { label: key, name: key, widget: hidden, default: index-page }
+          - { label: key, name: key, widget: hidden, default: profile }
           - { label: Título, name: title, widget: string }
           - { label: Imagem, name: image, widget: image }
           - { label: Body, name: body, widget: markdown }
@@ -58,7 +58,7 @@ collections:
         label: Sobre mim
         name: about
         fields:
-          - { label: key, name: key, widget: hidden, default: about-page }
+          - { label: key, name: key, widget: hidden, default: about }
           - { label: Título, name: title, widget: string }
           - { label: Imagem, name: image, widget: image }
           - { label: Body, name: body, widget: markdown }

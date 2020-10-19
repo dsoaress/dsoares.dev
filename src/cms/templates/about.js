@@ -1,11 +1,11 @@
 import React from 'react'
-import BioShort from '@components/bio-short'
+import About from '@components/about'
 
-const IndexPage = ({ entry, getAsset, widgetFor }) => {
+const AboutPreview = ({ entry, getAsset, widgetFor }) => {
   const data = entry.getIn(['data']).toJS()
 
   return (
-    <BioShort
+    <About
       body={widgetFor('body')}
       image={getAsset(data.image)}
       title={data.title}
@@ -13,4 +13,4 @@ const IndexPage = ({ entry, getAsset, widgetFor }) => {
   )
 }
 
-export default IndexPage
+export default AboutPreview
