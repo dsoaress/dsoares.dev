@@ -1,7 +1,7 @@
 name: Deploy
 on:
   schedule:
-    - cron: '0 1 * * *'
+    - cron: '0 7 * * 2'
 
 jobs:
   deploy:
@@ -12,21 +12,5 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Setup Node
-        uses: actions/setup-node@v2.1.2
-        with:
-          node-version: 12.x
-
-      - name: Install dependencies
-        run: yarn --frozen-lockfile
-
-      - name: Build
-        run: yarn build
-
       - name: Deploy to netlify
-        uses: netlify/actions/cli@master
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        with:
-          args: deploy --dir=public --prod
+        run: curl -X POST -d {} ${{ secrets.NETLIFY_BUILD_HOOK }}

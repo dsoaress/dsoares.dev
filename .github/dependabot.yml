@@ -3,9 +3,11 @@ updates:
   - package-ecosystem: npm
     directory: '/'
     schedule:
-      interval: 'daily'
+      interval: 'weekly'
+      day: 'tuesday'
+      time: '00:00'
+      timezone: 'America/Sao_Paulo'
     open-pull-requests-limit: 50
-    target-branch: main
     versioning-strategy: increase
     commit-message:
       prefix: '⬆️ [skip ci]'
@@ -13,7 +15,9 @@ updates:
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
-      interval: 'daily'
-    target-branch: main
+      interval: 'weekly'
+      day: 'tuesday'
+      time: '00:00'
+      timezone: 'America/Sao_Paulo'
     commit-message:
       prefix: '⬆️ [skip ci]'
