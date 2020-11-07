@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from '@components/image'
+import { Background } from '@components/image'
 import Social from '@components/social'
 
 const About = ({ body, image, socialLinks, title }) => (
@@ -9,7 +9,7 @@ const About = ({ body, image, socialLinks, title }) => (
       {body}
       {socialLinks && <Social socialLinks={socialLinks} />}
     </div>
-    <Image image={image} className="rounded-xl shadow-md" />
+    <Background src={image} className="min-h-128" />
   </div>
 )
 

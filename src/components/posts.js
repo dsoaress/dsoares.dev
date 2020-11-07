@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Img from 'gatsby-image'
+import { Image } from '@components/image'
 
 const Posts = ({ posts, title }) => (
   <section className="container">
@@ -13,11 +13,11 @@ const Posts = ({ posts, title }) => (
           className="border-none"
           key={i}
         >
-          <div className="rounded-xl bg-muted shadow-md">
-            <Img
-              fluid={node.frontmatter.image?.childImageSharp.fluid}
+          <div className="bg-muted rounded-xl shadow-md">
+            <Image
+              src={node.frontmatter.image}
               alt={node.frontmatter.title}
-              className="rounded-t-xl h-56"
+              className="rounded-t-xl rounded-b-none shadow-none h-56"
             />
             <div className="grid gap-2 p-6">
               <h3 className="text-default hover:text-highLight transition-colors duration-500 text-xl m-0">

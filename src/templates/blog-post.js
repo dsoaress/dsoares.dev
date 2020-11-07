@@ -27,7 +27,7 @@ const BlogPost = ({ data }) => {
       <div className="mx-4 md:mx-8">
         <Profile
           body={profileBody}
-          className="bg-muted rounded-xl shadow-md py-8"
+          className="bg-muted py-8"
           image={profile.frontmatter.image}
           socialLinks={socialLinks}
           title={profile.frontmatter.title}
