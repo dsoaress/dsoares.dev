@@ -2,7 +2,7 @@
   "name": "dsoares-site",
   "author": "Daniel Soares <daniel.soares@me.com>",
   "private": true,
-  "version": "1.9.0",
+  "version": "1.10.0",
   "license": "0BSD",
   "scripts": {
     "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
