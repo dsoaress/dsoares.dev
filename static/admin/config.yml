@@ -9,116 +9,54 @@ backend:
     uploadMedia: ':bento: Upload “{{path}}” [skip ci]'
     deleteMedia: ':fire: Delete “{{path}}” [skip ci]'
 
-media_folder: content/assets
-public_folder: /assets
-locale: pt
-display_url: https://dsoares.me
-logo_url: https://dsoares.me/logo.svg
+media_folder: 'static/images'
+public_folder: 'images'
 
 collections:
-  - name: posts
-    label: Posts
-    label_singular: post
-    folder: content/blog
-    create: true
-    media_folder: ''
-    public_folder: ''
-    sortable_fields: [title, date]
-    path: '{{slug}}/index'
-    fields:
-      - { label: key, name: key, widget: hidden, default: blog-post }
-      - { label: Título, name: title, widget: string }
-      - {
-          label: Data,
-          name: date,
-          widget: datetime,
-          format: YYYY-MM-DD HH:mm:ss,
-        }
-      - { label: Imagem em destaque, name: image, widget: image }
-      - { label: Tags, name: tags, widget: string }
-      - { label: Descrição, name: description, widget: text }
-      - { label: Corpo, name: body, widget: markdown }
-
   - name: pages
-    label: Páginas
-    media_folder: ''
-    public_folder: ''
+    label: Pages
     sortable_fields: []
     files:
-      - file: content/pages/profile/index.md
-        label: Perfil
-        name: profile
+      - file: src/settings/index-page.json
+        label: Index
+        name: index
         fields:
-          - { label: key, name: key, widget: hidden, default: profile }
-          - { label: Título, name: title, widget: string }
-          - { label: Imagem, name: image, widget: image }
-          - { label: Body, name: body, widget: markdown }
+          - { label: key, name: key, widget: hidden, default: index }
+          - { label: Logo, name: logo, widget: image }
+          - { label: Buttons color, name: buttonsColor, widget: color }
+          - { label: Border radius, name: borderRadius, widget: slider }
+          - { label: Font color, name: buttonsFontColor, widget: color }
+          - { label: Footer font color, name: fontColor, widget: color }
+          - { label: Background color, name: background, widget: color }
+          - label: Links
+            label_singular: link
+            name: links
+            widget: list
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: URL, name: url, widget: string }
 
-      - file: content/pages/about/index.md
-        label: Sobre mim
-        name: about
-        fields:
-          - { label: key, name: key, widget: hidden, default: about }
-          - { label: Título, name: title, widget: string }
-          - { label: Imagem, name: image, widget: image }
-          - { label: Body, name: body, widget: markdown }
-
-      - file: content/pages/not-found/index.md
+      - file: src/settings/not-found-page.json
         label: '404'
         name: not-found
         fields:
-          - { label: key, name: key, widget: hidden, default: not-found-page }
-          - { label: Título, name: title, widget: string }
-          - { label: Mensagem, name: message, widget: string }
+          - { label: key, name: key, widget: hidden, default: not-found }
+          - { label: Title, name: title, widget: string }
+          - { label: Message, name: message, widget: string }
+          - { label: Button label, name: buttonLabel, widget: string }
 
   - name: settings
-    label: Configurações
-    media_folder: ''
-    public_folder: ''
+    label: Settings
     sortable_fields: []
     editor:
       preview: false
     files:
-      - file: README.md
-        label: Leia me
-        name: readme
-        fields:
-          - { label: Body, name: body, widget: markdown }
-
-      - file: content/settings/siteMetadata.json
+      - file: src/settings/site-metadata.json
         label: Metadata
-        name: siteMetadata
+        name: site-metadata
         fields:
-          - { label: Título, name: title, widget: string }
-          - { label: Título curto, name: shortTitle, widget: string }
-          - { label: Descrição, name: description, widget: text }
-          - { label: URL do site, name: siteUrl, widget: string }
-          - { label: Favicon, name: favicon, widget: image }
-          - { label: Lang, name: lang, widget: string }
+          - { label: Company name, name: title, widget: string }
+          - { label: Short company name, name: shortTitle, widget: string }
+          - { label: Description, name: description, widget: text }
+          - { label: Favicon, name: favicon, widget: 'image' }
           - { label: GTM ID, name: gtmID, widget: string }
-          - label: Links sociais
-            label_singular: profile
-            name: socialLinks
-            widget: list
-            fields:
-              - {
-                  label: Rótulo,
-                  name: label,
-                  widget: select,
-                  options:
-                    [
-                      Behance,
-                      Dribbble,
-                      Email,
-                      Facebook,
-                      Github,
-                      Instagram,
-                      Medium,
-                      Messenger,
-                      Telegram,
-                      Twitter,
-                      WhatsApp,
-                    ],
-                }
-
-              - { label: URL, name: url, widget: string }

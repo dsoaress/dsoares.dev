@@ -1,31 +1,26 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
-import Layout from '@layout'
-import SEO from '@seo'
-import NotFound from '@components/not-found'
+import SEO from '../components/seo'
+import NotFoundPageTemplate from '../templates/not-found'
+import * as indexPage from '../settings/index-page.json'
+import * as notFoundPage from '../settings/not-found-page.json'
+import * as siteMetadata from '../settings/site-metadata.json'
 
-const NotFoundPage = () => {
-  const { markdownRemark } = useStaticQuery(
-    graphql`
-      query {
-        markdownRemark(frontmatter: { key: { eq: "not-found" } }) {
-          frontmatter {
-            title
-            message
-          }
-        }
-      }
-    `
-  )
-
-  const notFound = markdownRemark.frontmatter
-
-  return (
-    <Layout>
-      <SEO title={notFound.title} />
-      <NotFound message={notFound.message} title={notFound.title} />
-    </Layout>
-  )
-}
+const NotFoundPage = () => (
+  <>
+    <SEO />
+    <NotFoundPageTemplate
+      background={indexPage.background}
+      borderRadius={indexPage.borderRadius}
+      buttonsColor={indexPage.buttonsColor}
+      buttonsFontColor={indexPage.buttonsFontColor}
+      buttonLabel={notFoundPage.buttonLabel}
+      fontColor={indexPage.fontColor}
+      header={notFoundPage.title}
+      logo={indexPage.logo}
+      message={notFoundPage.message}
+      title={siteMetadata.title}
+    />
+  </>
+)
 
 export default NotFoundPage
