@@ -7,12 +7,12 @@
   "logo": "images/logo.svg",
   "links": [
     {
-      "label": "Chat with us on WhatsApp 💬",
-      "url": "https://wa.me/5545991328593"
+      "label": "Chat with me on WhatsApp 💬",
+      "url": "https://wa.me/5545988031679"
     },
     {
-      "label": "Follow us on Instagram 📸",
-      "url": "https://instagram.com/mars.collective"
+      "label": "Follow me on Instagram 📸",
+      "url": "https://instagram.com/dansoares"
     },
     {
       "label": "See our portfolio on Behance 🎨",
@@ -23,8 +23,8 @@
       "url": "https://github.com/marscollective"
     },
     {
-      "label": "Like us on Facebook 👍",
-      "url": "https://www.facebook.com/marscollective.co"
+      "label": "Mars Collective 🚀",
+      "url": "https://marscollective.co"
     }
   ]
 }
