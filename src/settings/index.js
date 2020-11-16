@@ -1,14 +1,15 @@
-const siteMetadata = require('./siteMetadata.json')
+const siteMetadata = require('./site-metadata.json')
+const indexPage = require('./index-page.json')
 
 const settings = {
   title: siteMetadata.title,
   shortTitle: siteMetadata.shortTitle,
   description: siteMetadata.description,
-  siteUrl: siteMetadata.siteUrl,
   favicon: siteMetadata.favicon,
   lang: siteMetadata.lang,
-  gtmID: siteMetadata.gtmID,
-  socialLinks: siteMetadata.socialLinks
+  background: indexPage.background,
+  themeColor: indexPage.buttonsColor,
+  gtmID: siteMetadata.gtmID
 }
 
 module.exports = settings

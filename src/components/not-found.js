@@ -1,9 +1,34 @@
 import React from 'react'
+import { Link } from 'gatsby'
+import Button from './button'
 
-const NotFound = ({ message, title }) => (
-  <div className="container text-center my-56">
-    <h1>{title}</h1>
+const NotFound = ({
+  borderRadius,
+  buttonLabel,
+  buttonsFontColor,
+  buttonsColor,
+  fontColor,
+  header,
+  message
+}) => (
+  <div
+    style={{
+      display: 'grid',
+      gap: '3rem',
+      margin: '6rem 0',
+      color: `${fontColor}`
+    }}
+  >
+    <h1 style={{ fontSize: '4rem' }}>{header}</h1>
     <p>{message}</p>
+    <Link to="/">
+      <Button
+        borderRadius={borderRadius}
+        buttonsFontColor={buttonsFontColor}
+        buttonsColor={buttonsColor}
+        label={buttonLabel}
+      />
+    </Link>
   </div>
 )
 
