@@ -13,7 +13,7 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,yml}\""
   },
   "dependencies": {
-    "gatsby": "^2.32.10",
+    "gatsby": "^2.32.11",
     "gatsby-plugin-google-tagmanager": "^2.11.0",
     "gatsby-plugin-manifest": "^2.12.1",
     "gatsby-plugin-netlify-cms": "^4.10.0",
