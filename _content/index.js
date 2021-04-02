@@ -7,5 +7,27 @@ export default {
   es,
   pt,
   title: 'Daniel Soares',
-  image: '/images/daniel-soares.jpeg'
+  image: '/images/daniel-soares.jpeg',
+  links: [
+    {
+      label: '📸 Instagram',
+      url: '#'
+    },
+    {
+      label: '🎨 Behance',
+      url: '#'
+    },
+    {
+      label: '💻 GitHub',
+      url: '#'
+    },
+    {
+      label: '👔 Mars Collective',
+      url: '#'
+    },
+    {
+      label: '👔 Lattes',
+      url: '#'
+    }
+  ]
 }

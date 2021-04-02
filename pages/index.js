@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import Layout from '@/layout'
 import Profile from '@/containers/profile'
+import Links from '@/containers/links'
 import content from '@/content'
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
         text={t.profile.text}
         title={t.profile.title}
       />
+      <Links data={content.links} />
     </Layout>
   )
 }
