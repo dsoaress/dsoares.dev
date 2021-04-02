@@ -1,25 +1,29 @@
-# Logs
-logs
-*.log
+# dependencies
+node_modules
+.pnp
+.pnp.js
+
+# testing
+coverage
+
+# next.js
+.next/
+out/
+sw.js
+sw*.map
+workbox*
+
+# misc
+.vscode
+.DS_Store
+*.pem
+
+# debug
 yarn-debug.log*
 yarn-error.log*
 
-# Dependency directories
-node_modules
-
-# Dotenv environment variable files
+# local env files
 .env
 
-# Gatsby files
-.cache
-public
-
-# Mac files
-.DS_Store
-
-# Yarn
-yarn-error.log
-.yarn-integrity
-
-# Local Netlify folder
-.netlify
+# vercel
+.vercel
