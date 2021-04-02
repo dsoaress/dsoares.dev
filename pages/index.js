@@ -12,6 +12,7 @@ export default function Home() {
     <Layout>
       <Profile
         image={content.image}
+        alt={content.title}
         text={t.profile.text}
         title={t.profile.title}
       />

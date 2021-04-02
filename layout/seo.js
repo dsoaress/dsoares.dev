@@ -17,6 +17,11 @@ export default function SEO() {
       <meta property="twitter:card" content="summary" />
       <meta property="twitter:title" content={content.title} />
       <meta property="twitter:description" content={t.description} />
+      <link rel="manifest" href="manifest.json" />
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+      <link rel="apple-touch-icon" href="icons/icon-512x512.png" />
+      <meta name="theme-color" content="#E61F5B" />
+      <meta name="apple-mobile-web-app-status-bar" content="#E61F5B" />
     </Head>
   )
 }

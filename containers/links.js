@@ -9,7 +9,7 @@ export default function Links({ data }) {
           <Link href={item.url} key={i} isExternal>
             <Button
               bg="highlight"
-              color="default"
+              color="white"
               _hover={{ bg: 'hover' }}
               py={8}
               w="100%"
