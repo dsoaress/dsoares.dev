@@ -8,7 +8,7 @@ export default function Footer() {
   const { locale } = router
   const t = content[locale]
   return (
-    <Section my={8} fontSize="xs" textAlign="center" lineHeight={1.6}>
+    <Section as="footer" my={8} fontSize="xs" textAlign="center">
       <Text>{t.footer}</Text>
       <Text>
         {content.title} ©️ {new Date().getFullYear()}

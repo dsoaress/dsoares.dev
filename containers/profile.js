@@ -12,9 +12,7 @@ export default function Profile({ image, text, title }) {
       >
         <Image src={image} />
         <Stack py={{ md: 8, lg: 24 }} spacing={{ base: 4, lg: 8 }}>
-          <Heading as="h1" fontSize={['4xl', null, '5xl', '6xl']}>
-            {title}
-          </Heading>
+          <Heading fontSize={['4xl', null, '5xl', '6xl']}>{title}</Heading>
           <Text>{text}</Text>
         </Stack>
       </SimpleGrid>
