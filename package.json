@@ -1,33 +1,23 @@
 {
-  "name": "dsoares-site",
+  "name": "dsoares.me",
   "author": "Daniel Soares <daniel.soares@me.com>",
   "private": true,
-  "version": "2.0.0",
+  "version": "3.0.0",
   "license": "0BSD",
   "scripts": {
-    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
-    "dev": "gatsby develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "deploy": "yarn build && netlify deploy -p",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,yml}\""
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "format": "prettier --write \"**/*.{js,json}\""
   },
   "dependencies": {
-    "gatsby": "^2.32.11",
-    "gatsby-plugin-google-tagmanager": "^2.11.0",
-    "gatsby-plugin-manifest": "^2.12.1",
-    "gatsby-plugin-netlify-cms": "^4.10.0",
-    "gatsby-plugin-offline": "^3.10.2",
-    "gatsby-plugin-react-helmet": "^3.10.0",
-    "netlify-cms-app": "^2.14.32",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
-    "react-helmet": "^6.1.0"
-  },
-  "devDependencies": {
-    "prettier": "^2.2.1"
-  },
-  "engines": {
-    "node": "12.x"
+    "@chakra-ui/react": "^1.4.2",
+    "@emotion/react": "^11.1.5",
+    "@emotion/styled": "^11.1.5",
+    "emotion-icons": "^3.13.0",
+    "framer-motion": "^4.1.2",
+    "next": "^10.1.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }
