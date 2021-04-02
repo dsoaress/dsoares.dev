@@ -11,22 +11,22 @@ export default {
   links: [
     {
       label: '📸 Instagram',
-      url: '#'
+      url: 'https://www.instagram.com/dansoares'
     },
     {
       label: '🎨 Behance',
-      url: '#'
+      url: 'https://www.behance.net/dpsoares'
     },
     {
-      label: '💻 GitHub',
-      url: '#'
+      label: '🐙 GitHub',
+      url: 'https://github.com/dsoaress'
     },
     {
-      label: '👔 Mars Collective',
-      url: '#'
+      label: '🧑🏻‍💻 Mars Collective',
+      url: 'https://marscollective.co'
     },
     {
-      label: '👔 Lattes',
+      label: '📚 Lattes',
       url: '#'
     }
   ]
