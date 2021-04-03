@@ -16,12 +16,16 @@
     "@emotion/styled": "^11.1.5",
     "@fontsource/rubik": "^4.2.2",
     "@fontsource/rubik-mono-one": "^4.2.2",
+    "@prisma/client": "^2.20.1",
     "framer-motion": "^4.1.2",
     "next": "^10.1.3",
+    "next-auth": "^3.13.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "prettier-plugin-prisma": "^0.7.0",
+    "prisma": "^2.20.1"
   }
 }

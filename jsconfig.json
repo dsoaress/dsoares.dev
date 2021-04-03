@@ -6,6 +6,7 @@
       "@/containers/*": ["containers/*"],
       "@/content": ["_content"],
       "@/layout": ["layout"],
+      "@/lib/*": ["lib/*"],
       "@/theme": ["theme"]
     }
   },

@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import Layout from '@/layout'
+import { Main } from '@/layout'
 import Profile from '@/containers/profile'
 import Links from '@/containers/links'
 import content from '@/content'
@@ -9,7 +9,7 @@ export default function Home() {
   const { locale } = router
   const t = content[locale]
   return (
-    <Layout>
+    <Main>
       <Profile
         image={content.image}
         alt={content.title}
@@ -17,6 +17,6 @@ export default function Home() {
         title={t.profile.title}
       />
       <Links data={content.links} />
-    </Layout>
+    </Main>
   )
 }
