@@ -8,8 +8,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "postinstall": "husky install",
-    "format": "prettier --write \"**/*.{js,json}\""
+    "format": "prettier --write \"src/**/*.js\""
   },
   "dependencies": {
     "@fontsource/rubik": "^4.2.2",
@@ -19,10 +18,7 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "^12.1.1",
-    "@commitlint/config-conventional": "^12.1.1",
     "autoprefixer": "^10.2.5",
-    "husky": "^6.0.0",
     "postcss": "^8.2.10",
     "prettier": "^2.2.1",
     "tailwindcss": "^2.1.1"
