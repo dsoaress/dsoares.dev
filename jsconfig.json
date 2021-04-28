@@ -3,11 +3,9 @@
     "baseUrl": "src",
     "paths": {
       "@/components/*": ["components/*"],
-      "@/containers/*": ["containers/*"],
       "@/content": ["../_content"],
-      "@/layout": ["layout"],
-      "@/theme": ["theme"]
+      "@/styles/*": ["styles/*"]
     }
   },
-  "exclude": ["node_modules/*"]
+  "exclude": ["node_modules", ".next", ".vercel", "public"]
 }

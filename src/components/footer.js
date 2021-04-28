@@ -1,6 +1,4 @@
 import { useRouter } from 'next/router'
-import { Text } from '@chakra-ui/react'
-import Section from '@/components/section'
 import content from '@/content'
 
 export default function Footer() {
@@ -8,11 +6,11 @@ export default function Footer() {
   const { locale } = router
   const t = content[locale]
   return (
-    <Section as="footer" my={8} fontSize="xs" textAlign="center">
-      <Text>{t.footer}</Text>
-      <Text>
+    <footer className="my-8 text-xs text-center">
+      <p>{t.footer}</p>
+      <p>
         {content.title} ©️ {new Date().getFullYear()}
-      </Text>
-    </Section>
+      </p>
+    </footer>
   )
 }
