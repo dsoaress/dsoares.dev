@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.2.5",
+    "next-pwa": "^5.2.15",
     "postcss": "^8.2.10",
     "prettier": "^2.2.1",
     "tailwindcss": "^2.1.1"
