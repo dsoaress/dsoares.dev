@@ -1,24 +1,33 @@
+import { useState } from 'react'
 import { signIn } from 'next-auth/client'
+import { Button, Center, Heading, Stack, Text } from '@chakra-ui/react'
 import { AiOutlineGithub as GitHub } from 'react-icons/ai'
 
 export default function Login() {
+  const [loading, setLoading] = useState(false)
+
   return (
-    <div className="fixed inset-0 flex items-center justify-center p-8">
-      <div className="space-y-8 text-center">
-        <h1 className="text-3xl font-bold ">Hello, stranger 🖖</h1>
-        <p>You need to be logged in</p>
-        <div className="flex justify-center">
-          <button
-            className="flex items-center bg-green-600 hover:bg-green-700 transition-colors py-3 px-6 rounded-md"
+    <Center pos="fixed" top="0" left="0" right="0" bottom="0" p="8">
+      <Stack spacing="8" textAlign="center">
+        <Heading as="h1" textSize="3xl" fontWeight="bold">
+          Hello, stranger 🖖
+        </Heading>
+        <Text>You need to be logged in</Text>
+        <Center>
+          <Button
+            leftIcon={<GitHub />}
+            isLoading={loading}
+            loadingText="GitHub"
+            colorScheme="teal"
             onClick={() => {
+              setLoading(true)
               signIn('github')
             }}
           >
-            <GitHub className="mr-2" />
             GitHub
-          </button>
-        </div>
-      </div>
-    </div>
+          </Button>
+        </Center>
+      </Stack>
+    </Center>
   )
 }
