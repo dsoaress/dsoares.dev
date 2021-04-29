@@ -7,31 +7,35 @@ import Links from '@/components/links'
 import Footer from '@/components/footer'
 
 export default function Home({ data }) {
-  const router = useRouter()
-  const { locale } = router
+  const { locale } = useRouter()
   const profile = data.profile[locale]
   const footer = data.footer[locale]
+  const { image, links, name } = data
+  const splittedName = name.split(' ')
+  const firstName = splittedName[0]
+  const lastName = splittedName[1]
+  const description = profile?.title + ' ' + profile?.text
 
   return (
     <div className="mx-auto px-6 max-w-screen-md">
-      <SEO data={data} />
-      <Header data={data} />
+      <SEO description={description} name={name} />
+      <Header firstName={firstName} lastName={lastName} />
       <main>
         <Profile
-          image={data.image}
-          alt={data.name}
+          image={image}
+          alt={name}
           text={profile?.text}
           title={profile?.title}
         />
-        <Links data={data.links} />
+        <Links data={links} />
       </main>
-      <Footer footerText={footer} name={data.name} />
+      <Footer footer={footer} name={name} />
     </div>
   )
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`${process.env.URL}/api`)
+  const res = await fetch(`${process.env.DOMAIN}/api`)
   const data = await res.json()
 
   return { props: { data } }
