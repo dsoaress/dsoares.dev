@@ -1,15 +1,9 @@
-import { useRouter } from 'next/router'
-import content from '@/content'
-
-export default function Footer() {
-  const router = useRouter()
-  const { locale } = router
-  const t = content[locale]
+export default function Footer({ footerText, name }) {
   return (
     <footer className="my-8 text-xs text-center">
-      <p>{t.footer}</p>
+      <p>{footerText}</p>
       <p>
-        {content.title} ©️ {new Date().getFullYear()}
+        {name} ©️ {new Date().getFullYear()}
       </p>
     </footer>
   )

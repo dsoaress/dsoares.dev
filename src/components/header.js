@@ -1,19 +1,17 @@
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
-import content from '@/content'
-
-export default function Header() {
+export default function Header({ data }) {
   const router = useRouter()
   const { locale, locales, pathname } = router
-  const title = content.title.split(' ')
+  const name = data.name.split(' ')
 
   return (
     <header className="my-8">
       <div className="flex align-center justify-between">
         <h1 className="text-lg font-normal font-head uppercase">
-          {title[0]}
-          <span className="text-green-600">{title[1]}</span>
+          {name[0]}
+          <span className="text-green-600">{name[1]}</span>
         </h1>
         <ul className="flex space-x-2">
           {locales.map((localeItem, i) => (

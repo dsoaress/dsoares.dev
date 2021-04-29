@@ -1,9 +1,10 @@
 const withPWA = require('next-pwa')
 
 const nextConfig = {
+  images: { domains: ['avatars.githubusercontent.com'] },
   i18n: {
-    locales: ['en', 'es', 'pt'],
-    defaultLocale: 'en'
+    locales: process.env.LOCALES.split(','),
+    defaultLocale: process.env.DEFAULT_LOCALE
   },
   pwa: {
     dest: 'public',
