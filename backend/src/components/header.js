@@ -1,10 +1,15 @@
 import { Avatar, Box, Button, Flex, Text } from '@chakra-ui/react'
 import { signOut } from 'next-auth/client'
 
-export default function Header({ firstName, image }) {
+export default function Header({ firstName, image, saving }) {
   return (
     <Flex
       as="header"
+      pos="fixed"
+      top="0"
+      left="0"
+      right="0"
+      zIndex="50"
       justify="space-between"
       align="center"
       p="4"

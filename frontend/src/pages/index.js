@@ -1,5 +1,3 @@
-import { useRouter } from 'next/router'
-
 import SEO from '@/components/seo'
 import Header from '@/components/header'
 import Profile from '@/components/profile'
@@ -7,10 +5,7 @@ import Links from '@/components/links'
 import Footer from '@/components/footer'
 
 export default function Home({ data }) {
-  const { locale } = useRouter()
-  const profile = data.profile[locale]
-  const footer = data.footer[locale]
-  const { image, links, name } = data
+  const { footer, image, links, name, profile } = data
   const splittedName = name.split(' ')
   const firstName = splittedName[0]
   const lastName = splittedName[1]
