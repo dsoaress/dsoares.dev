@@ -26,15 +26,13 @@ export default async (req, res) => {
       res.end()
     }
 
-    if (req.method === 'PATCH') {
+    if (req.method === 'DELETE') {
       await db.collection('users').updateOne(
         { email: userEmail },
         {
           $pull: {
             links: {
-              _id: ObjectId(),
-              label: link.label,
-              url: link.url
+              _id: ObjectId(link._id)
             }
           }
         }
