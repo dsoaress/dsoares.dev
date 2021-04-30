@@ -3,8 +3,7 @@
     "baseUrl": "src",
     "paths": {
       "@/components/*": ["components/*"],
-      "@/content": ["../_content"],
-      "@/styles/*": ["styles/*"]
+      "@/lib/*": ["lib/*"]
     }
   },
   "exclude": ["node_modules", ".next", ".vercel", "public"]
