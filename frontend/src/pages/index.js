@@ -12,11 +12,10 @@ const { NEXT_PUBLIC_API_URL: api } = process.env
 export default function Home(props) {
   const { data } = useSWR(api, fetcher, { initialData: props.data })
 
-  const { footer, image, links, name, profile } = data
+  const { description, footer, greeting, image, links, name } = data
   const splittedName = name.split(' ')
   const firstName = splittedName[0]
   const lastName = splittedName[1]
-  const description = profile?.title + ' ' + profile?.text
 
   return (
     <div className="mx-auto px-6 max-w-screen-md">
@@ -24,10 +23,10 @@ export default function Home(props) {
       <Header firstName={firstName} lastName={lastName} />
       <main>
         <Profile
-          image={image}
           alt={name}
-          text={profile?.text}
-          title={profile?.title}
+          description={description}
+          greeting={greeting}
+          image={image}
         />
         <Links data={links} />
       </main>
