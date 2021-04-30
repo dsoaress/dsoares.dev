@@ -12,32 +12,29 @@ import {
 } from '@chakra-ui/react'
 import { AiOutlineSave } from 'react-icons/ai'
 
+import ImageUpload from '@/components/imageUpload'
+
 export default function Settings({ data }) {
   const [loading, setLoading] = useState(false)
+  const [description, setDescription] = useState(data.description)
   const [footer, setFooter] = useState(data.footer)
-  const [text, setText] = useState(data.profile?.text)
-  const [title, setTitle] = useState(data.profile?.title)
+  const [greeting, setGreeting] = useState(data.greeting)
   const toast = useToast()
 
   async function handleSettings(e) {
     e.preventDefault()
     setLoading(true)
 
-    const body = {
-      profile: {
-        title,
-        text
-      },
-      footer
-    }
+    const image = e.currentTarget.image.files[0]
+    const formData = new FormData()
+    formData.append('description', description)
+    formData.append('footer', footer)
+    formData.append('greeting', greeting)
+    formData.append('image', image)
 
     const res = await fetch('/api/settings', {
       method: 'PATCH',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(body)
+      body: formData
     })
 
     if (res.status === 200) {
@@ -67,11 +64,11 @@ export default function Settings({ data }) {
       <form onSubmit={handleSettings}>
         <Stack p="4" bg="gray.300" rounded="md">
           <FormControl id="title">
-            <FormLabel srOnly>Title</FormLabel>
+            <FormLabel srOnly>Greeting</FormLabel>
             <Input
               type="text"
-              value={title}
-              onChange={e => setTitle(e.target.value)}
+              value={greeting}
+              onChange={e => setGreeting(e.target.value)}
               placeholder="Title"
               bg="gray.50"
             />
@@ -80,14 +77,16 @@ export default function Settings({ data }) {
           <FormControl id="text">
             <FormLabel srOnly>Description</FormLabel>
             <Textarea
-              value={text}
-              onChange={e => setText(e.target.value)}
+              value={description}
+              onChange={e => setDescription(e.target.value)}
               placeholder="Description"
               bg="gray.50"
               h="36"
               resize="none"
             />
           </FormControl>
+
+          <ImageUpload id="image" value={data.image} />
 
           <FormControl id="footer">
             <FormLabel srOnly>Footer</FormLabel>

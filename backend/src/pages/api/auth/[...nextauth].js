@@ -11,7 +11,7 @@ export default NextAuth({
     })
   ],
   pages: {
-    signIn: '/admin'
+    signIn: '/'
   },
   database: MONGODB_URI
 })
