@@ -1,10 +1,17 @@
+import useSWR from 'swr'
+
 import SEO from '@/components/seo'
 import Header from '@/components/header'
 import Profile from '@/components/profile'
 import Links from '@/components/links'
 import Footer from '@/components/footer'
+import { fetcher } from '@/lib/fetcher'
 
-export default function Home({ data }) {
+const { NEXT_PUBLIC_API_URL: api } = process.env
+
+export default function Home(props) {
+  const { data } = useSWR(api, fetcher, { initialData: props.data })
+
   const { footer, image, links, name, profile } = data
   const splittedName = name.split(' ')
   const firstName = splittedName[0]
@@ -30,8 +37,7 @@ export default function Home({ data }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`${process.env.API_URL}/api`)
-  const data = await res.json()
+  const data = await fetcher(api)
 
-  return { props: { data } }
+  return { props: { data }, revalidate: 1 }
 }
