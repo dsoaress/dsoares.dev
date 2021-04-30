@@ -15,7 +15,7 @@ export default function Home() {
   if (loading || !data) return <Spinner />
   if (!session) return <Login />
 
-  const { image, name } = data
+  const { footer, image, name, profile } = data
   const splittedName = name.split(' ')
   const firstName = splittedName[0]
 
@@ -44,21 +44,33 @@ export default function Home() {
   async function handleSettings(e) {
     e.preventDefault()
 
-    // await fetch('/api/links', {
-    //   method: 'POST',
-    //   headers: {
-    //     Accept: 'application/json',
-    //     'Content-Type': 'application/json'
-    //   },
-    //   body: JSON.stringify({ link: { label, url } })
-    // })
+    const body = {
+      profile: {
+        title: e.currentTarget.title.value,
+        text: e.currentTarget.text.value
+      },
+      footer: e.currentTarget.footer.value
+    }
+
+    await fetch('/api/settings', {
+      method: 'PATCH',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    })
   }
 
   return (
     <>
       <Header firstName={firstName} image={image} />
       <AddLink handleLink={handleLink} />
-      <Settings handleSettings={handleSettings} />
+      <Settings
+        footer={footer}
+        handleSettings={handleSettings}
+        profile={profile}
+      />
     </>
   )
 }
