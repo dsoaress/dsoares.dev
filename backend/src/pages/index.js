@@ -1,5 +1,6 @@
 import { useSession } from 'next-auth/client'
 import useSWR from 'swr'
+import Head from 'next/head'
 
 import AddLink from '@/components/addLink'
 import Header from '@/components/header'
@@ -16,16 +17,15 @@ export default function Home() {
   if (loading || !data) return <Spinner />
   if (!session) return <Login />
 
-  const { footer, image, links, name, profile } = data
-  const splittedName = name.split(' ')
-  const firstName = splittedName[0]
-
   return (
     <>
-      <Header firstName={firstName} image={image} />
+      <Head>
+        <title>{data.name} | Dashboard</title>
+      </Head>
+      <Header data={data} />
       <AddLink />
-      <Links links={links} />
-      <Settings footer={footer} profile={profile} />
+      <Links data={data} />
+      <Settings data={data} />
     </>
   )
 }

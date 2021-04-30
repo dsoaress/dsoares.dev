@@ -1,7 +1,21 @@
-import { Avatar, Box, Button, Flex, Text } from '@chakra-ui/react'
+import { useState } from 'react'
+import {
+  Avatar,
+  Box,
+  Button,
+  ButtonGroup,
+  Flex,
+  Link,
+  Text
+} from '@chakra-ui/react'
 import { signOut } from 'next-auth/client'
 
-export default function Header({ firstName, image, saving }) {
+export default function Header({ data }) {
+  const [loading, setLoading] = useState(false)
+  const { image, name } = data
+  const splittedName = name.split(' ')
+  const firstName = splittedName[0]
+
   return (
     <Box bg="gray.900" pos="fixed" top="0" left="0" right="0" zIndex="50">
       <Flex
@@ -21,9 +35,26 @@ export default function Header({ firstName, image, saving }) {
           </Box>
         </Flex>
 
-        <Button colorScheme="red" size="sm" onClick={() => signOut()}>
-          Sign out
-        </Button>
+        <ButtonGroup>
+          <Link href={process.env.NEXT_PUBLIC_FRONTEND}>
+            <Button colorScheme="teal" size="sm">
+              Go to site
+            </Button>
+          </Link>
+
+          <Button
+            isLoading={loading}
+            loadingText="Sign out"
+            colorScheme="red"
+            size="sm"
+            onClick={() => {
+              setLoading(true)
+              signOut()
+            }}
+          >
+            Sign out
+          </Button>
+        </ButtonGroup>
       </Flex>
     </Box>
   )

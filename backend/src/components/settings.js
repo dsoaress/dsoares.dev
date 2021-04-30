@@ -7,26 +7,31 @@ import {
   Heading,
   Input,
   Stack,
-  Textarea
+  Textarea,
+  useToast
 } from '@chakra-ui/react'
+import { AiOutlineSave } from 'react-icons/ai'
 
-export default function Settings({ footer, profile }) {
-  const [footerText, setFooterText] = useState(footer)
-  const [profileTitle, setProfileTitle] = useState(profile.title)
-  const [profileText, setProfileText] = useState(profile.text)
+export default function Settings({ data }) {
+  const [loading, setLoading] = useState(false)
+  const [footer, setFooter] = useState(data.footer)
+  const [text, setText] = useState(data.profile?.text)
+  const [title, setTitle] = useState(data.profile?.title)
+  const toast = useToast()
 
   async function handleSettings(e) {
     e.preventDefault()
+    setLoading(true)
 
     const body = {
       profile: {
-        title: e.currentTarget.title.value,
-        text: e.currentTarget.text.value
+        title,
+        text
       },
-      footer: e.currentTarget.footer.value
+      footer
     }
 
-    await fetch('/api/settings', {
+    const res = await fetch('/api/settings', {
       method: 'PATCH',
       headers: {
         Accept: 'application/json',
@@ -34,19 +39,39 @@ export default function Settings({ footer, profile }) {
       },
       body: JSON.stringify(body)
     })
+
+    if (res.status === 200) {
+      toast({
+        title: 'Saved',
+        status: 'success',
+        duration: 3000,
+        isClosable: true
+      })
+    } else {
+      toast({
+        title: 'We had an internal error, please try again in a few seconds',
+        status: 'error',
+        duration: 6000,
+        isClosable: true
+      })
+    }
+
+    setLoading(false)
   }
 
   return (
-    <Box px="4" mt="12" mx="auto" maxW="container.md">
-      <Stack as="form" onSubmit={handleSettings}>
-        <Heading>Settings</Heading>
+    <Box px="4" my="12" mx="auto" maxW="container.md">
+      <Heading fontSize="xl" mb="4">
+        Settings
+      </Heading>
+      <form onSubmit={handleSettings}>
         <Stack p="4" bg="gray.300" rounded="md">
           <FormControl id="title">
             <FormLabel srOnly>Title</FormLabel>
             <Input
               type="text"
-              value={profileTitle}
-              onChange={e => setProfileTitle(e.target.value)}
+              value={title}
+              onChange={e => setTitle(e.target.value)}
               placeholder="Title"
               bg="gray.50"
             />
@@ -55,8 +80,8 @@ export default function Settings({ footer, profile }) {
           <FormControl id="text">
             <FormLabel srOnly>Description</FormLabel>
             <Textarea
-              value={profileText}
-              onChange={e => setProfileText(e.target.value)}
+              value={text}
+              onChange={e => setText(e.target.value)}
               placeholder="Description"
               bg="gray.50"
               h="36"
@@ -68,18 +93,24 @@ export default function Settings({ footer, profile }) {
             <FormLabel srOnly>Footer</FormLabel>
             <Input
               type="text"
-              value={footerText}
-              onChange={e => setFooterText(e.target.value)}
+              value={footer}
+              onChange={e => setFooter(e.target.value)}
               placeholder="Footer"
               bg="gray.50"
             />
           </FormControl>
 
-          <Button colorScheme="teal" type="submit">
+          <Button
+            leftIcon={<AiOutlineSave />}
+            isLoading={loading}
+            loadingText="Save"
+            colorScheme="teal"
+            type="submit"
+          >
             Save
           </Button>
         </Stack>
-      </Stack>
+      </form>
     </Box>
   )
 }
