@@ -12,7 +12,7 @@ import {
 } from '@chakra-ui/react'
 import { AiOutlineSave } from 'react-icons/ai'
 
-import ImageUpload from '@/components/imageUpload'
+import ImageUpload from '@/components/admin/imageUpload'
 
 export default function Settings({ data }) {
   const [loading, setLoading] = useState(false)
@@ -62,7 +62,7 @@ export default function Settings({ data }) {
         Settings
       </Heading>
       <form onSubmit={handleSettings}>
-        <Stack p="4" bg="gray.300" rounded="md">
+        <Stack p="4" bg="gray.700" rounded="md">
           <FormControl id="title">
             <FormLabel srOnly>Greeting</FormLabel>
             <Input
@@ -70,7 +70,6 @@ export default function Settings({ data }) {
               value={greeting}
               onChange={e => setGreeting(e.target.value)}
               placeholder="Title"
-              bg="gray.50"
             />
           </FormControl>
 
@@ -80,7 +79,6 @@ export default function Settings({ data }) {
               value={description}
               onChange={e => setDescription(e.target.value)}
               placeholder="Description"
-              bg="gray.50"
               h="36"
               resize="none"
             />
@@ -95,7 +93,6 @@ export default function Settings({ data }) {
               value={footer}
               onChange={e => setFooter(e.target.value)}
               placeholder="Footer"
-              bg="gray.50"
             />
           </FormControl>
 

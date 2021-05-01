@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
-    "baseUrl": "src",
+    "baseUrl": ".",
     "paths": {
       "@/components/*": ["components/*"],
-      "@/lib/*": ["lib/*"]
+      "@/lib/*": ["lib/*"],
+      "@/theme": ["theme"]
     }
   },
   "exclude": ["node_modules", ".next", ".vercel", "public"]

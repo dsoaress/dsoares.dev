@@ -2,12 +2,12 @@ import { useSession } from 'next-auth/client'
 import useSWR from 'swr'
 import Head from 'next/head'
 
-import AddLink from '@/components/addLink'
-import Header from '@/components/header'
-import Links from '@/components/links'
-import Login from '@/components/login'
-import Settings from '@/components/settings'
-import Spinner from '@/components/spinner'
+import AddLink from '@/components/admin/addLink'
+import Header from '@/components/admin/header'
+import Links from '@/components/admin/links'
+import Login from '@/components/admin/login'
+import Settings from '@/components/admin/settings'
+import Spinner from '@/components/admin/spinner'
 import { fetcher } from '@/lib/fetcher'
 
 export default function Home() {

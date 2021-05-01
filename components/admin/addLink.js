@@ -59,7 +59,7 @@ export default function AddLink() {
       <Heading fontSize="xl" mb="4">
         Links
       </Heading>
-      <Stack as="form" p="4" bg="gray.300" rounded="md" onSubmit={handleLink}>
+      <Stack as="form" p="4" bg="gray.700" rounded="md" onSubmit={handleLink}>
         <FormControl id="label">
           <FormLabel srOnly>Label</FormLabel>
           <InputGroup>
@@ -68,7 +68,7 @@ export default function AddLink() {
               color="gray.400"
               children={<AiOutlineTags />}
             />
-            <Input type="text" placeholder="Label" bg="gray.50" required />
+            <Input type="text" placeholder="Label" required />
           </InputGroup>
         </FormControl>
 
@@ -80,7 +80,7 @@ export default function AddLink() {
               color="gray.400"
               children={<AiOutlineLink />}
             />
-            <Input type="text" placeholder="URL" bg="gray.50" required />
+            <Input type="text" placeholder="URL" required />
           </InputGroup>
         </FormControl>
 

@@ -32,7 +32,6 @@ export default function ImageUpload({ value, ...rest }) {
       gap={(files.length !== 0 || value) && '4'}
     >
       <Box
-        bg="gray.50"
         border="1px"
         borderColor="gray.300"
         borderRadius="md"

@@ -17,7 +17,7 @@ export default function Header({ data }) {
   const firstName = splittedName[0]
 
   return (
-    <Box bg="gray.900" pos="fixed" top="0" left="0" right="0" zIndex="50">
+    <Box bg="gray.700" pos="fixed" top="0" left="0" right="0" zIndex="50">
       <Flex
         as="header"
         justify="space-between"
@@ -25,7 +25,6 @@ export default function Header({ data }) {
         p="4"
         mx="auto"
         maxW="container.md"
-        color="gray.50"
       >
         <Flex align="center">
           <Avatar name={firstName} src={image} mr="2" />
@@ -36,7 +35,7 @@ export default function Header({ data }) {
         </Flex>
 
         <ButtonGroup>
-          <Link href={process.env.NEXT_PUBLIC_FRONTEND}>
+          <Link href="/">
             <Button colorScheme="teal" size="sm">
               Go to site
             </Button>
