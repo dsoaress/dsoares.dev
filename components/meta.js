@@ -3,6 +3,12 @@ import Head from 'next/head'
 export default function Meta({ description, name }) {
   return (
     <Head>
+      <script
+        async
+        defer
+        data-website-id="f4b04d5d-93fc-4073-a1d3-5113814daf6a"
+        src="https://stats.marscollective.co/umami.js"
+      ></script>
       <title>{name}</title>
       <meta name="description" content={description} />
       <meta property="og:type" content="website" />
