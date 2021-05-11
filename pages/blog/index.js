@@ -2,9 +2,11 @@ import { useRouter } from 'next/router'
 import useSWR from 'swr'
 
 import Layout from '@/components/Layout'
+import Heading from '@/components/Heading'
 import PostCard from '@/components/PostCard'
 import { api } from '@/lib/api'
 import { fetcher } from '@/lib/fetcher'
+import { formatDate } from '@/lib/formatDate'
 import { postsQuery } from '@/lib/queries'
 import { getPostsByMonth } from '@/lib/getPostsByMonth'
 
@@ -19,10 +21,12 @@ export default function BlogPage(props) {
 
   return (
     <Layout>
-      <h1>Blog</h1>
       {postsByMonth.map(({ date, posts }, i) => (
         <div key={i}>
-          {date}
+          <Heading size="h3" className="mt-12">
+            {formatDate(date)}
+          </Heading>
+          <hr className="border-neutral-300 dark:border-neutral-700" />
           {posts.map(({ id, date, icon, slug, tags, translations }) => {
             const { description, title } = translations[0]
 

@@ -10,12 +10,12 @@ const nextConfig = {
   },
   images: { domains: ['dash.dsoares.me'] },
   future: { webpack5: true },
-  // webpack: (config, { isServer }) => {
-  //   if (isServer) {
-  //     require('./scripts/prebuild')
-  //   }
-  //   return config
-  // },
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      require('./scripts/prebuild')
+    }
+    return config
+  },
   pwa: {
     dest: 'public',
     disable: process.env.NODE_ENV === 'development'

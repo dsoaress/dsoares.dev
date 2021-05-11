@@ -8,10 +8,12 @@
     "dev": "next dev",
     "build": "next build && next-sitemap",
     "start": "next start",
-    "format": "prettier --write \"./**/*.{js,json,yml}\"",
+    "format": "prettier --write \"./**/*.{js,json,yml,css}\"",
+    "clean": "rm -rf .next public settings",
     "postversion": "git push --tags && git push"
   },
   "dependencies": {
+    "@headlessui/react": "^1.2.0",
     "@mdx-js/loader": "^1.6.22",
     "axios": "^0.21.1",
     "classnames": "^2.3.1",
