@@ -4,8 +4,8 @@
     "paths": {
       "@/components/*": ["components/*"],
       "@/lib/*": ["lib/*"],
-      "@/theme": ["theme"]
+      "@/settings": ["settings"],
+      "@/styles/*": ["styles/*"]
     }
-  },
-  "exclude": ["node_modules", ".next", ".vercel", "public"]
+  }
 }

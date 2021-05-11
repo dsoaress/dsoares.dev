@@ -7,11 +7,10 @@ node_modules
 coverage
 
 # next.js
-.next/
-out/
-sw.js
-sw*.map
-workbox*
+.next
+out
+public
+settings
 
 # misc
 .vscode

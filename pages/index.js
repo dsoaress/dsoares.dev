@@ -1,40 +1,45 @@
+import { useRouter } from 'next/router'
 import useSWR from 'swr'
 
-import Meta from '@/components/meta'
-import Header from '@/components/header'
-import Profile from '@/components/profile'
-import Links from '@/components/links'
-import Footer from '@/components/footer'
-import { getInitialData } from '@/lib/getInitialData'
+import Layout from '@/components/Layout'
+import PostCard from '@/components/PostCard'
+import { api } from '@/lib/api'
 import { fetcher } from '@/lib/fetcher'
+import { postsQuery } from '@/lib/queries'
 
-export default function Home(props) {
-  const { data } = useSWR('/api', fetcher, { initialData: props.data })
+export default function IndexPage(props) {
+  const { locale } = useRouter()
 
-  const { description, footer, greeting, image, links, name } = data
-  const splittedName = name.split(' ')
-  const firstName = splittedName[0]
-  const lastName = splittedName[1]
+  const { data: posts } = useSWR(postsQuery(locale), fetcher, {
+    initialData: props.posts
+  })
 
   return (
-    <>
-      <Meta description={description} name={name} />
-      <Header firstName={firstName} lastName={lastName} />
-      <main>
-        <Profile
-          alt={name}
-          description={description}
-          greeting={greeting}
-          image={image}
-        />
-        <Links data={links} />
-      </main>
-      <Footer footer={footer} name={name} />
-    </>
+    <Layout>
+      <h1>Index</h1>
+      <div>
+        {posts.data.map(({ id, date, icon, slug, tags, translations }) => {
+          const { description, title } = translations[0]
+
+          return (
+            <PostCard
+              key={id}
+              date={date}
+              description={description}
+              icon={icon}
+              slug={slug}
+              tags={tags}
+              title={title}
+            />
+          )
+        })}
+      </div>
+    </Layout>
   )
 }
 
-export async function getStaticProps() {
-  const data = await getInitialData()
-  return { props: { data }, revalidate: 1 }
+export async function getStaticProps({ locale }) {
+  const { data: posts } = await api.get(postsQuery(locale, 1))
+
+  return { props: { posts }, revalidate: 1 }
 }

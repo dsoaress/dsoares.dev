@@ -1,16 +1,11 @@
-import { Provider } from 'next-auth/client'
-import { ChakraProvider } from '@chakra-ui/react'
+import { ThemeProvider } from 'next-themes'
 
-import theme from '@/theme'
-import '@fontsource/rubik-mono-one'
-import '@fontsource/rubik'
+import '@/styles/globals.css'
 
 export default function App({ Component, pageProps }) {
   return (
-    <Provider session={pageProps.session}>
-      <ChakraProvider theme={theme}>
-        <Component {...pageProps} />
-      </ChakraProvider>
-    </Provider>
+    <ThemeProvider defaultTheme="system" attribute="class">
+      <Component {...pageProps} />
+    </ThemeProvider>
   )
 }
