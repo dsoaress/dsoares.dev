@@ -1,11 +1,17 @@
 import Layout from '@/components/Layout'
 import PostsList from '@/components/PostsList'
+import ProfileCard from '@/components/ProfileCard'
 import getPosts from '@/lib/getPosts'
+import getProfile from '@/lib/getProfile'
 
-export default function IndexPage({ posts }) {
+export default function IndexPage({ posts, profile }) {
   return (
     <Layout>
-      <h1>Index</h1>
+      <ProfileCard
+        image={profile.image}
+        text={profile.text}
+        title={profile.title}
+      />
       <PostsList posts={posts} />
     </Layout>
   )
@@ -13,5 +19,7 @@ export default function IndexPage({ posts }) {
 
 export async function getStaticProps({ locale }) {
   const posts = await getPosts(locale, 3)
-  return { props: { posts }, revalidate: 1 }
+  const profile = await getProfile(locale)
+
+  return { props: { posts, profile }, revalidate: 1 }
 }

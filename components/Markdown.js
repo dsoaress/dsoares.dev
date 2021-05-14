@@ -2,10 +2,14 @@ import { MDXRemote } from 'next-mdx-remote'
 
 import Figure from '@/components/Figure'
 
-export default function Markdown({ content }) {
+export default function Markdown({ className, content }) {
   const components = {
     img: Figure
   }
 
-  return <MDXRemote components={components} {...content} />
+  return (
+    <div className={className}>
+      <MDXRemote components={components} {...content} />
+    </div>
+  )
 }
