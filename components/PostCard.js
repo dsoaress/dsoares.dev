@@ -1,10 +1,9 @@
-import Image from 'next/image'
 import Link from 'next/link'
 
+import Date from '@/components/Date'
 import Heading from '@/components/Heading'
-import Tag from '@/components/Tag'
-import { formatFullDate } from '@/lib/formatDate'
-import { imageToUrl } from '@/lib/imageToUrl'
+import PostIcon from '@/components/PostIcon'
+import Tags from '@/components/Tags'
 
 export default function PostCard({
   date,
@@ -15,40 +14,26 @@ export default function PostCard({
   title
 }) {
   return (
-    <Link href={`/blog/${slug}`}>
-      <a>
-        <div className="grid gap-8 my-8 rounded-md lg:p-6 lg:grid-cols-[1fr,180px] transition-colors duration-300 lg:hover:bg-neutral-100 lg:dark:hover:bg-neutral-800">
-          <div className="flex">
-            <div className="flex items-center flex-shrink-0 mr-8">
-              <Image
-                src={imageToUrl(icon)}
-                width={48}
-                height={48}
-                className="w-10"
-              />
-            </div>
-            <div>
-              <Heading as="h2">{title}</Heading>
-              <p className="lg:text-lg">{description}</p>
-            </div>
-          </div>
-          <div className="border-t lg:border-t-0 lg:border-l border-neutral-300 dark:border-neutral-700 pt-4 lg:pt-0 lg:pl-4 lg:flex lg:flex-col lg:justify-center">
-            {formatFullDate(date)}
-            <div className="flex flex-wrap">
-              {tags.map(({ tag }, i) => {
-                const { name, color } = tag
-                return (
-                  <Link href={`/blog/tag/${name}`} key={i}>
-                    <a>
-                      <Tag color={color} name={name} size="small" />
-                    </a>
-                  </Link>
-                )
-              })}
-            </div>
+    <article className="relative lg:hover:bg-neutral-200 lg:dark:hover:bg-neutral-800 rounded-md transition-colors duration-300 cursor-pointer">
+      <Link href={`/blog/${slug}`}>
+        <a aria-label={title} className="absolute inset-0"></a>
+      </Link>
+      <div className="gap-8 grid lg:grid-cols-[1fr,180px] lg:p-6">
+        <div className="flex items-center lg:space-x-8">
+          <PostIcon icon={icon} className="hidden lg:block" />
+          <div>
+            <Heading>{title}</Heading>
+            <p className="lg:text-lg">{description}</p>
           </div>
         </div>
-      </a>
-    </Link>
+        <div className="border-neutral-300 border-t flex items-center pt-6 space-x-6 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0 lg:space-x-0 dark:border-neutral-700">
+          <PostIcon icon={icon} className="lg:hidden h-12" />
+          <div className="lg:space-y-2">
+            <Date date={date} />
+            <Tags tags={tags} />
+          </div>
+        </div>
+      </div>
+    </article>
   )
 }

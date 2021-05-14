@@ -1,47 +1,27 @@
-import { useRouter } from 'next/router'
-import useSWR from 'swr'
-
 import Layout from '@/components/Layout'
 import Heading from '@/components/Heading'
-import PostCard from '@/components/PostCard'
-import { api } from '@/lib/api'
-import { fetcher } from '@/lib/fetcher'
+import PostsList from '@/components/PostsList'
+import getPostsByMonth from '@/lib/getPostsByMonth'
 import { formatDate } from '@/lib/formatDate'
-import { postsQuery } from '@/lib/queries'
-import { getPostsByMonth } from '@/lib/getPostsByMonth'
 
-export default function BlogPage(props) {
-  const { locale } = useRouter()
-
-  const { data: posts } = useSWR(postsQuery(locale), fetcher, {
-    initialData: props.posts
-  })
-
-  const postsByMonth = getPostsByMonth(posts.data)
+export default function BlogPage({ postsByMonth }) {
+  function capitalize(s) {
+    if (typeof s !== 'string') return ''
+    return s.charAt(0).toUpperCase() + s.slice(1)
+  }
 
   return (
     <Layout>
       {postsByMonth.map(({ date, posts }, i) => (
-        <div key={i}>
-          <Heading size="h3" className="mt-12">
-            {formatDate(date)}
+        <div key={i} className="mb-24 last:mb-0">
+          <Heading
+            as="h1"
+            className="text-primary-700 dark:text-primary-500 !text-xl"
+          >
+            {capitalize(formatDate(date))}
           </Heading>
-          <hr className="border-neutral-300 dark:border-neutral-700" />
-          {posts.map(({ id, date, icon, slug, tags, translations }) => {
-            const { description, title } = translations[0]
 
-            return (
-              <PostCard
-                key={id}
-                date={date}
-                description={description}
-                icon={icon}
-                slug={slug}
-                tags={tags}
-                title={title}
-              />
-            )
-          })}
+          <PostsList posts={posts} />
         </div>
       ))}
     </Layout>
@@ -49,7 +29,6 @@ export default function BlogPage(props) {
 }
 
 export async function getStaticProps({ locale }) {
-  const { data: posts } = await api.get(postsQuery(locale))
-
-  return { props: { posts }, revalidate: 1 }
+  const postsByMonth = await getPostsByMonth(locale)
+  return { props: { postsByMonth }, revalidate: 1 }
 }

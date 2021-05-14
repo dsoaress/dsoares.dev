@@ -1,34 +1,29 @@
+import Link from 'next/link'
 import cn from 'classnames'
 
-export default function Tag({ color, name, size }) {
+export default function Tag({ color, name, size, ...rest }) {
   return (
-    <div
-      className={cn(defaultStyle, color, {
-        [small]: size === 'small',
-        [bigger]: size === 'bigger'
-      })}
-    >
-      {name}
+    <div className="relative inline-block">
+      <Link href={`/blog/tag/${name}`}>
+        <a aria-label={name} className="absolute inset-0"></a>
+      </Link>
+      <div
+        className={cn(
+          color,
+          'duration-300 font-semibold leading-4 rounded-md transition',
+          {
+            'mr-2 mt-2 p-1.5 text-sm': size === 'small',
+            'p-2 md:py-1 ml-3 text-xl md:text-2xl': size === 'bigger'
+          }
+        )}
+        {...rest}
+      >
+        {name}
+      </div>
     </div>
   )
 }
 
-const defaultStyle = `
-  duration-300
-  font-semibold
-  leading-4
-  rounded-md
-  transition
-`
-
-const small = `
-  mr-2
-  mt-2
-  p-1.5
-  text-sm
-`
-
-const bigger = `
-  p-2
-  text-lg
-`
+Tag.defaultProps = {
+  size: 'small'
+}

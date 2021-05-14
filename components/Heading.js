@@ -8,16 +8,16 @@ export default function Heading({
   size,
   ...props
 }) {
-  const Element = { as: as || size }
+  const Element = { as }
 
   return (
     <Element.as
       className={cn(
         'font-bold',
         {
-          [h1Style]: size === Sizes.h1,
-          [h2Style]: size === Sizes.h2,
-          [h3Style]: size === Sizes.h3,
+          'text-4xl md:text-5xl': as === Sizes.h1,
+          'text-3xl md:text-4xl': as === Sizes.h2,
+          'font-semibold text-lg md:text-xl lg:text-2xl': as === Sizes.h3,
           'mb-6': !noMargin
         },
         className
@@ -35,24 +35,6 @@ const Sizes = {
   h3: 'h3'
 }
 
-const h1Style = `
-
-`
-
-const h2Style = `
-  text-3xl
-  md:text-4xl
-  lg:text-5xl
-`
-
-const h3Style = `
-  font-semibold
-  text-lg
-  md:text-xl
-  lg:text-2xl
-`
-
 Heading.defaultProps = {
-  as: undefined,
-  size: Sizes.h2
+  as: Sizes.h2
 }

@@ -4,12 +4,11 @@ import cn from 'classnames'
 
 import LanguageSelector from '@/components/LanguageSelector'
 import ThemeToggle from '@/components/ThemeToggle'
-import i18n from '@/lib/i18n'
 import settings from '@/settings'
 
 export default function Header() {
   const { locale, pathname } = useRouter()
-  const { nav } = i18n[locale]
+  const { nav } = settings[locale]
 
   const { title } = settings
   const splittedName = title.split(' ')

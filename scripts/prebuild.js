@@ -1,7 +1,8 @@
-const axios = require('axios')
 const fs = require('fs')
 const Jimp = require('jimp')
 const prettier = require('prettier')
+
+const getSettings = require('../lib/getSettings')
 
 ;(async () => {
   const api = process.env.NEXT_PUBLIC_API_URL
@@ -13,43 +14,13 @@ const prettier = require('prettier')
     fs.mkdirSync(settingsDir)
   }
 
-  const {
-    data: { data: settings }
-  } = await axios.get(`${api}/items/settings`)
-
-  const {
-    data: { data: settingsEN }
-  } = await axios.get(
-    `${api}/items/settings?fields=translations.*&deep[translations][_filter][language_code][_eq]=en`
-  )
-
-  const {
-    data: { data: settingsPT }
-  } = await axios.get(
-    `${api}/items/settings?fields=translations.*&deep[translations][_filter][language_code][_eq]=pt`
-  )
+  const settings = await getSettings()
 
   const formattedSettings = prettier.format(JSON.stringify(settings), {
     parser: 'json'
   })
 
-  const formattedSettingsEN = prettier.format(
-    JSON.stringify(settingsEN.translations[0]),
-    {
-      parser: 'json'
-    }
-  )
-
-  const formattedSettingsPT = prettier.format(
-    JSON.stringify(settingsPT.translations[0]),
-    {
-      parser: 'json'
-    }
-  )
-
   fs.writeFileSync(`${settingsDir}/index.json`, formattedSettings)
-  fs.writeFileSync(`${settingsDir}/en.json`, formattedSettingsEN)
-  fs.writeFileSync(`${settingsDir}/pt.json`, formattedSettingsPT)
 
   const { title, short_title, favicon, background_color, theme_color } =
     settings

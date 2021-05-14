@@ -4,14 +4,10 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 import cn from 'classnames'
 
-export default function LanguageSelector() {
-  const { locale, locales, pathname, query } = useRouter()
-  const { slug } = query
+import settings from '@/settings'
 
-  const languagesName = {
-    en: 'English',
-    pt: 'Português'
-  }
+export default function LanguageSelector() {
+  const { asPath, locale, locales } = useRouter()
 
   return (
     <Popover className="relative h-5">
@@ -30,16 +26,12 @@ export default function LanguageSelector() {
         leaveTo="opacity-0 translate-y-1"
       >
         <Popover.Panel className="absolute z-10 w-48 mt-4 right-0">
-          <div className="overflow-hidden rounded-md border border-neutral-200 dark:border-neutral-700 shadow-lg text-right">
+          <div className="overflow-hidden rounded-md border border-neutral-200 dark:border-neutral-700 shadow-lg text-right bg-neutral-50 dark:bg-neutral-900">
             <ul>
               {locales.map((localeItem, i) => {
-                const item = languagesName[localeItem]
+                const item = settings[localeItem].language_name
                 return (
-                  <Link
-                    href={slug ? `/blog/${slug}` : pathname}
-                    locale={localeItem}
-                    key={i}
-                  >
+                  <Link href={asPath} locale={localeItem} key={i}>
                     <a>
                       <li
                         className={cn(
