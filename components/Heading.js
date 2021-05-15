@@ -4,9 +4,10 @@ export default function Heading({
   as,
   children,
   className,
+  highlight,
   noMargin,
   size,
-  ...props
+  ...rest
 }) {
   const Element = { as }
 
@@ -17,12 +18,13 @@ export default function Heading({
         {
           'text-4xl md:text-5xl': as === Sizes.h1,
           'text-3xl md:text-4xl': as === Sizes.h2,
-          'font-semibold text-lg md:text-xl lg:text-2xl': as === Sizes.h3,
+          'text-lg md:text-xl lg:text-2xl': as === Sizes.h3,
+          'text-primary-700 dark:text-primary-500': highlight,
           'mb-6': !noMargin
         },
         className
       )}
-      {...props}
+      {...rest}
     >
       {children}
     </Element.as>

@@ -32,8 +32,7 @@ module.exports = {
         ...colors
       },
       fontFamily: {
-        body: 'Rubik, sans-serif',
-        'mono-black': 'Rubik Mono One, sans-serif',
+        body: 'Lato, sans-serif',
         mono: 'Fira Code, monospace'
       },
       typography: theme => ({

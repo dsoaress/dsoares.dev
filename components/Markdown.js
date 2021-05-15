@@ -1,4 +1,5 @@
 import { MDXRemote } from 'next-mdx-remote'
+import cn from 'classnames'
 
 import Figure from '@/components/Figure'
 
@@ -8,7 +9,7 @@ export default function Markdown({ className, content }) {
   }
 
   return (
-    <div className={className}>
+    <div className={cn('prose dark:prose-dark max-w-none', className)}>
       <MDXRemote components={components} {...content} />
     </div>
   )

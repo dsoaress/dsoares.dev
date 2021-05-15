@@ -10,7 +10,7 @@ export default function Tag({ color, name, size, ...rest }) {
       <div
         className={cn(
           color,
-          'duration-300 font-semibold leading-4 rounded-md transition',
+          'duration-300 font-bold leading-4 rounded-md transition',
           {
             'mr-2 mt-2 p-1.5 text-sm': size === 'small',
             'p-2 md:py-1 ml-3 text-xl md:text-2xl': size === 'bigger'

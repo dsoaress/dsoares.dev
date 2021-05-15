@@ -2,7 +2,7 @@ import Heading from '@/components/Heading'
 
 export default function Error({ title, message }) {
   return (
-    <main className="fixed inset-0 flex justify-center items-center text-center p-8">
+    <main className="fixed inset-0 flex items-center justify-center p-8 text-center">
       <div>
         <Heading>{title}</Heading>
         <p>{message}</p>

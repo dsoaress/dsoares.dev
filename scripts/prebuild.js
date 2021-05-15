@@ -2,28 +2,38 @@ const fs = require('fs')
 const Jimp = require('jimp')
 const prettier = require('prettier')
 
-const getSettings = require('../lib/getSettings')
+const getSEO = require('../lib/getSEO')
+const getTranslations = require('../lib/getTranslations')
 
 ;(async () => {
-  const api = process.env.NEXT_PUBLIC_API_URL
-  const settingsDir = './settings'
+  const seoDir = './seo'
+  const translationsDir = './translations'
   const publicDir = './public'
   const iconsDir = './public/icons'
 
-  if (!fs.existsSync(settingsDir)) {
-    fs.mkdirSync(settingsDir)
+  if (!fs.existsSync(seoDir)) {
+    fs.mkdirSync(seoDir)
   }
 
-  const settings = await getSettings()
+  if (!fs.existsSync(translationsDir)) {
+    fs.mkdirSync(translationsDir)
+  }
 
-  const formattedSettings = prettier.format(JSON.stringify(settings), {
+  const seo = await getSEO()
+  const translations = await getTranslations()
+
+  const formattedSEO = prettier.format(JSON.stringify(seo), {
     parser: 'json'
   })
 
-  fs.writeFileSync(`${settingsDir}/index.json`, formattedSettings)
+  const formattedTranslations = prettier.format(JSON.stringify(translations), {
+    parser: 'json'
+  })
 
-  const { title, short_title, favicon, background_color, theme_color } =
-    settings
+  fs.writeFileSync(`${seoDir}/index.json`, formattedSEO)
+  fs.writeFileSync(`${translationsDir}/index.json`, formattedTranslations)
+
+  const { title, shortTitle, favicon, backgroundColor, themeColor } = seo
 
   if (!fs.existsSync(iconsDir)) {
     fs.mkdirSync(iconsDir, {
@@ -31,28 +41,26 @@ const getSettings = require('../lib/getSettings')
     })
   }
 
-  const iconUrl = `${api}/assets/${favicon}`
-
-  Jimp.read(iconUrl, function (err, lenna) {
+  Jimp.read(favicon, function (err, lenna) {
     if (err) throw err
-    lenna.resize(512, 512).write(`${iconsDir}/icon-512x512.png`)
-    lenna.resize(384, 384).write(`${iconsDir}/icon-384x384.png`)
-    lenna.resize(256, 256).write(`${iconsDir}/icon-256x256.png`)
-    lenna.resize(192, 192).write(`${iconsDir}/icon-192x192.png`)
-    lenna.resize(144, 144).write(`${iconsDir}/icon-144x144.png`)
-    lenna.resize(96, 96).write(`${iconsDir}/icon-96x96.png`)
-    lenna.resize(72, 72).write(`${iconsDir}/icon-72x72.png`)
-    lenna.resize(48, 48).write(`${iconsDir}/icon-48x48.png`)
-    lenna.resize(32, 32).write(`${iconsDir}/icon-32x32.png`)
+    lenna.cover(512, 512).write(`${iconsDir}/icon-512x512.png`)
+    lenna.cover(384, 384).write(`${iconsDir}/icon-384x384.png`)
+    lenna.cover(256, 256).write(`${iconsDir}/icon-256x256.png`)
+    lenna.cover(192, 192).write(`${iconsDir}/icon-192x192.png`)
+    lenna.cover(144, 144).write(`${iconsDir}/icon-144x144.png`)
+    lenna.cover(96, 96).write(`${iconsDir}/icon-96x96.png`)
+    lenna.cover(72, 72).write(`${iconsDir}/icon-72x72.png`)
+    lenna.cover(48, 48).write(`${iconsDir}/icon-48x48.png`)
+    lenna.cover(32, 32).write(`${iconsDir}/icon-32x32.png`)
   })
 
   const manifest = `
       {
         "name": "${title}",
-        "short_name": "${short_title}",
+        "short_name": "${shortTitle}",
         "start_url": "/",
-        "background_color": "${background_color}",
-        "theme_color": "${theme_color}",
+        "background_color": "${backgroundColor}",
+        "theme_color": "${themeColor}",
         "display": "fullscreen",
         "icons": [
           {

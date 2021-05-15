@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 import cn from 'classnames'
 
-import settings from '@/settings'
+import translations from '@/translations'
 
 export default function LanguageSelector() {
   const { asPath, locale, locales } = useRouter()
@@ -25,25 +25,25 @@ export default function LanguageSelector() {
         leaveFrom="opacity-100 translate-y-0"
         leaveTo="opacity-0 translate-y-1"
       >
-        <Popover.Panel className="absolute z-10 w-48 mt-4 right-0">
-          <div className="overflow-hidden rounded-md border border-neutral-200 dark:border-neutral-700 shadow-lg text-right bg-neutral-50 dark:bg-neutral-900">
+        <Popover.Panel className="absolute right-0 z-10 w-48 mt-4">
+          <div className="overflow-hidden text-right border rounded-md shadow-lg border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900">
             <ul>
               {locales.map((localeItem, i) => {
-                const item = settings[localeItem].language_name
+                const item = translations[localeItem].language_name
                 return (
-                  <Link href={asPath} locale={localeItem} key={i}>
-                    <a>
-                      <li
+                  <li key={i}>
+                    <Link href={asPath} locale={localeItem}>
+                      <a
                         className={cn(
-                          'p-3 transition-colors hover:bg-neutral-300 dark:hover:bg-neutral-700 text-sm',
+                          'block p-3 transition-colors hover:bg-neutral-300 dark:hover:bg-neutral-700 text-sm',
                           locale === localeItem &&
                             'bg-neutral-200 dark:bg-neutral-800'
                         )}
                       >
                         {item}
-                      </li>
-                    </a>
-                  </Link>
+                      </a>
+                    </Link>
+                  </li>
                 )
               })}
             </ul>

@@ -1,5 +1,5 @@
-const settings = require('./settings')
+const seoData = require('./seo')
 
 module.exports = {
-  siteUrl: `https://${settings.site_url}`
+  siteUrl: `https://${seoData.siteUrl}`
 }

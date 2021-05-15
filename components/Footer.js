@@ -1,12 +1,11 @@
 import { RiCopyleftLine } from 'react-icons/ri'
 
-import settings from '@/settings'
+import seoData from '@/seo'
 
 export default function Footer() {
-  const { title } = settings
   return (
-    <footer className="bg-secondary-100 flex justify-center items-center mt-16 py-6 text-secondary-700 text-sm dark:bg-secondary-900 dark:text-secondary-300">
-      {title}
+    <footer className="flex items-center justify-center py-6 mt-10 text-sm bg-secondary-100 text-secondary-700 dark:bg-secondary-900 dark:text-secondary-300">
+      {seoData.title}
       <RiCopyleftLine className="mx-1" />
       {new Date().getFullYear()}
     </footer>

@@ -1,31 +1,26 @@
 import { useRouter } from 'next/router'
 
 import Heading from '@/components/Heading'
-import Layout from '@/components/Layout'
 import PostsList from '@/components/PostsList'
 import Tag from '@/components/Tag'
 import getTag from '@/lib/getTag'
 import getTagsPaths from '@/lib/getTagsPaths'
-import settings from '@/settings'
+import translations from '@/translations'
 
 export default function TagPage({ tag }) {
   const { locale } = useRouter()
-  const { tag_preposition } = settings[locale]
-
-  const { color, name, posts } = tag
-  const count = posts?.length
+  const { blog_preposition } = translations[locale]
 
   return (
-    <Layout>
-      <Heading
-        as="h1"
-        className="text-primary-700 dark:text-primary-500 flex items-center"
-      >
-        {posts.length} Post{count > 1 ? 's' : ''} {tag_preposition}
-        <Tag color={color} name={name} size="bigger" />
+    <>
+      <Heading as="h1" className="flex items-center" highlight>
+        {tag.posts.length} Post{tag.posts?.length > 1 ? 's' : ''}{' '}
+        {blog_preposition}
+        <Tag color={tag.color} name={tag.name} size="bigger" />
       </Heading>
-      <PostsList posts={posts} />
-    </Layout>
+      <p className="prose prose-lg">{tag.description}</p>
+      <PostsList posts={tag.posts} />
+    </>
   )
 }
 

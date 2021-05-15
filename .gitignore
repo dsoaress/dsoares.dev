@@ -10,7 +10,8 @@ coverage
 .next
 out
 public
-settings
+seo
+translations
 
 # misc
 .vscode
