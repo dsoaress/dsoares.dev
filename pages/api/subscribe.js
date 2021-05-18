@@ -21,7 +21,7 @@ export default async function handler(req, res) {
     email
   }
 
-  const rawResponse = await fetch(
+  const response = await fetch(
     `${CONVERTKIT_API}/forms/${form[locale]}/subscribe`,
     {
       method: 'POST',
@@ -32,8 +32,6 @@ export default async function handler(req, res) {
       body: JSON.stringify(body)
     }
   )
-
-  const response = await rawResponse.json()
 
   res.status(response.status).json(response.statusText)
 }

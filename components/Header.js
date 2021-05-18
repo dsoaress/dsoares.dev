@@ -48,7 +48,9 @@ export default function Header() {
               ))}
             </ul>
             <div className="flex items-center space-x-6">
-              <ThemeToggle />
+              <div className="w-5 h-5">
+                <ThemeToggle />
+              </div>
               <LanguageSelector />
             </div>
           </div>

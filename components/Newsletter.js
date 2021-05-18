@@ -21,7 +21,7 @@ export default function Newsletter() {
     const email = e.currentTarget.email.value
     const body = { name, email, locale }
 
-    const rawResponse = await fetch('/api/subscribe', {
+    const response = await fetch('/api/subscribe', {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -30,40 +30,38 @@ export default function Newsletter() {
       body: JSON.stringify(body)
     })
 
-    const response = await rawResponse.json()
-
     if (response.status === 200) {
       setMessage({
         variant: 'success',
-        text: t.newsletter_success
+        text: t.newsletterSuccess
       })
       sendNotification(`Novo usuário cadastrado: ${name} <${email}>`)
     } else {
       setMessage({
         variant: 'error',
-        text: t.newsletter_error
+        text: t.newsletterError
       })
     }
   }
 
   return (
     <div className="max-w-screen-sm py-12 mx-auto text-center">
-      <Heading as="h2" noMargin>
-        {t.newsletter_title}
+      <Heading as="h2" className="!text-2xl" noMargin>
+        {t.newsletterTitle}
       </Heading>
       <Heading as="h2" highlight>
-        {t.newsletter_subtitle}
+        {t.newsletterSubtitle}
       </Heading>
 
       <form
         onSubmit={handleSubmit}
         className="flex flex-col mt-12 space-y-4 md:flex-row md:space-y-0 md:space-x-4"
       >
-        <Input id="name" label={t.newsletter_name} type="text" required />
-        <Input id="email" label={t.newsletter_email} type="email" required />
+        <Input id="name" label={t.newsletterName} type="text" required />
+        <Input id="email" label={t.newsletterEmail} type="email" required />
 
         <div className="flex-shrink-0">
-          <Button>{t.newsletter_button}</Button>
+          <Button>{t.newsletterButton}</Button>
         </div>
       </form>
       <Alert message={message} />

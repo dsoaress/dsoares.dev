@@ -13,5 +13,5 @@ export default function ServerErrorPage() {
     sendNotification(`Erro 500: ${asPath}`)
   }, [])
 
-  return <Error title={t.error_500_title} message={t.error_500_message} />
+  return <Error title={t.error500Title} message={t.error500Message} />
 }

@@ -7,17 +7,17 @@ import Newsletter from '@/components/Newsletter'
 import Seo from '@/components/Seo'
 import seoData from '@/seo'
 import '@/styles/globals.css'
+import '@fontsource/lato/latin-400.css'
+import '@fontsource/lato/latin-400-italic.css'
+import '@fontsource/lato/latin-700.css'
+import '@fontsource/lato/latin-700-italic.css'
+import '@fontsource/lato/latin-900.css'
 import 'prismjs/themes/prism-okaidia.css'
 
 export default function App({ Component, pageProps }) {
   return (
     <ThemeProvider defaultTheme="system" attribute="class">
       <Head>
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap"
-          rel="stylesheet"
-        />
         <script
           async
           defer

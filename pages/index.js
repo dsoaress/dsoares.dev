@@ -22,13 +22,13 @@ export default function IndexPage({ posts, profile }) {
       />
       <div>
         <Heading size="h3" className="text-center" noMargin highlight>
-          Blog
+          {t.blogTitle}
         </Heading>
         <Heading as="h2" className="text-center">
-          {t.blog_title}
+          {t.blogSubtitle}
         </Heading>
-        <div className="mb-12 prose prose-lg text-center">
-          {t.blog_subtitle}
+        <div className="mb-12 prose prose-lg text-center dark:prose-dark max-w-none">
+          {t.blogDescription}
         </div>
         <PostsList posts={posts} />
       </div>
@@ -36,7 +36,7 @@ export default function IndexPage({ posts, profile }) {
       <div className="flex justify-center">
         <Link href="/blog">
           <a>
-            <Button>{t.blog_button}</Button>
+            <Button>{t.blogButton}</Button>
           </a>
         </Link>
       </div>

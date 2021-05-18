@@ -29,7 +29,7 @@ export default function LanguageSelector() {
           <div className="overflow-hidden text-right border rounded-md shadow-lg border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900">
             <ul>
               {locales.map((localeItem, i) => {
-                const item = translations[localeItem].language_name
+                const item = translations[localeItem].languageName
                 return (
                   <li key={i}>
                     <Link href={asPath} locale={localeItem}>

@@ -15,7 +15,7 @@ export default function PostAside({ date, icon, readingTime, tags }) {
         <PostIcon icon={icon} />
         <dl>
           <dt className="text-sm font-bold text-neutral-700 dark:text-neutral-300">
-            {t.blog_date}
+            {t.blogDate}
           </dt>
           <dd className="text-sm text-neutral-600 dark:text-neutral-400">
             {formatDate(date)}
@@ -23,10 +23,10 @@ export default function PostAside({ date, icon, readingTime, tags }) {
         </dl>
         <dl>
           <dt className="text-sm font-bold text-neutral-700 dark:text-neutral-300">
-            {t.blog_reading_time}
+            {t.blogReadingTime}
           </dt>
           <dd className="text-sm text-neutral-600 dark:text-neutral-400 mt-0.5">
-            {readingTime} {t.blog_minute}
+            {readingTime} {t.blogMinute}
             {parseInt(readingTime) > 1 ? 's' : ''}
           </dd>
         </dl>

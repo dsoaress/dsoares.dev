@@ -9,13 +9,12 @@ import translations from '@/translations'
 
 export default function TagPage({ tag }) {
   const { locale } = useRouter()
-  const { blog_preposition } = translations[locale]
+  const { blogPreposition } = translations[locale]
 
   return (
     <>
       <Heading as="h1" className="flex items-center" highlight>
-        {tag.posts.length} Post{tag.posts?.length > 1 ? 's' : ''}{' '}
-        {blog_preposition}
+        {tag.posts.length} Post{tag.posts?.length > 1 && 's'} {blogPreposition}
         <Tag color={tag.color} name={tag.name} size="bigger" />
       </Heading>
       <p className="prose prose-lg">{tag.description}</p>

@@ -13,5 +13,5 @@ export default function NotFoundPage() {
     sendNotification(`Erro 404: ${asPath}`)
   }, [])
 
-  return <Error title={t.error_404_title} message={t.error_404_message} />
+  return <Error title={t.error404Title} message={t.error404Message} />
 }
