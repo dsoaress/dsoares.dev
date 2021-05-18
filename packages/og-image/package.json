@@ -1,0 +1,22 @@
+{
+  "name": "og-image",
+  "author": "Daniel Soares <daniel.soares@me.com>",
+  "version": "3.0.2",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "clean": "rm -rf node_modules .next"
+  },
+  "dependencies": {
+    "@fontsource/lato": "^4.3.0",
+    "autoprefixer": "^10.2.5",
+    "next": "^10.2.0",
+    "postcss": "^8.2.15",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "tailwindcss": "^2.1.2"
+  }
+}

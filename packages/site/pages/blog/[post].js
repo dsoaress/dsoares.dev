@@ -9,15 +9,13 @@ export default function BlogPostPage({ post }) {
   return (
     <article className="relative flex flex-col md:grid md:grid-cols-4 xl:col-gap-6">
       <SeoPost
-        authorName="Daniel Soares"
-        body={post.body}
         date={post.date}
         dateUpdated={post.date_updated}
         description={post.description}
-        // image={image}
+        image={post.ogImage}
         tags={post.tagsList}
         title={post.title}
-        url="localhost"
+        url={post.url}
       />
       <div className="md:col-span-3">
         <Heading as="h1">{post.title}</Heading>

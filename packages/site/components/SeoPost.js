@@ -1,8 +1,8 @@
-import { NextSeo, NewsArticleJsonLd } from 'next-seo'
+import { NextSeo, BlogJsonLd } from 'next-seo'
+
+import seoData from '@/seo'
 
 export default function SeoPost({
-  authorName,
-  body,
   date,
   dateUpdated,
   description,
@@ -11,6 +11,7 @@ export default function SeoPost({
   title,
   url
 }) {
+  const tagsArr = tags.split(',')
   return (
     <>
       <NextSeo
@@ -21,29 +22,27 @@ export default function SeoPost({
           type: 'article',
           article: {
             publishedTime: date,
-            modifiedTime: dateUpdated
-            // tags
-          }
-          // images: [
-          //   {
-          //     url: image,
-          //     width: 850,
-          //     height: 650,
-          //     alt: title
-          //   }
-          // ]
+            modifiedTime: dateUpdated,
+            tags: [tagsArr]
+          },
+          images: [
+            {
+              url: image,
+              width: 1200,
+              height: 630,
+              alt: title
+            }
+          ]
         }}
       />
-      <NewsArticleJsonLd
+      <BlogJsonLd
         url={url}
         title={title}
-        // [image]
-        keywords={tags}
+        images={[image]}
         datePublished={date}
         dateModified={dateUpdated}
-        authorName={authorName}
+        authorName={seoData.title}
         description={description}
-        body={body}
       />
     </>
   )

@@ -32,8 +32,7 @@ module.exports = {
         ...colors
       },
       fontFamily: {
-        body: 'Lato, sans-serif',
-        mono: 'Fira Code, monospace'
+        body: 'Lato, sans-serif'
       },
       typography: theme => ({
         DEFAULT: {

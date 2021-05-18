@@ -3,6 +3,8 @@ import reading from 'reading-time'
 
 import client from '@/lib/apolloClient'
 import serializeMdx from '@/lib/serializeMdx'
+import getOgImage from '@/lib/getOgImage'
+import seoData from '@/seo'
 
 const { API_URL } = process.env
 
@@ -16,7 +18,6 @@ export default async function getPost(locale, slug) {
           icon {
             id
           }
-          slug
           tags {
             tags_name {
               name
@@ -40,22 +41,31 @@ export default async function getPost(locale, slug) {
   const rawPost = data.posts[0]
   const { body: rawBody, description, title } = rawPost.translations[0]
 
+  const ogImage = await getOgImage(
+    `?title=${title}&slug=${slug}&locale=${locale}`
+  )
+
   const body = await serializeMdx(rawBody)
   const icon = `${API_URL}/assets/${rawPost.icon.id}`
   const readingTime = Math.round(reading(rawBody).minutes)
-  const tagsList = rawPost.tags.map(t => t.tags_name.name).join(', ')
+  const tagsList = rawPost.tags.map(t => t.tags_name.name).join(',')
+  const url = `https://${seoData.siteUrl}${
+    locale === 'en' ? '' : `/${locale}`
+  }/${slug}`
 
   const post = {
     title,
     description,
     date: rawPost.date,
     dateUpdated: rawPost.date_updated,
+    ogImage,
     icon,
     readingTime,
-    slug: rawPost.slug,
+    slug,
     tags: rawPost.tags,
     tagsList,
-    body
+    body,
+    url
   }
 
   return post
