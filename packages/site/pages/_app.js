@@ -30,9 +30,9 @@ export default function App({ Component, pageProps }) {
       <Header />
       <main className="max-w-screen-lg px-8 mx-auto space-y-16">
         <Component {...pageProps} />
-        <Newsletter />
+        {/* <Newsletter /> */}
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </ThemeProvider>
   )
 }

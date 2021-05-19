@@ -20,7 +20,7 @@ export default function IndexPage({ posts, profile }) {
         body={profile.body}
         title={profile.title}
       />
-      <div>
+      {/* <div>
         <Heading size="h3" className="text-center" noMargin highlight>
           {t.blogTitle}
         </Heading>
@@ -39,7 +39,7 @@ export default function IndexPage({ posts, profile }) {
             <Button>{t.blogButton}</Button>
           </a>
         </Link>
-      </div>
+      </div> */}
     </>
   )
 }

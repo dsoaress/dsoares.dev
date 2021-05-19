@@ -31,22 +31,24 @@ export default function Header() {
           </Link>
 
           <div className="flex space-x-20 md:space-x-12">
-            <ul className="flex space-x-4">
+            {/* <ul className="flex space-x-4">
               {nav.map(({ label, url }) => (
-                <li key={url}>
-                  <Link href={url}>
-                    <a
-                      className={cn(
-                        'text-sm md:text-base py-2 px-4 rounded-md hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-colors',
-                        pathname === url && 'bg-neutral-200 dark:bg-neutral-800'
-                      )}
-                    >
-                      {label}
-                    </a>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+                  <li key={url}>
+                    <Link href={url}>
+                      <a
+                        className={cn(
+                          'text-sm md:text-base py-2 px-4 rounded-md hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-colors',
+                          pathname === url &&
+                            'bg-neutral-200 dark:bg-neutral-800'
+                        )}
+                      >
+                        {label}
+                      </a>
+                    </Link>
+                  </li>
+                )
+              )}
+            </ul> */}
             <div className="flex items-center space-x-6">
               <div className="w-5 h-5">
                 <ThemeToggle />
