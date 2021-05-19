@@ -1,40 +1,52 @@
-import useSWR from 'swr'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
-import Meta from '@/components/meta'
-import Header from '@/components/header'
-import Profile from '@/components/profile'
-import Links from '@/components/links'
-import Footer from '@/components/footer'
-import { getInitialData } from '@/lib/getInitialData'
-import { fetcher } from '@/lib/fetcher'
+import Button from '@/components/Button'
+import Heading from '@/components/Heading'
+import PostsList from '@/components/PostsList'
+import ProfileCard from '@/components/ProfileCard'
+import getProfile from '@/lib/getProfile'
+import getPosts from '@/lib/getPosts'
+import translations from '@/translations'
 
-export default function Home(props) {
-  const { data } = useSWR('/api', fetcher, { initialData: props.data })
-
-  const { description, footer, greeting, image, links, name } = data
-  const splittedName = name.split(' ')
-  const firstName = splittedName[0]
-  const lastName = splittedName[1]
+export default function IndexPage({ posts, profile }) {
+  const { locale } = useRouter()
+  const t = translations[locale]
 
   return (
     <>
-      <Meta description={description} name={name} />
-      <Header firstName={firstName} lastName={lastName} />
-      <main>
-        <Profile
-          alt={name}
-          description={description}
-          greeting={greeting}
-          image={image}
-        />
-        <Links data={links} />
-      </main>
-      <Footer footer={footer} name={name} />
+      <ProfileCard
+        image={profile.image}
+        body={profile.body}
+        title={profile.title}
+      />
+      {/* <div>
+        <Heading size="h3" className="text-center" noMargin highlight>
+          {t.blogTitle}
+        </Heading>
+        <Heading as="h2" className="text-center">
+          {t.blogSubtitle}
+        </Heading>
+        <div className="mb-12 prose prose-lg text-center dark:prose-dark max-w-none">
+          {t.blogDescription}
+        </div>
+        <PostsList posts={posts} />
+      </div>
+
+      <div className="flex justify-center">
+        <Link href="/blog">
+          <a>
+            <Button>{t.blogButton}</Button>
+          </a>
+        </Link>
+      </div> */}
     </>
   )
 }
 
-export async function getStaticProps() {
-  const data = await getInitialData()
-  return { props: { data }, revalidate: 1 }
+export async function getStaticProps({ locale }) {
+  const profile = await getProfile(locale)
+  const posts = await getPosts(locale, 3)
+
+  return { props: { posts, profile }, revalidate: 1 }
 }

@@ -7,11 +7,11 @@ node_modules
 coverage
 
 # next.js
-.next/
-out/
-sw.js
-sw*.map
-workbox*
+.next
+out
+public
+seo
+translations
 
 # misc
 .vscode
@@ -25,5 +25,4 @@ yarn-error.log*
 # local env files
 .env
 
-# vercel
 .vercel
