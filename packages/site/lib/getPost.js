@@ -38,6 +38,10 @@ export default async function getPost(locale, slug) {
     }
   })
 
+  if (data.posts.length === 0) {
+    return
+  }
+
   const rawPost = data.posts[0]
   const { body: rawBody, description, title } = rawPost.translations[0]
 

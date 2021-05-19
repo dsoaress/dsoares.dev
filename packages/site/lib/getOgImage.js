@@ -9,7 +9,7 @@ const { OG_IMAGE_URL } = process.env
 
 export default async function getOgImage(path) {
   if (isDev) {
-    return
+    return null
   }
 
   const url = `${OG_IMAGE_URL}${path}`

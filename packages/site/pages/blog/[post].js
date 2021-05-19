@@ -39,10 +39,25 @@ export default function BlogPostPage({ post }) {
 
 export async function getStaticPaths({ locales }) {
   const paths = await getPostsPaths(locales)
-  return { paths, fallback: 'blocking' }
+  return {
+    paths,
+    fallback: 'blocking'
+  }
 }
 
 export async function getStaticProps({ locale, params }) {
   const post = await getPost(locale, params.post)
-  return { props: { post }, revalidate: 1 }
+
+  if (!post) {
+    return {
+      notFound: true
+    }
+  }
+
+  return {
+    props: {
+      post
+    },
+    revalidate: 1
+  }
 }

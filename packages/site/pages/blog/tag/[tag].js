@@ -17,7 +17,7 @@ export default function TagPage({ tag }) {
         {tag.posts.length} Post{tag.posts?.length > 1 && 's'} {blogPreposition}
         <Tag color={tag.color} name={tag.name} size="bigger" />
       </Heading>
-      <p className="prose prose-lg">{tag.description}</p>
+      <p className="prose prose-lg dark:prose-dark">{tag.description}</p>
       <PostsList posts={tag.posts} />
     </>
   )
@@ -25,10 +25,25 @@ export default function TagPage({ tag }) {
 
 export async function getStaticPaths({ locales }) {
   const paths = await getTagsPaths(locales)
-  return { paths, fallback: 'blocking' }
+  return {
+    paths,
+    fallback: 'blocking'
+  }
 }
 
 export async function getStaticProps({ locale, params }) {
   const tag = await getTag(locale, params.tag)
-  return { props: { tag }, revalidate: 1 }
+
+  if (!tag || tag.posts.length === 0) {
+    return {
+      notFound: true
+    }
+  }
+
+  return {
+    props: {
+      tag
+    },
+    revalidate: 1
+  }
 }
