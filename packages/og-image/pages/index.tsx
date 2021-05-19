@@ -1,7 +1,8 @@
 import { useRouter } from 'next/router'
+import { GetServerSideProps } from 'next'
 
-import Layout from '@/components/layout'
-import Welcome from '@/components/welcome'
+import Layout from '@/components/Layout'
+import Welcome from '@/components/Welcome'
 
 export default function OgImage({ user }) {
   const { asPath } = useRouter()
@@ -36,7 +37,7 @@ export default function OgImage({ user }) {
   )
 }
 
-export async function getServerSideProps() {
+export const getServerSideProps: GetServerSideProps = async () => {
   const res = await fetch(
     `https://api.github.com/users/${process.env.GITHUB_USER}`
   )
