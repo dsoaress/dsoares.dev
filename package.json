@@ -11,7 +11,8 @@
     "pre-run": "node -r dotenv/config scripts/pre-run",
     "clean": "rm -rf .next public seo translations",
     "analyze": "ANALYZE=true next build",
-    "format": "prettier --write \"./**/*.{js,jsx,ts,tsx,json}\""
+    "format": "prettier --write \"./**/*.{js,jsx,ts,tsx,json}\"",
+    "postversion": "git push --tags && git push"
   },
   "dependencies": {
     "@apollo/client": "^3.3.19",
