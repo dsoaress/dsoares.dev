@@ -1,0 +1,16 @@
+{
+  "name": "dsoares.me",
+  "author": "Daniel Soares <daniel.soares@me.com>",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "dev": "directus start",
+    "start": "directus start",
+    "deploy": "railway up -d"
+  },
+  "dependencies": {
+    "directus": "^9.0.0-rc.69",
+    "pg": "^8.6.0"
+  }
+}
