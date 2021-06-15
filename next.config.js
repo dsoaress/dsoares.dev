@@ -9,7 +9,7 @@ const nextConfig = {
     defaultLocale: 'en'
   },
   images: { domains: ['dash.dsoares.me'] },
-  future: { webpack5: true },
+  webpack5: true,
   pwa: {
     dest: 'public',
     disable: process.env.NODE_ENV === 'development'
