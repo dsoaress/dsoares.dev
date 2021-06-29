@@ -3,18 +3,11 @@ node_modules
 .pnp
 .pnp.js
 
-# testing
-coverage
-
 # next.js
 .next
-out
 public
-seo
-translations
 
 # misc
-.vscode
 .DS_Store
 *.pem
 
@@ -25,4 +18,5 @@ yarn-error.log*
 # local env files
 .env
 
+# vercel
 .vercel
