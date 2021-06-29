@@ -1,0 +1,14 @@
+{
+  "title": "Daniel Soares",
+  "shortTitle": "DSoares",
+  "description": {
+    "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet auctor metus. Proin dictum, leo eget hendrerit vestibulum, arcu libero semper nunc, ac dignissim mauris odio pellentesque purus. Etiam id enim sit amet lacus consectetur lacinia sed porttitor ante. Mauris aliquet at nulla et viverra. Cras convallis vulputate nulla, vitae porta nisi pretium non.",
+    "pt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet auctor metus. Proin dictum, leo eget hendrerit vestibulum, arcu libero semper nunc, ac dignissim mauris odio pellentesque purus. Etiam id enim sit amet lacus consectetur lacinia sed porttitor ante. Mauris aliquet at nulla et viverra. Cras convallis vulputate nulla, vitae porta nisi pretium non."
+  },
+  "backgroundColor": "#ffffff",
+  "themeColor": "#be185d",
+  "umami": {
+    "id": "f4b04d5d-93fc-4073-a1d3-5113814daf6a",
+    "src": "https://stats.marscollective.co/umami.js"
+  }
+}

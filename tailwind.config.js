@@ -1,4 +1,4 @@
-const colors = require('tailwindcss/colors')
+const { coolGray, rose } = require('tailwindcss/colors')
 
 module.exports = {
   mode: 'jit',
@@ -9,11 +9,8 @@ module.exports = {
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
-        primary: colors.rose,
-        neutral: colors.coolGray
-      },
-      fontFamily: {
-        body: 'Mulish, sans-serif'
+        primary: rose,
+        neutral: coolGray
       }
     }
   }

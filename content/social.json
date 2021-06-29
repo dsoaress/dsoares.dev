@@ -1,0 +1,18 @@
+[
+  {
+    "label": "Instagram",
+    "url": "http://instagram.com/dansoares"
+  },
+  {
+    "label": "GitHub",
+    "url": "http://github.com/dsoaress"
+  },
+  {
+    "label": "WhatsApp",
+    "url": "https://api.whatsapp.com/send?phone=5545988031679"
+  },
+  {
+    "label": "Email",
+    "url": "mailto:daniel.soares@me.com"
+  }
+]
