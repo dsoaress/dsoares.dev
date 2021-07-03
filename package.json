@@ -39,15 +39,85 @@
     "jimp": "^0.16.1",
     "lint-staged": "^11.0.0",
     "postcss": "^8.3.5",
+    "postcss-load-config": "^3.1.0",
     "prettier": "^2.3.2",
     "pretty-quick": "^3.1.1",
     "tailwindcss": "^2.2.4",
     "ts-node": "^10.0.0",
     "typescript": "^4.3.5"
   },
+  "eslintConfig": {
+    "extends": [
+      "next",
+      "next/core-web-vitals",
+      "plugin:prettier/recommended"
+    ],
+    "plugins": [
+      "prettier",
+      "simple-import-sort"
+    ],
+    "rules": {
+      "prettier/prettier": "error",
+      "simple-import-sort/imports": "error",
+      "simple-import-sort/exports": "error",
+      "@next/next/no-page-custom-font": "off"
+    }
+  },
+  "prettier": {
+    "trailingComma": "none",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true,
+    "arrowParens": "avoid",
+    "printWidth": 100
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
   "lint-staged": {
     "*.{js,ts,tsx,jsx}": [
       "eslint --fix"
     ]
+  },
+  "renovate": {
+    "extends": [
+      "config:base"
+    ],
+    "labels": [
+      "dependencies"
+    ],
+    "semanticCommits": "enabled",
+    "rangeStrategy": "replace",
+    "rebaseLabel": "rebase",
+    "rebaseWhen": "auto",
+    "packageRules": [
+      {
+        "updateTypes": [
+          "minor",
+          "patch",
+          "pin",
+          "digest"
+        ],
+        "automerge": true
+      },
+      {
+        "depTypeList": [
+          "devDependencies"
+        ],
+        "automerge": true
+      }
+    ],
+    "lockFileMaintenance": {
+      "enabled": true,
+      "automerge": true
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
   }
 }
