@@ -13,12 +13,12 @@ export default function Social() {
           <li key={url}>
             <Link href={url}>
               <a
-                className="transition-colors duration-300 hover:text-primary-500"
+                className="transition-colors duration-300 text-primary-500 hover:text-neutral-300"
                 aria-label={label}
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <Icon size={20} />
+                <Icon size={22} />
               </a>
             </Link>
           </li>

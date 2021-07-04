@@ -1,3 +1,3 @@
 export default function Layout({ children }) {
-  return <main className="fixed inset-0 flex flex-col md:flex-row bg-gray-50">{children}</main>
+  return <main className="flex flex-col h-screen md:flex-row bg-neutral-900">{children}</main>
 }
