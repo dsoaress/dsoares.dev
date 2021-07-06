@@ -7,6 +7,9 @@ node_modules
 .next
 public
 
+# jest
+coverage
+
 # misc
 .DS_Store
 *.pem
