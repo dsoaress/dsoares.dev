@@ -1,6 +1,10 @@
-import cn from 'classnames'
-import { HTMLAttributes } from 'react'
+import styled from 'styled-components'
 
-export default function Text({ children, className }: HTMLAttributes<HTMLHeadingElement>) {
-  return <h1 className={cn('text-5xl font-black', className)}>{children}</h1>
-}
+const Heading = styled.h1`
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 900;
+  margin: 0;
+`
+
+export default Heading

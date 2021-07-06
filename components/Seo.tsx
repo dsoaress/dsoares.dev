@@ -2,6 +2,7 @@ import { useRouter } from 'next/router'
 import { DefaultSeo } from 'next-seo'
 
 import profileData from '@/content/profile.json'
+import { theme } from '@/styles/theme'
 
 export default function Seo() {
   const { locale, defaultLocale } = useRouter()
@@ -80,7 +81,7 @@ export default function Seo() {
       additionalMetaTags={[
         {
           name: 'theme-color',
-          content: profileData.themeColor
+          content: theme.colors.neutral[900]
         }
       ]}
     />

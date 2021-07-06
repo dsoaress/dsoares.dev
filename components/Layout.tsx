@@ -1,3 +1,14 @@
-export default function Layout({ children }) {
-  return <main className="flex flex-col h-screen md:flex-row bg-neutral-900">{children}</main>
-}
+import styled from 'styled-components'
+import media from 'styled-media-query'
+
+const Layout = styled.main`
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  ${media.greaterThan('medium')`
+    flex-direction: row;
+  `}
+`
+
+export default Layout

@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import { useRouter } from 'next/router'
+import styled from 'styled-components'
+import media from 'styled-media-query'
 
 import logo from '@/assets/logo.svg'
 import Avatar from '@/components/Avatar'
@@ -8,6 +10,26 @@ import Social from '@/components/Social'
 import Text from '@/components/Text'
 import profileData from '@/content/profile.json'
 
+export const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  color: ${({ theme }) => theme.colors.neutral[300]};
+`
+
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2.5rem;
+  text-align: center;
+
+  ${media.greaterThan('small')`
+    padding: 5rem;
+  `}
+`
+
 export default function Profile() {
   const { locale } = useRouter()
   const description = profileData.description[locale] as string
@@ -15,14 +37,14 @@ export default function Profile() {
   return (
     <>
       <Avatar />
-      <div className="flex items-center justify-center mx-auto text-neutral-300">
-        <div className="p-10 space-y-8 text-center sm:p-20">
+      <Wrapper>
+        <Container>
           <Image src={logo} alt={profileData.title} width={80} height={80} />
           <Heading>{profileData.title}</Heading>
           <Text>{description}</Text>
           <Social />
-        </div>
-      </div>
+        </Container>
+      </Wrapper>
     </>
   )
 }

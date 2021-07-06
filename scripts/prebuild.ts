@@ -3,6 +3,7 @@ import jimp from 'jimp'
 import prettier from 'prettier'
 
 import profileData from '../content/profile.json'
+import { theme } from '../styles/theme'
 
 const icon = fs.readFileSync('./assets/icon.png')
 const i18n = {
@@ -31,8 +32,8 @@ i18n.locales.map(locale => {
       "name": "${profileData.title}",
       "short_name": "${profileData.shortTitle}",
       "start_url": "/${startUrl}",
-      "background_color": "${profileData.backgroundColor}",
-      "theme_color": "${profileData.themeColor}",
+      "background_color": "${theme.colors.neutral[900]}",
+      "theme_color": "${theme.colors.neutral[900]}",
       "display": "fullscreen",
       "icons": [
         {

@@ -1,6 +1,8 @@
-import cn from 'classnames'
-import { HTMLAttributes } from 'react'
+import styled from 'styled-components'
 
-export default function Text({ children, className }: HTMLAttributes<HTMLParagraphElement>) {
-  return <p className={cn('font-light leading-7', className)}>{children}</p>
-}
+const Text = styled.p`
+  line-height: 1.75rem;
+  font-weight: 300;
+`
+
+export default Text
