@@ -12,7 +12,7 @@
     "lint": "next lint",
     "prepare": "husky install",
     "clean": "rm -rf node_modules .next public",
-    "format": "prettier --write \"./**/*.{js,jsx,ts,tsx,json}\"",
+    "format": "prettier --write \"./**/*.{js,jsx,ts,tsx,json,md,mdx}\"",
     "postversion": "git push --tags && git push"
   },
   "dependencies": {
@@ -49,73 +49,5 @@
     "ts-node": "^10.0.0",
     "typescript": "^4.3.5",
     "webpack": "^5.42.1"
-  },
-  "eslintConfig": {
-    "extends": [
-      "next",
-      "next/core-web-vitals",
-      "plugin:prettier/recommended"
-    ],
-    "plugins": [
-      "prettier",
-      "simple-import-sort"
-    ],
-    "rules": {
-      "prettier/prettier": "error",
-      "simple-import-sort/imports": "error",
-      "simple-import-sort/exports": "error",
-      "@next/next/no-page-custom-font": "off"
-    }
-  },
-  "prettier": {
-    "trailingComma": "none",
-    "tabWidth": 2,
-    "semi": false,
-    "singleQuote": true,
-    "arrowParens": "avoid",
-    "printWidth": 100
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
-  "lint-staged": {
-    "*.{js,ts,tsx,jsx}": [
-      "eslint --fix"
-    ]
-  },
-  "renovate": {
-    "extends": [
-      "config:base"
-    ],
-    "labels": [
-      "dependencies"
-    ],
-    "semanticCommits": "enabled",
-    "rangeStrategy": "replace",
-    "rebaseLabel": "rebase",
-    "rebaseWhen": "auto",
-    "packageRules": [
-      {
-        "updateTypes": [
-          "minor",
-          "patch",
-          "pin",
-          "digest"
-        ],
-        "automerge": true
-      },
-      {
-        "depTypeList": [
-          "devDependencies"
-        ],
-        "automerge": true
-      }
-    ],
-    "lockFileMaintenance": {
-      "enabled": true,
-      "automerge": true
-    }
   }
 }
