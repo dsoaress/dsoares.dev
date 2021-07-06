@@ -12,11 +12,12 @@
     "lint": "next lint",
     "test": "jest --watch --updateSnapshot",
     "test:ci": "jest --ci",
+    "test:coverage": "jest --coverage && serve ./coverage/lcov-report -l 3020",
     "prepare": "husky install",
     "clean": "rm -rf node_modules .next public",
     "format": "prettier --write \"./**/*.{js,jsx,ts,tsx,json,md,mdx}\"",
     "postversion": "git push --tags && git push",
-    "storybook": "start-storybook -p 6006"
+    "storybook": "start-storybook -p 3010"
   },
   "dependencies": {
     "next": "^11.0.1",
@@ -67,6 +68,7 @@
     "lint-staged": "^11.0.0",
     "prettier": "^2.3.2",
     "pretty-quick": "^3.1.1",
+    "serve": "^12.0.0",
     "ts-node": "^10.0.0",
     "typescript": "^4.3.5",
     "webpack": "^5.42.1"
