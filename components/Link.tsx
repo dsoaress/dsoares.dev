@@ -16,7 +16,7 @@ export const StyledLink = styled.a`
 
 export default function Link({ href, ...props }: AnchorHTMLAttributes<HTMLAnchorElement>) {
   return (
-    <NextLink href={href}>
+    <NextLink href={href} passHref>
       <StyledLink {...props} />
     </NextLink>
   )

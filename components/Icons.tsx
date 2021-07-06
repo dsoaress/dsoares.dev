@@ -1,5 +1,6 @@
 import {
   AiFillGithub as GitHub,
+  AiFillLinkedin as LinkedIn,
   AiOutlineInstagram as Instagram,
   AiOutlineMail as Email,
   AiOutlineWhatsApp as WhatsApp
@@ -8,6 +9,7 @@ import {
 const Icons = {
   Email,
   GitHub,
+  LinkedIn,
   Instagram,
   WhatsApp
 }
