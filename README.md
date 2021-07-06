@@ -1,9 +1,22 @@
-# dsoares.me
+# Daniel Soares
 
 Source of my personal site.
 
-<img src="./assets/lighthouse.gif" />
+![Screenshot](./assets/screenshot.png)
+
+## Running Locally
 
 ```shell
-yarn && yarn dev
+git clone https://github.com/dsoaress/dsoares.me.git
+cd dsoares.me
+yarn
+yarn dev
 ```
+
+## Built Using
+
+- [Next.js](https://nextjs.org)
+- [styled-components](https://styled-components.com)
+- [TypeScript](https://www.typescriptlang.org)
+
+![Lighthouse](./assets/lighthouse.gif)
