@@ -6,6 +6,7 @@ import media from 'styled-media-query'
 import logo from '@/assets/logo.svg'
 import Avatar from '@/components/Avatar'
 import Heading from '@/components/Heading'
+import Nav from '@/components/Nav'
 import Social from '@/components/Social'
 import Text from '@/components/Text'
 import profileData from '@/content/profile.json'
@@ -42,6 +43,7 @@ export default function Profile() {
           <Image src={logo} alt={profileData.title} width={80} height={80} />
           <Heading>{profileData.title}</Heading>
           <Text>{description}</Text>
+          <Nav />
           <Social />
         </Container>
       </Wrapper>

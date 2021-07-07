@@ -1,6 +1,5 @@
+import Link from '@/components/Link'
 import { render, screen } from '@/lib/testUtils'
-
-import Link from './Link'
 
 describe('<Link />', () => {
   it('Renders with children', () => {
