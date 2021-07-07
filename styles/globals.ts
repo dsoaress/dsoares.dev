@@ -1,9 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 import { normalize } from 'styled-normalize'
 
-import { ThemeType } from './theme'
-
-export const GlobalStyles = createGlobalStyle<{ theme: ThemeType }>`
+export const GlobalStyles = createGlobalStyle`
   ${normalize}
 
   * {
@@ -14,6 +12,6 @@ export const GlobalStyles = createGlobalStyle<{ theme: ThemeType }>`
 
   html {
     font-family: ${({ theme }) => theme.fontFamily.fontSans};
-    background: ${({ theme }) => theme.colors.neutral[900]};
+    background: ${({ theme }) => theme.colors.background};
   }
 `

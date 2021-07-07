@@ -32,8 +32,8 @@ i18n.locales.map(locale => {
       "name": "${profileData.title}",
       "short_name": "${profileData.shortTitle}",
       "start_url": "/${startUrl}",
-      "background_color": "${theme.colors.neutral[900]}",
-      "theme_color": "${theme.colors.neutral[900]}",
+      "background_color": "${theme.colors.background}",
+      "theme_color": "${theme.colors.background}",
       "display": "fullscreen",
       "icons": [
         {

@@ -81,7 +81,7 @@ export default function Seo() {
       additionalMetaTags={[
         {
           name: 'theme-color',
-          content: theme.colors.neutral[900]
+          content: theme.colors.background
         }
       ]}
     />

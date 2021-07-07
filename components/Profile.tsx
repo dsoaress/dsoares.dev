@@ -16,7 +16,7 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  color: ${({ theme }) => theme.colors.neutral[300]};
+  color: ${({ theme }) => theme.colors.text};
 `
 
 export const Container = styled.div`
