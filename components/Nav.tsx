@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import { HiOutlineDocumentDuplicate } from 'react-icons/hi'
-import { VscProject } from 'react-icons/vsc'
+// import { VscProject } from 'react-icons/vsc'
 import styled from 'styled-components'
 
 import Button from '@/components/Button'
@@ -14,9 +14,9 @@ const Wrapper = styled.nav`
   gap: 1rem;
 `
 
-const ProjectsIcon = styled(VscProject)`
-  margin-right: 0.5rem;
-`
+// const ProjectsIcon = styled(VscProject)`
+//   margin-right: 0.5rem;
+// `
 
 const ResumeIcon = styled(HiOutlineDocumentDuplicate)`
   margin-right: 0.5rem;
@@ -28,14 +28,14 @@ export default function Resume() {
 
   return (
     <Wrapper>
-      <Link href="/projects">
+      {/* <Link href="/projects">
         <Button>
           <ProjectsIcon size={18} />
           {nav.projects}
         </Button>
-      </Link>
+      </Link> */}
 
-      <Link href="/resume">
+      <Link href={`/resume-${locale}.pdf`}>
         <Button>
           <ResumeIcon size={20} />
           {nav.resume}
