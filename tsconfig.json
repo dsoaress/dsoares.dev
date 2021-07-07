@@ -5,10 +5,8 @@
       "@/assets/*": ["./assets/*"],
       "@/components/*": ["./components/*"],
       "@/content/*": ["./content/*"],
-      "@/i18n": ["./i18n"],
       "@/lib/*": ["./lib/*"],
-      "@/styles/*": ["./styles/*"],
-      "@/types/*": ["./types/*"]
+      "@/styles/*": ["./styles/*"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
