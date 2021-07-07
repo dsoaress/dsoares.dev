@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Link /> Renders with children 1`] = `
+.c0 {
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
+  color: #F43F5E;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.c0:hover {
+  color: #FECDD3;
+}
+
+.c0:active {
+  color: #FFF1F2;
+}
+
+<a
+  class="c0"
+  href="/#"
+>
+  Children
+</a>
+`;

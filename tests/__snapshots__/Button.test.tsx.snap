@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> Renders with children 1`] = `
+.c0 {
+  -webkit-transition-property: background;
+  transition-property: background;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 1.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 0.35rem;
+  background: #F43F5E;
+  color: #FFE4E6;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.c0:hover {
+  background: #E11D48;
+}
+
+.c0:active {
+  background: #BE123C;
+  color: #FECDD3;
+}
+
+<button
+  class="c0"
+>
+  Children
+</button>
+`;

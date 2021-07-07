@@ -6,5 +6,6 @@ describe('<Link />', () => {
     render(<Link href="#">Children</Link>)
 
     expect(screen.getByText('Children')).toBeInTheDocument()
+    expect(screen.getByText('Children')).toMatchSnapshot()
   })
 })

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Text /> Renders with children 1`] = `
+.c0 {
+  line-height: 1.75rem;
+  font-weight: 300;
+}
+
+<p
+  class="c0"
+>
+  Children
+</p>
+`;
