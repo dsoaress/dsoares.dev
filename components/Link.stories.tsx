@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0'
 
-import Link from './Link'
+import Link from '@/components/Link'
 
 export default {
   title: 'Link',
