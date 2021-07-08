@@ -4,7 +4,7 @@ import { DefaultSeo } from 'next-seo'
 import profileData from '@/content/profile.json'
 import { theme } from '@/styles/theme'
 
-export default function Seo() {
+export function Seo() {
   const { locale, defaultLocale } = useRouter()
   const description = profileData.description[locale]
 

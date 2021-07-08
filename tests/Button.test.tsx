@@ -1,4 +1,4 @@
-import Button from '@/components/Button'
+import { Button } from '@/components/Button'
 import { render, screen } from '@/lib/testUtils'
 
 describe('<Button />', () => {

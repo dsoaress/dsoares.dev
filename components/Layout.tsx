@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
-const Layout = styled.main`
+export const Layout = styled.main`
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -10,5 +10,3 @@ const Layout = styled.main`
     flex-direction: row;
   `}
 `
-
-export default Layout

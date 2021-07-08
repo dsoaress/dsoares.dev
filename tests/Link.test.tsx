@@ -1,4 +1,4 @@
-import Link from '@/components/Link'
+import { Link } from '@/components/Link'
 import { render, screen } from '@/lib/testUtils'
 
 describe('<Link />', () => {

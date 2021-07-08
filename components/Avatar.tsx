@@ -15,7 +15,7 @@ const Wrapper = styled.div`
   `}
 `
 
-export default function Avatar() {
+export function Avatar() {
   return (
     <Wrapper>
       <Image

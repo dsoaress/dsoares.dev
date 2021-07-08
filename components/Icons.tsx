@@ -6,7 +6,7 @@ import {
 import { BsEnvelope as Email } from 'react-icons/bs'
 import { FaDev as Dev, FaLinkedinIn as LinkedIn } from 'react-icons/fa'
 
-const Icons = {
+export const Icons = {
   Email,
   GitHub,
   LinkedIn,
@@ -14,5 +14,3 @@ const Icons = {
   Instagram,
   WhatsApp
 }
-
-export default Icons

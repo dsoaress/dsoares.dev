@@ -4,14 +4,14 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 
 import logo from '@/assets/logo.svg'
-import Avatar from '@/components/Avatar'
-import Heading from '@/components/Heading'
-import Resume from '@/components/Resume'
-import Social from '@/components/Social'
-import Text from '@/components/Text'
+import { Avatar } from '@/components/Avatar'
+import { Heading } from '@/components/Heading'
+import { Resume } from '@/components/Resume'
+import { Social } from '@/components/Social'
+import { Text } from '@/components/Text'
 import profileData from '@/content/profile.json'
 
-export const Wrapper = styled.div`
+const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
   color: ${({ theme }) => theme.colors.text};
 `
 
-export const Container = styled.div`
+const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -31,7 +31,7 @@ export const Container = styled.div`
   `}
 `
 
-export default function Profile() {
+export function Profile() {
   const { locale } = useRouter()
   const description = profileData.description[locale] as string
 

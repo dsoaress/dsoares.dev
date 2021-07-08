@@ -1,8 +1,8 @@
 import { IconType } from 'react-icons/lib'
 import styled from 'styled-components'
 
-import Icons from '@/components/Icons'
-import Link from '@/components/Link'
+import { Icons } from '@/components/Icons'
+import { Link } from '@/components/Link'
 import profileData from '@/content/profile.json'
 
 const Wrapper = styled.ul`
@@ -12,7 +12,7 @@ const Wrapper = styled.ul`
   list-style: none;
 `
 
-export default function Social() {
+export function Social() {
   return (
     <Wrapper>
       {profileData.social.map(({ label, url }) => {

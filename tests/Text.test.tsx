@@ -1,4 +1,4 @@
-import Text from '@/components/Text'
+import { Text } from '@/components/Text'
 import { render, screen } from '@/lib/testUtils'
 
 describe('<Text />', () => {

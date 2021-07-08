@@ -26,6 +26,6 @@ const StyledButton = styled.button`
   }
 `
 
-export default function Button({ ...props }: ButtonHTMLAttributes<HTMLButtonElement>) {
+export function Button({ ...props }: ButtonHTMLAttributes<HTMLButtonElement>) {
   return <StyledButton {...props} />
 }

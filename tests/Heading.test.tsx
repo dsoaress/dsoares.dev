@@ -1,4 +1,4 @@
-import Heading from '@/components/Heading'
+import { Heading } from '@/components/Heading'
 import { render, screen } from '@/lib/testUtils'
 
 describe('<Button />', () => {
