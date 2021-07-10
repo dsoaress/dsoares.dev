@@ -4,7 +4,6 @@ export type Project = {
   htmlUrl: string
   description: string
   fork: boolean
-  homepage: string
   stargazersCount: number
   language: string
 }

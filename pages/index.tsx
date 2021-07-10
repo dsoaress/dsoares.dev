@@ -1,6 +1,7 @@
 import { GetStaticProps } from 'next'
 import useSWR from 'swr'
 
+import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Layout } from '@/components/Layout'
 import { Posts } from '@/components/Posts'
@@ -26,6 +27,7 @@ export default function IndexPage(props: IndexPageProps) {
       <Layout>
         <Projects projects={projects} />
         <Posts posts={posts} />
+        <Footer />
       </Layout>
     </>
   )

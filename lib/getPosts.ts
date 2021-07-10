@@ -1,2 +1,4 @@
-const username = process.env.NEXT_PUBLIC_DEV_TO_USERNAME
+import profileData from '@/content/profile.json'
+
+const username = profileData.profiles.github
 export const getPosts = `https://dev.to/api/articles?username=${username}`

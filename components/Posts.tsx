@@ -1,11 +1,41 @@
-import { useRouter } from 'next/router'
+import styled from 'styled-components'
+import media from 'styled-media-query'
 
-import { formatDate } from '@/lib/formatDate'
 import { Post } from '@/types/post'
 
-export function Posts({ posts }: { posts: Post[] }) {
-  const { locale } = useRouter()
+import { Heading } from './Heading'
+import { PostCard } from './PostCard'
 
-  console.log(formatDate(posts[0].publishedAt)[locale])
-  return <div />
+const Wrapper = styled.div`
+  margin: 76px 0;
+`
+
+const PostsList = styled.div`
+  display: grid;
+  gap: ${({ theme }) => theme.spacing.lg};
+
+  ${media.greaterThan('medium')`
+    grid-template-columns: 1fr 1fr;
+    gap: ${({ theme }) => theme.spacing.xl};
+  `}
+
+  ${media.greaterThan('large')`
+    grid-template-columns: 1fr 1fr 1fr;
+  `}
+`
+
+export function Posts({ posts }: { posts: Post[] }) {
+  return (
+    <Wrapper>
+      <Heading level={2} size="lg" margin="xl">
+        Posts
+      </Heading>
+
+      <PostsList>
+        {posts?.map(post => {
+          return <PostCard key={post.id} post={post} />
+        })}
+      </PostsList>
+    </Wrapper>
+  )
 }

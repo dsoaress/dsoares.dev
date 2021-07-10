@@ -18,15 +18,15 @@ const Wrapper = styled.div`
   padding-bottom: 96px;
   width: 100%;
   height: 100vh;
-`
 
-const Content = styled.div`
-  display: grid;
-  gap: 32px;
-  max-width: 640px;
-  padding: 0 32px;
-  text-align: center;
-  z-index: 10;
+  div {
+    display: grid;
+    gap: 32px;
+    max-width: 640px;
+    padding: 0 32px;
+    text-align: center;
+    z-index: 10;
+  }
 `
 
 export function Header() {
@@ -36,13 +36,13 @@ export function Header() {
   return (
     <>
       <Wrapper>
-        <Content>
+        <div>
           <Image src={logo} alt={profileData.title} width={80} height={80} />
           <Heading>{profileData.title}</Heading>
           <Text>{description}</Text>
           <Resume />
           <Social />
-        </Content>
+        </div>
       </Wrapper>
       <Avatar />
     </>

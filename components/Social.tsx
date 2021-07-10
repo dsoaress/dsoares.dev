@@ -7,13 +7,12 @@ import profileData from '@/content/profile.json'
 
 const Wrapper = styled.ul`
   display: inline-flex;
-  /* gap: 1.25rem; */
   margin: 0 auto;
   list-style: none;
-`
 
-const SocialItem = styled.li`
-  margin: 0 12px;
+  li {
+    margin: 0 12px;
+  }
 `
 
 export function Social() {
@@ -22,7 +21,7 @@ export function Social() {
       {profileData.social.map(({ label, url }) => {
         const Icon = Icons[label] as IconType
         return (
-          <SocialItem key={url}>
+          <li key={url}>
             <Link
               href={url}
               aria-label={label}
@@ -32,7 +31,7 @@ export function Social() {
             >
               <Icon size={22} />
             </Link>
-          </SocialItem>
+          </li>
         )
       })}
     </Wrapper>

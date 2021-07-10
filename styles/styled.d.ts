@@ -7,8 +7,20 @@ declare module 'styled-components' {
       text: string
       background: string
     }
-    fontFamily: {
-      fontSans: string
+    fontFamily: string
+    fontSizes: {
+      xs: string
+      sm: string
+      md: string
+      lg: string
+      xl: string
+    }
+    spacing: {
+      xs: string
+      sm: string
+      md: string
+      lg: string
+      xl: string
     }
   }
 }

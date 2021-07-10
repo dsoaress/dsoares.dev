@@ -11,7 +11,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   html {
-    font-family: ${({ theme }) => theme.fontFamily.fontSans};
+    font-family: ${({ theme }) => theme.fontFamily};
     color: ${({ theme }) => theme.colors.text};
     background: ${({ theme }) => theme.colors.background};
   }

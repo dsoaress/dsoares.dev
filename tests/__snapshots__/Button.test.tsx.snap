@@ -35,6 +35,11 @@ exports[`<Button /> Renders with children 1`] = `
   background: #c20b2a;
 }
 
+.c0 svg {
+  font-size: 20px;
+  margin-right: 8px;
+}
+
 <button
   class="c0"
 >

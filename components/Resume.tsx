@@ -11,10 +11,6 @@ const Wrapper = styled.nav`
   justify-content: center;
 `
 
-const ResumeIcon = styled(HiOutlineDocumentDuplicate)`
-  margin-right: 0.5rem;
-`
-
 export function Resume() {
   const { locale } = useRouter()
   const resume = i18nData.resume[locale] as string
@@ -28,7 +24,7 @@ export function Resume() {
         className={`umami--click--resume-${locale}`}
       >
         <Button>
-          <ResumeIcon size={20} />
+          <HiOutlineDocumentDuplicate />
           {resume}
         </Button>
       </Link>

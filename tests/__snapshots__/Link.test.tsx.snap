@@ -8,6 +8,7 @@ exports[`<Link /> Renders with children 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 600;
+  z-index: 10;
   cursor: pointer;
 }
 

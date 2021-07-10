@@ -8,6 +8,7 @@ const StyledLink = styled.a`
   color: ${({ theme }) => theme.colors.text};
   text-decoration: none;
   font-weight: 600;
+  z-index: 10;
   cursor: pointer;
 
   &:hover {
@@ -25,4 +26,16 @@ export function Link({ href, ...props }: AnchorHTMLAttributes<HTMLAnchorElement>
       <StyledLink {...props} />
     </NextLink>
   )
+}
+
+const StyledCardLink = styled(Link)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+`
+
+export function CardLink({ ...props }: AnchorHTMLAttributes<HTMLAnchorElement>) {
+  return <StyledCardLink {...props} />
 }

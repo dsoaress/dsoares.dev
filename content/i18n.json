@@ -4,23 +4,23 @@
     "pt": "Currículo"
   },
   "posts": {
+    "readingTime": {
+      "en": "minutes of reading",
+      "pt": "minutos de leitura"
+    },
     "readMore": {
-      "en": "Read more",
-      "pt": "Leia mais"
+      "en": "read more",
+      "pt": "leia mais"
     }
   },
   "projects": {
     "title": {
       "en": "Projects",
       "pt": "Projetos"
-    },
-    "viewOnline": {
-      "en": "View online",
-      "pt": "Veja online"
-    },
-    "source": {
-      "en": "Source",
-      "pt": "Código fonte"
     }
+  },
+  "footer": {
+    "en": "Made with ❤️ and ",
+    "pt": "Feito com ❤️ e "
   }
 }
