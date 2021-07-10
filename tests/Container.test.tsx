@@ -1,9 +1,9 @@
-import { Layout } from '@/components/Layout'
+import { Container } from '@/components/Container'
 import { render, screen } from '@/lib/testUtils'
 
-describe('<Layout />', () => {
+describe('<Container />', () => {
   it('Renders with children', () => {
-    render(<Layout>Children</Layout>)
+    render(<Container>Children</Container>)
 
     expect(screen.getByText('Children')).toBeInTheDocument()
     expect(screen.getByText('Children')).toMatchSnapshot()

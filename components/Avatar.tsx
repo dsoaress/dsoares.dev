@@ -16,7 +16,11 @@ const Overlay = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: linear-gradient(
+    0deg,
+    ${({ theme }) => theme.colors.background} 10%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
 `
 
 export function Avatar() {

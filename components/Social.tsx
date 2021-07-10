@@ -9,10 +9,10 @@ const Wrapper = styled.ul`
   display: inline-flex;
   margin: 0 auto;
   list-style: none;
+`
 
-  li {
-    margin: 0 12px;
-  }
+const SocialItem = styled.li`
+  margin: 0 12px;
 `
 
 export function Social() {
@@ -21,7 +21,7 @@ export function Social() {
       {profileData.social.map(({ label, url }) => {
         const Icon = Icons[label] as IconType
         return (
-          <li key={url}>
+          <SocialItem key={url}>
             <Link
               href={url}
               aria-label={label}
@@ -31,7 +31,7 @@ export function Social() {
             >
               <Icon size={22} />
             </Link>
-          </li>
+          </SocialItem>
         )
       })}
     </Wrapper>

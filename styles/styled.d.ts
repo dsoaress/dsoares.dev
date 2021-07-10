@@ -9,7 +9,6 @@ declare module 'styled-components' {
     }
     fontFamily: string
     fontSizes: {
-      xs: string
       sm: string
       md: string
       lg: string

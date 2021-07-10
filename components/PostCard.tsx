@@ -21,24 +21,6 @@ const Wrapper = styled.div`
     background: ${({ theme }) => lighten(0.04, theme.colors.background)};
     box-shadow: 4px 4px 16px 4px rgba(0, 0, 0, 0.05);
   }
-
-  p:last-child {
-    display: flex;
-    justify-content: space-between;
-    align-self: flex-end;
-    font-size: ${({ theme }) => theme.fontSizes.sm};
-    color: ${({ theme }) => darken(0.3, theme.colors.text)};
-    line-height: 1;
-
-    span {
-      display: flex;
-      align-items: center;
-
-      svg {
-        margin-left: ${({ theme }) => theme.spacing.xs};
-      }
-    }
-  }
 `
 
 const ImageCover = styled.div`
@@ -54,6 +36,23 @@ const Content = styled.div`
   padding: ${({ theme }) => theme.spacing.xl};
 `
 
+const Footer = styled.footer`
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-end;
+
+  span {
+    p {
+      display: flex;
+      align-items: center;
+    }
+
+    svg {
+      margin-left: ${({ theme }) => theme.spacing.xs};
+    }
+  }
+`
+
 export function PostCard({ post }: { post: Post }) {
   const { locale } = useRouter()
   const readingTime = i18nData.posts.readingTime[locale] as string
@@ -66,7 +65,7 @@ export function PostCard({ post }: { post: Post }) {
         aria-label={post.title}
         rel="noopener noreferrer"
         target="_blank"
-        className={`umami--click--project-${post.url}`}
+        className={`umami--click--post-${post.url}`}
       />
       <ImageCover>
         <Image src={post.coverImage} alt={post.title} objectFit="cover" layout="fill" />
@@ -77,13 +76,17 @@ export function PostCard({ post }: { post: Post }) {
         </Heading>
         <Text>{formatDate(post.publishedAt)[locale]}</Text>
         <Text>{post.description}</Text>
-        <Text>
-          {post.readingTimeMinutes} {readingTime}
+        <Footer>
+          <Text faded size="sm">
+            {post.readingTimeMinutes} {readingTime}
+          </Text>
           <span>
-            {readMore}
-            <AiOutlineArrowRight />
+            <Text faded size="sm">
+              {readMore}
+              <AiOutlineArrowRight />
+            </Text>
           </span>
-        </Text>
+        </Footer>
       </Content>
     </Wrapper>
   )

@@ -3,17 +3,19 @@ import { darken } from 'polished'
 import styled from 'styled-components'
 
 import { Link } from '@/components/Link'
+import { Social } from '@/components/Social'
 import { Text } from '@/components/Text'
 import i18nData from '@/content/i18n.json'
 
 const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 48px 0;
 
   p {
-    font-size: ${({ theme }) => theme.fontSizes.sm};
     text-align: center;
-    color: ${({ theme }) => darken(0.3, theme.colors.text)};
-    line-height: 1;
+    margin-top: ${({ theme }) => theme.spacing.xl};
   }
 `
 
@@ -23,7 +25,8 @@ export function Footer() {
 
   return (
     <Wrapper>
-      <Text>
+      <Social />
+      <Text faded size="sm">
         {footer}
         <Link href="https://nextjs.org" rel="noopener noreferrer" target="_blank">
           Next.js

@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 
 import { theme } from '@/styles/theme'
 
-export type HeadingProps = {
+type HeadingProps = {
   level?: 1 | 2 | 3
   margin?: keyof typeof theme.spacing
   size?: keyof typeof theme.fontSizes
