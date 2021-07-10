@@ -1,8 +1,20 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
-export const Heading = styled.h1`
-  font-size: 3rem;
-  line-height: 1;
-  font-weight: 900;
-  margin: 0;
+import { theme } from '@/styles/theme'
+
+export type HeadingProps = {
+  level?: 1 | 2 | 3
+  margin?: keyof typeof theme.spacing
+  size?: keyof typeof theme.fontSizes
+}
+
+export const Heading = styled('h1').attrs<HeadingProps>(({ level = 1 }) => ({
+  as: `h${level}`
+}))<HeadingProps>`
+  ${({ size = 'xl', margin }) => css`
+    color: ${theme.colors.text};
+    font-size: ${theme.fontSizes[size]};
+    font-weight: 900;
+    margin: 0 0 ${margin ? theme.spacing[margin] : 0};
+  `}
 `

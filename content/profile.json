@@ -5,11 +5,12 @@
     "en": "I'm a social scientist, as well as a hobbyist web developer.",
     "pt": "Eu sou um cientista social que tem, por hobby, desenvolver aplicações web."
   },
-  "resume": {
-    "en": "Resume",
-    "pt": "Currículo"
+  "profiles": {
+    "dev": "dsoares",
+    "github": "dsoaress"
   },
   "umami": {
+    "domain": "dsoares.me",
     "id": "f4b04d5d-93fc-4073-a1d3-5113814daf6a",
     "src": "https://stats.marscollective.co/umami.js"
   },

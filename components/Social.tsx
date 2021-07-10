@@ -7,9 +7,12 @@ import profileData from '@/content/profile.json'
 
 const Wrapper = styled.ul`
   display: inline-flex;
-  gap: 1.25rem;
   margin: 0 auto;
   list-style: none;
+
+  li {
+    margin: 0 12px;
+  }
 `
 
 export function Social() {
@@ -19,7 +22,13 @@ export function Social() {
         const Icon = Icons[label] as IconType
         return (
           <li key={url}>
-            <Link href={url} aria-label={label} rel="noopener noreferrer" target="_blank">
+            <Link
+              href={url}
+              aria-label={label}
+              rel="noopener noreferrer"
+              target="_blank"
+              className={`umami--click--${label}`}
+            >
               <Icon size={22} />
             </Link>
           </li>

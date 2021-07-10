@@ -1,0 +1,26 @@
+{
+  "resume": {
+    "en": "Resume",
+    "pt": "Currículo"
+  },
+  "posts": {
+    "readingTime": {
+      "en": "minutes of reading",
+      "pt": "minutos de leitura"
+    },
+    "readMore": {
+      "en": "read more",
+      "pt": "leia mais"
+    }
+  },
+  "projects": {
+    "title": {
+      "en": "Projects",
+      "pt": "Projetos"
+    }
+  },
+  "footer": {
+    "en": "Made with ❤️ and ",
+    "pt": "Feito com ❤️ e "
+  }
+}

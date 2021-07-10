@@ -4,26 +4,27 @@ import styled from 'styled-components'
 
 import { Button } from '@/components/Button'
 import { Link } from '@/components/Link'
-import profileData from '@/content/profile.json'
+import i18nData from '@/content/i18n.json'
 
 const Wrapper = styled.nav`
   display: flex;
   justify-content: center;
 `
 
-const ResumeIcon = styled(HiOutlineDocumentDuplicate)`
-  margin-right: 0.5rem;
-`
-
 export function Resume() {
   const { locale } = useRouter()
-  const resume = profileData.resume[locale] as string
+  const resume = i18nData.resume[locale] as string
 
   return (
     <Wrapper>
-      <Link href={`/resume-${locale}.pdf`}>
+      <Link
+        href={`/resume-${locale}.pdf`}
+        rel="noopener noreferrer"
+        target="_blank"
+        className={`umami--click--resume-${locale}`}
+      >
         <Button>
-          <ResumeIcon size={20} />
+          <HiOutlineDocumentDuplicate />
           {resume}
         </Button>
       </Link>
