@@ -8,6 +8,12 @@ exports[`<Button /> Renders with children 1`] = `
   margin: 0;
 }
 
+@media (max-width:450px) {
+  .c0 {
+    font-size: 2.4rem;
+  }
+}
+
 <h1
   class="c0"
 >

@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import styled from 'styled-components'
-import media from 'styled-media-query'
 
 import logo from '@/assets/logo.svg'
 import { Avatar } from '@/components/Avatar'
@@ -12,41 +11,40 @@ import { Text } from '@/components/Text'
 import profileData from '@/content/profile.json'
 
 const Wrapper = styled.div`
+  position: absolute;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  margin: 0 auto;
-  color: ${({ theme }) => theme.colors.text};
+  padding-bottom: 96px;
+  width: 100%;
+  height: 100vh;
 `
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 2.5rem;
+const Content = styled.div`
+  display: grid;
+  gap: 32px;
+  max-width: 640px;
+  padding: 0 32px;
   text-align: center;
-
-  ${media.greaterThan('small')`
-    padding: 5rem;
-  `}
+  z-index: 10;
 `
 
-export function Profile() {
+export function Header() {
   const { locale } = useRouter()
   const description = profileData.description[locale] as string
 
   return (
     <>
-      <Avatar />
       <Wrapper>
-        <Container>
+        <Content>
           <Image src={logo} alt={profileData.title} width={80} height={80} />
           <Heading>{profileData.title}</Heading>
           <Text>{description}</Text>
           <Resume />
           <Social />
-        </Container>
+        </Content>
       </Wrapper>
+      <Avatar />
     </>
   )
 }

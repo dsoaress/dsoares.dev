@@ -1,9 +1,9 @@
 import { GetStaticProps } from 'next'
 import useSWR from 'swr'
 
+import { Header } from '@/components/Header'
 import { Layout } from '@/components/Layout'
 import { Posts } from '@/components/Posts'
-import { Profile } from '@/components/Profile'
 import { Projects } from '@/components/Projects'
 import { fetcher } from '@/lib/fetcher'
 import { getPosts } from '@/lib/getPosts'
@@ -21,11 +21,13 @@ export default function IndexPage(props: IndexPageProps) {
   const { data: posts } = useSWR(getPosts, { initialData: props.posts })
 
   return (
-    <Layout>
-      <Profile />
-      <Projects projects={projects} />
-      <Posts posts={posts} />
-    </Layout>
+    <>
+      <Header />
+      <Layout>
+        <Projects projects={projects} />
+        <Posts posts={posts} />
+      </Layout>
+    </>
   )
 }
 
