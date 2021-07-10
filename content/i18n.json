@@ -1,0 +1,26 @@
+{
+  "resume": {
+    "en": "Resume",
+    "pt": "Currículo"
+  },
+  "posts": {
+    "readMore": {
+      "en": "Read more",
+      "pt": "Leia mais"
+    }
+  },
+  "projects": {
+    "title": {
+      "en": "Projects",
+      "pt": "Projetos"
+    },
+    "viewOnline": {
+      "en": "View online",
+      "pt": "Veja online"
+    },
+    "source": {
+      "en": "Source",
+      "pt": "Código fonte"
+    }
+  }
+}

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 import { Button } from '@/components/Button'
 import { Link } from '@/components/Link'
-import profileData from '@/content/profile.json'
+import i18nData from '@/content/i18n.json'
 
 const Wrapper = styled.nav`
   display: flex;
@@ -17,7 +17,7 @@ const ResumeIcon = styled(HiOutlineDocumentDuplicate)`
 
 export function Resume() {
   const { locale } = useRouter()
-  const resume = profileData.resume[locale] as string
+  const resume = i18nData.resume[locale] as string
 
   return (
     <Wrapper>
