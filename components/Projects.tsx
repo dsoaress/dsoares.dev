@@ -29,7 +29,7 @@ export function Projects({ projects }: { projects: Project[] }) {
   const { locale } = useRouter()
   const projectsTitle = i18nData.projects.title[locale] as string
   return (
-    <Wrapper>
+    <Wrapper id="projects">
       <Heading level={2} size="lg" margin="xl">
         {projectsTitle}
       </Heading>

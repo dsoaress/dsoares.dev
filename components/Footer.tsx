@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router'
-import { darken } from 'polished'
 import styled from 'styled-components'
 
 import { Link } from '@/components/Link'

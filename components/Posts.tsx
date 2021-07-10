@@ -26,7 +26,7 @@ const PostsList = styled.div`
 
 export function Posts({ posts }: { posts: Post[] }) {
   return (
-    <Wrapper>
+    <Wrapper id="posts">
       <Heading level={2} size="lg" margin="xl">
         Posts
       </Heading>

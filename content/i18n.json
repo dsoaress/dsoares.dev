@@ -1,4 +1,26 @@
 {
+  "nav": {
+    "en": [
+      {
+        "label": "Projects",
+        "url": "projects"
+      },
+      {
+        "label": "Posts",
+        "url": "posts"
+      }
+    ],
+    "pt": [
+      {
+        "label": "Projetos",
+        "url": "projects"
+      },
+      {
+        "label": "Posts",
+        "url": "posts"
+      }
+    ]
+  },
   "resume": {
     "en": "Resume",
     "pt": "Currículo"

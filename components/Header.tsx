@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import logo from '@/assets/logo.svg'
 import { Avatar } from '@/components/Avatar'
 import { Heading } from '@/components/Heading'
+import { Nav } from '@/components/Nav'
 import { Resume } from '@/components/Resume'
 import { Social } from '@/components/Social'
 import { Text } from '@/components/Text'
@@ -35,6 +36,7 @@ export function Header() {
 
   return (
     <>
+      <Nav />
       <Wrapper>
         <Content>
           <Image src={logo} alt={profileData.title} width={80} height={80} />
