@@ -1,7 +1,6 @@
 import camelcaseKeys from 'camelcase-keys'
 
-export async function fetcher(url: string) {
-  const response = await fetch(url)
-  const data = await response.json()
-  return camelcaseKeys(data)
-}
+export const fetcher = (url: string) =>
+  fetch(url)
+    .then(res => res.json())
+    .then(res => camelcaseKeys(res))
