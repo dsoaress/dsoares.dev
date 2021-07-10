@@ -21,7 +21,12 @@ export function Resume() {
 
   return (
     <Wrapper>
-      <Link href={`/resume-${locale}.pdf`}>
+      <Link
+        href={`/resume-${locale}.pdf`}
+        rel="noopener noreferrer"
+        target="_blank"
+        className={`umami--click--resume-${locale}`}
+      >
         <Button>
           <ResumeIcon size={20} />
           {resume}

@@ -15,7 +15,13 @@ export default function App({ Component, pageProps }: AppProps) {
       <GlobalStyles />
       <Seo />
       <Head>
-        <script async defer src={profileData.umami.src} data-website-id={profileData.umami.id} />
+        <script
+          async
+          defer
+          src={profileData.umami.src}
+          data-website-id={profileData.umami.id}
+          data-domains={profileData.umami.domain}
+        />
       </Head>
       <SWRConfig value={{ fetcher }}>
         <Component {...pageProps} />
