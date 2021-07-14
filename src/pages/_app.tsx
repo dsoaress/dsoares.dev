@@ -4,7 +4,6 @@ import { ThemeProvider } from 'styled-components'
 import { SWRConfig } from 'swr'
 
 import { Seo } from '@/components/Seo'
-import profileData from '@/content/profile.json'
 import { TranslationProvider } from '@/hooks/useTranslation'
 import { fetcher } from '@/lib/fetcher'
 import { GlobalStyles } from '@/styles/globals'
@@ -16,15 +15,6 @@ export default function App({ Component, pageProps }: AppProps) {
       <GlobalStyles />
       <TranslationProvider>
         <Seo />
-        <Head>
-          <script
-            async
-            defer
-            src={profileData.umami.src}
-            data-website-id={profileData.umami.id}
-            data-domains={profileData.umami.domain}
-          />
-        </Head>
         <SWRConfig value={{ fetcher }}>
           <Component {...pageProps} />
         </SWRConfig>
