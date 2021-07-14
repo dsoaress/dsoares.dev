@@ -1,8 +1,6 @@
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-import { darken, lighten } from 'polished'
 import { AiOutlineArrowRight } from 'react-icons/ai'
-import styled from 'styled-components'
 
 import { Heading } from '@/components/Heading'
 import { CardLink } from '@/components/Link'
@@ -11,47 +9,7 @@ import i18nData from '@/content/i18n.json'
 import { formatDate } from '@/lib/formatDate'
 import { Post } from '@/types/post'
 
-const Wrapper = styled.div`
-  position: relative;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid ${({ theme }) => lighten(0.05, theme.colors.background)};
-  border-radius: 0.35rem;
-
-  &:hover {
-    background: ${({ theme }) => lighten(0.04, theme.colors.background)};
-    box-shadow: 4px 4px 16px 4px rgba(0, 0, 0, 0.05);
-  }
-`
-
-const ImageCover = styled.div`
-  position: relative;
-  height: 260px;
-  border-radius: 0.35rem 0.35rem 0 0;
-  overflow: hidden;
-`
-
-const Content = styled.div`
-  display: grid;
-  gap: ${({ theme }) => theme.spacing.md};
-  padding: ${({ theme }) => theme.spacing.xl};
-`
-
-const Footer = styled.footer`
-  display: flex;
-  justify-content: space-between;
-  align-self: flex-end;
-
-  span {
-    p {
-      display: flex;
-      align-items: center;
-    }
-
-    svg {
-      margin-left: ${({ theme }) => theme.spacing.xs};
-    }
-  }
-`
+import { Content, Footer, ImageCover, Wrapper } from './styles'
 
 export function PostCard({ post }: { post: Post }) {
   const { locale } = useRouter()

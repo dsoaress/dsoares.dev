@@ -1,33 +1,20 @@
 import { useRouter } from 'next/router'
-import styled from 'styled-components'
-import media from 'styled-media-query'
 
-import { Heading } from '@/components/Heading'
+import { Heading } from '@/components/Heading/styles'
 import { ProjectCard } from '@/components/ProjectCard'
 import i18nData from '@/content/i18n.json'
 import { Project } from '@/types/project'
 
-const Wrapper = styled.div`
-  margin: 76px 0;
-`
+import { ProjectsList, Wrapper } from './styles'
 
-const ProjectsList = styled.div`
-  display: grid;
-  gap: ${({ theme }) => theme.spacing.lg};
+type ProjectProps = {
+  projects: Project[]
+}
 
-  ${media.greaterThan('medium')`
-    grid-template-columns: 1fr 1fr;
-    gap: ${({ theme }) => theme.spacing.xl};
-  `}
-
-  ${media.greaterThan('large')`
-    grid-template-columns: 1fr 1fr 1fr;
-  `}
-`
-
-export function Projects({ projects }: { projects: Project[] }) {
+export function Projects({ projects }: ProjectProps) {
   const { locale } = useRouter()
   const projectsTitle = i18nData.projects.title[locale] as string
+
   return (
     <Wrapper id="projects">
       <Heading level={2} size="lg" margin="xl">

@@ -1,19 +1,10 @@
 import { IconType } from 'react-icons/lib'
-import styled from 'styled-components'
 
 import { Icons } from '@/components/Icons'
 import { Link } from '@/components/Link'
 import profileData from '@/content/profile.json'
 
-const Wrapper = styled.ul`
-  display: inline-flex;
-  margin: 0 auto;
-  list-style: none;
-`
-
-const SocialItem = styled.li`
-  margin: 0 12px;
-`
+import { SocialItem, Wrapper } from './styles'
 
 export function Social() {
   return (
