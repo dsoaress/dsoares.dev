@@ -19,4 +19,4 @@ yarn dev
 - [styled-components](https://styled-components.com)
 - [TypeScript](https://www.typescriptlang.org)
 
-![Lighthouse](./assets/lighthouse.gif)
+![Lighthouse](./src/assets/lighthouse.gif)
