@@ -1,15 +1,13 @@
-import { useRouter } from 'next/router'
 import { HiOutlineDocumentDuplicate } from 'react-icons/hi'
 
 import { Button } from '@/components/Button'
 import { Link } from '@/components/Link'
-import i18nData from '@/content/i18n.json'
+import { useTranslation } from '@/hooks/useTranslation'
 
 import { Wrapper } from './styles'
 
 export function Resume() {
-  const { locale } = useRouter()
-  const resume = i18nData.resume[locale] as string
+  const { locale, t } = useTranslation()
 
   return (
     <Wrapper>
@@ -21,7 +19,7 @@ export function Resume() {
       >
         <Button>
           <HiOutlineDocumentDuplicate />
-          {resume}
+          {t.resume}
         </Button>
       </Link>
     </Wrapper>

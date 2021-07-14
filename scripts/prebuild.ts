@@ -4,16 +4,14 @@ import prettier from 'prettier'
 
 import profileData from '../content/profile.json'
 
-const icon = fs.readFileSync('./assets/icon.png')
+const icon = fs.readFileSync('./src/assets/icon.png')
 const i18n = {
   locales: ['en', 'pt'],
   defaultLocale: 'en'
 }
 
 if (!fs.existsSync('./public/icons')) {
-  fs.mkdirSync('./public/icons', {
-    recursive: true
-  })
+  fs.mkdirSync('./public/icons')
 }
 
 jimp.read(icon, function (_, lenna) {

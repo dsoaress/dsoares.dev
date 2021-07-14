@@ -1,10 +1,6 @@
 {
   "title": "Daniel Soares",
   "shortTitle": "DSoares",
-  "description": {
-    "en": "I'm a social scientist, as well as a hobbyist web developer.",
-    "pt": "Eu sou um cientista social que tem, por hobby, desenvolver aplicações web."
-  },
   "profiles": {
     "dev": "dsoares",
     "github": "dsoaress"

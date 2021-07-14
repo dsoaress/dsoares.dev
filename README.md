@@ -2,7 +2,7 @@
 
 Source of my personal site.
 
-![Screenshot](./assets/screenshot.png)
+![Screenshot](./src/assets/screenshot.png)
 
 ## Running Locally
 

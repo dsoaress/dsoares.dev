@@ -1,17 +1,16 @@
-import { useRouter } from 'next/router'
 import { DefaultSeo } from 'next-seo'
 
 import profileData from '@/content/profile.json'
+import { useTranslation } from '@/hooks/useTranslation'
 import { theme } from '@/styles/theme'
 
 export function Seo() {
-  const { locale, defaultLocale } = useRouter()
-  const description = profileData.description[locale]
+  const { defaultLocale, locale, t } = useTranslation()
 
   return (
     <DefaultSeo
       defaultTitle={profileData.title}
-      description={description}
+      description={t.description}
       openGraph={{
         locale,
         type: 'website',

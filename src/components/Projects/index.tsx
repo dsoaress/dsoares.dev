@@ -1,8 +1,6 @@
-import { useRouter } from 'next/router'
-
 import { Heading } from '@/components/Heading/styles'
 import { ProjectCard } from '@/components/ProjectCard'
-import i18nData from '@/content/i18n.json'
+import { useTranslation } from '@/hooks/useTranslation'
 import { Project } from '@/types/project'
 
 import { ProjectsList, Wrapper } from './styles'
@@ -12,13 +10,12 @@ type ProjectProps = {
 }
 
 export function Projects({ projects }: ProjectProps) {
-  const { locale } = useRouter()
-  const projectsTitle = i18nData.projects.title[locale] as string
+  const { t } = useTranslation()
 
   return (
     <Wrapper id="projects">
       <Heading level={2} size="lg" margin="xl">
-        {projectsTitle}
+        {t.projects.title}
       </Heading>
 
       <ProjectsList>

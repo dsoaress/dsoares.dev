@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { useRouter } from 'next/router'
 
 import logo from '@/assets/logo.svg'
 import { Avatar } from '@/components/Avatar'
@@ -9,12 +8,12 @@ import { Resume } from '@/components/Resume'
 import { Social } from '@/components/Social'
 import { Text } from '@/components/Text'
 import profileData from '@/content/profile.json'
+import { useTranslation } from '@/hooks/useTranslation'
 
 import { Content, Wrapper } from './styles'
 
 export function Header() {
-  const { locale } = useRouter()
-  const description = profileData.description[locale] as string
+  const { t } = useTranslation()
 
   return (
     <>
@@ -23,7 +22,7 @@ export function Header() {
         <Content>
           <Image src={logo} alt={profileData.title} width={80} height={80} />
           <Heading>{profileData.title}</Heading>
-          <Text>{description}</Text>
+          <Text>{t.description}</Text>
           <Resume />
           <Social />
         </Content>
