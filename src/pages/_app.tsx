@@ -1,5 +1,4 @@
 import { AppProps } from 'next/app'
-import Head from 'next/head'
 import { ThemeProvider } from 'styled-components'
 import { SWRConfig } from 'swr'
 
