@@ -1,5 +1,5 @@
 export const pt = {
-  description: 'Eu sou um cientista social que tem, por hobby, desenvolver aplicações web.',
+  description: 'Eu sou um desenvolvedor front-end trabalhando com React e Next.js',
   nav: [
     {
       label: 'Projetos',

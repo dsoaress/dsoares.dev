@@ -1,5 +1,5 @@
 export const en = {
-  description: "I'm a social scientist, as well as a hobbyist web developer.",
+  description: 'I am a front-end developer working with React and Next.js',
   nav: [
     {
       label: 'Projects',
