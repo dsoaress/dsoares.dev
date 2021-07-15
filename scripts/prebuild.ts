@@ -4,12 +4,9 @@ import prettier from 'prettier'
 
 import colorsData from '../content/colors.json'
 import profileData from '../content/profile.json'
+import { i18n } from '../locales.config'
 
 const icon = fs.readFileSync('./src/assets/icon.png')
-const i18n = {
-  locales: ['en', 'pt'],
-  defaultLocale: 'en'
-}
 
 if (!fs.existsSync('./public/icons')) {
   fs.mkdirSync('./public/icons')

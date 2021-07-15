@@ -1,13 +1,12 @@
 const withPWA = require('next-pwa')
 
+const { i18n } = require('./locales.config')
+
 const nextConfig = {
   reactStrictMode: true,
+  i18n,
   images: {
     domains: ['res.cloudinary.com']
-  },
-  i18n: {
-    locales: ['en', 'pt'],
-    defaultLocale: 'en'
   },
   pwa: {
     dest: 'public',

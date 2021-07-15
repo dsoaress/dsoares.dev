@@ -15,6 +15,7 @@ export const pt = {
     title: 'Projetos'
   },
   posts: {
+    title: 'Posts',
     readingTime: 'minutos de leitura',
     readMore: 'leia mais'
   },

@@ -1,3 +1,4 @@
+import { useTranslation } from '@/hooks/useTranslation'
 import { Post } from '@/types/post'
 
 import { Heading } from '../Heading'
@@ -9,10 +10,12 @@ type PostsProps = {
 }
 
 export function Posts({ posts }: PostsProps) {
+  const { t } = useTranslation()
+
   return (
     <Wrapper id="posts">
       <Heading level={2} size="lg" margin="xl">
-        Posts
+        {t.posts.title}
       </Heading>
 
       <PostsList>

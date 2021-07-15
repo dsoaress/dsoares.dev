@@ -15,6 +15,7 @@ export const en = {
     title: 'Projects'
   },
   posts: {
+    title: 'Posts',
     readingTime: 'minutes of reading',
     readMore: 'read more'
   },
