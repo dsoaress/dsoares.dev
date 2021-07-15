@@ -1,10 +1,10 @@
 import { AiOutlineStar } from 'react-icons/ai'
 
 import { Heading } from '@/components/Heading/styles'
+import { CardLink } from '@/components/Link'
 import { Text } from '@/components/Text/styles'
 import { Project } from '@/types/project'
 
-import { CardLink } from '../Link'
 import { Footer, Wrapper } from './styles'
 
 type ProjectCardProps = {

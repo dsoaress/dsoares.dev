@@ -1,8 +1,8 @@
+import { Heading } from '@/components/Heading'
+import { PostCard } from '@/components/PostCard'
 import { useTranslation } from '@/hooks/useTranslation'
 import { Post } from '@/types/post'
 
-import { Heading } from '../Heading'
-import { PostCard } from '../PostCard'
 import { PostsList, Wrapper } from './styles'
 
 type PostsProps = {

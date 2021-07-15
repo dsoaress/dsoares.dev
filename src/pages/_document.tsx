@@ -2,6 +2,7 @@ import NextDocument, { DocumentContext, Head, Html, Main, NextScript } from 'nex
 import { ServerStyleSheet } from 'styled-components'
 
 import profileData from '@/content/profile.json'
+
 export default class Document extends NextDocument {
   static async getInitialProps(ctx: DocumentContext) {
     const sheet = new ServerStyleSheet()
