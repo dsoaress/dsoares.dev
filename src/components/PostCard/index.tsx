@@ -10,7 +10,11 @@ import { Post } from '@/types/post'
 
 import { Content, Footer, ImageCover, Wrapper } from './styles'
 
-export function PostCard({ post }: { post: Post }) {
+type PostCardProps = {
+  post: Post
+}
+
+export function PostCard({ post }: PostCardProps) {
   const { locale, t } = useTranslation()
 
   return (
