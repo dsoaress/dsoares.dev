@@ -14,7 +14,7 @@
     "test:ci": "jest --ci",
     "test:coverage": "jest --coverage && serve coverage/lcov-report -l 3020",
     "prepare": "husky install",
-    "clean": "rm -rf node_modules .next public",
+    "clean": "rm -rf node_modules .next",
     "format": "prettier --write \"./**/*.{js,jsx,ts,tsx,json,md,mdx}\"",
     "postversion": "git push --tags && git push"
   },
