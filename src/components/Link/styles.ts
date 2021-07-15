@@ -2,7 +2,7 @@ import { lighten } from 'polished'
 import { Link as ReactScroll } from 'react-scroll'
 import styled, { css } from 'styled-components'
 
-import { Link, LinkProps } from '.'
+import { Link } from '.'
 
 export const BaseStyle = css`
   ${({ theme }) => css`
@@ -23,7 +23,7 @@ export const BaseStyle = css`
   `}
 `
 
-export const StyledLink = styled.a<LinkProps>`
+export const StyledLink = styled.a<{ active?: boolean }>`
   ${BaseStyle}
   ${({ active = false, theme }) => css`
     color: ${active && theme.colors.primary};

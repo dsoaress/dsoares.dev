@@ -1,11 +1,10 @@
-import { useRouter } from 'next/router'
-
 import { Link } from '@/components/Link'
+import { useTranslation } from '@/hooks/useTranslation'
 
 import { LanguageItem, Wrapper } from './styles'
 
 export function LanguageSelector() {
-  const { asPath, locale, locales } = useRouter()
+  const { asPath, locale, locales } = useTranslation()
 
   return (
     <Wrapper>

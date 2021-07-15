@@ -6,7 +6,7 @@ import { Project } from '@/types/project'
 import { ProjectsList, Wrapper } from './styles'
 
 type ProjectProps = {
-  projects: Project[]
+  projects: Project[] | undefined
 }
 
 export function Projects({ projects }: ProjectProps) {

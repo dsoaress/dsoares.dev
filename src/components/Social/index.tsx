@@ -10,7 +10,7 @@ export function Social() {
   return (
     <Wrapper>
       {profileData.social.map(({ label, url }) => {
-        const Icon = Icons[label] as IconType
+        const Icon: IconType = Icons[label as keyof typeof Icons]
         return (
           <SocialItem key={url}>
             <Link

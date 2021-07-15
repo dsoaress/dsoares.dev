@@ -7,6 +7,7 @@ export { CardLink, ScrollLink } from './styles'
 
 export type LinkProps = {
   active?: boolean
+  href: string
   locale?: string
 } & AnchorHTMLAttributes<HTMLAnchorElement>
 

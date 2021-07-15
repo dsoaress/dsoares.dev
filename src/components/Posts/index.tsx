@@ -6,7 +6,7 @@ import { PostCard } from '../PostCard'
 import { PostsList, Wrapper } from './styles'
 
 type PostsProps = {
-  posts: Post[]
+  posts: Post[] | undefined
 }
 
 export function Posts({ posts }: PostsProps) {
