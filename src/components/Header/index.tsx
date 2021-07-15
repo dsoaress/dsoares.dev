@@ -1,8 +1,6 @@
-import Image from 'next/image'
-
-import logo from '@/assets/logo.svg'
 import { Avatar } from '@/components/Avatar'
 import { Heading } from '@/components/Heading'
+import { Logo } from '@/components/Logo'
 import { Nav } from '@/components/Nav'
 import { Resume } from '@/components/Resume'
 import { Social } from '@/components/Social'
@@ -20,7 +18,7 @@ export function Header() {
       <Nav />
       <Wrapper>
         <Content>
-          <Image src={logo} alt={profileData.title} width={80} height={80} />
+          <Logo width={80} height={80} />
           <Heading>{profileData.title}</Heading>
           <Text>{t.description}</Text>
           <Resume />

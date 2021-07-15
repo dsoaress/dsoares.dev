@@ -14,7 +14,7 @@ export const Heading = styled('h1').attrs<HeadingProps>(({ level = 1 }) => ({
   ${({ size = 'xl', margin }) => css`
     color: ${theme.colors.text};
     font-size: ${theme.fontSizes[size]};
-    font-weight: 900;
+    font-weight: 600;
     margin: 0 0 ${margin ? theme.spacing[margin] : 0};
   `}
 `

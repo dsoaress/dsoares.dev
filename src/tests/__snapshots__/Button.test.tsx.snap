@@ -20,7 +20,7 @@ exports[`<Button /> Renders with children 1`] = `
   height: 2.5rem;
   border: none;
   border-radius: 0.35rem;
-  background: #F43F5E;
+  background: #14B8A6;
   color: #fff;
   font-size: 0.85rem;
   font-weight: 600;
@@ -28,16 +28,16 @@ exports[`<Button /> Renders with children 1`] = `
 }
 
 .c0:hover {
-  background: #f10f36;
+  background: #0f8a7c;
 }
 
 .c0:active {
-  background: #c20b2a;
+  background: #0a5c53;
 }
 
 .c0 svg {
   font-size: 20px;
-  margin-right: 8px;
+  margin-right: 8px !important;
 }
 
 <button

@@ -9,7 +9,7 @@ export const BaseStyle = css`
     transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     color: ${theme.colors.text};
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
     z-index: 10;
     cursor: pointer;
 

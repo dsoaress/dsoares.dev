@@ -29,7 +29,9 @@ export function PostCard({ post }: { post: Post }) {
         <Heading level={3} size="md">
           {post.title}
         </Heading>
-        <Text>{formatDate(post.publishedAt, locale)}</Text>
+        <Text faded size="sm">
+          {formatDate(post.publishedAt, locale)}
+        </Text>
         <Text>{post.description}</Text>
         <Footer>
           <Text faded size="sm">

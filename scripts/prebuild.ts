@@ -2,6 +2,7 @@ import fs from 'fs'
 import jimp from 'jimp'
 import prettier from 'prettier'
 
+import colorsData from '../content/colors.json'
 import profileData from '../content/profile.json'
 
 const icon = fs.readFileSync('./src/assets/icon.png')
@@ -29,8 +30,8 @@ i18n.locales.map(locale => {
       "name": "${profileData.title}",
       "short_name": "${profileData.shortTitle}",
       "start_url": "/${startUrl}",
-      "background_color": "#111827",
-      "theme_color": "#111827",
+      "background_color": "${colorsData.background}",
+      "theme_color": "${colorsData.background}",
       "display": "fullscreen",
       "icons": [
         {

@@ -2,8 +2,6 @@
 
 Source of my personal site.
 
-![Screenshot](./src/assets/screenshot.png)
-
 ## Running Locally
 
 ```shell

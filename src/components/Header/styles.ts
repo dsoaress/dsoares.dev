@@ -17,4 +17,8 @@ export const Content = styled.div`
   padding: 0 32px;
   text-align: center;
   z-index: 10;
+
+  svg {
+    margin: auto;
+  }
 `

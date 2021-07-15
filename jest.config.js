@@ -6,6 +6,7 @@ module.exports = {
   moduleNameMapper: {
     '^@/assets(.*)$': '<rootDir>/src/assets$1',
     '^@/components(.*)$': '<rootDir>/src/components$1',
+    '^@/content(.*)$': '<rootDir>/content$1',
     '^@/lib(.*)$': '<rootDir>/src/lib$1',
     '^@/styles(.*)$': '<rootDir>/src/styles$1'
   }

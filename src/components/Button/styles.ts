@@ -27,7 +27,7 @@ export const Button = styled.button`
 
     svg {
       font-size: 20px;
-      margin-right: ${theme.spacing.sm};
+      margin-right: ${theme.spacing.sm} !important;
     }
   `}
 `

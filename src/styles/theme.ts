@@ -1,13 +1,14 @@
 import { DefaultTheme } from 'styled-components'
 
+import colorsData from '@/content/colors.json'
+
 export const theme: DefaultTheme = {
   colors: {
-    primary: '#F43F5E',
-    text: '#D1D5DB',
-    background: '#111827'
+    primary: colorsData.primary,
+    text: colorsData.text,
+    background: colorsData.background
   },
-  fontFamily:
-    'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+  fontFamily: '"Ubuntu", sans-serif',
   fontSizes: {
     sm: '0.85rem',
     md: '1rem',

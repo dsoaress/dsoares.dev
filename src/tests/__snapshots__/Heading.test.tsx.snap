@@ -4,7 +4,7 @@ exports[`<Button /> Renders with children 1`] = `
 .c0 {
   color: #D1D5DB;
   font-size: 3rem;
-  font-weight: 900;
+  font-weight: 600;
   margin: 0 0 0;
 }
 
