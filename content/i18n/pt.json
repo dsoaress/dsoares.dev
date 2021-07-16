@@ -13,11 +13,11 @@
   "resume": "Currículo",
   "projects": {
     "title": "Projetos",
-    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit"
+    "description": "Alguns dos meus projetos no GitHub."
   },
   "posts": {
     "title": "Posts",
-    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+    "description": "Aqui estão os posts mais recentes. Costumo escrever sobre tecnologias web e assuntos relacionados.",
     "readingTime": "minutos de leitura",
     "readMore": "leia mais"
   },
