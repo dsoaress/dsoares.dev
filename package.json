@@ -19,6 +19,7 @@
     "postversion": "git push --tags && git push"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "camelcase-keys": "^7.0.0",
     "next": "^11.0.1",
     "next-pwa": "^5.2.23",

@@ -19,5 +19,10 @@ export const en = {
     readingTime: 'minutes of reading',
     readMore: 'read more'
   },
+  error: {
+    notFound: 'Not found',
+    internalError: 'Internal error',
+    buttonLabel: 'Back to home'
+  },
   footer: 'Made with ❤️ and '
 }

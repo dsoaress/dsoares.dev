@@ -19,5 +19,10 @@ export const pt = {
     readingTime: 'minutos de leitura',
     readMore: 'leia mais'
   },
+  error: {
+    notFound: 'Não encontrado',
+    internalError: 'Erro interno',
+    buttonLabel: 'Voltar à página inicial'
+  },
   footer: 'Feito com ❤️ e '
 }
