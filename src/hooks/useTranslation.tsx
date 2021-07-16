@@ -1,9 +1,15 @@
 import { useRouter } from 'next/router'
 import { createContext, ReactNode, useContext } from 'react'
 
-import { i18n } from '@/i18n'
+import en from '@/i18n/en.json'
+import pt from '@/i18n/pt.json'
 
-type TranslationData = typeof i18n.en
+const i18n = {
+  en,
+  pt
+}
+
+type TranslationData = typeof en
 
 type TranslationContextData = {
   asPath: string
