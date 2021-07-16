@@ -2,22 +2,18 @@
 
 exports[`<Button /> Renders with children 1`] = `
 .c0 {
-  -webkit-transition: background 0.3s cubic-bezier(0.4,0,0.2,1);
-  transition: background 0.3s cubic-bezier(0.4,0,0.2,1);
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   padding: 0 1.5rem;
-  height: 2.5rem;
+  height: 2.6rem;
   border: none;
   border-radius: 0.35rem;
   background: #14B8A6;
@@ -37,7 +33,7 @@ exports[`<Button /> Renders with children 1`] = `
 
 .c0 svg {
   font-size: 20px;
-  margin-right: 8px !important;
+  margin-right: 0.5rem !important;
 }
 
 <button

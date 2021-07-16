@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
 export const ProjectsList = styled.div`
   display: grid;
   gap: ${({ theme }) => theme.spacing.lg};
+  margin-top: ${({ theme }) => theme.spacing.xxl};
 
   ${media.greaterThan('medium')`
     grid-template-columns: 1fr 1fr;

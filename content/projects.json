@@ -1,0 +1,42 @@
+[
+  {
+    "name": "dsoares.me",
+    "image": "dsoares.png",
+    "description": {
+      "en": "Source of my personal site.",
+      "pt": "Código fonte do meu site pessoal."
+    },
+    "tags": ["TypeScript", "Next.js"],
+    "repositoryUrl": "https://github.com/dsoaress/dsoares.me"
+  },
+  {
+    "name": "Podcastr",
+    "image": "podcastr.png",
+    "description": {
+      "en": "Source of my personal site.",
+      "pt": "Código fonte do meu site pessoal."
+    },
+    "tags": ["TypeScript"],
+    "repositoryUrl": "https://github.com/dsoaress/dsoares.me"
+  },
+  {
+    "name": "Let me ask",
+    "image": "let-me-ask.png",
+    "description": {
+      "en": "Source of my personal site.",
+      "pt": "Código fonte do meu site pessoal."
+    },
+    "tags": ["TypeScript"],
+    "repositoryUrl": "https://github.com/dsoaress/dsoares.me"
+  },
+  {
+    "name": "ABNT Pandoc",
+    "image": "abnt-pandoc.png",
+    "description": {
+      "en": "Source of my personal site.",
+      "pt": "Código fonte do meu site pessoal."
+    },
+    "tags": ["LaTeX"],
+    "repositoryUrl": "https://github.com/dsoaress/dsoares.me"
+  }
+]

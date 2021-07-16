@@ -3,14 +3,13 @@ import styled, { css } from 'styled-components'
 
 export const Button = styled.button`
   ${({ theme }) => css`
-    transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background 0.3s;
     display: flex;
-    justify-content: center;
     align-items: center;
     padding: 0 1.5rem;
-    height: 2.5rem;
+    height: 2.6rem;
     border: none;
-    border-radius: 0.35rem;
+    border-radius: ${theme.rounded};
     background: ${theme.colors.primary};
     color: ${lighten(1, theme.colors.text)};
     font-size: ${theme.fontSizes.sm};

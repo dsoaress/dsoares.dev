@@ -1,26 +1,69 @@
-import { Heading } from '@/components/Heading'
-import { PostCard } from '@/components/PostCard'
-import { useTranslation } from '@/hooks/useTranslation'
-import { Post } from '@/types/post'
+import { AiOutlineArrowRight } from 'react-icons/ai'
 
-import { PostsList, Wrapper } from './styles'
+import { Card } from '@/components/Card'
+import { Heading } from '@/components/Heading'
+import { Text } from '@/components/Text'
+import { useTranslation } from '@/hooks/useTranslation'
+import { formatDate } from '@/lib/formatDate'
+
+import { Footer, PostsList, Wrapper } from './styles'
+
+export type PostType = {
+  id: number
+  title: string
+  description: string
+  url: string
+  coverImage: string
+  publishedAt: string
+  readingTimeMinutes: number
+  organization: {
+    username: string
+  }
+}
 
 type PostsProps = {
-  posts: Post[] | undefined
+  posts: PostType[] | undefined
 }
 
 export function Posts({ posts }: PostsProps) {
-  const { t } = useTranslation()
+  const { locale, t } = useTranslation()
 
   return (
     <Wrapper id="posts">
-      <Heading level={2} size="lg" margin="xl">
+      <Heading level={2} size="xl" margin="xl">
         {t.posts.title}
       </Heading>
+      <Text faded size="lg">
+        {t.posts.description}
+      </Text>
 
       <PostsList>
         {posts?.map(post => {
-          return <PostCard key={post.id} post={post} />
+          return (
+            <Card
+              key={post.id}
+              image={post.coverImage}
+              title={post.title}
+              type="post"
+              url={post.url}
+            >
+              <Text faded size="sm">
+                {formatDate(post.publishedAt, locale)}
+              </Text>
+              <Text>{post.description}</Text>
+              <Footer>
+                <Text faded size="sm">
+                  {post.readingTimeMinutes} {t.posts.readingTime}
+                </Text>
+                <span>
+                  <Text faded size="sm">
+                    {t.posts.readMore}
+                    <AiOutlineArrowRight />
+                  </Text>
+                </span>
+              </Footer>
+            </Card>
+          )
         })}
       </PostsList>
     </Wrapper>

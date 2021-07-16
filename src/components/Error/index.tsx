@@ -1,11 +1,12 @@
 import { AiFillHome } from 'react-icons/ai'
 
+import { Button } from '@/components/Button'
+import { Container } from '@/components/Container'
+import { Heading } from '@/components/Heading'
+import { Link } from '@/components/Link'
+import { Text } from '@/components/Text'
 import { useTranslation } from '@/hooks/useTranslation'
 
-import { Button } from '../Button'
-import { Heading } from '../Heading'
-import { Link } from '../Link'
-import { Text } from '../Text'
 import { Content, Wrapper } from './styles'
 
 type ErrorProps = {
@@ -18,20 +19,22 @@ export function Error({ statusCode, errorMessage }: ErrorProps) {
 
   return (
     <Wrapper>
-      <Content>
-        <Heading size="xl" margin="xl">
-          {statusCode}
-        </Heading>
+      <Container>
+        <Content>
+          <Heading size="xl" margin="xl">
+            {statusCode}
+          </Heading>
 
-        <Text>{errorMessage}</Text>
+          <Text>{errorMessage}</Text>
 
-        <Link href="/">
-          <Button>
-            <AiFillHome />
-            {t.error.buttonLabel}
-          </Button>
-        </Link>
-      </Content>
+          <Link href="/">
+            <Button>
+              <AiFillHome />
+              {t.error.buttonLabel}
+            </Button>
+          </Link>
+        </Content>
+      </Container>
     </Wrapper>
   )
 }

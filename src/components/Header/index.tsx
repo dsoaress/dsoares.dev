@@ -1,17 +1,21 @@
-import { Avatar } from '@/components/Avatar'
+import Image from 'next/image'
+import { HiOutlineDocumentDuplicate } from 'react-icons/hi'
+
+import avatar from '@/assets/avatar.jpg'
+import { Button } from '@/components/Button'
 import { Heading } from '@/components/Heading'
+import { Link } from '@/components/Link'
 import { Logo } from '@/components/Logo'
 import { Nav } from '@/components/Nav'
-import { Resume } from '@/components/Resume'
 import { Social } from '@/components/Social'
 import { Text } from '@/components/Text'
 import profileData from '@/content/profile.json'
 import { useTranslation } from '@/hooks/useTranslation'
 
-import { Content, Wrapper } from './styles'
+import { Avatar, Content, Overlay, Resume, Wrapper } from './styles'
 
 export function Header() {
-  const { t } = useTranslation()
+  const { locale, t } = useTranslation()
 
   return (
     <>
@@ -21,11 +25,37 @@ export function Header() {
           <Logo width={80} height={80} />
           <Heading>{profileData.title}</Heading>
           <Text>{t.description}</Text>
-          <Resume />
+
+          {/* <Resume>
+            <Link
+              href={`/resume-${locale}.pdf`}
+              rel="noopener noreferrer"
+              target="_blank"
+              className={`umami--click--resume-${locale}`}
+            >
+              <Button>
+                <HiOutlineDocumentDuplicate />
+                {t.resume}
+              </Button>
+            </Link>
+          </Resume> */}
+
           <Social />
         </Content>
       </Wrapper>
-      <Avatar />
+      <Avatar>
+        <Image
+          src={avatar}
+          alt={profileData.title}
+          objectFit="cover"
+          objectPosition="top"
+          layout="fill"
+          placeholder="blur"
+          quality={100}
+          priority
+        />
+        <Overlay />
+      </Avatar>
     </>
   )
 }

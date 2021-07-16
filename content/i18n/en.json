@@ -12,10 +12,12 @@
   ],
   "resume": "Resume",
   "projects": {
-    "title": "Projects"
+    "title": "Projects",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit"
   },
   "posts": {
     "title": "Posts",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
     "readingTime": "minutes of reading",
     "readMore": "read more"
   },

@@ -12,14 +12,17 @@ export const theme: DefaultTheme = {
   fontSizes: {
     sm: '0.85rem',
     md: '1rem',
-    lg: '2.4rem',
-    xl: '3rem'
+    lg: '1.2rem',
+    xl: '2.4rem',
+    xxl: '3rem'
   },
   spacing: {
-    xs: '4px',
-    sm: '8px',
-    md: '12px',
-    lg: '16px',
-    xl: '24px'
-  }
+    xs: '0.25rem',
+    sm: '0.5rem',
+    md: '0.8rem',
+    lg: '1rem',
+    xl: '1.5rem',
+    xxl: '2rem'
+  },
+  rounded: '0.35rem'
 }

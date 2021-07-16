@@ -1,10 +1,25 @@
+import {
+  AiFillGithub as GitHub,
+  AiOutlineInstagram as Instagram,
+  AiOutlineWhatsApp as WhatsApp
+} from 'react-icons/ai'
+import { BsEnvelope as Email } from 'react-icons/bs'
+import { FaDev as Dev, FaLinkedinIn as LinkedIn } from 'react-icons/fa'
 import { IconType } from 'react-icons/lib'
 
-import { Icons } from '@/components/Icons'
 import { Link } from '@/components/Link'
 import profileData from '@/content/profile.json'
 
 import { SocialItem, Wrapper } from './styles'
+
+const Icons = {
+  Email,
+  GitHub,
+  LinkedIn,
+  Dev,
+  Instagram,
+  WhatsApp
+}
 
 export function Social() {
   return (

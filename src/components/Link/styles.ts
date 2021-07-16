@@ -6,7 +6,7 @@ import { Link } from '.'
 
 export const BaseStyle = css`
   ${({ theme }) => css`
-    transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 0.3s;
     color: ${theme.colors.text};
     text-decoration: none;
     font-weight: 500;

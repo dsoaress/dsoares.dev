@@ -1,4 +1,3 @@
-import profileData from '@/content/profile.json'
+const username = process.env.DEV_TO_PROFILE
 
-const username = profileData.profiles.dev
 export const getPosts = `https://dev.to/api/articles?username=${username}`

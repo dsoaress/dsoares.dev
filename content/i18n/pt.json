@@ -12,10 +12,12 @@
   ],
   "resume": "Currículo",
   "projects": {
-    "title": "Projetos"
+    "title": "Projetos",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit"
   },
   "posts": {
     "title": "Posts",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
     "readingTime": "minutos de leitura",
     "readMore": "leia mais"
   },

@@ -13,6 +13,7 @@ declare module 'styled-components' {
       md: string
       lg: string
       xl: string
+      xxl: string
     }
     spacing: {
       xs: string
@@ -20,6 +21,8 @@ declare module 'styled-components' {
       md: string
       lg: string
       xl: string
+      xxl: string
     }
+    rounded: string
   }
 }

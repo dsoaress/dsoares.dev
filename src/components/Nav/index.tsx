@@ -1,25 +1,35 @@
-import { LanguageSelector } from '@/components/LanguageSelector'
-import { ScrollLink } from '@/components/Link'
+import { Link, ScrollLink } from '@/components/Link'
 import { useTranslation } from '@/hooks/useTranslation'
 
-import { NavLinkItem, NavLinks, Wrapper } from './styles'
+import { LanguageItem, LanguageSelector, NavLinkItem, NavLinks, Wrapper } from './styles'
 
 export function Nav() {
-  const { t } = useTranslation()
+  const { asPath, locale, locales, t } = useTranslation()
 
   return (
     <Wrapper>
       <NavLinks>
-        {t.nav.map((navItem, i) => {
+        {/* {t.nav.map(navItem => {
           return (
-            <NavLinkItem key={i}>
+            <NavLinkItem key={navItem.url}>
               <ScrollLink to={navItem.url} smooth={true} offset={-76}>
                 {navItem.label}
               </ScrollLink>
             </NavLinkItem>
           )
-        })}
-        <LanguageSelector />
+        })} */}
+
+        <LanguageSelector>
+          {locales.map(localeItem => {
+            return (
+              <LanguageItem key={localeItem}>
+                <Link href={asPath} active={locale === localeItem} locale={localeItem}>
+                  [{localeItem}]
+                </Link>
+              </LanguageItem>
+            )
+          })}
+        </LanguageSelector>
       </NavLinks>
     </Wrapper>
   )
