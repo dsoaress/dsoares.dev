@@ -10,14 +10,15 @@ export const Button = styled.button`
     height: 2.6rem;
     border: none;
     border-radius: ${theme.rounded};
-    background: ${theme.colors.primary};
+    background: ${darken(0.1, theme.colors.primary)};
     color: ${lighten(1, theme.colors.text)};
     font-size: ${theme.fontSizes.sm};
-    font-weight: 600;
+    font-weight: 500;
+
     cursor: pointer;
 
     &:hover {
-      background: ${darken(0.1, theme.colors.primary)};
+      background: ${darken(0.15, theme.colors.primary)};
     }
 
     &:active {

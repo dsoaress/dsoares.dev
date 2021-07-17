@@ -16,15 +16,15 @@ exports[`<Button /> Renders with children 1`] = `
   height: 2.6rem;
   border: none;
   border-radius: 0.35rem;
-  background: #14B8A6;
+  background: #0f8a7c;
   color: #fff;
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
 }
 
 .c0:hover {
-  background: #0f8a7c;
+  background: #0d7368;
 }
 
 .c0:active {
