@@ -1,3 +1,4 @@
+import { cover } from 'polished'
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
@@ -34,11 +35,7 @@ export const Avatar = styled.div`
 `
 
 export const Overlay = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  ${cover()}
   background: linear-gradient(
     0deg,
     ${({ theme }) => theme.colors.background} 10%,

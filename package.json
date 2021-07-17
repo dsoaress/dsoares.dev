@@ -31,7 +31,6 @@
     "react-scroll": "^1.8.2",
     "styled-components": "^5.3.0",
     "styled-media-query": "^2.1.2",
-    "styled-normalize": "^8.0.7",
     "swr": "^0.5.6"
   },
   "devDependencies": {
