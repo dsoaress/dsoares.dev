@@ -26,7 +26,7 @@ export function Header() {
           <Heading>{profileData.title}</Heading>
           <Text>{t.description}</Text>
 
-          {/* <Resume>
+          <Resume>
             <Link
               href={`/resume-${locale}.pdf`}
               rel="noopener noreferrer"
@@ -38,7 +38,7 @@ export function Header() {
                 {t.resume}
               </Button>
             </Link>
-          </Resume> */}
+          </Resume>
 
           <Social />
         </Content>
