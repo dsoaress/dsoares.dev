@@ -17,12 +17,12 @@ exports[`<Link /> Renders with children 1`] = `
 
 .c0:hover {
   --tw-text-opacity: 1;
-  color: rgba(20,184,166,var(--tw-text-opacity));
+  color: rgba(244,63,94,var(--tw-text-opacity));
 }
 
 .c0:active {
   --tw-text-opacity: 1;
-  color: rgba(13,148,136,var(--tw-text-opacity));
+  color: rgba(225,29,72,var(--tw-text-opacity));
 }
 
 <a
