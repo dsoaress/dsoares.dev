@@ -1,6 +1,6 @@
 import fs from 'fs'
-import jimp from 'jimp'
 import prettier from 'prettier'
+import sharp from 'sharp'
 
 import profileData from '../content/profile.json'
 import { i18n } from '../locales.config'
@@ -11,12 +11,10 @@ const icon = fs.readFileSync('./src/assets/icon.png')
 if (!fs.existsSync('./public/icons')) {
   fs.mkdirSync('./public/icons')
 }
+const dimensions = [512, 384, 256, 192, 144, 96, 72, 48, 32]
 
-jimp.read(icon, function (_, lenna) {
-  const dimensions = [512, 384, 256, 192, 144, 96, 72, 48, 32]
-  dimensions.map(dimension => {
-    lenna.cover(dimension, dimension).write(`./public/icons/icon-${dimension}x${dimension}.png`)
-  })
+dimensions.map(dimension => {
+  sharp(icon).resize(dimension).png().toFile(`./public/icons/icon-${dimension}.png`)
 })
 
 i18n.locales.map(locale => {
