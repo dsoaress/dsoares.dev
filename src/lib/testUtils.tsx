@@ -1,15 +1,12 @@
 import { render } from '@testing-library/react'
 import { ReactElement, ReactNode } from 'react'
-import { ThemeProvider } from 'styled-components'
-
-import { theme } from '@/styles/theme'
 
 type ProvidersProps = {
   children?: ReactNode
 }
 
 const Providers = ({ children }: ProvidersProps) => {
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>
+  return <>{children}</>
 }
 
 const customRender = (ui: ReactElement, options = {}) =>

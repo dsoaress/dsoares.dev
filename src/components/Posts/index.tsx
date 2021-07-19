@@ -30,10 +30,10 @@ export function Posts({ posts }: PostsProps) {
 
   return (
     <Wrapper id="posts">
-      <Heading level={2} size="xl" margin="xl">
+      <Heading as="h2" size="3xl" margin={6}>
         {t.posts.title}
       </Heading>
-      <Text faded size="lg">
+      <Text faded size="xl">
         {t.posts.description}
       </Text>
 

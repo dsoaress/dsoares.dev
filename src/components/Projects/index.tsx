@@ -11,10 +11,10 @@ export function Projects() {
 
   return (
     <Wrapper id="projects">
-      <Heading level={2} size="xl" margin="xl">
+      <Heading as="h2" size="3xl" margin={6}>
         {t.projects.title}
       </Heading>
-      <Text faded size="lg">
+      <Text faded size="xl">
         {t.projects.description}
       </Text>
 

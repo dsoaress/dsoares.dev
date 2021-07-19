@@ -2,9 +2,12 @@
 
 exports[`<Link /> Renders with children 1`] = `
 .c0 {
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
-  color: #D1D5DB;
+  -webkit-transition-property: background-color,border-color,color,fill,stroke;
+  transition-property: background-color,border-color,color,fill,stroke;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 500;
@@ -13,11 +16,13 @@ exports[`<Link /> Renders with children 1`] = `
 }
 
 .c0:hover {
-  color: #14B8A6;
+  --tw-text-opacity: 1;
+  color: rgba(20,184,166,var(--tw-text-opacity));
 }
 
 .c0:active {
-  color: #19e6cf;
+  --tw-text-opacity: 1;
+  color: rgba(13,148,136,var(--tw-text-opacity));
 }
 
 <a

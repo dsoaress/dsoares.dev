@@ -21,7 +21,7 @@ export function Error({ statusCode, errorMessage }: ErrorProps) {
     <Wrapper>
       <Container>
         <Content>
-          <Heading size="xl" margin="xl">
+          <Heading size="xl" margin={6}>
             {statusCode}
           </Heading>
 

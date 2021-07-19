@@ -30,7 +30,7 @@ export function Card({ children, image, title, type, url }: CardProps) {
       </ImageCover>
 
       <Container>
-        <Heading level={3} size="md">
+        <Heading as="h3" size="lg">
           {title}
         </Heading>
 

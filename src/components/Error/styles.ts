@@ -1,21 +1,20 @@
-import styled from 'styled-components'
+import tw, { styled } from 'twin.macro'
 
 export const Wrapper = styled.main`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  ${tw`
+    fixed
+    inset-0
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    flex
+    items-center
+    justify-center
+  `}
 `
 
 export const Content = styled.div`
-  text-align: center;
+  ${tw`text-center`}
 
   p {
-    margin-bottom: ${({ theme }) => theme.spacing.xl};
+    ${tw`mb-8`}
   }
 `

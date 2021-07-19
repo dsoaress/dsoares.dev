@@ -1,33 +1,24 @@
-import { lighten } from 'polished'
 import { Link as ReactScroll } from 'react-scroll'
-import styled, { css } from 'styled-components'
+import tw, { css, styled } from 'twin.macro'
 
 import { Link } from '.'
 
 export const BaseStyle = css`
-  ${({ theme }) => css`
-    transition: color 0.3s;
-    color: ${theme.colors.text};
-    text-decoration: none;
-    font-weight: 500;
-    z-index: 10;
-    cursor: pointer;
-
-    &:hover {
-      color: ${theme.colors.primary};
-    }
-
-    &:active {
-      color: ${lighten(0.1, theme.colors.primary)};
-    }
+  ${tw`
+    transition-colors
+    duration-300
+    no-underline
+    font-medium
+    z-10
+    cursor-pointer
+    hover:text-primary-500
+    active:text-primary-600
   `}
 `
 
 export const StyledLink = styled.a<{ active?: boolean }>`
   ${BaseStyle}
-  ${({ active = false, theme }) => css`
-    color: ${active && theme.colors.primary};
-  `}
+  ${({ active = false }) => active && tw`text-primary-500`}
 `
 
 export const ScrollLink = styled(ReactScroll)`
@@ -35,9 +26,8 @@ export const ScrollLink = styled(ReactScroll)`
 `
 
 export const CardLink = styled(Link)`
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  ${tw`
+    absolute
+    inset-0
+  `}
 `

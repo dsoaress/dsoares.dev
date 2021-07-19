@@ -1,43 +1,39 @@
-import styled from 'styled-components'
-import media from 'styled-media-query'
+import tw, { styled } from 'twin.macro'
 
 export const Wrapper = styled.nav`
-  position: absolute;
-  left: 0;
-  right: 0;
-  padding: 48px 64px 120px;
-  background: linear-gradient(
-    180deg,
-    ${({ theme }) => theme.colors.background} 0%,
-    rgba(0, 0, 0, 0) 90%
-  );
-  font-size: ${({ theme }) => theme.fontSizes.sm} !important;
-  z-index: 10;
+  ${tw`
+    absolute
+    left-0
+    right-0
+    pt-12
+    px-16
+    pb-32
+    bg-gradient-to-b
+    from-neutral-900
+    to-transparent
+    text-sm!
+    z-10
+  `}
 `
 export const NavLinks = styled.ul`
-  display: flex;
-  justify-content: center;
-  list-style: none;
-
-  ${media.greaterThan('medium')`
-    justify-content: flex-end;
+  ${tw`
+    flex
+    justify-center
+    list-none
+    space-x-6
+    md:justify-end
   `}
 `
 
-export const NavLinkItem = styled.li`
-  margin-right: 24px;
-`
+export const NavLinkItem = styled.li``
 
 export const LanguageSelector = styled.ul`
-  display: flex;
-  justify-content: center;
-  list-style: none;
+  ${tw`
+    flex
+    justify-center
+    list-none
+    space-x-2
+  `}
 `
 
-export const LanguageItem = styled.li`
-  margin-right: 8px;
-
-  &:last-child {
-    margin: 0;
-  }
-`
+export const LanguageItem = styled.li``

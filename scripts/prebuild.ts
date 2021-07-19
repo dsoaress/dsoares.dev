@@ -2,9 +2,9 @@ import fs from 'fs'
 import jimp from 'jimp'
 import prettier from 'prettier'
 
-import colorsData from '../content/colors.json'
 import profileData from '../content/profile.json'
 import { i18n } from '../locales.config'
+import { theme } from '../tailwind.config'
 
 const icon = fs.readFileSync('./src/assets/icon.png')
 
@@ -27,8 +27,8 @@ i18n.locales.map(locale => {
       "name": "${profileData.title}",
       "short_name": "${profileData.shortTitle}",
       "start_url": "/${startUrl}",
-      "background_color": "${colorsData.background}",
-      "theme_color": "${colorsData.background}",
+      "background_color": "${theme.extend.colors.neutral[900]}",
+      "theme_color": "${theme.extend.colors.neutral[900]}",
       "display": "fullscreen",
       "icons": [
         {

@@ -2,10 +2,10 @@
 
 exports[`<Text /> Renders with children 1`] = `
 .c0 {
-  line-height: 1.75;
+  line-height: 1.75rem;
   font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 300;
-  color: #D1D5DB;
 }
 
 <p

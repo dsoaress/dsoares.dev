@@ -1,7 +1,9 @@
-import styled from 'styled-components'
+import tw, { styled } from 'twin.macro'
 
 export const Container = styled.main`
-  max-width: 1280px;
-  padding: 0 ${({ theme }) => theme.spacing.xl};
-  margin: auto;
+  ${tw`
+    max-w-screen-xl
+    px-6
+    mx-auto
+  `}
 `

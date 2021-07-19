@@ -1,35 +1,36 @@
-import { lighten } from 'polished'
-import styled, { css } from 'styled-components'
+import tw, { styled } from 'twin.macro'
 
 export const Wrapper = styled.div`
-  ${({ theme }) => css`
-    position: relative;
-    transition: all 0.3s;
-    border: 1px solid ${lighten(0.05, theme.colors.background)};
-    border-radius: ${theme.rounded};
+  ${tw`
+    relative
+    transition-all
+    duration-300
+    border
+    border-neutral-800
+    rounded-md
 
-    &:hover {
-      background: ${lighten(0.04, theme.colors.background)};
-      box-shadow: 4px 4px 16px 4px rgba(0, 0, 0, 0.05);
-      transform: translate(0, -0.25rem);
-    }
+    hover:(
+      bg-neutral-800
+      shadow-2xl
+      transform
+      -translate-y-1
+    )
   `}
 `
 
 export const ImageCover = styled.div`
-  ${({ theme }) => css`
-    position: relative;
-    height: 260px;
-    border-radius: ${theme.rounded} ${theme.rounded} 0 0;
-    overflow: hidden;
+  ${tw`
+    relative
+    h-64
+    rounded-t-md
+    overflow-hidden
   `}
 `
 
 export const Container = styled.main`
-  ${({ theme }) => css`
-    display: grid;
-    gap: ${theme.spacing.md};
-
-    padding: ${theme.spacing.xl};
+  ${tw`
+    grid
+    gap-4
+    p-6
   `}
 `

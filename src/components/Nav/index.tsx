@@ -19,17 +19,19 @@ export function Nav() {
           )
         })} */}
 
-        <LanguageSelector>
-          {locales.map(localeItem => {
-            return (
-              <LanguageItem key={localeItem}>
-                <Link href={asPath} active={locale === localeItem} locale={localeItem}>
-                  [{localeItem}]
-                </Link>
-              </LanguageItem>
-            )
-          })}
-        </LanguageSelector>
+        <NavLinkItem>
+          <LanguageSelector>
+            {locales.map(localeItem => {
+              return (
+                <LanguageItem key={localeItem}>
+                  <Link href={asPath} active={locale === localeItem} locale={localeItem}>
+                    [{localeItem}]
+                  </Link>
+                </LanguageItem>
+              )
+            })}
+          </LanguageSelector>
+        </NavLinkItem>
       </NavLinks>
     </Wrapper>
   )

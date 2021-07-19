@@ -1,11 +1,12 @@
-import styled from 'styled-components'
+import tw, { styled } from 'twin.macro'
 
 export const Wrapper = styled.ul`
-  display: inline-flex;
-  margin: 0 auto;
-  list-style: none;
+  ${tw`
+    inline-flex
+    mx-auto
+    list-none
+    space-x-6
+  `}
 `
 
-export const SocialItem = styled.li`
-  margin: 0 12px;
-`
+export const SocialItem = styled.li``

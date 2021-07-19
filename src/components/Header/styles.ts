@@ -1,44 +1,51 @@
-import { cover } from 'polished'
-import styled from 'styled-components'
+import tw, { styled } from 'twin.macro'
 
 export const Wrapper = styled.div`
-  position: absolute;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding-bottom: 96px;
-  width: 100%;
-  height: 100vh;
+  ${tw`
+    absolute
+    flex
+    items-end
+    justify-center
+    pb-24
+    w-full
+    h-screen
+  `}
 `
 
 export const Content = styled.div`
-  display: grid;
-  gap: 2rem;
-  max-width: 640px;
-  padding: 0 2rem;
-  text-align: center;
-  z-index: 10;
+  ${tw`
+    grid
+    gap-8
+    px-8
+    text-center
+    z-10
+  `}
 
   svg {
-    margin: auto;
+    ${tw`mx-auto`}
   }
 `
 
 export const Resume = styled.nav`
-  display: flex;
-  justify-content: center;
+  ${tw`
+    flex
+    justify-center
+  `}
 `
 
 export const Avatar = styled.div`
-  position: relative;
-  height: 100vh;
+  ${tw`
+    relative
+    h-screen
+  `}
 `
 
 export const Overlay = styled.div`
-  ${cover()}
-  background: linear-gradient(
-    0deg,
-    ${({ theme }) => theme.colors.background} 10%,
-    rgba(0, 0, 0, 0.1) 100%
-  );
+  ${tw`
+    absolute
+    inset-0
+    bg-gradient-to-t
+    from-neutral-900
+    to-transparent
+  `}
 `

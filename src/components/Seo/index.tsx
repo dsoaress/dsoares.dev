@@ -1,8 +1,8 @@
 import Head from 'next/head'
+import { theme } from 'twin.macro'
 
 import profileData from '@/content/profile.json'
 import { useTranslation } from '@/hooks/useTranslation'
-import { theme } from '@/styles/theme'
 
 export function Seo() {
   const { defaultLocale, locale, t } = useTranslation()
@@ -13,7 +13,7 @@ export function Seo() {
       <meta name="robots" content="index,follow" />
       <meta name="googlebot" content="index,follow" />
       <meta name="description" content={t.description} />
-      <meta name="theme-color" content={theme.colors.background} />
+      <meta name="theme-color" content={theme`colors.neutral.900`} />
       <link
         rel="manifest"
         href={locale === defaultLocale ? '/manifest.json' : `/${locale}/manifest.json`}

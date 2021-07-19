@@ -1,13 +1,17 @@
-import styled from 'styled-components'
+import tw, { styled } from 'twin.macro'
 
 export const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 48px 0;
+  ${tw`
+    flex
+    flex-col
+    justify-center
+    my-12
+  `}
 
   p {
-    text-align: center;
-    margin-top: ${({ theme }) => theme.spacing.xl};
+    ${tw`
+      text-center
+      mt-6
+    `}
   }
 `
