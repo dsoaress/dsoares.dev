@@ -10,6 +10,16 @@
     "repositoryUrl": "https://github.com/dsoaress/dsoares.me"
   },
   {
+    "name": "React News",
+    "image": "react-news.png",
+    "description": {
+      "en": "Next.js blog with Paywall and integration with Stripe, Faunadb and Prismic.",
+      "pt": "Blog Next.js com Paywall e integração com Stripe, Faunadb e Prismic."
+    },
+    "tags": ["TypeScript", "Next.js", "Stripe", "Faunadb", "Prismic"],
+    "repositoryUrl": "https://github.com/dsoaress/react-news"
+  },
+  {
     "name": "Podcastr",
     "image": "podcastr.png",
     "description": {
