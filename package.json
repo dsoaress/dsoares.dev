@@ -40,7 +40,7 @@
     "@types/prettier": "^2.3.1",
     "@types/react": "^17.0.13",
     "@types/react-scroll": "^1.8.3",
-    "@types/sharp": "^0.28.4",
+    "@types/sharp": "^0.29.0",
     "@types/styled-components": "^5.1.11",
     "@types/tailwindcss": "^2.2.1",
     "autoprefixer": "^10.3.1",
