@@ -1,43 +1,60 @@
+import { AiOutlineStar } from 'react-icons/ai'
+
 import { Card } from '@/components/Card'
+import { CardList } from '@/components/CardList'
 import { Heading } from '@/components/Heading/styles'
+import { Section } from '@/components/Section'
 import { Text } from '@/components/Text'
-import projects from '@/content/projects.json'
 import { useTranslation } from '@/hooks/useTranslation'
+import { ProjectType } from '@/types/project'
 
-import { ProjectsList, Wrapper } from './styles'
+import { Footer } from './styles'
 
-export function Projects() {
-  const { locale, t } = useTranslation()
+type ProjectsProps = {
+  projects: ProjectType[]
+}
+
+export function Projects({ projects }: ProjectsProps) {
+  const { t } = useTranslation()
+  const { title, description } = t.projects
 
   return (
-    <Wrapper id="projects">
+    <Section id="projects">
       <Heading as="h2" size="3xl" margin={6}>
-        {t.projects.title}
+        {title}
       </Heading>
       <Text faded size="xl">
-        {t.projects.description}
+        {description}
       </Text>
 
-      <ProjectsList>
+      <CardList>
         {projects.map(project => {
           return (
             <Card
-              key={project.repositoryUrl}
-              image={`/projects/${project.image}`}
-              title={project.name}
+              key={project.id}
+              image={project.cover}
+              title={project.title}
               type="project"
               url={project.repositoryUrl}
             >
-              <Text>{project.description[locale]}</Text>
-              <footer>
+              <Text>{project.description}</Text>
+              <Footer>
                 <Text faded size="sm">
-                  {project.tags.join(', ')}
+                  {project.tags}
                 </Text>
-              </footer>
+                <span>
+                  {project.stars > 0 && (
+                    <Text faded size="sm">
+                      <AiOutlineStar />
+                      {project.stars}
+                    </Text>
+                  )}
+                </span>
+              </Footer>
             </Card>
           )
         })}
-      </ProjectsList>
-    </Wrapper>
+      </CardList>
+    </Section>
   )
 }

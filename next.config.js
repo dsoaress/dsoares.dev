@@ -6,7 +6,7 @@ const nextConfig = {
   reactStrictMode: true,
   i18n,
   images: {
-    domains: ['res.cloudinary.com']
+    domains: ['images.prismic.io']
   },
   pwa: {
     dest: 'public',

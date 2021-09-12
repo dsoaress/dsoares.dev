@@ -30,7 +30,7 @@ export function Error({ statusCode, errorMessage }: ErrorProps) {
           <Link href="/">
             <Button>
               <AiFillHome />
-              {t.error.buttonLabel}
+              {t.errors.buttonLabel}
             </Button>
           </Link>
         </Content>

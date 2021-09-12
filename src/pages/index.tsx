@@ -3,21 +3,25 @@ import { GetStaticProps } from 'next'
 import { Container } from '@/components/Container'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
-import { Posts, PostType } from '@/components/Posts'
+import { Nav } from '@/components/Nav'
+import { Posts } from '@/components/Posts'
 import { Projects } from '@/components/Projects'
-import profileData from '@/content/profile.json'
-import { fetcher } from '@/lib/fetcher'
+import { getAllPosts, getAllProjects } from '@/services/queries'
+import { PostType } from '@/types/post'
+import { ProjectType } from '@/types/project'
 
 type IndexPageProps = {
   posts: PostType[]
+  projects: ProjectType[]
 }
 
-export default function IndexPage({ posts }: IndexPageProps) {
+export default function IndexPage({ posts, projects }: IndexPageProps) {
   return (
     <>
+      <Nav />
       <Header />
       {/* <Container>
-        <Projects />
+        <Projects projects={projects} />
         <Posts posts={posts} />
         <Footer />
       </Container> */}
@@ -25,9 +29,17 @@ export default function IndexPage({ posts }: IndexPageProps) {
   )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
-  const getPosts = `https://dev.to/api/articles?username=${profileData.devToProfile}`
-  const posts = await fetcher(getPosts)
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  // if (!locale) throw new Error('locale is not defined')
 
-  return { props: { posts }, revalidate: 1 }
+  // const projects = await getAllProjects(locale)
+  // const posts = await getAllPosts(locale)
+
+  return {
+    props: {
+      posts: [],
+      projects: []
+    },
+    revalidate: 1
+  }
 }

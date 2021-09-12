@@ -2,20 +2,7 @@ import tw, { styled } from 'twin.macro'
 
 type HeadingProps = {
   margin?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 14 | 16 | 20
-  size?:
-    | 'xs'
-    | 'sm'
-    | 'base'
-    | 'lg'
-    | 'xl'
-    | '2xl'
-    | '3xl'
-    | '4xl'
-    | '5xl'
-    | '6xl'
-    | '7xl'
-    | '8xl'
-    | '9xl'
+  size?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl'
 }
 
 export const Heading = styled.h1<HeadingProps>(({ margin = 0, size = '5xl' }) => [
@@ -46,9 +33,5 @@ export const Heading = styled.h1<HeadingProps>(({ margin = 0, size = '5xl' }) =>
   size === '2xl' && tw`text-2xl`,
   size === '3xl' && tw`text-3xl`,
   size === '4xl' && tw`text-4xl`,
-  size === '5xl' && tw`text-5xl`,
-  size === '6xl' && tw`text-6xl`,
-  size === '7xl' && tw`text-7xl`,
-  size === '8xl' && tw`text-8xl`,
-  size === '9xl' && tw`text-9xl`
+  size === '5xl' && tw`text-5xl`
 ])

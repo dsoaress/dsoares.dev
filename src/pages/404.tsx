@@ -4,5 +4,5 @@ import { useTranslation } from '@/hooks/useTranslation'
 export default function NotFoundPage() {
   const { t } = useTranslation()
 
-  return <Error errorMessage={t.error.notFound} statusCode={404} />
+  return <Error errorMessage={t.errors.notFound} statusCode={404} />
 }

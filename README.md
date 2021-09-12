@@ -17,4 +17,4 @@ yarn dev
 - [twin.macro](https://github.com/ben-rogerson/twin.macro) ([styled-components](https://styled-components.com) + [tailwindcss](https://tailwindcss.com))
 - [TypeScript](https://www.typescriptlang.org)
 
-![Lighthouse](./src/assets/lighthouse.gif)
+![Lighthouse](./.github/lighthouse.gif)
