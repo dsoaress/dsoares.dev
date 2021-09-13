@@ -19,5 +19,13 @@ jobs:
       - name: Jest
         run: yarn test:ci
 
+      - name: Make .env
+        uses: SpicyPizza/create-envfile@v1
+        with:
+          envkey_PRISMIC_ACCESS_TOKEN: ${{ secrets.PRISMIC_ACCESS_TOKEN }}
+          envkey_PRISMIC_ENDPOINT: ${{ secrets.PRISMIC_ENDPOINT }}
+          envkey_GITHUB_USERNAME: ${{ secrets.USERNAME }}
+          envkey_GITHUB_ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+
       - name: Build
         run: yarn build
