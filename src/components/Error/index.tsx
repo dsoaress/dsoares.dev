@@ -5,7 +5,7 @@ import { Container } from '@/components/Container'
 import { Heading } from '@/components/Heading'
 import { Link } from '@/components/Link'
 import { Text } from '@/components/Text'
-import { useTranslation } from '@/hooks/useTranslation'
+import { useData } from '@/hooks/useData'
 
 import { Content, Wrapper } from './styles'
 
@@ -15,7 +15,7 @@ type ErrorProps = {
 }
 
 export function Error({ statusCode, errorMessage }: ErrorProps) {
-  const { t } = useTranslation()
+  const { d } = useData()
 
   return (
     <Wrapper>
@@ -30,7 +30,7 @@ export function Error({ statusCode, errorMessage }: ErrorProps) {
           <Link href="/">
             <Button>
               <AiFillHome />
-              {t.errors.buttonLabel}
+              {d.errors.buttonLabel}
             </Button>
           </Link>
         </Content>

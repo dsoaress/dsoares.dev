@@ -7,32 +7,31 @@ import { Link } from '@/components/Link'
 import { Logo } from '@/components/Logo'
 import { Social } from '@/components/Social'
 import { Text } from '@/components/Text'
-import profileData from '@/content/profile.json'
-import { useTranslation } from '@/hooks/useTranslation'
+import { useData } from '@/hooks/useData'
 
 import { Avatar, Content, Overlay, Resume, Wrapper } from './styles'
 
 export function Header() {
-  const { locale, t } = useTranslation()
+  const { locale, d } = useData()
 
   return (
     <>
       <Wrapper>
         <Content>
           <Logo width={80} height={80} />
-          <Heading>{profileData.title}</Heading>
-          <Text>{t.description}</Text>
+          <Heading>{d.profile.title}</Heading>
+          <Text>{d.profile.description}</Text>
 
           <Resume>
             <Link
-              href={`/resume-${locale}.pdf`}
+              href={d.resume.file}
               rel="noopener noreferrer"
               target="_blank"
               className={`umami--click--resume-${locale}`}
             >
               <Button>
                 <HiOutlineDocumentDuplicate />
-                {t.resume}
+                {d.resume.title}
               </Button>
             </Link>
           </Resume>
@@ -42,8 +41,10 @@ export function Header() {
       </Wrapper>
       <Avatar>
         <Image
-          src={profileData.avatar}
-          alt={profileData.title}
+          src={d.profile.avatar.image}
+          blurDataURL={d.profile.avatar.placeholder}
+          placeholder="blur"
+          alt={d.profile.title}
           objectFit="cover"
           objectPosition="top"
           layout="fill"

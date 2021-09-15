@@ -5,8 +5,9 @@
   "private": true,
   "license": "MIT",
   "scripts": {
+    "predev": "ts-node scripts/initialdata.ts",
     "dev": "next dev",
-    "prebuild": "ts-node scripts/prebuild.ts",
+    "prebuild": "ts-node scripts/initialdata.ts",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -14,7 +15,7 @@
     "test:ci": "jest --ci",
     "test:coverage": "jest --coverage && serve coverage/lcov-report -l 3020",
     "prepare": "husky install",
-    "clean": "rm -rf node_modules .next content",
+    "clean": "rm -rf node_modules .next data public",
     "format": "prettier --write \"./**/*.{js,jsx,ts,tsx,json,md,mdx}\"",
     "postversion": "git push --tags && git push"
   },
@@ -30,6 +31,7 @@
     "react-icons": "^4.2.0",
     "react-scroll": "^1.8.4",
     "reading-time": "^1.5.0",
+    "sharp": "^0.29.1",
     "styled-components": "^5.3.1"
   },
   "devDependencies": {
@@ -44,7 +46,7 @@
     "@types/node": "^16.9.1",
     "@types/prettier": "^2.3.2",
     "@types/prismic-dom": "^2.1.1",
-    "@types/react": "^17.0.20",
+    "@types/react": "^17.0.21",
     "@types/react-scroll": "^1.8.3",
     "@types/styled-components": "^5.1.14",
     "autoprefixer": "^10.3.4",

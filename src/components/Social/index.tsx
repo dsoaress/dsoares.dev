@@ -8,7 +8,7 @@ import { FaDev as Dev, FaLinkedinIn as LinkedIn } from 'react-icons/fa'
 import { IconType } from 'react-icons/lib'
 
 import { Link } from '@/components/Link'
-import profileData from '@/content/profile.json'
+import { useData } from '@/hooks/useData'
 
 import { SocialItem, Wrapper } from './styles'
 
@@ -22,9 +22,11 @@ const Icons = {
 }
 
 export function Social() {
+  const { d } = useData()
+
   return (
     <Wrapper>
-      {profileData.social.map(({ label, url }) => {
+      {d.social.map(({ label, url }) => {
         const Icon: IconType = Icons[label as keyof typeof Icons]
         return (
           <SocialItem key={url}>

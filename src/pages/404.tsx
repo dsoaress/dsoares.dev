@@ -1,8 +1,8 @@
 import { Error } from '@/components/Error'
-import { useTranslation } from '@/hooks/useTranslation'
+import { useData } from '@/hooks/useData'
 
 export default function NotFoundPage() {
-  const { t } = useTranslation()
+  const { d } = useData()
 
-  return <Error errorMessage={t.errors.notFound} statusCode={404} />
+  return <Error errorMessage={d.errors.notFound} statusCode={404} />
 }

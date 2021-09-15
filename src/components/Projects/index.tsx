@@ -5,7 +5,7 @@ import { CardList } from '@/components/CardList'
 import { Heading } from '@/components/Heading/styles'
 import { Section } from '@/components/Section'
 import { Text } from '@/components/Text'
-import { useTranslation } from '@/hooks/useTranslation'
+import { useData } from '@/hooks/useData'
 import { ProjectType } from '@/types/project'
 
 import { Footer } from './styles'
@@ -15,8 +15,8 @@ type ProjectsProps = {
 }
 
 export function Projects({ projects }: ProjectsProps) {
-  const { t } = useTranslation()
-  const { title, description } = t.projects
+  const { d } = useData()
+  const { title, description } = d.projects
 
   return (
     <Section id="projects">

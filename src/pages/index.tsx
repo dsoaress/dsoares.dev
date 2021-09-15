@@ -29,16 +29,14 @@ export default function IndexPage({ posts, projects }: IndexPageProps) {
   )
 }
 
-export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  // if (!locale) throw new Error('locale is not defined')
-
-  // const projects = await getAllProjects(locale)
-  // const posts = await getAllPosts(locale)
+export const getStaticProps: GetStaticProps = async ctx => {
+  const projects = await getAllProjects(ctx)
+  const posts = await getAllPosts(ctx)
 
   return {
     props: {
-      posts: [],
-      projects: []
+      posts,
+      projects
     },
     revalidate: 1
   }

@@ -5,9 +5,10 @@
       "@/assets/*": ["./src/assets/*"],
       "@/components/*": ["./src/components/*"],
       "@/content/*": ["./content/*"],
+      "@/data/*": ["./data/*"],
       "@/hooks/*": ["./src/hooks/*"],
       "@/lib/*": ["./src/lib/*"],
-      "@/i18n/*": ["./content/i18n/*"],
+      "@/localesConfig": ["./locales.config"],
       "@/services/*": ["./src/services/*"],
       "@/styles/*": ["./src/styles/*"],
       "@/types/*": ["./src/types/*"]

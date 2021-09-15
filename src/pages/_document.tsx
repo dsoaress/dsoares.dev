@@ -1,8 +1,6 @@
 import NextDocument, { DocumentContext, Head, Html, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
-import profileData from '@/content/profile.json'
-
 export default class Document extends NextDocument {
   static async getInitialProps(ctx: DocumentContext) {
     const sheet = new ServerStyleSheet()
@@ -36,14 +34,6 @@ export default class Document extends NextDocument {
           <link
             href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap"
             rel="stylesheet"
-          />
-
-          <script
-            async
-            defer
-            src={profileData.umami.src}
-            data-website-id={profileData.umami.id}
-            data-domains={profileData.umami.domain}
           />
         </Head>
         <body>

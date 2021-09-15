@@ -1,5 +1,6 @@
 import Prismic from '@prismicio/client'
 import { AxiosError } from 'axios'
+import { GetStaticPropsContext } from 'next'
 import { RichText } from 'prismic-dom'
 import readingTime from 'reading-time'
 
@@ -10,17 +11,14 @@ import { ProjectType } from '@/types/project'
 import { github } from './github'
 import { getPrismicClient } from './prismic'
 
-const lang = {
-  en: 'en-us',
-  pt: 'pt-br'
-}
-
-export async function getAllProjects(locale: string) {
+export async function getAllProjects({ locale }: GetStaticPropsContext) {
   const prismic = getPrismicClient()
+
+  if (!locale) throw new Error('locale is not defined')
 
   const response = await prismic.query([Prismic.predicates.at('document.type', 'project')], {
     pageSize: 6,
-    lang: (lang as any)[locale]
+    lang: locale
   })
 
   const projects: (ProjectType | undefined)[] = await Promise.all(
@@ -59,12 +57,14 @@ export async function getAllProjects(locale: string) {
   return projects.filter(item => item != null)
 }
 
-export async function getAllPosts(locale: string) {
+export async function getAllPosts({ locale }: GetStaticPropsContext) {
   const prismic = getPrismicClient()
+
+  if (!locale) throw new Error('locale is not defined')
 
   const response = await prismic.query([Prismic.predicates.at('document.type', 'post')], {
     pageSize: 6,
-    lang: (lang as any)[locale as string]
+    lang: locale
   })
 
   const posts: PostType[] = response.results.map(post => {
@@ -82,4 +82,47 @@ export async function getAllPosts(locale: string) {
   })
 
   return posts
+}
+
+export async function getSinglePost({ params, locale }: GetStaticPropsContext) {
+  const prismic = getPrismicClient()
+
+  if (!params?.post) throw new Error('slug is not defined')
+  if (!locale) throw new Error('locale is not defined')
+
+  const response = await prismic.getByUID('post', params.post as string, {
+    lang: locale
+  })
+
+  const content = RichText.asHtml(response.data.content)
+
+  const post = {
+    id: response.id,
+    title: response.data.title,
+    description: response.data.description,
+    slug: response.uid as string,
+    cover: response.data.cover.url,
+    date: formatDate(response.data.date, locale),
+    readingTime: Math.floor(readingTime(content).minutes),
+    content
+  }
+
+  return post
+}
+
+export async function getPaths() {
+  const prismic = getPrismicClient()
+
+  const response = await prismic.query([Prismic.predicates.at('document.type', 'post')], {
+    fetch: ['post.uid'],
+    lang: '*',
+    pageSize: 2000
+  })
+
+  const paths = response.results.map(post => ({
+    params: { post: post.uid },
+    locale: post.lang
+  }))
+
+  return paths
 }

@@ -5,7 +5,7 @@ import { CardList } from '@/components/CardList'
 import { Heading } from '@/components/Heading'
 import { Section } from '@/components/Section'
 import { Text } from '@/components/Text'
-import { useTranslation } from '@/hooks/useTranslation'
+import { useData } from '@/hooks/useData'
 import { PostType } from '@/types/post'
 
 import { Footer } from './styles'
@@ -15,15 +15,15 @@ type PostsProps = {
 }
 
 export function Posts({ posts }: PostsProps) {
-  const { t } = useTranslation()
+  const { d } = useData()
 
   return (
     <Section id="posts">
       <Heading as="h2" size="3xl" margin={6}>
-        {t.posts.title}
+        {d.posts.title}
       </Heading>
       <Text faded size="xl">
-        {t.posts.description}
+        {d.posts.description}
       </Text>
 
       <CardList>
@@ -42,11 +42,11 @@ export function Posts({ posts }: PostsProps) {
               <Text>{post.description}</Text>
               <Footer>
                 <Text faded size="sm">
-                  {post.readingTime} {t.posts.readingTime}
+                  {post.readingTime} {d.posts.readingTime}
                 </Text>
                 <span>
                   <Text faded size="sm">
-                    {t.posts.readMore}
+                    {d.posts.readMore}
                     <AiOutlineArrowRight />
                   </Text>
                 </span>
