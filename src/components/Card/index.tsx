@@ -1,29 +1,22 @@
 import Image from 'next/image'
-import { ReactNode } from 'react'
+import { AnchorHTMLAttributes, ReactNode } from 'react'
 
 import { Heading } from '@/components/Heading'
 import { CardLink } from '@/components/Link'
 
 import { Container, ImageCover, Wrapper } from './styles'
 
-type CardProps = {
+interface CardProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   children: ReactNode
   image: string
   title: string
-  type: 'post' | 'project'
-  url: string
+  href: string
 }
 
-export function Card({ children, image, title, type, url }: CardProps) {
+export function Card({ children, image, title, href, ...rest }: CardProps) {
   return (
     <Wrapper>
-      <CardLink
-        href={url}
-        aria-label={title}
-        rel="noopener noreferrer"
-        target="_blank"
-        className={`umami--click--${type}-${title}`}
-      />
+      <CardLink href={href} aria-label={title} {...rest} />
 
       <ImageCover>
         <Image src={image} alt={title} objectFit="cover" layout="fill" />

@@ -1,21 +1,32 @@
-import { Link, ScrollLink } from '@/components/Link'
+// import { Link, ScrollLink } from '@/components/Link'
+import { Link } from '@/components/Link'
 import { useData } from '@/hooks/useData'
 import { langNames } from '@/localesConfig'
 
 import { LanguageItem, LanguageSelector, NavLinkItem, NavLinks, Wrapper } from './styles'
 
 export function Nav() {
-  const { asPath, locale, locales, d } = useData()
+  // const { asPath, locale, locales, d } = useData()
+  const { asPath, locale, locales } = useData()
+  // const isHome = asPath === '/'
 
   return (
     <Wrapper>
       <NavLinks>
         {/* {d.nav.map(navItem => {
+          if (isHome && navItem.url === '/') return
+
           return (
             <NavLinkItem key={navItem.url}>
-              <ScrollLink to={navItem.url} smooth={true} offset={-76}>
-                {navItem.label}
-              </ScrollLink>
+              {isHome ? (
+                <ScrollLink to={navItem.url} smooth={true} offset={-76}>
+                  {navItem.label}
+                </ScrollLink>
+              ) : (
+                <Link href={navItem.url === '/' ? navItem.url : `/#${navItem.url}`}>
+                  {navItem.label}
+                </Link>
+              )}
             </NavLinkItem>
           )
         })} */}

@@ -1,5 +1,6 @@
 import { AppProps } from 'next/app'
 
+import { Nav } from '@/components/Nav'
 import { Seo } from '@/components/Seo'
 import { DataProvider } from '@/hooks/useData'
 import { GlobalStyles } from '@/styles/globals'
@@ -9,6 +10,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <DataProvider>
       <GlobalStyles />
       <Seo />
+      <Nav />
       <Component {...pageProps} />
     </DataProvider>
   )

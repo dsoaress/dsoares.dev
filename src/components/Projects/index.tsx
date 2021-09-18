@@ -34,8 +34,10 @@ export function Projects({ projects }: ProjectsProps) {
               key={project.id}
               image={project.cover}
               title={project.title}
-              type="project"
-              url={project.repositoryUrl}
+              href={project.repositoryUrl}
+              rel="noopener noreferrer"
+              target="_blank"
+              className={`umami--click--project-${project.title}`}
             >
               <Text>{project.description}</Text>
               <Footer>

@@ -2,16 +2,16 @@
 
 exports[`<Link /> Renders with children 1`] = `
 .c0 {
+  z-index: 10;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   -webkit-transition-property: background-color,border-color,color,fill,stroke;
   transition-property: background-color,border-color,color,fill,stroke;
   -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
   transition-timing-function: cubic-bezier(0.4,0,0.2,1);
   -webkit-transition-duration: 300ms;
   transition-duration: 300ms;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-weight: 500;
-  z-index: 10;
   cursor: pointer;
 }
 

@@ -4,16 +4,7 @@ import tw, { css, styled } from 'twin.macro'
 import { Link } from '.'
 
 export const BaseStyle = css`
-  ${tw`
-    transition-colors
-    duration-300
-    no-underline
-    font-medium
-    z-10
-    cursor-pointer
-    hover:text-primary-500
-    active:text-primary-600
-  `}
+  ${tw`z-10 font-medium no-underline transition-colors duration-300 cursor-pointer hover:text-primary-500 active:text-primary-600`}
 `
 
 export const StyledLink = styled.a<{ active?: boolean }>`
@@ -26,8 +17,5 @@ export const ScrollLink = styled(ReactScroll)`
 `
 
 export const CardLink = styled(Link)`
-  ${tw`
-    absolute
-    inset-0
-  `}
+  ${tw`absolute inset-0 `}
 `

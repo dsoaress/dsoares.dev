@@ -1,25 +1,25 @@
-import { GetStaticProps } from 'next'
+// import { GetStaticProps } from 'next'
 
-import { Container } from '@/components/Container'
-import { Footer } from '@/components/Footer'
+// import { Container } from '@/components/Container'
+// import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
-import { Nav } from '@/components/Nav'
-import { Posts } from '@/components/Posts'
-import { Projects } from '@/components/Projects'
-import { getAllPosts, getAllProjects } from '@/services/queries'
-import { PostType } from '@/types/post'
-import { ProjectType } from '@/types/project'
+// import { Posts } from '@/components/Posts'
+// import { Projects } from '@/components/Projects'
+// import { initialdata } from '@/services/initialdata'
+// import { getAllPosts, getAllProjects } from '@/services/queries'
+// import { PostType } from '@/types/post'
+// import { ProjectType } from '@/types/project'
 
-type IndexPageProps = {
-  posts: PostType[]
-  projects: ProjectType[]
-}
+// type IndexPageProps = {
+//   posts: PostType[]
+//   projects: ProjectType[]
+// }
 
-export default function IndexPage({ posts, projects }: IndexPageProps) {
+// export default function IndexPage({ posts, projects }: IndexPageProps) {
+export default function IndexPage() {
   return (
     <>
-      <Nav />
-      <Header />
+      <Header showResume={false} />
       {/* <Container>
         <Projects projects={projects} />
         <Posts posts={posts} />
@@ -29,15 +29,17 @@ export default function IndexPage({ posts, projects }: IndexPageProps) {
   )
 }
 
-export const getStaticProps: GetStaticProps = async ctx => {
-  const projects = await getAllProjects(ctx)
-  const posts = await getAllPosts(ctx)
+// export const getStaticProps: GetStaticProps = async ctx => {
+//   await initialdata()
 
-  return {
-    props: {
-      posts,
-      projects
-    },
-    revalidate: 1
-  }
-}
+//   const projects = await getAllProjects(ctx)
+//   const posts = await getAllPosts(ctx)
+
+//   return {
+//     props: {
+//       posts,
+//       projects
+//     },
+//     revalidate: 1
+//   }
+// }

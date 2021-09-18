@@ -1,9 +1,9 @@
+import { saveAs } from 'file-saver'
 import Image from 'next/image'
 import { HiOutlineDocumentDuplicate } from 'react-icons/hi'
 
 import { Button } from '@/components/Button'
 import { Heading } from '@/components/Heading'
-import { Link } from '@/components/Link'
 import { Logo } from '@/components/Logo'
 import { Social } from '@/components/Social'
 import { Text } from '@/components/Text'
@@ -11,7 +11,11 @@ import { useData } from '@/hooks/useData'
 
 import { Avatar, Content, Overlay, Resume, Wrapper } from './styles'
 
-export function Header() {
+type HeaderProps = {
+  showResume?: boolean
+}
+
+export function Header({ showResume = true }: HeaderProps) {
   const { locale, d } = useData()
 
   return (
@@ -22,19 +26,17 @@ export function Header() {
           <Heading>{d.profile.title}</Heading>
           <Text>{d.profile.description}</Text>
 
-          <Resume>
-            <Link
-              href={d.resume.file}
-              rel="noopener noreferrer"
-              target="_blank"
-              className={`umami--click--resume-${locale}`}
-            >
-              <Button>
+          {showResume && (
+            <Resume>
+              <Button
+                className={`umami--click--resume-${locale}`}
+                onClick={() => saveAs(d.resume.file, `${d.profile.title}-resume.pdf`)}
+              >
                 <HiOutlineDocumentDuplicate />
                 {d.resume.title}
               </Button>
-            </Link>
-          </Resume>
+            </Resume>
+          )}
 
           <Social />
         </Content>
