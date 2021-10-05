@@ -1,5 +1,4 @@
 import Prismic from '@prismicio/client'
-import { AxiosError } from 'axios'
 import { GetStaticPropsContext } from 'next'
 import { RichText } from 'prismic-dom'
 import readingTime from 'reading-time'
@@ -8,7 +7,7 @@ import { formatDate } from '@/lib/formatDate'
 import { PostType } from '@/types/post'
 import { ProjectType } from '@/types/project'
 
-import { github } from './github'
+import { github, GitHubAPIType } from './github'
 import { getPrismicClient } from './prismic'
 
 export async function getAllProjects({ locale }: GetStaticPropsContext) {
@@ -28,7 +27,7 @@ export async function getAllProjects({ locale }: GetStaticPropsContext) {
       }
 
       try {
-        const { data: repo } = await github.get(project.data.repo)
+        const { data: repo } = await github.get<GitHubAPIType>(project.data.repo)
 
         return {
           id: project.id,
@@ -41,11 +40,8 @@ export async function getAllProjects({ locale }: GetStaticPropsContext) {
           cover: project.data.cover.url
         }
       } catch (error) {
-        const { response } = error as AxiosError
-
         const errorMessage = {
-          repository: project.data.repo,
-          ...response?.data
+          repository: project.data.repo
         }
 
         console.log('error:', errorMessage)
