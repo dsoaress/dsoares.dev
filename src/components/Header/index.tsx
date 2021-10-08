@@ -11,11 +11,7 @@ import { useData } from '@/hooks/useData'
 
 import { Avatar, Content, Overlay, Resume, Wrapper } from './styles'
 
-type HeaderProps = {
-  showResume?: boolean
-}
-
-export function Header({ showResume = true }: HeaderProps) {
+export function Header() {
   const { locale, d } = useData()
 
   return (
@@ -26,7 +22,7 @@ export function Header({ showResume = true }: HeaderProps) {
           <Heading>{d.profile.title}</Heading>
           <Text>{d.profile.description}</Text>
 
-          {showResume && (
+          {d.resume.showResume && (
             <Resume>
               <Button
                 className={`umami--click--resume-${locale}`}

@@ -58,26 +58,31 @@ export async function initialdata() {
             url: link.url
           }
         }),
+        showNav: response.show_nav,
         resume: {
           title: response.resume,
-          file: response.file.url
+          file: response.file.url,
+          showResume: response.show_resume
         },
         projects: {
           title: response.projects_title,
-          description: response.projects_description
+          description: response.projects_description,
+          showProjects: response.show_projects
         },
         posts: {
           title: response.posts_title,
           description: response.posts_description,
           readingTime: response.posts_reading_time,
-          readMore: response.posts_read_more
+          readMore: response.posts_read_more,
+          showPosts: response.show_posts
         },
         errors: {
           notFound: response.not_found,
           internalError: response.internal_error,
           buttonLabel: response.button_label
         },
-        footer: response.footer
+        footer: response.footer,
+        showFooter: response.show_footer
       }
 
       const formattedData = prettier.format(JSON.stringify(data), {
