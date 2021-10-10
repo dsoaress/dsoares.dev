@@ -4,4 +4,4 @@ git push
 git checkout main
 git rebase development
 git push
-git checkout main
+git checkout development
