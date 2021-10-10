@@ -19,7 +19,7 @@
     "prepare": "husky install",
     "clean": "rm -rf node_modules .next data public",
     "format": "prettier --write \"./**/*.{js,jsx,ts,tsx,json,md,mdx}\"",
-    "postversion": "git push --tags && git push"
+    "postversion": "scripts/postversion"
   },
   "dependencies": {
     "@prismicio/client": "5.1.0",
