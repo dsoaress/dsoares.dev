@@ -51,7 +51,7 @@
     "@types/node": "16.10.2",
     "@types/prettier": "2.4.1",
     "@types/prismic-dom": "2.1.1",
-    "@types/react": "17.0.29",
+    "@types/react": "17.0.30",
     "@types/react-scroll": "1.8.3",
     "@types/styled-components": "5.1.15",
     "autoprefixer": "10.3.7",
