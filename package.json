@@ -1,7 +1,7 @@
 {
   "name": "dsoares.me",
   "author": "Daniel Soares <daniel.soares@me.com>",
-  "version": "3.6.6",
+  "version": "3.6.7",
   "private": true,
   "license": "MIT",
   "scripts": {
