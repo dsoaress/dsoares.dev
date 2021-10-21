@@ -3,7 +3,6 @@ import 'twin.macro'
 import { GetStaticPaths, GetStaticProps } from 'next'
 
 import { Post } from '@/components/Post'
-import { initialdata } from '@/services/initialdata'
 import { getPaths, getSinglePost } from '@/services/queries'
 import { PostType } from '@/types/post'
 
@@ -25,14 +24,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async ctx => {
-  await initialdata()
-
   const post = await getSinglePost(ctx)
 
   return {
     props: {
       post
-    },
-    revalidate: 1
+    }
   }
 }

@@ -8,6 +8,9 @@ const nextConfig = {
   images: {
     domains: ['images.prismic.io']
   },
+  eslint: {
+    dirs: ['./**/*']
+  },
   pwa: {
     dest: 'public',
     disable: process.env.NODE_ENV === 'development'

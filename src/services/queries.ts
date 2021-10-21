@@ -3,10 +3,9 @@ import { GetStaticPropsContext } from 'next'
 import { RichText } from 'prismic-dom'
 import readingTime from 'reading-time'
 
-import { formatDate } from '@/lib/formatDate'
-import { PostType } from '@/types/post'
-import { ProjectType } from '@/types/project'
-
+import { formatDate } from '../lib/formatDate'
+import { PostType } from '../types/post'
+import { ProjectType } from '../types/project'
 import { github, GitHubAPIType } from './github'
 import { getPrismicClient } from './prismic'
 
@@ -121,4 +120,77 @@ export async function getPaths() {
   }))
 
   return paths
+}
+
+export async function getInitialData(locale: string) {
+  const prismic = getPrismicClient()
+
+  const dataResponse = await prismic.query([Prismic.predicates.at('document.type', 'data')], {
+    lang: locale
+  })
+
+  const response = dataResponse.results[0].data
+  const faviconSizes = ['32', '48', '72', '96', '144', '192', '256', '384', '512']
+
+  const data = {
+    profile: {
+      title: response.title,
+      shortTitle: response.short_title,
+      avatar: {
+        image: response.avatar.url,
+        placeholder: response.avatar.placeholder.url
+      },
+      description: response.description
+    },
+    umami: {
+      domain: response.umami_domain,
+      id: response.umami_id,
+      src: response.umami_src
+    },
+    social: response.social_links.map((link: any) => {
+      return {
+        label: link.label,
+        url: link.url.url
+      }
+    }),
+    favicons: faviconSizes.map(size => {
+      return {
+        size,
+        src: response.favicon[size].url
+      }
+    }),
+    nav: response.links.map((link: any) => {
+      return {
+        label: link.label,
+        url: link.url
+      }
+    }),
+    showNav: response.show_nav,
+    resume: {
+      title: response.resume,
+      file: response.file.url,
+      showResume: response.show_resume
+    },
+    projects: {
+      title: response.projects_title,
+      description: response.projects_description,
+      showProjects: response.show_projects
+    },
+    posts: {
+      title: response.posts_title,
+      description: response.posts_description,
+      readingTime: response.posts_reading_time,
+      readMore: response.posts_read_more,
+      showPosts: response.show_posts
+    },
+    errors: {
+      notFound: response.not_found,
+      internalError: response.internal_error,
+      buttonLabel: response.button_label
+    },
+    footer: response.footer,
+    showFooter: response.show_footer
+  }
+
+  return data
 }
