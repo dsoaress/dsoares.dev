@@ -30,7 +30,7 @@ export function Seo() {
         const { size, src } = favicon
 
         if (size === '32') {
-          return <link rel="icon" href={src} type="image/png" />
+          return <link rel="icon" href={src} type="image/png" key={size} />
         }
 
         return <link rel="apple-touch-icon" sizes={`${size}x${size}`} href={src} key={size} />
