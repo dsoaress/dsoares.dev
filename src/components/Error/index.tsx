@@ -10,7 +10,7 @@ import { useData } from '@/hooks/useData'
 import { Content, Wrapper } from './styles'
 
 type ErrorProps = {
-  statusCode: number
+  statusCode: number | string
   errorMessage: string
 }
 
