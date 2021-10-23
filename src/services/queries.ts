@@ -1,77 +1,121 @@
-import Prismic from '@prismicio/client'
+import { gql } from 'graphql-request'
 import { GetStaticPropsContext } from 'next'
 import { RichText } from 'prismic-dom'
 import readingTime from 'reading-time'
 
 import { formatDate } from '../lib/formatDate'
-import { PostType } from '../types/post'
-import { ProjectType } from '../types/project'
-import { github, GitHubAPIType } from './github'
-import { getPrismicClient } from './prismic'
+import { DataResponse } from '../types/data'
+import { PostResponse, PostsResponse } from '../types/post'
+import { ProjectsResponse, RepositoryResponse } from '../types/project'
+import { github } from './github'
+import { prismic } from './prismic'
 
 export async function getAllProjects({ locale }: GetStaticPropsContext) {
-  const prismic = getPrismicClient()
-
   if (!locale) throw new Error('locale is not defined')
 
-  const response = await prismic.query([Prismic.predicates.at('document.type', 'project')], {
-    pageSize: 6,
-    lang: locale
-  })
-
-  const projects: (ProjectType | undefined)[] = await Promise.all(
-    response.results.map(async project => {
-      if (!project.data.repo) {
-        return
+  const data = await prismic<ProjectsResponse>(
+    gql`
+      query ($lang: String!) {
+        allProjects(lang: $lang) {
+          edges {
+            node {
+              _meta {
+                id
+              }
+              title
+              description
+              tags
+              cover
+              repo
+            }
+          }
+        }
       }
+    `,
+    {
+      variables: {
+        lang: locale
+      }
+    }
+  )
 
-      try {
-        const { data: repo } = await github.get<GitHubAPIType>(project.data.repo)
+  const projects = await Promise.all(
+    data.allProjects.edges.map(async ({ node }) => {
+      const { GITHUB_USERNAME } = process.env
 
-        return {
-          id: project.id,
-          title: project.data.title,
-          description: project.data.description,
-          tags: project.tags.join(', '),
-          repositoryUrl: repo.html_url,
-          repo: project.data.repo,
-          stars: repo.stargazers_count,
-          cover: project.data.cover.url
+      const gitHubData = await github<RepositoryResponse>(
+        gql`
+          query ($owner: String!, $name: String!) {
+            repository(owner: $owner, name: $name) {
+              url
+              stargazerCount
+            }
+          }
+        `,
+        {
+          variables: {
+            owner: GITHUB_USERNAME as string,
+            name: node.repo
+          }
         }
-      } catch (error) {
-        const errorMessage = {
-          repository: project.data.repo
-        }
+      )
 
-        console.log('error:', errorMessage)
-        return
+      return {
+        id: node._meta.id,
+        title: node.title,
+        description: node.description,
+        tags: node.tags,
+        repositoryUrl: gitHubData.repository.url,
+        repo: node.repo,
+        stars: gitHubData.repository.stargazerCount,
+        cover: node.cover.url
       }
     })
   )
 
-  return projects.filter(item => item != null)
+  return projects
 }
 
 export async function getAllPosts({ locale }: GetStaticPropsContext) {
-  const prismic = getPrismicClient()
-
   if (!locale) throw new Error('locale is not defined')
 
-  const response = await prismic.query([Prismic.predicates.at('document.type', 'post')], {
-    pageSize: 6,
-    lang: locale
-  })
+  const data = await prismic<PostsResponse>(
+    gql`
+      query ($lang: String!) {
+        allPosts(lang: $lang) {
+          edges {
+            node {
+              _meta {
+                id
+                uid
+              }
+              title
+              description
+              cover
+              date
+              content
+            }
+          }
+        }
+      }
+    `,
+    {
+      variables: {
+        lang: locale
+      }
+    }
+  )
 
-  const posts: PostType[] = response.results.map(post => {
-    const content = RichText.asHtml(post.data.content)
+  const posts = data.allPosts.edges.map(({ node }) => {
+    const content = RichText.asHtml(node.content)
 
     return {
-      id: post.id,
-      title: post.data.title,
-      description: post.data.description,
-      slug: post.uid as string,
-      cover: post.data.cover.url,
-      date: formatDate(post.data.date, locale),
+      id: node._meta.id,
+      title: node.title,
+      description: node.description,
+      slug: node._meta.uid,
+      cover: node.cover.url,
+      date: formatDate(node.date, locale),
       readingTime: Math.floor(readingTime(content).minutes)
     }
   })
@@ -80,24 +124,42 @@ export async function getAllPosts({ locale }: GetStaticPropsContext) {
 }
 
 export async function getSinglePost({ params, locale }: GetStaticPropsContext) {
-  const prismic = getPrismicClient()
-
   if (!params?.post) throw new Error('slug is not defined')
   if (!locale) throw new Error('locale is not defined')
 
-  const response = await prismic.getByUID('post', params.post as string, {
-    lang: locale
-  })
+  const data = await prismic<PostResponse>(
+    gql`
+      query ($lang: String!, $uid: String!) {
+        post(uid: $uid, lang: $lang) {
+          _meta {
+            id
+            uid
+          }
+          title
+          description
+          cover
+          date
+          content
+        }
+      }
+    `,
+    {
+      variables: {
+        lang: locale,
+        uid: params.post as string
+      }
+    }
+  )
 
-  const content = RichText.asHtml(response.data.content)
+  const content = RichText.asHtml(data.post.content)
 
   const post = {
-    id: response.id,
-    title: response.data.title,
-    description: response.data.description,
-    slug: response.uid as string,
-    cover: response.data.cover.url,
-    date: formatDate(response.data.date, locale),
+    id: data.post._meta.id,
+    title: data.post.title,
+    description: data.post.description,
+    slug: data.post._meta.uid,
+    cover: data.post.cover.url,
+    date: formatDate(data.post.date, locale),
     readingTime: Math.floor(readingTime(content).minutes),
     content
   }
@@ -106,48 +168,107 @@ export async function getSinglePost({ params, locale }: GetStaticPropsContext) {
 }
 
 export async function getPaths() {
-  const prismic = getPrismicClient()
+  const data = await prismic<PostsResponse>(
+    gql`
+      query {
+        allPosts {
+          edges {
+            node {
+              _meta {
+                uid
+                lang
+              }
+            }
+          }
+        }
+      }
+    `
+  )
 
-  const response = await prismic.query([Prismic.predicates.at('document.type', 'post')], {
-    fetch: ['post.uid'],
-    lang: '*',
-    pageSize: 2000
-  })
-
-  const paths = response.results.map(post => ({
-    params: { post: post.uid },
-    locale: post.lang
+  const paths = data.allPosts.edges.map(({ node }) => ({
+    params: { post: node._meta.uid },
+    locale: node._meta.lang
   }))
 
   return paths
 }
 
 export async function getInitialData(locale: string) {
-  const prismic = getPrismicClient()
+  const response = await prismic<DataResponse>(
+    gql`
+      query ($lang: String!) {
+        allDatas(lang: $lang) {
+          edges {
+            node {
+              title
+              short_title
+              avatar
+              description
+              umami_domain
+              umami_id
+              umami_src
+              social_links {
+                label
+                url {
+                  _linkType
+                }
+              }
+              favicon
+              links {
+                label
+                url
+              }
+              show_nav
+              resume
+              file {
+                _linkType
+                __typename
+              }
+              show_resume
+              projects_title
+              projects_description
+              show_projects
+              posts_title
+              posts_description
+              posts_reading_time
+              posts_read_more
+              show_posts
+              not_found
+              internal_error
+              button_label
+              footer
+              show_footer
+            }
+          }
+        }
+      }
+    `,
+    {
+      variables: {
+        lang: locale
+      }
+    }
+  )
 
-  const dataResponse = await prismic.query([Prismic.predicates.at('document.type', 'data')], {
-    lang: locale
-  })
-
-  const response = dataResponse.results[0].data
+  const data = response.allDatas.edges[0].node
   const faviconSizes = ['32', '48', '72', '96', '144', '192', '256', '384', '512']
 
-  const data = {
+  return {
     profile: {
-      title: response.title,
-      shortTitle: response.short_title,
+      title: data.title,
+      shortTitle: data.short_title,
       avatar: {
-        image: response.avatar.url,
-        placeholder: response.avatar.placeholder.url
+        image: data.avatar.url,
+        placeholder: data.avatar.placeholder.url
       },
-      description: response.description
+      description: data.description
     },
     umami: {
-      domain: response.umami_domain,
-      id: response.umami_id,
-      src: response.umami_src
+      domain: data.umami_domain,
+      id: data.umami_id,
+      src: data.umami_src
     },
-    social: response.social_links.map((link: any) => {
+    social: data.social_links.map((link: any) => {
       return {
         label: link.label,
         url: link.url.url
@@ -156,41 +277,39 @@ export async function getInitialData(locale: string) {
     favicons: faviconSizes.map(size => {
       return {
         size,
-        src: response.favicon[size].url
+        src: data.favicon[size].url
       }
     }),
-    nav: response.links.map((link: any) => {
+    nav: data.links.map((link: any) => {
       return {
         label: link.label,
         url: link.url
       }
     }),
-    showNav: response.show_nav,
+    showNav: data.show_nav,
     resume: {
-      title: response.resume,
-      file: response.file.url,
-      showResume: response.show_resume
+      title: data.resume,
+      file: data.file.url,
+      showResume: data.show_resume
     },
     projects: {
-      title: response.projects_title,
-      description: response.projects_description,
-      showProjects: response.show_projects
+      title: data.projects_title,
+      description: data.projects_description,
+      showProjects: data.show_projects
     },
     posts: {
-      title: response.posts_title,
-      description: response.posts_description,
-      readingTime: response.posts_reading_time,
-      readMore: response.posts_read_more,
-      showPosts: response.show_posts
+      title: data.posts_title,
+      description: data.posts_description,
+      readingTime: data.posts_reading_time,
+      readMore: data.posts_read_more,
+      showPosts: data.show_posts
     },
     errors: {
-      notFound: response.not_found,
-      internalError: response.internal_error,
-      buttonLabel: response.button_label
+      notFound: data.not_found,
+      internalError: data.internal_error,
+      buttonLabel: data.button_label
     },
-    footer: response.footer,
-    showFooter: response.show_footer
+    footer: data.footer,
+    showFooter: data.show_footer
   }
-
-  return data
 }

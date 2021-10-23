@@ -22,9 +22,10 @@
   },
   "dependencies": {
     "@prismicio/client": "5.1.0",
-    "axios": "0.23.0",
     "dotenv": "10.0.0",
     "file-saver": "2.0.5",
+    "graphql": "^15.6.1",
+    "graphql-request": "^3.6.1",
     "next": "11.1.2",
     "next-pwa": "5.4.0",
     "prismic-dom": "2.2.6",

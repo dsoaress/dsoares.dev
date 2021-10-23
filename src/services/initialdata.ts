@@ -18,7 +18,7 @@ export async function initialdata() {
 
       fs.writeFileSync(`./data/${locale}.json`, JSON.stringify(data, null, 2))
 
-      const manifestData = {
+      const manifest = {
         name: data.profile.title,
         short_name: data.profile.shortTitle,
         start_url: `/${startUrl}`,
@@ -39,7 +39,7 @@ export async function initialdata() {
         fs.mkdirSync(manifestDir, { recursive: true })
       }
 
-      fs.writeFileSync(`${manifestDir}/manifest.json`, JSON.stringify(manifestData, null, 2))
+      fs.writeFileSync(`${manifestDir}/manifest.json`, JSON.stringify(manifest, null, 2))
     })
   )
 }

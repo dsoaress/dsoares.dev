@@ -1,16 +1,36 @@
 import Prismic from '@prismicio/client'
+import { GraphQLClient } from 'graphql-request'
 
-export function getPrismicClient(req?: unknown) {
-  const { PRISMIC_ACCESS_TOKEN, PRISMIC_ENDPOINT } = process.env
-
-  if (!PRISMIC_ACCESS_TOKEN || !PRISMIC_ENDPOINT) {
-    throw new Error('Prismic keys are missing')
+type Variables = {
+  variables?: {
+    [key: string]: string
   }
+}
 
-  const prismic = Prismic.client(PRISMIC_ENDPOINT, {
-    req,
-    accessToken: PRISMIC_ACCESS_TOKEN
+export async function prismic<T>(query: string, { variables }: Variables = {}) {
+  const REPOSITORY = process.env.PRISMIC_REPOSITORY_NAME
+  const REF_API_URL = `https://${REPOSITORY}.cdn.prismic.io/api/v2`
+  const GRAPHQL_API_URL = `https://${REPOSITORY}.cdn.prismic.io/graphql`
+  const ACCESS_TOKEN = process.env.PRISMIC_ACCESS_TOKEN
+
+  const PrismicClient = Prismic.client(REF_API_URL, {
+    accessToken: ACCESS_TOKEN
   })
 
-  return prismic
+  const graphQLClient = new GraphQLClient(GRAPHQL_API_URL, {
+    method: 'GET'
+  })
+
+  try {
+    const prismicAPI = await PrismicClient.getApi()
+    const data = await graphQLClient.request<T>(query, variables, {
+      'Prismic-Ref': prismicAPI.masterRef.ref,
+      Authorization: `Token ${ACCESS_TOKEN}`
+    })
+
+    return data
+  } catch (error) {
+    console.log(error)
+    throw new Error('Failed to fetch Prismic API')
+  }
 }
