@@ -1,9 +1,9 @@
 import dotenv from 'dotenv'
 
-import { initialdata } from '../src/services/initialdata'
+import { initialData } from '../src/services/initialData'
 
 dotenv.config({
   path: './.env'
 })
 
-initialdata().catch(error => console.log(error))
+initialData().catch(error => console.log(error))

@@ -3,7 +3,8 @@ import 'twin.macro'
 import { GetStaticPaths, GetStaticProps } from 'next'
 
 import { Post } from '@/components/Post'
-import { getPaths, getSinglePost } from '@/services/queries'
+import { getPaths } from '@/queries/getPaths'
+import { getSinglePost } from '@/queries/getSinglePost'
 import { PostType } from '@/types/post'
 
 type PostPagePros = {

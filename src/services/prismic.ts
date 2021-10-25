@@ -23,12 +23,10 @@ export async function prismic<T>(query: string, { variables }: Variables = {}) {
 
   try {
     const prismicAPI = await PrismicClient.getApi()
-    const data = await graphQLClient.request<T>(query, variables, {
+    return await graphQLClient.request<T>(query, variables, {
       'Prismic-Ref': prismicAPI.masterRef.ref,
       Authorization: `Token ${ACCESS_TOKEN}`
     })
-
-    return data
   } catch (error) {
     console.log(error)
     throw new Error('Failed to fetch Prismic API')

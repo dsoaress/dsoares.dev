@@ -2,9 +2,9 @@ import fs from 'fs'
 
 import { i18n } from '../../locales.config'
 import { theme } from '../../tailwind.config'
-import { getInitialData } from './queries'
+import { getInitialData } from '../queries/getInitialData'
 
-export async function initialdata() {
+export async function initialData() {
   await Promise.all(
     i18n.locales.map(async locale => {
       const startUrl = locale === i18n.defaultLocale ? '' : locale

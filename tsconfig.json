@@ -8,6 +8,7 @@
       "@/hooks/*": ["./src/hooks/*"],
       "@/lib/*": ["./src/lib/*"],
       "@/localesConfig": ["./locales.config"],
+      "@/queries/*": ["./src/queries/*"],
       "@/services/*": ["./src/services/*"],
       "@/styles/*": ["./src/styles/*"],
       "@/types/*": ["./src/types/*"]

@@ -11,21 +11,24 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v2
         with:
-          node-version: 14
+          node-version: 16
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-
-      - name: Jest
-        run: yarn test:ci
 
       - name: Make .env
         uses: SpicyPizza/create-envfile@v1
         with:
           envkey_PRISMIC_ACCESS_TOKEN: ${{ secrets.PRISMIC_ACCESS_TOKEN }}
-          envkey_PRISMIC_ENDPOINT: ${{ secrets.PRISMIC_ENDPOINT }}
+          envkey_PRISMIC_REPOSITORY_NAME: ${{ secrets.PRISMIC_REPOSITORY_NAME }}
           envkey_GITHUB_USERNAME: ${{ secrets.USERNAME }}
           envkey_GITHUB_ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+
+      - name: Get initial data
+        run: yarn initialdata
+
+      - name: Jest
+        run: yarn test:ci
 
       - name: Build
         run: yarn build
