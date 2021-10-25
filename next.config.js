@@ -9,7 +9,7 @@ const nextConfig = {
     domains: ['images.prismic.io']
   },
   eslint: {
-    dirs: ['./**/*']
+    dirs: ['./src/**/*']
   },
   pwa: {
     dest: 'public',

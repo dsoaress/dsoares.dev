@@ -1,4 +1,6 @@
-module.exports = {
+import { Config } from '@jest/types'
+
+const config: Config.InitialOptions = {
   testEnvironment: 'jsdom',
   collectCoverageFrom: ['<rootDir>/src/components/**/*.{js,jsx,ts,tsx}'],
   setupFilesAfterEnv: ['<rootDir>/src/lib/setupTests.ts'],
@@ -17,3 +19,5 @@ module.exports = {
     '^@/types(.*)$': '<rootDir>/src/types$1'
   }
 }
+
+export default config

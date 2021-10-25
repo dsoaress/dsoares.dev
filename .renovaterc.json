@@ -1,29 +1,17 @@
 {
-  "extends": [
-    "config:base",
-    ":disableDependencyDashboard"
-  ],
-  "labels": [
-    "dependencies"
-  ],
+  "extends": ["config:base", ":disableDependencyDashboard"],
+  "labels": ["dependencies"],
   "semanticCommits": "enabled",
   "rangeStrategy": "replace",
   "rebaseLabel": "rebase",
   "rebaseWhen": "auto",
   "packageRules": [
     {
-      "updateTypes": [
-        "minor",
-        "patch",
-        "pin",
-        "digest"
-      ],
+      "updateTypes": ["minor", "patch", "pin", "digest"],
       "automerge": true
     },
     {
-      "depTypeList": [
-        "devDependencies"
-      ],
+      "depTypeList": ["devDependencies"],
       "automerge": true
     }
   ],
