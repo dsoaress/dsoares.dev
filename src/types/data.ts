@@ -21,7 +21,9 @@ type DataContentResponse = {
   umami_src: string
   social_links: {
     label: string
-    url: string
+    url: {
+      url: string
+    }
   }[]
   favicon: {
     [key: string]: {

@@ -2,14 +2,15 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/assets/*": ["./src/assets/*"],
       "@/components/*": ["./src/components/*"],
       "@/data/*": ["./data/*"],
       "@/hooks/*": ["./src/hooks/*"],
       "@/lib/*": ["./src/lib/*"],
       "@/localesConfig": ["./locales.config"],
+      "@/queries/*": ["./src/queries/*"],
       "@/services/*": ["./src/services/*"],
       "@/styles/*": ["./src/styles/*"],
+      "@/tailwindConfig": ["./tailwind.config"],
       "@/types/*": ["./src/types/*"]
     },
     "target": "es5",
