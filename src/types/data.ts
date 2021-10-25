@@ -1,3 +1,19 @@
+import en from '@/data/en-us.json'
+import pt from '@/data/pt-br.json'
+import { data } from '@/lib/data'
+
+export type DataType = typeof en | typeof pt
+
+export type DataContextProps = {
+  asPath: string
+  defaultLocale: string
+  locale: keyof typeof data
+  locales: string[]
+  d: DataType
+}
+
+export type RouterProps = Omit<DataContextProps, 'd'>
+
 export type DataResponse = {
   allDatas: {
     edges: {

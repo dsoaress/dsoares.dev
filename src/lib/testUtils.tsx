@@ -2,24 +2,24 @@ import { render } from '@testing-library/react'
 import mockRouter from 'next-router-mock'
 import { ReactElement, ReactNode } from 'react'
 
-import { DataProvider } from '@/hooks/useData'
+import { Providers } from '@/providers'
 
 import { i18n } from '../../locales.config'
 
-type ProvidersProps = {
+type ReactProvidersProps = {
   children?: ReactNode
 }
 
 jest.mock('next/router', () => require('next-router-mock'))
 
-const Providers = ({ children }: ProvidersProps) => {
-  return <DataProvider>{children}</DataProvider>
+const ReactProviders = ({ children }: ReactProvidersProps) => {
+  return <Providers>{children}</Providers>
 }
 
 const customRender = (ui: ReactElement, options = {}) => {
   mockRouter.locales = i18n.locales
   mockRouter.locale = i18n.defaultLocale
-  render(ui, { wrapper: Providers, ...options })
+  render(ui, { wrapper: ReactProviders, ...options })
 }
 export * from '@testing-library/react'
 
