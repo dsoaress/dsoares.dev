@@ -4,6 +4,14 @@ export const Wrapper = styled.div`
   ${tw`absolute flex items-end justify-center w-full h-screen pb-24`}
 `
 
+export const Content2 = styled.div`
+  ${tw`z-10 grid gap-8 px-8 text-center transform translate-y-80`}
+
+  svg {
+    ${tw`mx-auto`}
+  }
+`
+
 export const Content = styled.div`
   ${tw`z-10 grid gap-8 px-8 text-center`}
 

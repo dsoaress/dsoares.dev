@@ -10,7 +10,7 @@ import { IconType } from 'react-icons/lib'
 import { Link } from '@/components/Link'
 import { useData } from '@/hooks/useData'
 
-import { SocialItem, Wrapper } from './styles'
+import { Content, SocialItem, Wrapper } from './styles'
 
 const Icons = {
   Email,
@@ -26,22 +26,47 @@ export function Social() {
 
   return (
     <Wrapper>
-      {d.social.map(({ label, url }) => {
-        const Icon: IconType = Icons[label as keyof typeof Icons]
-        return (
-          <SocialItem key={url}>
-            <Link
-              href={url}
-              aria-label={label}
-              rel="noopener noreferrer"
-              target="_blank"
-              className={`umami--click--${label}`}
+      <Content
+        variants={{
+          hidden: { opacity: 1, scale: 0 },
+          visible: {
+            opacity: 1,
+            scale: 1,
+            transition: {
+              delayChildren: 0.3,
+              staggerChildren: 0.2
+            }
+          }
+        }}
+        initial="hidden"
+        animate="visible"
+      >
+        {d.social.map(({ label, url }) => {
+          const Icon: IconType = Icons[label as keyof typeof Icons]
+          return (
+            <SocialItem
+              key={url}
+              variants={{
+                hidden: { y: 20, opacity: 0 },
+                visible: {
+                  y: 0,
+                  opacity: 1
+                }
+              }}
             >
-              <Icon size={22} />
-            </Link>
-          </SocialItem>
-        )
-      })}
+              <Link
+                href={url}
+                aria-label={label}
+                rel="noopener noreferrer"
+                target="_blank"
+                className={`umami--click--${label}`}
+              >
+                <Icon size={22} />
+              </Link>
+            </SocialItem>
+          )
+        })}
+      </Content>
     </Wrapper>
   )
 }
