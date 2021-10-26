@@ -19,7 +19,7 @@ export async function getPaths() {
   `)
 
   return data.allPosts.edges.map(({ node }) => ({
-    params: { post: node._meta.uid },
+    params: { uid: node._meta.uid },
     locale: node._meta.lang
   }))
 }

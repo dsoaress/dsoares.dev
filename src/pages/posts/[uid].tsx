@@ -28,6 +28,12 @@ export const getStaticProps: GetStaticProps = async ctx => {
 
   const post = await getSinglePost(ctx)
 
+  if (!post) {
+    return {
+      notFound: true
+    }
+  }
+
   return {
     props: {
       post

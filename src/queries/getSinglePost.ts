@@ -8,7 +8,7 @@ import { prismic } from '@/services/prismic'
 import { PostResponse } from '@/types/post'
 
 export async function getSinglePost({ params, locale }: GetStaticPropsContext) {
-  if (!params?.post) throw new Error('slug is not defined')
+  if (!params?.uid) throw new Error('slug is not defined')
   if (!locale) throw new Error('locale is not defined')
 
   const data = await prismic<PostResponse>(
@@ -30,10 +30,14 @@ export async function getSinglePost({ params, locale }: GetStaticPropsContext) {
     {
       variables: {
         lang: locale,
-        uid: params.post as string
+        uid: params.uid as string
       }
     }
   )
+
+  if (!data.post) {
+    return console.log('post not found')
+  }
 
   const content = RichText.asHtml(data.post.content)
 
