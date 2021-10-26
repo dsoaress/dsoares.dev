@@ -4,7 +4,7 @@ import { i18n } from '@/localesConfig'
 import { getInitialData } from '@/queries/getInitialData'
 import { theme } from '@/tailwindConfig'
 
-export async function initialData() {
+export async function initialdata() {
   await Promise.all(
     i18n.locales.map(async locale => {
       const startUrl = locale === i18n.defaultLocale ? '' : locale
