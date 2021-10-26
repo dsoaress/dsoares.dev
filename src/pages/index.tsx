@@ -8,7 +8,6 @@ import { Projects } from '@/components/Projects'
 import { useData } from '@/hooks/useData'
 import { getAllPosts } from '@/queries/getAllPosts'
 import { getAllProjects } from '@/queries/getAllProjects'
-import { initialdata } from '@/services/initialdata'
 import { PostType } from '@/types/post'
 import { ProjectType } from '@/types/project'
 
@@ -33,8 +32,6 @@ export default function IndexPage({ posts, projects }: IndexPageProps) {
 }
 
 export const getStaticProps: GetStaticProps = async ctx => {
-  await initialdata()
-
   const projects = await getAllProjects(ctx)
   const posts = await getAllPosts(ctx)
 
@@ -42,7 +39,6 @@ export const getStaticProps: GetStaticProps = async ctx => {
     props: {
       posts,
       projects
-    },
-    revalidate: 1
+    }
   }
 }

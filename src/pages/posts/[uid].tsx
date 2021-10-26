@@ -3,7 +3,6 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import { Post } from '@/components/Post'
 import { getPaths } from '@/queries/getPaths'
 import { getSinglePost } from '@/queries/getSinglePost'
-import { initialdata } from '@/services/initialdata'
 import { PostType } from '@/types/post'
 
 type PostPagePros = {
@@ -24,8 +23,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async ctx => {
-  await initialdata()
-
   const post = await getSinglePost(ctx)
 
   if (!post) {
@@ -37,7 +34,6 @@ export const getStaticProps: GetStaticProps = async ctx => {
   return {
     props: {
       post
-    },
-    revalidate: 1
+    }
   }
 }
