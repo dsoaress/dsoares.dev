@@ -8,4 +8,14 @@ describe('<Link />', () => {
     expect(screen.getByText('Children')).toBeInTheDocument()
     expect(screen.getByText('Children')).toMatchSnapshot()
   })
+
+  it('Renders with active className', () => {
+    render(
+      <Link href="#" active>
+        Children
+      </Link>
+    )
+
+    expect(screen.getByText('Children')).toMatchSnapshot()
+  })
 })

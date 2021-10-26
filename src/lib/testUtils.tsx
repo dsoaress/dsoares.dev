@@ -2,9 +2,8 @@ import { render } from '@testing-library/react'
 import mockRouter from 'next-router-mock'
 import { ReactElement, ReactNode } from 'react'
 
+import { i18n } from '@/localesConfig'
 import { Providers } from '@/providers'
-
-import { i18n } from '../../locales.config'
 
 type ReactProvidersProps = {
   children?: ReactNode
