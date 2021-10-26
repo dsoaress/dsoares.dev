@@ -48,7 +48,7 @@
     "@testing-library/user-event": "13.5.0",
     "@types/file-saver": "2.0.3",
     "@types/jest": "27.0.2",
-    "@types/node": "16.11.5",
+    "@types/node": "16.11.6",
     "@types/prettier": "2.4.1",
     "@types/prismic-dom": "2.1.1",
     "@types/react": "17.0.33",
