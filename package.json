@@ -76,7 +76,7 @@
     "pretty-quick": "3.1.1",
     "react-is": "17.0.2",
     "serve": "12.0.1",
-    "tailwindcss": "2.2.17",
+    "tailwindcss": "2.2.19",
     "ts-node": "10.4.0",
     "tsconfig-paths": "3.11.0",
     "twin.macro": "2.8.1",
