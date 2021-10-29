@@ -1,9 +1,12 @@
-name: ci
+name: Check PR
+
 on: [pull_request]
 
 jobs:
-  build:
+  run-ci:
+    name: Run Type Check & Linters
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
@@ -13,8 +16,8 @@ jobs:
         with:
           node-version: 14
 
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
+      - name: Install dependencies (with cache)
+        uses: bahmutov/npm-install@HEAD
 
       - name: Make .env
         uses: SpicyPizza/create-envfile@v1
@@ -27,8 +30,11 @@ jobs:
       - name: Get initial data
         run: yarn initialdata
 
+      - name: Check types
+        run: yarn type-check
+
       - name: Jest
         run: yarn test:ci
 
-      - name: Build
-        run: yarn build
+      - name: Check linting
+        run: yarn lint

@@ -18,6 +18,7 @@
     "test:coverage": "jest --coverage && serve coverage/lcov-report -l 3020",
     "prepare": "husky install",
     "clean": "rm -rf node_modules .next data public",
+    "type-check": "tsc",
     "postversion": "scripts/postversion"
   },
   "dependencies": {
