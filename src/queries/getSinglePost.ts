@@ -1,9 +1,8 @@
 import { GetStaticPropsContext } from 'next'
-import { RichText } from 'prismic-dom'
-import readingTime from 'reading-time'
 
 import { formatDate } from '@/lib/formatDate'
 import { gql } from '@/lib/gql'
+import { getReadingTime, getSerializedContent } from '@/lib/postUtils'
 import { prismic } from '@/services/prismic'
 import { PostResponse } from '@/types/post'
 
@@ -35,11 +34,7 @@ export async function getSinglePost({ params, locale }: GetStaticPropsContext) {
     }
   )
 
-  if (!data.post) {
-    return console.log('post not found')
-  }
-
-  const content = RichText.asHtml(data.post.content)
+  if (!data.post) return console.log('post not found')
 
   return {
     id: data.post._meta.id,
@@ -48,7 +43,7 @@ export async function getSinglePost({ params, locale }: GetStaticPropsContext) {
     slug: data.post._meta.uid,
     cover: data.post.cover.url,
     date: formatDate(data.post.date, locale),
-    readingTime: Math.floor(readingTime(content).minutes),
-    content
+    readingTime: getReadingTime(data.post.content),
+    content: getSerializedContent(data.post.content)
   }
 }

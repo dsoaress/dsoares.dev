@@ -1,9 +1,8 @@
 import { GetStaticPropsContext } from 'next'
-import { RichText } from 'prismic-dom'
-import readingTime from 'reading-time'
 
 import { formatDate } from '@/lib/formatDate'
 import { gql } from '@/lib/gql'
+import { getReadingTime } from '@/lib/postUtils'
 import { prismic } from '@/services/prismic'
 import { PostsResponse } from '@/types/post'
 
@@ -38,8 +37,6 @@ export async function getAllPosts({ locale }: GetStaticPropsContext) {
   )
 
   return data.allPosts.edges.map(({ node }) => {
-    const content = RichText.asHtml(node.content)
-
     return {
       id: node._meta.id,
       title: node.title,
@@ -47,7 +44,7 @@ export async function getAllPosts({ locale }: GetStaticPropsContext) {
       slug: node._meta.uid,
       cover: node.cover.url,
       date: formatDate(node.date, locale),
-      readingTime: Math.floor(readingTime(content).minutes)
+      readingTime: getReadingTime(node.content)
     }
   })
 }
