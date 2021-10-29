@@ -14,6 +14,7 @@ coverage
 # misc
 .DS_Store
 *.pem
+tsconfig.tsbuildinfo
 
 # debug
 yarn-debug.log*
