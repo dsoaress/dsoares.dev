@@ -1,6 +1,5 @@
 import { Link, ScrollLink } from '@/components/Link'
 import { useData } from '@/hooks/useData'
-import { langNames } from '@/localesConfig'
 
 import { LanguageItem, LanguageSelector, NavLinkItem, NavLinks, Wrapper } from './styles'
 
@@ -36,7 +35,7 @@ export function Nav() {
               return (
                 <LanguageItem key={localeItem}>
                   <Link href={asPath} active={locale === localeItem} locale={localeItem}>
-                    [{langNames[localeItem]}]
+                    [{localeItem}]
                   </Link>
                 </LanguageItem>
               )

@@ -2,12 +2,13 @@ import { GetStaticPropsContext } from 'next'
 
 import { formatDate } from '@/lib/formatDate'
 import { gql } from '@/lib/gql'
+import { formatLocale } from '@/lib/localeUtils'
 import { getReadingTime } from '@/lib/postUtils'
 import { prismic } from '@/services/prismic'
 import { PostsResponse } from '@/types/post'
 
 export async function getAllPosts({ locale }: GetStaticPropsContext) {
-  if (!locale) throw new Error('locale is not defined')
+  const formattedLocale = formatLocale(locale)
 
   const data = await prismic<PostsResponse>(
     gql`
@@ -31,7 +32,7 @@ export async function getAllPosts({ locale }: GetStaticPropsContext) {
     `,
     {
       variables: {
-        lang: locale
+        lang: formattedLocale
       }
     }
   )
@@ -43,7 +44,7 @@ export async function getAllPosts({ locale }: GetStaticPropsContext) {
       description: node.description,
       slug: node._meta.uid,
       cover: node.cover.url,
-      date: formatDate(node.date, locale),
+      date: formatDate(node.date, formattedLocale),
       readingTime: getReadingTime(node.content)
     }
   })

@@ -1,5 +1,5 @@
-import en from '@/data/en-us.json'
-import pt from '@/data/pt-br.json'
+import en from '@/data/en.json'
+import pt from '@/data/pt.json'
 import { data } from '@/lib/data'
 
 export type DataType = typeof en | typeof pt

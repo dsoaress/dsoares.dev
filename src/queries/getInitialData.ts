@@ -1,8 +1,11 @@
 import { gql } from '@/lib/gql'
+import { formatLocale } from '@/lib/localeUtils'
 import { prismic } from '@/services/prismic'
 import { DataResponse } from '@/types/data'
 
 export async function getInitialData(locale: string) {
+  const formattedLocale = formatLocale(locale)
+
   const data = await prismic<DataResponse>(
     gql`
       query ($lang: String!) {
@@ -57,7 +60,7 @@ export async function getInitialData(locale: string) {
     `,
     {
       variables: {
-        lang: locale
+        lang: formattedLocale
       }
     }
   )

@@ -1,4 +1,5 @@
 import { gql } from '@/lib/gql'
+import { reformatLocale } from '@/lib/localeUtils'
 import { prismic } from '@/services/prismic'
 import { PostsResponse } from '@/types/post'
 
@@ -20,6 +21,6 @@ export async function getPaths() {
 
   return data.allPosts.edges.map(({ node }) => ({
     params: { uid: node._meta.uid },
-    locale: node._meta.lang
+    locale: reformatLocale(node._meta.lang)
   }))
 }

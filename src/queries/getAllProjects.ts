@@ -1,13 +1,14 @@
 import { GetStaticPropsContext } from 'next'
 
 import { gql } from '@/lib/gql'
+import { formatLocale } from '@/lib/localeUtils'
 import { github } from '@/services/github'
 import { prismic } from '@/services/prismic'
 import { RepositoryResponse } from '@/types/project'
 import { ProjectsResponse } from '@/types/project'
 
 export async function getAllProjects({ locale }: GetStaticPropsContext) {
-  if (!locale) throw new Error('locale is not defined')
+  const formattedLocale = formatLocale(locale)
 
   const data = await prismic<ProjectsResponse>(
     gql`
@@ -30,7 +31,7 @@ export async function getAllProjects({ locale }: GetStaticPropsContext) {
     `,
     {
       variables: {
-        lang: locale
+        lang: formattedLocale
       }
     }
   )

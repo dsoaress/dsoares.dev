@@ -2,13 +2,14 @@ import { GetStaticPropsContext } from 'next'
 
 import { formatDate } from '@/lib/formatDate'
 import { gql } from '@/lib/gql'
+import { formatLocale } from '@/lib/localeUtils'
 import { getReadingTime, getSerializedContent } from '@/lib/postUtils'
 import { prismic } from '@/services/prismic'
 import { PostResponse } from '@/types/post'
 
 export async function getSinglePost({ params, locale }: GetStaticPropsContext) {
   if (!params?.uid) throw new Error('slug is not defined')
-  if (!locale) throw new Error('locale is not defined')
+  const formattedLocale = formatLocale(locale)
 
   const data = await prismic<PostResponse>(
     gql`
@@ -28,7 +29,7 @@ export async function getSinglePost({ params, locale }: GetStaticPropsContext) {
     `,
     {
       variables: {
-        lang: locale,
+        lang: formattedLocale,
         uid: params.uid as string
       }
     }
@@ -42,7 +43,7 @@ export async function getSinglePost({ params, locale }: GetStaticPropsContext) {
     description: data.post.description,
     slug: data.post._meta.uid,
     cover: data.post.cover.url,
-    date: formatDate(data.post.date, locale),
+    date: formatDate(data.post.date, formattedLocale),
     readingTime: getReadingTime(data.post.content),
     content: getSerializedContent(data.post.content)
   }

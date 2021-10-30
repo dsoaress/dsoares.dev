@@ -1,7 +1,7 @@
-import en from '@/data/en-us.json'
-import pt from '@/data/pt-br.json'
+import en from '@/data/en.json'
+import pt from '@/data/pt.json'
 
 export const data = {
-  'en-us': en,
-  'pt-br': pt
+  en,
+  pt
 }
