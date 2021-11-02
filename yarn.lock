@@ -6208,10 +6208,10 @@ next-pwa@5.4.0:
     workbox-webpack-plugin "^6.3.0"
     workbox-window "^6.3.0"
 
-next-router-mock@0.5.3:
-  version "0.5.3"
-  resolved "https://registry.yarnpkg.com/next-router-mock/-/next-router-mock-0.5.3.tgz#3b8410ddc944bffd4ede9607cfa41d8403186647"
-  integrity sha512-epyCcx7hCk1y6lKHn3uRjtXF1Rr5+jBO/QFh3NbwLlrCG8lWY2SLh+EV0rvPkusZv2phwQz0BPbr8N/ib6IAeQ==
+next-router-mock@0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/next-router-mock/-/next-router-mock-0.6.1.tgz#5eb250da0e78b31a7cf3d95e863ec363b7b03678"
+  integrity sha512-0uUAgDC5v0i02nZy7mBToGNSMBHsFD08sZdi0pyyw+seyU1jyHmcYqy2MedoFRaYBl0CNhZhkDFTnz8fQHuOpw==
 
 next@12.0.2:
   version "12.0.2"
