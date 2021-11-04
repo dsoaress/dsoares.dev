@@ -26,34 +26,11 @@ export function Social() {
 
   return (
     <Wrapper>
-      <Content
-        variants={{
-          hidden: { opacity: 1, scale: 0 },
-          visible: {
-            opacity: 1,
-            scale: 1,
-            transition: {
-              delayChildren: 0.3,
-              staggerChildren: 0.2
-            }
-          }
-        }}
-        initial="hidden"
-        animate="visible"
-      >
+      <Content>
         {d.social.map(({ label, url }) => {
           const Icon: IconType = Icons[label as keyof typeof Icons]
           return (
-            <SocialItem
-              key={url}
-              variants={{
-                hidden: { y: 20, opacity: 0 },
-                visible: {
-                  y: 0,
-                  opacity: 1
-                }
-              }}
-            >
+            <SocialItem key={url}>
               <Link
                 href={url}
                 aria-label={label}

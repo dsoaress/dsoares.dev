@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 import tw, { styled } from 'twin.macro'
 
 type TextProps = {
@@ -6,7 +5,7 @@ type TextProps = {
   size?: 'xs' | 'sm' | 'base' | 'lg' | 'xl'
 }
 
-export const Text = styled(motion.p)<TextProps>(({ faded = false, size = 'base' }) => [
+export const Text = styled.p<TextProps>(({ faded = false, size = 'base' }) => [
   faded && tw`text-neutral-500`,
 
   size === 'sm' ? tw`leading-4` : tw`leading-7`,

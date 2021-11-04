@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 import tw, { styled } from 'twin.macro'
 
 type HeadingProps = {
@@ -6,7 +5,7 @@ type HeadingProps = {
   size?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl'
 }
 
-export const Heading = styled(motion.h1)<HeadingProps>(({ margin = 0, size = '5xl' }) => [
+export const Heading = styled.h1<HeadingProps>(({ margin = 0, size = '5xl' }) => [
   tw`font-bold text-neutral-50`,
 
   margin === 0 && tw`mb-0`,
