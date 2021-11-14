@@ -3,13 +3,13 @@ import { styled, theme } from '@/styles/stitches.config'
 export const Wrapper = styled('div', {
   position: 'relative',
   transition: 'all 0.3s ease-in-out',
-  border: `${theme.borderWidth[1]} solid ${theme.colors.neutral800}`,
+  border: `1px solid ${theme.colors.neutral800}`,
   borderRadius: theme.radii.md,
 
   '&:hover': {
     background: theme.colors.neutral800,
     transform: 'translateY(-0.25rem)',
-    boxShadow: theme.shadows['2xl']
+    boxShadow: theme.shadows.default
   }
 })
 

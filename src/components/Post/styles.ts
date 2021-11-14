@@ -24,5 +24,5 @@ export const Overlay = styled('div', {
 })
 
 export const Article = styled('article', {
-  marginX: theme.space.auto
+  marginX: 'auto'
 })

@@ -1,5 +1,4 @@
 export const radii = {
-  none: '0px',
   sm: '0.125rem',
   default: '0.25rem',
   md: '0.375rem',

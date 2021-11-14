@@ -19,24 +19,9 @@ export const fontSizes = {
 }
 
 export const fontWeights = {
-  thin: '100',
-  extralight: '200',
-  light: '300',
-  normal: '400',
+  normal: '300',
   medium: '500',
-  semibold: '600',
-  bold: '700',
-  extrabold: '800',
-  black: '900'
-}
-
-export const letterSpacings = {
-  tighter: '-0.05em',
-  tight: '-0.025em',
-  normal: '0em',
-  wide: '0.025em',
-  wider: '0.05em',
-  widest: '0.1em'
+  bold: '700'
 }
 
 export const lineHeights = {

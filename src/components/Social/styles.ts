@@ -1,7 +1,7 @@
 import { styled, theme } from '@/styles/stitches.config'
 
 export const Wrapper = styled('div', {
-  marginX: theme.space.auto
+  marginX: 'auto'
 })
 
 export const Content = styled('ul', {

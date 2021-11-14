@@ -18,7 +18,7 @@ export const Content = styled('div', {
   zIndex: 10,
 
   svg: {
-    marginX: theme.space.auto
+    marginX: 'auto'
   }
 })
 

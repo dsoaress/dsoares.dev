@@ -4,7 +4,7 @@ import { variants } from '@/styles/variants'
 export const Text = styled('p', {
   fontSize: theme.fontSizes.md,
   lineHeight: theme.lineHeights.md,
-  fontWeight: theme.fontWeights.light,
+  fontWeight: theme.fontWeights.normal,
 
   variants: {
     style: {

@@ -7,7 +7,7 @@ export const Button = styled('button', {
   fontSize: theme.fontSizes.sm,
   lineHeight: theme.lineHeights.sm,
   fontWeight: theme.fontWeights.medium,
-  border: theme.borderWidth[0],
+  border: 0,
   borderRadius: theme.radii.md,
   cursor: 'pointer',
   height: theme.sizes[11],

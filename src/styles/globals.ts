@@ -9,7 +9,7 @@ export const globalStyles = globalCss({
   body: {
     fontFamily: theme.fonts.primary,
     fontSize: '16px',
-    fontWeight: theme.fontWeights.light,
+    fontWeight: theme.fontWeights.normal,
     color: theme.colors.neutral50,
     backgroundColor: theme.colors.neutral900
   }

@@ -54,7 +54,7 @@ export const variants = {
 
   mb: {
     0: {
-      marginBottom: theme.space[0]
+      marginBottom: 0
     },
     0.5: {
       marginBottom: theme.space[0.5]
