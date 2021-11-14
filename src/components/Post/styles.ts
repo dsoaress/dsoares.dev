@@ -16,10 +16,7 @@ export const Cover = styled('div', {
 
 export const Overlay = styled('div', {
   position: 'absolute',
-  top: 0,
-  left: 0,
-  right: 0,
-  bottom: 0,
+  inset: 0,
   background: `linear-gradient(to top, ${theme.colors.neutral900} 0%, transparent 100%)`
 })
 

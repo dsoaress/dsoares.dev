@@ -29,7 +29,7 @@ export function Posts({ posts }: PostsProps) {
       <CardList>
         {posts?.map(post => {
           return (
-            <Card key={post.id} image={post.cover} title={post.title} href={post.slug}>
+            <Card key={post.id} image={post.cover} title={post.title} href={`/posts/${post.slug}`}>
               <Text style="faded" size="sm">
                 {post.date}
               </Text>

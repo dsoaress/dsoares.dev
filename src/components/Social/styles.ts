@@ -10,8 +10,11 @@ export const Content = styled('ul', {
 })
 
 export const SocialItem = styled('li', {
-  marginX: theme.space[4],
   transition: 'transform 0.2s ease-in-out',
+
+  '&:not(:last-child)': {
+    marginRight: theme.space[6]
+  },
 
   '&:hover': {
     transform: 'scale(1.1)'

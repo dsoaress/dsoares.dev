@@ -2,8 +2,7 @@ import { styled, theme } from '@/styles/stitches.config'
 
 export const Wrapper = styled('nav', {
   position: 'absolute',
-  left: 0,
-  right: 0,
+  insetX: 0,
   zIndex: 10,
   paddingX: theme.space[16],
   paddingTop: theme.space[12],
@@ -23,14 +22,17 @@ export const NavLinks = styled('ul', {
 })
 
 export const NavLinkItem = styled('li', {
-  marginLeft: theme.space[6]
+  marginRight: theme.space[6]
 })
 
 export const LanguageSelector = styled('ul', {
   display: 'flex',
   justifyContent: 'center',
-  listStyle: 'none',
-  marginLeft: theme.space[2]
+  listStyle: 'none'
 })
 
-export const LanguageItem = styled('li', {})
+export const LanguageItem = styled('li', {
+  '&:not(:last-child)': {
+    marginRight: theme.space[2]
+  }
+})
