@@ -1,5 +1,3 @@
-import 'modern-normalize/modern-normalize.css'
-
 import { ReactNode } from 'react'
 
 import { globalStyles } from '@/styles/globals'

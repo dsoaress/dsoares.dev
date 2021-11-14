@@ -5,6 +5,7 @@ import { css, styled, theme } from '@/styles/stitches.config'
 import { Link } from '.'
 
 const BaseStyle = css({
+  color: theme.colors.neutral50,
   fontWeight: theme.fontWeights.medium,
   textDecoration: 'none',
   transition: 'color 0.3s ease',
@@ -20,7 +21,7 @@ const BaseStyle = css({
   }
 })
 
-export const StyledLink = styled('a', {
+export const StyledLink = styled('a', BaseStyle, {
   variants: {
     active: {
       true: {

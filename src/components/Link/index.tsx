@@ -14,7 +14,7 @@ export type LinkProps = {
 export function Link({ active = false, href, locale, ...rest }: LinkProps) {
   return (
     <NextLink href={href} locale={locale} passHref>
-      <StyledLink active />
+      <StyledLink active={active} {...rest} />
     </NextLink>
   )
 }

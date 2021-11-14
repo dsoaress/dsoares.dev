@@ -28,7 +28,6 @@
     "file-saver": "2.0.5",
     "graphql": "16.0.1",
     "graphql-request": "3.6.1",
-    "modern-normalize": "^1.1.0",
     "next": "12.0.2",
     "next-pwa": "5.4.0",
     "prismic-dom": "2.2.6",
