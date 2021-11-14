@@ -1,32 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Error /> Renders with status code and error message 1`] = `
-.c0 {
-  font-weight: 700;
-  --tw-text-opacity: 1;
-  color: rgba(249,250,251,var(--tw-text-opacity));
-  margin-bottom: 1.5rem;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
 <h1
-  class="c0"
+  class="c-gMRxiR c-gMRxiR-ccsAlU-size-xl c-gMRxiR-cwookq-mb-6"
 >
   404
 </h1>
 `;
 
 exports[`<Error /> Renders with status code and error message 2`] = `
-.c0 {
-  line-height: 1.75rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: 300;
-}
-
 <p
-  class="c0"
+  class="c-IbAAC"
 >
   Error message
 </p>

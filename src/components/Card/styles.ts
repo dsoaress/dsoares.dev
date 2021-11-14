@@ -1,13 +1,28 @@
-import tw, { styled } from 'twin.macro'
+import { styled, theme } from '@/styles/stitches.config'
 
-export const Wrapper = styled.div`
-  ${tw`relative transition-all duration-300 border rounded-md border-neutral-800 hover:bg-neutral-800 hover:shadow-2xl hover:transform hover:-translate-y-1`}
-`
+export const Wrapper = styled('div', {
+  position: 'relative',
+  transition: 'all 0.3s ease-in-out',
+  border: `${theme.borderWidth[1]} solid ${theme.colors.neutral800}`,
+  borderRadius: theme.radii.md,
 
-export const ImageCover = styled.div`
-  ${tw`relative h-64 overflow-hidden rounded-t-md`}
-`
+  '&:hover': {
+    background: theme.colors.neutral800,
+    transform: 'translateY(-0.25rem)',
+    boxShadow: theme.shadows['2xl']
+  }
+})
 
-export const Container = styled.main`
-  ${tw`grid gap-4 p-6`}
-`
+export const ImageCover = styled('div', {
+  position: 'relative',
+  height: theme.sizes[64],
+  overflow: 'hidden',
+  borderTopLeftRadius: theme.radii.md,
+  borderTopRightRadius: theme.radii.md
+})
+
+export const Container = styled('div', {
+  display: 'grid',
+  gap: theme.sizes[4],
+  padding: theme.space[6]
+})

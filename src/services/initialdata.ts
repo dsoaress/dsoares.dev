@@ -2,7 +2,7 @@ import fs from 'fs'
 
 import { i18n } from '@/localesConfig'
 import { getInitialData } from '@/queries/getInitialData'
-import { theme } from '@/tailwindConfig'
+import { colors } from '@/styles/colors'
 
 export async function initialdata() {
   await Promise.all(
@@ -22,8 +22,8 @@ export async function initialdata() {
         name: data.profile.title,
         short_name: data.profile.shortTitle,
         start_url: `/${startUrl}`,
-        background_color: theme.extend.colors.neutral[900],
-        theme_color: theme.extend.colors.neutral[900],
+        background_color: colors.neutral900,
+        theme_color: colors.neutral900,
         display: 'fullscreen',
         icons: data.favicons.map(favicon => {
           return {

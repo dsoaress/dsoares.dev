@@ -20,6 +20,7 @@ const customRender = (ui: ReactElement, options = {}) => {
   mockRouter.locale = i18n.defaultLocale
   render(ui, { wrapper: ReactProviders, ...options })
 }
+
 export * from '@testing-library/react'
 
 export { customRender as render }

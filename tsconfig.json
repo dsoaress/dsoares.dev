@@ -12,7 +12,6 @@
       "@/queries/*": ["./src/queries/*"],
       "@/services/*": ["./src/services/*"],
       "@/styles/*": ["./src/styles/*"],
-      "@/tailwindConfig": ["./tailwind.config"],
       "@/types/*": ["./src/types/*"]
     },
     "target": "es5",

@@ -1,21 +1,41 @@
 import { Link as ReactScroll } from 'react-scroll'
-import tw, { css, styled } from 'twin.macro'
+
+import { css, styled, theme } from '@/styles/stitches.config'
 
 import { Link } from '.'
 
-export const BaseStyle = css`
-  ${tw`z-10 font-medium no-underline transition-colors duration-300 cursor-pointer hover:text-primary-500 active:text-primary-600`}
-`
+const BaseStyle = css({
+  fontWeight: theme.fontWeights.medium,
+  textDecoration: 'none',
+  transition: 'color 0.3s ease',
+  cursor: 'pointer',
+  zIndex: 10,
 
-export const StyledLink = styled.a<{ active?: boolean }>`
-  ${BaseStyle}
-  ${({ active = false }) => active && tw`text-primary-500`}
-`
+  '&:hover': {
+    color: theme.colors.primary500
+  },
 
-export const ScrollLink = styled(ReactScroll)`
-  ${BaseStyle}
-`
+  '&:active': {
+    color: theme.colors.primary600
+  }
+})
 
-export const CardLink = styled(Link)`
-  ${tw`absolute inset-0 `}
-`
+export const StyledLink = styled('a', {
+  variants: {
+    active: {
+      true: {
+        color: theme.colors.primary500
+      }
+    }
+  }
+})
+
+export const ScrollLink = styled(ReactScroll, BaseStyle)
+
+export const CardLink = styled(Link, {
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0
+})

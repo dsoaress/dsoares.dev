@@ -1,20 +1,18 @@
-import tw, { styled } from 'twin.macro'
+import { styled, theme } from '@/styles/stitches.config'
+import { variants } from '@/styles/variants'
 
-type TextProps = {
-  faded?: boolean
-  size?: 'xs' | 'sm' | 'base' | 'lg' | 'xl'
-}
+export const Text = styled('p', {
+  fontSize: theme.fontSizes.md,
+  lineHeight: theme.lineHeights.md,
+  fontWeight: theme.fontWeights.normal,
 
-export const Text = styled.p<TextProps>(({ faded = false, size = 'base' }) => [
-  faded && tw`text-neutral-500`,
+  variants: {
+    style: {
+      faded: {
+        color: theme.colors.neutral500
+      }
+    },
 
-  size === 'sm' ? tw`leading-4` : tw`leading-7`,
-
-  size === 'xs' && tw`text-xs`,
-  size === 'sm' && tw`text-sm`,
-  size === 'base' && tw`text-base`,
-  size === 'lg' && tw`text-lg`,
-  size === 'xl' && tw`text-xl`,
-
-  tw`font-light`
-])
+    size: variants.size
+  }
+})

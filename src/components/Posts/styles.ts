@@ -1,15 +1,18 @@
-import tw, { styled } from 'twin.macro'
+import { styled, theme } from '@/styles/stitches.config'
 
-export const Footer = styled.footer`
-  ${tw`flex self-end justify-between `}
+export const Footer = styled('footer', {
+  display: 'flex',
+  alignSelf: 'flex-end',
+  justifyContent: 'space-between',
 
-  span {
-    p {
-      ${tw`flex items-center `}
-    }
+  span: {
+    p: {
+      display: 'flex',
+      alignItems: 'center'
+    },
 
-    svg {
-      ${tw`ml-2`};
+    svg: {
+      marginLeft: theme.space[2]
     }
   }
-`
+})

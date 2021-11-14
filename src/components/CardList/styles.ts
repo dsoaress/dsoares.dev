@@ -1,5 +1,16 @@
-import tw, { styled } from 'twin.macro'
+import { styled, theme } from '@/styles/stitches.config'
 
-export const CardList = styled.div`
-  ${tw`grid gap-8 mt-8 md:grid-cols-2 md:gap-6 lg:grid-cols-3`}
-`
+export const CardList = styled('div', {
+  display: 'grid',
+  gap: theme.space[8],
+  marginTop: theme.sizes[8],
+
+  '@md': {
+    gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+    gap: theme.space[6]
+  },
+
+  '@lg': {
+    gridTemplateColumns: 'repeat(3, minmax(0, 1fr))'
+  }
+})

@@ -1,9 +1,13 @@
-import tw, { styled } from 'twin.macro'
+import { styled, theme } from '@/styles/stitches.config'
 
-export const Wrapper = styled.div`
-  ${tw`flex flex-col justify-center my-12`}
+export const Wrapper = styled('div', {
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  marginY: theme.space[12],
 
-  p {
-    ${tw`mt-6 text-center`}
+  p: {
+    textAlign: 'center',
+    marginTop: theme.space[6]
   }
-`
+})

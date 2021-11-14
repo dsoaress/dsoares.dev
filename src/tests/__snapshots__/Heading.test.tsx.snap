@@ -1,17 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Button /> Renders with children 1`] = `
-.c0 {
-  font-weight: 700;
-  --tw-text-opacity: 1;
-  color: rgba(249,250,251,var(--tw-text-opacity));
-  margin-bottom: 0px;
-  font-size: 3rem;
-  line-height: 1;
-}
-
 <h1
-  class="c0"
+  class="c-gMRxiR"
 >
   Children
 </h1>

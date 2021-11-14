@@ -1,4 +1,5 @@
 #!/bin/sh
+
 git push --tags
 git push
 git checkout main

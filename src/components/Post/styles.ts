@@ -1,21 +1,28 @@
-import tw, { styled } from 'twin.macro'
+import { styled, theme } from '@/styles/stitches.config'
 
-export const Wrapper = styled.main`
-  ${tw``}
-`
+export const Wrapper = styled('main')
 
-export const Header = styled.header`
-  ${tw`flex items-center justify-center w-full h-screen`}
-`
+export const Header = styled('header', {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  width: theme.sizes.full,
+  height: theme.sizes.screenY
+})
 
-export const Cover = styled.div`
-  z-index: -10;
-`
+export const Cover = styled('div', {
+  zIndex: -10
+})
 
-export const Overlay = styled.div`
-  ${tw`absolute inset-0 bg-gradient-to-t from-neutral-900 to-transparent`}
-`
+export const Overlay = styled('div', {
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  background: `linear-gradient(to top, ${theme.colors.neutral900} 0%, transparent 100%)`
+})
 
-export const Article = styled.article`
-  ${tw`mx-auto -mt-32 prose xl:prose-xl text-primary-50`}
-`
+export const Article = styled('article', {
+  marginX: theme.space.auto
+})

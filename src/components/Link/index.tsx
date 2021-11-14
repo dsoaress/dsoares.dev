@@ -11,10 +11,10 @@ export type LinkProps = {
   locale?: string
 } & AnchorHTMLAttributes<HTMLAnchorElement>
 
-export function Link({ href, locale, ...props }: LinkProps) {
+export function Link({ active = false, href, locale, ...rest }: LinkProps) {
   return (
     <NextLink href={href} locale={locale} passHref>
-      <StyledLink {...props} />
+      <StyledLink active />
     </NextLink>
   )
 }

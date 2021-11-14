@@ -20,10 +20,10 @@ export function Projects({ projects }: ProjectsProps) {
 
   return (
     <Section id="projects">
-      <Heading as="h2" size="3xl" margin={6}>
+      <Heading as="h2" size="3xl" mb={6}>
         {title}
       </Heading>
-      <Text faded size="xl">
+      <Text style="faded" size="xl">
         {description}
       </Text>
 
@@ -41,12 +41,12 @@ export function Projects({ projects }: ProjectsProps) {
             >
               <Text>{project.description}</Text>
               <Footer>
-                <Text faded size="sm">
+                <Text style="faded" size="sm">
                   {project.tags}
                 </Text>
                 <span>
                   {project.stars > 0 && (
-                    <Text faded size="sm">
+                    <Text style="faded" size="sm">
                       <AiOutlineStar />
                       {project.stars}
                     </Text>

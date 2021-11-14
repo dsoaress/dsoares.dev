@@ -19,10 +19,10 @@ export function Posts({ posts }: PostsProps) {
 
   return (
     <Section id="posts">
-      <Heading as="h2" size="3xl" margin={6}>
+      <Heading as="h2" size="3xl" mb={6}>
         {d.posts.title}
       </Heading>
-      <Text faded size="xl">
+      <Text style="faded" size="xl">
         {d.posts.description}
       </Text>
 
@@ -30,16 +30,16 @@ export function Posts({ posts }: PostsProps) {
         {posts?.map(post => {
           return (
             <Card key={post.id} image={post.cover} title={post.title} href={post.slug}>
-              <Text faded size="sm">
+              <Text style="faded" size="sm">
                 {post.date}
               </Text>
               <Text>{post.description}</Text>
               <Footer>
-                <Text faded size="sm">
+                <Text style="faded" size="sm">
                   {post.readingTime} {d.posts.readingTime}
                 </Text>
                 <span>
-                  <Text faded size="sm">
+                  <Text style="faded" size="sm">
                     {d.posts.readMore}
                     <AiOutlineArrowRight />
                   </Text>

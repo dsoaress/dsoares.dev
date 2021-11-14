@@ -1,5 +1,7 @@
-import tw, { styled } from 'twin.macro'
+import { styled, theme } from '@/styles/stitches.config'
 
-export const Container = styled.main`
-  ${tw`max-w-screen-xl px-6 mx-auto`}
-`
+export const Container = styled('main', {
+  maxWidth: theme.sizes.xl,
+  paddingX: theme.space[6],
+  marginX: theme.space.auto
+})

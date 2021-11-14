@@ -1,16 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Container /> Renders with children 1`] = `
-.c0 {
-  max-width: 1280px;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 <main
-  class="c0"
+  class="c-hQwlBf"
 >
   Children
 </main>

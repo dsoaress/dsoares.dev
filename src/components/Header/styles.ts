@@ -1,33 +1,42 @@
-import tw, { styled } from 'twin.macro'
+import { styled, theme } from '@/styles/stitches.config'
 
-export const Wrapper = styled.div`
-  ${tw`absolute flex items-end justify-center w-full h-screen pb-24`}
-`
+export const Wrapper = styled('div', {
+  position: 'absolute',
+  display: 'flex',
+  alignItems: 'flex-end',
+  justifyContent: 'center',
+  width: theme.sizes.full,
+  height: theme.sizes.screenY,
+  paddingBottom: theme.space[24]
+})
 
-export const Content2 = styled.div`
-  ${tw`z-10 grid gap-8 px-8 text-center transform translate-y-80`}
+export const Content = styled('div', {
+  display: 'grid',
+  gap: theme.space[8],
+  passingX: theme.space[8],
+  textAlign: 'center',
+  zIndex: 10,
 
-  svg {
-    ${tw`mx-auto`}
+  svg: {
+    marginX: theme.space.auto
   }
-`
+})
 
-export const Content = styled.div`
-  ${tw`z-10 grid gap-8 px-8 text-center`}
+export const Resume = styled('nav', {
+  display: 'flex',
+  justifyContent: 'center'
+})
 
-  svg {
-    ${tw`mx-auto`}
-  }
-`
+export const Avatar = styled('div', {
+  position: 'relative',
+  height: theme.sizes.screenY
+})
 
-export const Resume = styled.nav`
-  ${tw`flex justify-center`}
-`
-
-export const Avatar = styled.div`
-  ${tw`relative h-screen`}
-`
-
-export const Overlay = styled.div`
-  ${tw`absolute inset-0 bg-gradient-to-t from-neutral-900 to-transparent`}
-`
+export const Overlay = styled('div', {
+  position: 'absolute',
+  top: '0',
+  left: '0',
+  right: '0',
+  bottom: '0',
+  background: `linear-gradient(to top, ${theme.colors.neutral900} 0%, transparent 100%)`
+})
