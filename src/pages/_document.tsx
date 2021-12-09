@@ -2,6 +2,7 @@ import NextDocument, { Head, Html, Main, NextScript } from 'next/document'
 
 import { getCssText } from '@/styles/stitches.config'
 
+// @ts-ignore
 export default class Document extends NextDocument {
   render() {
     return (
