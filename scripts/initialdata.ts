@@ -1,9 +1,6 @@
-import dotenv from 'dotenv'
+import 'dotenv/config'
+import 'isomorphic-fetch'
 
 import { initialdata } from '@/services/initialdata'
-
-dotenv.config({
-  path: './.env'
-})
 
 initialdata().catch(error => console.log(error))
