@@ -1,4 +1,4 @@
-import Prismic from '@prismicio/client'
+import { Client } from '@prismicio/client'
 import { GraphQLClient } from 'graphql-request'
 
 type Variables = {
@@ -13,7 +13,7 @@ export async function prismic<T>(query: string, { variables }: Variables = {}) {
   const GRAPHQL_API_URL = `https://${REPOSITORY}.cdn.prismic.io/graphql`
   const ACCESS_TOKEN = process.env.PRISMIC_ACCESS_TOKEN
 
-  const PrismicClient = Prismic.client(REF_API_URL, {
+  const PrismicClient = new Client(REF_API_URL, {
     accessToken: ACCESS_TOKEN
   })
 
@@ -22,9 +22,9 @@ export async function prismic<T>(query: string, { variables }: Variables = {}) {
   })
 
   try {
-    const prismicAPI = await PrismicClient.getApi()
+    const prismicAPI = await PrismicClient.getMasterRef()
     return await graphQLClient.request<T>(query, variables, {
-      'Prismic-Ref': prismicAPI.masterRef.ref,
+      'Prismic-Ref': prismicAPI.ref,
       Authorization: `Token ${ACCESS_TOKEN}`
     })
   } catch (error) {
