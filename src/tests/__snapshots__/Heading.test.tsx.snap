@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`<Button /> Renders with children 1`] = `
-<h1
-  class="c-gMRxiR"
->
-  Children
-</h1>
-`;

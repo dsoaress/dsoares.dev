@@ -11,7 +11,7 @@ export function Footer() {
   return (
     <Wrapper>
       <Social />
-      <Text style="faded" size="sm">
+      <Text faded size="sm">
         {d.footer}
         <Link href="https://nextjs.org" rel="noopener noreferrer" target="_blank">
           Next.js

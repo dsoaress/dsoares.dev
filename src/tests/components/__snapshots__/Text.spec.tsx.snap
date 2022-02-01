@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Text /> should matches snapshot 1`] = `
+<p
+  class="font-normal text-neutral-50 text-base leading-6"
+>
+  Children
+</p>
+`;

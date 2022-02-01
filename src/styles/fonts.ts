@@ -1,5 +1,5 @@
 export const fonts = {
-  primary: 'Ubuntu, sans-serif'
+  primary: 'sans-serif'
 }
 
 export const fontSizes = {

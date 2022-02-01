@@ -2,7 +2,7 @@ import { AiOutlineStar } from 'react-icons/ai'
 
 import { Card } from '@/components/Card'
 import { CardList } from '@/components/CardList'
-import { Heading } from '@/components/Heading/styles'
+import { Heading } from '@/components/Heading'
 import { Section } from '@/components/Section'
 import { Text } from '@/components/Text'
 import { useData } from '@/hooks/useData'
@@ -20,10 +20,10 @@ export function Projects({ projects }: ProjectsProps) {
 
   return (
     <Section id="projects">
-      <Heading as="h2" size="3xl" mb={6}>
+      <Heading as="h2" size="3xl" className="mb-6">
         {title}
       </Heading>
-      <Text style="faded" size="xl">
+      <Text faded size="xl">
         {description}
       </Text>
 
@@ -41,12 +41,12 @@ export function Projects({ projects }: ProjectsProps) {
             >
               <Text>{project.description}</Text>
               <Footer>
-                <Text style="faded" size="sm">
+                <Text faded size="sm">
                   {project.tags}
                 </Text>
                 <span>
                   {project.stars > 0 && (
-                    <Text style="faded" size="sm">
+                    <Text faded size="sm">
                       <AiOutlineStar />
                       {project.stars}
                     </Text>

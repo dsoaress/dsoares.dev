@@ -27,14 +27,14 @@ jobs:
           envkey_GITHUB_USERNAME: ${{ secrets.USERNAME }}
           envkey_GITHUB_ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
-      # - name: Get initial data
-      # run: yarn initialdata
+      - name: Get initial data
+        run: yarn initialdata
 
-      # - name: Check types
-      # run: yarn type-check
+      - name: Check types
+        run: yarn type-check
 
-      # - name: Jest
-      # run: yarn test:ci
+      - name: Jest
+        run: yarn test:ci
 
       - name: Build
         run: yarn build
