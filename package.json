@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@prismicio/client": "6.1.1",
-    "@prismicio/helpers": "2.0.1",
+    "@prismicio/helpers": "2.1.0",
     "@stitches/react": "1.2.6",
     "dotenv": "14.3.2",
     "file-saver": "2.0.5",
