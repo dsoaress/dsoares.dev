@@ -4,8 +4,11 @@ module.exports = {
   content: ['./src/pages/**/*.{ts,tsx}', './src/components/**/*.{ts,tsx}'],
   theme: {
     extend: {
-      fonts: {
-        DEFAULT: ['Ubuntu', 'sans-serif']
+      fontFamily: {
+        sans: ['Ubuntu', 'sans-serif']
+      },
+      fontWeight: {
+        normal: 300
       },
       colors: {
         neutral: colors.gray,

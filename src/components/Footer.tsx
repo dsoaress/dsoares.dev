@@ -3,20 +3,18 @@ import { Social } from '@/components/Social'
 import { Text } from '@/components/Text'
 import { useData } from '@/hooks/useData'
 
-import { Wrapper } from './styles'
-
 export function Footer() {
   const { d } = useData()
 
   return (
-    <Wrapper>
+    <footer className="flex flex-col justify-center my-12">
       <Social />
-      <Text faded size="sm">
+      <Text size="sm" className="mt-6 text-center" faded>
         {d.footer}
         <Link href="https://nextjs.org" rel="noopener noreferrer" target="_blank">
           Next.js
         </Link>
       </Text>
-    </Wrapper>
+    </footer>
   )
 }

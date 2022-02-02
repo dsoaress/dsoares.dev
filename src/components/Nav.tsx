@@ -1,48 +1,44 @@
 import { Link, ScrollLink } from '@/components/Link'
 import { useData } from '@/hooks/useData'
 
-import { LanguageItem, LanguageSelector, NavLinkItem, NavLinks, Wrapper } from './styles'
-
 export function Nav() {
   const { asPath, locale, locales, d } = useData()
   const isHome = asPath === '/'
 
   return (
-    <Wrapper>
-      <NavLinks>
+    <nav className="absolute inset-x-0 z-10 px-16 pt-12 pb-32 text-sm bg-gradient-to-b from-neutral-900 to-transparent">
+      <ul className="flex justify-center list-none md:items-end">
         {d.showNav &&
           d.nav.map(navItem => {
             if (isHome && navItem.url === '/') return
 
             return (
-              <NavLinkItem key={navItem.url}>
+              <li className="mr-6" key={navItem.url}>
                 {isHome ? (
-                  <ScrollLink to={navItem.url} smooth={true} offset={-76}>
-                    {navItem.label}
-                  </ScrollLink>
+                  <ScrollLink to={navItem.url}>{navItem.label}</ScrollLink>
                 ) : (
                   <Link href={navItem.url === '/' ? navItem.url : `/#${navItem.url}`}>
                     {navItem.label}
                   </Link>
                 )}
-              </NavLinkItem>
+              </li>
             )
           })}
 
-        <NavLinkItem>
-          <LanguageSelector>
+        <li className="mr-6">
+          <ul className="flex justify-center list-none">
             {locales.map(localeItem => {
               return (
-                <LanguageItem key={localeItem}>
+                <li className="mr-2 last:mr-0" key={localeItem}>
                   <Link href={asPath} active={locale === localeItem} locale={localeItem}>
                     [{localeItem}]
                   </Link>
-                </LanguageItem>
+                </li>
               )
             })}
-          </LanguageSelector>
-        </NavLinkItem>
-      </NavLinks>
-    </Wrapper>
+          </ul>
+        </li>
+      </ul>
+    </nav>
   )
 }

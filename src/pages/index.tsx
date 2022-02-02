@@ -23,8 +23,8 @@ export default function IndexPage({ posts, projects }: IndexPageProps) {
     <>
       <Header />
       <Container>
-        {/* {d.projects.showProjects && <Projects projects={projects} />} */}
-        {/* {d.posts.showPosts && <Posts posts={posts} />} */}
+        {d.projects.showProjects && <Projects projects={projects} />}
+        {d.posts.showPosts && <Posts posts={posts} />}
         {d.showFooter && <Footer />}
       </Container>
     </>

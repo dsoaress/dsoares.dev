@@ -1,7 +1,12 @@
 import cn from 'classnames'
 import type { ButtonHTMLAttributes } from 'react'
+import type { IconType } from 'react-icons/lib'
 
-export function Button({ className, ...props }: ButtonHTMLAttributes<HTMLButtonElement>) {
+type ButtonProps = {
+  icon?: IconType
+} & ButtonHTMLAttributes<HTMLButtonElement>
+
+export function Button({ className, children, icon: Icon, ...props }: ButtonProps) {
   return (
     <button
       className={cn(
@@ -9,6 +14,9 @@ export function Button({ className, ...props }: ButtonHTMLAttributes<HTMLButtonE
         className
       )}
       {...props}
-    />
+    >
+      {!!Icon && <Icon className="mr-2 text-lg" />}
+      {children}
+    </button>
   )
 }

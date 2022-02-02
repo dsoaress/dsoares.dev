@@ -6,9 +6,7 @@ import { Heading } from '@/components/Heading'
 import { Section } from '@/components/Section'
 import { Text } from '@/components/Text'
 import { useData } from '@/hooks/useData'
-import { ProjectType } from '@/types/project'
-
-import { Footer } from './styles'
+import type { ProjectType } from '@/types/project'
 
 type ProjectsProps = {
   projects: ProjectType[]
@@ -40,19 +38,19 @@ export function Projects({ projects }: ProjectsProps) {
               className={`umami--click--project-${project.title}`}
             >
               <Text>{project.description}</Text>
-              <Footer>
+              <footer className="flex items-end justify-between">
                 <Text faded size="sm">
                   {project.tags}
                 </Text>
                 <span>
                   {project.stars > 0 && (
-                    <Text faded size="sm">
-                      <AiOutlineStar />
+                    <Text faded size="sm" className="flex items-center">
+                      <AiOutlineStar className="mr-1" />
                       {project.stars}
                     </Text>
                   )}
                 </span>
-              </Footer>
+              </footer>
             </Card>
           )
         })}

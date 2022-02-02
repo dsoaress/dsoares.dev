@@ -8,8 +8,6 @@ import { Text } from '@/components/Text'
 import { useData } from '@/hooks/useData'
 import { PostType } from '@/types/post'
 
-import { Footer } from './styles'
-
 type PostsProps = {
   posts: PostType[]
 }
@@ -34,17 +32,17 @@ export function Posts({ posts }: PostsProps) {
                 {post.date}
               </Text>
               <Text>{post.description}</Text>
-              <Footer>
+              <footer className="flex items-end justify-between">
                 <Text faded size="sm">
                   {post.readingTime} {d.posts.readingTime}
                 </Text>
                 <span>
-                  <Text faded size="sm">
+                  <Text faded size="sm" className="flex items-center">
                     {d.posts.readMore}
-                    <AiOutlineArrowRight />
+                    <AiOutlineArrowRight className="ml-2" />
                   </Text>
                 </span>
-              </Footer>
+              </footer>
             </Card>
           )
         })}

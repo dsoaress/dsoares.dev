@@ -9,36 +9,34 @@ import { Social } from '@/components/Social'
 import { Text } from '@/components/Text'
 import { useData } from '@/hooks/useData'
 
-import { Avatar, Content, Overlay, Resume, Wrapper } from './styles'
-
 export function Header() {
   const { locale, d } = useData()
 
   return (
     <>
-      <Wrapper>
-        <Content>
-          <Logo width={80} height={80} />
+      <header className="absolute flex items-end justify-center w-full h-screen pb-24">
+        <div className="z-10 grid gap-8 py-8 text-center">
+          <Logo width={80} height={80} className="mx-auto" />
           <Heading>{d.profile.title}</Heading>
           <Text>{d.profile.description}</Text>
 
           {d.resume.showResume && (
-            <Resume>
+            <nav className="flex justify-center">
               <Button
                 className={`umami--click--resume-${locale}`}
-                onClick={() => saveAs(d.resume.file, `${d.profile.title}-resume.pdf`)}
+                icon={HiOutlineDocumentDuplicate}
+                onClick={() => saveAs(d.resume.file, `${d.profile.title}-resume-${locale}.pdf`)}
               >
-                <HiOutlineDocumentDuplicate />
                 {d.resume.title}
               </Button>
-            </Resume>
+            </nav>
           )}
 
           <Social />
-        </Content>
-      </Wrapper>
+        </div>
+      </header>
 
-      <Avatar>
+      <div className="relative h-screen">
         <Image
           src={d.profile.avatar.image}
           blurDataURL={d.profile.avatar.placeholder}
@@ -49,8 +47,8 @@ export function Header() {
           layout="fill"
           quality={100}
         />
-        <Overlay />
-      </Avatar>
+        <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 to-transparent" />
+      </div>
     </>
   )
 }

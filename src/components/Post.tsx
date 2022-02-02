@@ -4,18 +4,16 @@ import { Container } from '@/components/Container'
 import { Heading } from '@/components/Heading'
 import { PostType } from '@/types/post'
 
-import { Article, Cover, Header, Overlay, Wrapper } from './styles'
-
 type PostPros = {
   post: PostType
 }
 
 export function Post({ post }: PostPros) {
   return (
-    <Wrapper>
-      <Header>
+    <main>
+      <header className="flex items-center justify-center w-full h-screen">
         <Heading>{post.title}</Heading>
-        <Cover>
+        <div className="-z-10">
           <Image
             src={post.cover}
             // blurDataURL={d.profile.avatar.placeholder}
@@ -26,12 +24,14 @@ export function Post({ post }: PostPros) {
             quality={100}
             priority
           />
-          <Overlay />
-        </Cover>
-      </Header>
+          <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 to-transparent" />
+        </div>
+      </header>
       <Container>
-        {post.content && <Article dangerouslySetInnerHTML={{ __html: post.content }} />}
+        {post.content && (
+          <article className="mx-auto" dangerouslySetInnerHTML={{ __html: post.content }} />
+        )}
       </Container>
-    </Wrapper>
+    </main>
   )
 }

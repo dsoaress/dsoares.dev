@@ -7,8 +7,6 @@ import { Link } from '@/components/Link'
 import { Text } from '@/components/Text'
 import { useData } from '@/hooks/useData'
 
-import { Content, Wrapper } from './styles'
-
 type ErrorProps = {
   statusCode: number | string
   errorMessage: string
@@ -18,23 +16,20 @@ export function Error({ statusCode, errorMessage }: ErrorProps) {
   const { d } = useData()
 
   return (
-    <Wrapper>
+    <main className="fixed inset-0 flex items-center justify-center">
       <Container>
-        <Content>
+        <div className="text-center">
           <Heading size="xl" className="mb-6">
             {statusCode}
           </Heading>
 
-          <Text>{errorMessage}</Text>
+          <Text className="mb-4">{errorMessage}</Text>
 
           <Link href="/">
-            <Button>
-              <AiFillHome />
-              {d.errors.buttonLabel}
-            </Button>
+            <Button icon={AiFillHome}>{d.errors.buttonLabel}</Button>
           </Link>
-        </Content>
+        </div>
       </Container>
-    </Wrapper>
+    </main>
   )
 }

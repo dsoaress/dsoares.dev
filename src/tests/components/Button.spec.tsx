@@ -1,4 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react'
+import { FiActivity } from 'react-icons/fi'
 
 import { Button } from '@/components/Button'
 
@@ -22,6 +23,13 @@ describe('<Button />', () => {
     const element = screen.getByRole('button')
 
     expect(element).toHaveClass('test')
+  })
+
+  it('should render with icon', () => {
+    render(<Button icon={FiActivity}>Children</Button>)
+    const element = screen.getByRole('button')
+
+    expect(element).toMatchSnapshot()
   })
 
   it('should call onClick handler', () => {
