@@ -3,12 +3,10 @@
     "baseUrl": ".",
     "paths": {
       "@/components/*": ["./src/components/*"],
-      "@/config": ["./_data/configonfig"],
       "@/contexts/*": ["./src/contexts/*"],
       "@/data/*": ["./_data/*"],
       "@/hooks/*": ["./src/hooks/*"],
       "@/lib/*": ["./src/lib/*"],
-      "@/i18n": ["./_data/i18n/i18n"],
       "@/localesConfig": ["./locales.config"],
       "@/queries/*": ["./src/queries/*"],
       "@/services/*": ["./src/services/*"],
