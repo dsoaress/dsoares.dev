@@ -16,8 +16,6 @@ export function Post({ post }: PostPros) {
         <div className="-z-10">
           <Image
             src={post.cover}
-            // blurDataURL={d.profile.avatar.placeholder}
-            // placeholder="blur"
             alt={post.title}
             objectFit="cover"
             layout="fill"
@@ -29,7 +27,10 @@ export function Post({ post }: PostPros) {
       </header>
       <Container>
         {post.content && (
-          <article className="mx-auto" dangerouslySetInnerHTML={{ __html: post.content }} />
+          <article
+            className="prose prose-invert mx-auto -mt-44 lg:prose-xl"
+            dangerouslySetInnerHTML={{ __html: post.content }}
+          />
         )}
       </Container>
     </main>
