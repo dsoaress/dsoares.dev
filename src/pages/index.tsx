@@ -5,34 +5,50 @@ import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Posts } from '@/components/Posts'
 import { Projects } from '@/components/Projects'
-import { useData } from '@/hooks/useData'
 import { getAllPosts } from '@/queries/getAllPosts'
 import { getAllProjects } from '@/queries/getAllProjects'
-import { PostType } from '@/types/post'
-import { ProjectType } from '@/types/project'
+
+type Post = {
+  id: string
+  slug: string
+  title: string
+  description: string
+  cover: string
+  date: string
+  readingTime: number
+  content?: string
+}
+
+type Project = {
+  title: string
+  description: string
+  tags: string
+  repositoryUrl: string
+  repo: string
+  stars: number
+  cover: string
+}
 
 type IndexPageProps = {
-  posts: PostType[]
-  projects: ProjectType[]
+  posts: Post[]
+  projects: Project[]
 }
 
 export default function IndexPage({ posts, projects }: IndexPageProps) {
-  const { d } = useData()
-
   return (
     <>
       <Header />
       <Container>
-        {d.projects.showProjects && <Projects projects={projects} />}
-        {d.posts.showPosts && <Posts posts={posts} />}
-        {d.showFooter && <Footer />}
+        <Projects projects={projects} />
+        <Posts posts={posts} />
+        <Footer />
       </Container>
     </>
   )
 }
 
 export const getStaticProps: GetStaticProps = async ctx => {
-  const projects = await getAllProjects(ctx)
+  const projects = await getAllProjects()
   const posts = await getAllPosts(ctx)
 
   return {

@@ -6,22 +6,32 @@ import { Heading } from '@/components/Heading'
 import { Section } from '@/components/Section'
 import { Text } from '@/components/Text'
 import { useData } from '@/hooks/useData'
-import { PostType } from '@/types/post'
+
+type Post = {
+  id: string
+  slug: string
+  title: string
+  description: string
+  cover: string
+  date: string
+  readingTime: number
+  content?: string
+}
 
 type PostsProps = {
-  posts: PostType[]
+  posts: Post[]
 }
 
 export function Posts({ posts }: PostsProps) {
-  const { d } = useData()
+  const { c, t } = useData()
 
-  return (
+  return c.parameters.showPosts ? (
     <Section id="posts">
       <Heading as="h2" size="3xl" className="mb-6">
-        {d.posts.title}
+        {t.posts.title}
       </Heading>
       <Text faded size="xl">
-        {d.posts.description}
+        {t.posts.description}
       </Text>
 
       <CardList>
@@ -34,11 +44,11 @@ export function Posts({ posts }: PostsProps) {
               <Text>{post.description}</Text>
               <footer className="flex items-end justify-between">
                 <Text faded size="sm">
-                  {post.readingTime} {d.posts.readingTime}
+                  {post.readingTime} {t.posts.readingTime(post.readingTime)}
                 </Text>
                 <span>
                   <Text faded size="sm" className="flex items-center">
-                    {d.posts.readMore}
+                    {t.posts.readMore}
                     <AiOutlineArrowRight className="ml-2" />
                   </Text>
                 </span>
@@ -48,5 +58,5 @@ export function Posts({ posts }: PostsProps) {
         })}
       </CardList>
     </Section>
-  )
+  ) : null
 }

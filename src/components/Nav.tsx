@@ -2,14 +2,14 @@ import { Link, ScrollLink } from '@/components/Link'
 import { useData } from '@/hooks/useData'
 
 export function Nav() {
-  const { asPath, locale, locales, d } = useData()
+  const { asPath, locale, locales, c, t } = useData()
   const isHome = asPath === '/'
 
   return (
     <nav className="absolute inset-x-0 z-10 px-16 pt-12 pb-32 text-sm bg-gradient-to-b from-neutral-900 to-transparent">
       <ul className="flex justify-center list-none md:items-end">
-        {d.showNav &&
-          d.nav.map(navItem => {
+        {c.parameters.showNav &&
+          t.nav.map(navItem => {
             if (isHome && navItem.url === '/') return
 
             return (

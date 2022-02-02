@@ -13,7 +13,7 @@ type ErrorProps = {
 }
 
 export function Error({ statusCode, errorMessage }: ErrorProps) {
-  const { d } = useData()
+  const { t } = useData()
 
   return (
     <main className="fixed inset-0 flex items-center justify-center">
@@ -26,7 +26,7 @@ export function Error({ statusCode, errorMessage }: ErrorProps) {
           <Text className="mb-4">{errorMessage}</Text>
 
           <Link href="/">
-            <Button icon={AiFillHome}>{d.errors.buttonLabel}</Button>
+            <Button icon={AiFillHome}>{t.errors.buttonLabel}</Button>
           </Link>
         </div>
       </Container>
