@@ -6,23 +6,14 @@ import { Heading } from '@/components/Heading'
 import { Section } from '@/components/Section'
 import { Text } from '@/components/Text'
 import { useData } from '@/hooks/useData'
-
-type Project = {
-  title: string
-  description: string
-  tags: string
-  repositoryUrl: string
-  repo: string
-  stars: number
-  cover: string
-}
+import type { Project } from '@/types/project'
 
 type ProjectsProps = {
   projects: Project[]
 }
 
 export function Projects({ projects }: ProjectsProps) {
-  const { c, t } = useData()
+  const { locale, c, t } = useData()
   const { title, description } = t.projects
 
   return c.parameters.showProjects ? (
@@ -45,7 +36,7 @@ export function Projects({ projects }: ProjectsProps) {
             target="_blank"
             className={`umami--click--project-${project.title}`}
           >
-            <Text>{project.description}</Text>
+            <Text>{project.description[locale]}</Text>
             <footer className="flex items-end justify-between">
               <Text faded size="sm">
                 {project.tags}

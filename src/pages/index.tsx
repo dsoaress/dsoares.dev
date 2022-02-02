@@ -8,16 +8,7 @@ import { Projects } from '@/components/Projects'
 import { getAllPosts } from '@/queries/getAllPosts'
 import { getAllProjects } from '@/queries/getAllProjects'
 import type { Post } from '@/types/post'
-
-type Project = {
-  title: string
-  description: string
-  tags: string
-  repositoryUrl: string
-  repo: string
-  stars: number
-  cover: string
-}
+import type { Project } from '@/types/project'
 
 type IndexPageProps = {
   posts: Post[]
