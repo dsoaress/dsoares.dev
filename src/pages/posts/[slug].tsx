@@ -1,8 +1,8 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
 
 import { Post } from '@/components/Post'
-import { getPaths } from '@/queries/getPaths'
-import { getSinglePost } from '@/queries/getSinglePost'
+import { getPaths } from '@/lib/getPaths'
+import { getSinglePost } from '@/lib/getSinglePost'
 import type { Post as PostType } from '@/types/post'
 
 type PostPagePros = {

@@ -7,8 +7,6 @@
       "@/data/*": ["./_data/*"],
       "@/hooks/*": ["./src/hooks/*"],
       "@/lib/*": ["./src/lib/*"],
-      "@/localesConfig": ["./locales.config"],
-      "@/queries/*": ["./src/queries/*"],
       "@/services/*": ["./src/services/*"],
       "@/styles/*": ["./src/styles/*"],
       "@/types/*": ["./src/types/*"]
@@ -28,6 +26,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/posts/[uid]"],
   "exclude": ["node_modules"]
 }

@@ -1,12 +1,11 @@
 import fs from 'fs'
 
 import { config } from '@/data/config'
-import { i18n } from '@/localesConfig'
 
 export async function initialdata() {
-  i18n.locales.map(async locale => {
-    const startUrl = locale === i18n.defaultLocale ? '' : locale
-    const manifestDir = locale === i18n.defaultLocale ? './public' : `./public/${locale}`
+  config.locales.locales.map(async locale => {
+    const startUrl = locale === config.locales.defaultLocale ? '' : locale
+    const manifestDir = locale === config.locales.defaultLocale ? './public' : `./public/${locale}`
 
     const manifest = {
       name: config.profile.title,

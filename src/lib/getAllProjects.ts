@@ -1,3 +1,4 @@
+import { config } from '@/data/config'
 import { projects } from '@/data/projects'
 import { gql } from '@/lib/gql'
 import { github } from '@/services/github'
@@ -12,8 +13,6 @@ export type GithubResponse = {
 export async function getAllProjects() {
   return await Promise.all(
     projects.map(async project => {
-      const { GITHUB_USERNAME } = process.env
-
       const gitHubData = await github<GithubResponse>(
         gql`
           query ($owner: String!, $name: String!) {
@@ -25,7 +24,7 @@ export async function getAllProjects() {
         `,
         {
           variables: {
-            owner: GITHUB_USERNAME as string,
+            owner: config.githubUsername,
             name: project.repo
           }
         }
