@@ -2,10 +2,10 @@ import Image from 'next/image'
 
 import { Container } from '@/components/Container'
 import { Heading } from '@/components/Heading'
-import { PostType } from '@/types/post'
+import type { Post } from '@/types/post'
 
 type PostPros = {
-  post: PostType
+  post: Post
 }
 
 export function Post({ post }: PostPros) {

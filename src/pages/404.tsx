@@ -2,7 +2,7 @@ import { Error } from '@/components/Error'
 import { useData } from '@/hooks/useData'
 
 export default function NotFoundPage() {
-  const { d } = useData()
+  const { t } = useData()
 
-  return <Error errorMessage={d.errors.notFound} statusCode={404} />
+  return <Error errorMessage={t.errors.notFound} statusCode={404} />
 }

@@ -3,32 +3,30 @@ import Script from 'next/script'
 
 import { useData } from '@/hooks/useData'
 
-import tailwind from '../../tailwind.config'
-
 export function Seo() {
-  const { defaultLocale, locale, d } = useData()
+  const { defaultLocale, locale, c } = useData()
 
   return (
     <>
       <Script
         strategy="beforeInteractive"
-        src={d.umami.src}
-        data-website-id={d.umami.id}
-        data-domains={d.umami.domain}
+        src={c.analytics.src}
+        data-website-id={c.analytics.id}
+        data-domains={c.analytics.domain}
       />
 
       <Head>
-        <title>{d.profile.title}</title>
+        <title>{c.profile.title}</title>
         <meta name="robots" content="index,follow" />
         <meta name="googlebot" content="index,follow" />
-        <meta name="description" content={d.profile.description} />
-        <meta name="theme-color" content={tailwind.theme.extend.colors.neutral[900]} />
+        <meta name="description" content={c.profile.description[locale]} />
+        <meta name="theme-color" content={c.colors.neutral[900]} />
         <link
           rel="manifest"
           href={locale === defaultLocale ? '/manifest.json' : `/${locale}/manifest.json`}
         />
 
-        {d.favicons.map(favicon => {
+        {c.favicons.map(favicon => {
           const { size, src } = favicon
 
           if (size === '32') {

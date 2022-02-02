@@ -6,7 +6,6 @@
   "license": "MIT",
   "scripts": {
     "initialdata": "ts-node -r tsconfig-paths/register scripts/initialdata.ts",
-    "predev": "yarn initialdata",
     "dev": "next dev",
     "prebuild": "yarn initialdata",
     "build": "next build",
@@ -53,6 +52,7 @@
     "@types/prismic-dom": "2.1.1",
     "@types/react": "17.0.38",
     "@types/react-scroll": "1.8.3",
+    "@types/tailwindcss": "^3.0.5",
     "autoprefixer": "10.4.2",
     "babel-jest": "27.4.6",
     "babel-loader": "8.2.3",

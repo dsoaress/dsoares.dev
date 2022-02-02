@@ -20,12 +20,12 @@ const Icons = {
 }
 
 export function Social() {
-  const { d } = useData()
+  const { c } = useData()
 
   return (
     <div className="mx-auto">
       <ul className="inline-flex list-none">
-        {d.social.map(({ label, url }) => {
+        {c.social.map(({ label, url }) => {
           const Icon: IconType = Icons[label as keyof typeof Icons]
           return (
             <li

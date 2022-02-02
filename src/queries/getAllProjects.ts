@@ -1,46 +1,20 @@
-import { GetStaticPropsContext } from 'next'
-
+import { projects } from '@/data/projects'
 import { gql } from '@/lib/gql'
-import { formatLocale } from '@/lib/localeUtils'
 import { github } from '@/services/github'
-import { prismic } from '@/services/prismic'
-import { RepositoryResponse } from '@/types/project'
-import { ProjectsResponse } from '@/types/project'
 
-export async function getAllProjects({ locale }: GetStaticPropsContext) {
-  const formattedLocale = formatLocale(locale)
+export type GithubResponse = {
+  repository: {
+    url: string
+    stargazerCount: number
+  }
+}
 
-  const data = await prismic<ProjectsResponse>(
-    gql`
-      query ($lang: String!) {
-        allProjects(lang: $lang) {
-          edges {
-            node {
-              _meta {
-                id
-              }
-              title
-              description
-              tags
-              cover
-              repo
-            }
-          }
-        }
-      }
-    `,
-    {
-      variables: {
-        lang: formattedLocale
-      }
-    }
-  )
-
+export async function getAllProjects() {
   return await Promise.all(
-    data.allProjects.edges.map(async ({ node }) => {
+    projects.map(async project => {
       const { GITHUB_USERNAME } = process.env
 
-      const gitHubData = await github<RepositoryResponse>(
+      const gitHubData = await github<GithubResponse>(
         gql`
           query ($owner: String!, $name: String!) {
             repository(owner: $owner, name: $name) {
@@ -52,20 +26,15 @@ export async function getAllProjects({ locale }: GetStaticPropsContext) {
         {
           variables: {
             owner: GITHUB_USERNAME as string,
-            name: node.repo
+            name: project.repo
           }
         }
       )
 
       return {
-        id: node._meta.id,
-        title: node.title,
-        description: node.description,
-        tags: node.tags,
+        ...project,
         repositoryUrl: gitHubData.repository.url,
-        repo: node.repo,
-        stars: gitHubData.repository.stargazerCount,
-        cover: node.cover.url
+        stars: gitHubData.repository.stargazerCount
       }
     })
   )

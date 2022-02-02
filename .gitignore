@@ -5,8 +5,9 @@ node_modules
 
 # next.js
 .next
-data/
-public/
+public/sw.js
+public/workbox-*.js
+public/**/manifest.json
 
 # jest
 coverage
