@@ -6,17 +6,7 @@ import { Heading } from '@/components/Heading'
 import { Section } from '@/components/Section'
 import { Text } from '@/components/Text'
 import { useData } from '@/hooks/useData'
-
-type Post = {
-  id: string
-  slug: string
-  title: string
-  description: string
-  cover: string
-  date: string
-  readingTime: number
-  content?: string
-}
+import type { Post } from '@/types/post'
 
 type PostsProps = {
   posts: Post[]

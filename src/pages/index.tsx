@@ -7,17 +7,7 @@ import { Posts } from '@/components/Posts'
 import { Projects } from '@/components/Projects'
 import { getAllPosts } from '@/queries/getAllPosts'
 import { getAllProjects } from '@/queries/getAllProjects'
-
-type Post = {
-  id: string
-  slug: string
-  title: string
-  description: string
-  cover: string
-  date: string
-  readingTime: number
-  content?: string
-}
+import type { Post } from '@/types/post'
 
 type Project = {
   title: string
