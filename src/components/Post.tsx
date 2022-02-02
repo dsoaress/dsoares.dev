@@ -11,7 +11,7 @@ type PostPros = {
 export function Post({ post }: PostPros) {
   return (
     <main>
-      <header className="flex items-center justify-center w-full h-screen">
+      <header className="flex h-screen w-full items-center justify-center">
         <Heading>{post.title}</Heading>
         <div className="-z-10">
           <Image

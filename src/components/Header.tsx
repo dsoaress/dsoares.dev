@@ -14,7 +14,7 @@ export function Header() {
 
   return (
     <>
-      <header className="absolute flex items-end justify-center w-full h-screen pb-24">
+      <header className="absolute flex h-screen w-full items-end justify-center pb-24">
         <div className="z-10 grid gap-8 py-8 text-center">
           <Logo width={80} height={80} className="mx-auto" />
           <Heading>{c.profile.title}</Heading>
