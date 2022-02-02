@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`<Text /> Renders with children 1`] = `
-<p
-  class="c-IbAAC"
->
-  Children
-</p>
-`;

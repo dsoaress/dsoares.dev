@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Link /> Renders with active className 1`] = `
+<a
+  class="z-10 font-medium no-underline transition-colors text-neutral-50 pointer hover:text-primary-500 active:text-primary-600 text-primary-500"
+  href="/#"
+>
+  Children
+</a>
+`;
+
+exports[`<Link /> Renders with children 1`] = `
+<a
+  class="z-10 font-medium no-underline transition-colors text-neutral-50 pointer hover:text-primary-500 active:text-primary-600"
+  href="/#"
+>
+  Children
+</a>
+`;
