@@ -10,9 +10,8 @@ import { github } from '@/services/github'
 
 import { formatDate } from './formatDate'
 
-export type GithubResponse = {
+type GithubResponse = {
   repository: {
-    url: string
     stargazerCount: number
   }
 }
@@ -67,7 +66,6 @@ export async function getAllProjects() {
         gql`
           query ($owner: String!, $name: String!) {
             repository(owner: $owner, name: $name) {
-              url
               stargazerCount
             }
           }
@@ -82,8 +80,7 @@ export async function getAllProjects() {
 
       return {
         ...project,
-        repositoryUrl: gitHubData.repository.url,
-        stars: gitHubData.repository.stargazerCount
+        stars: gitHubData?.repository.stargazerCount || 0
       }
     })
   )

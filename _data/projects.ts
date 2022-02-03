@@ -7,6 +7,7 @@ export const projects: Project[] = [
     },
     tags: 'React, React Query, TypeScript',
     repo: 'react-query-example',
+    repositoryUrl: 'https://github.com/dsoaress/react-query-example',
     cover: '/assets/projects/react-query-example.png'
   },
   {
@@ -17,6 +18,7 @@ export const projects: Project[] = [
     },
     tags: 'TypeScript, Next.js, Stripe, Faunadb, Prismic',
     repo: 'react-news',
+    repositoryUrl: 'https://github.com/dsoaress/react-news',
     cover: '/assets/projects/react-news.jpeg'
   },
   {
@@ -27,6 +29,7 @@ export const projects: Project[] = [
     },
     tags: 'TypeScript, Next.js',
     repo: 'dsoares.me',
+    repositoryUrl: 'https://github.com/dsoaress/dsoares.me',
     cover: '/assets/projects/dsoares.jpeg'
   }
 ]
@@ -39,5 +42,6 @@ type Project = {
   }
   tags: string
   repo: string
+  repositoryUrl: string
   cover: string
 }
