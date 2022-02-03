@@ -1,5 +1,15 @@
 export const projects = [
   {
+    title: 'React Query University app',
+    description: {
+      en: 'This application is a practical demonstration of the power of React Query',
+      pt: 'Este aplicativo é uma demonstração prática do poder do React Query'
+    },
+    tags: 'React, React Query, TypeScript',
+    repo: 'react-query-example',
+    cover: '/assets/projects/react-query-example.png'
+  },
+  {
     title: 'React News',
     description: {
       en: 'Next.js blog with Paywall and integration with Stripe, Faunadb and Prismic.',
