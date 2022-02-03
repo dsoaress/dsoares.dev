@@ -1,4 +1,6 @@
-export const pt = {
+import type { I18n } from '@/types/i18n'
+
+export const pt: I18n = {
   nav: [
     {
       label: 'Início',

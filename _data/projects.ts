@@ -1,4 +1,6 @@
-export const projects: Project[] = [
+import type { Project } from '@/types/project'
+
+export const projects: Omit<Project, 'stars'>[] = [
   {
     title: 'React Query University app',
     description: {
@@ -33,15 +35,3 @@ export const projects: Project[] = [
     cover: '/assets/projects/dsoares.jpeg'
   }
 ]
-
-type Project = {
-  title: string
-  description: {
-    en: string
-    pt: string
-  }
-  tags: string
-  repo: string
-  repositoryUrl: string
-  cover: string
-}

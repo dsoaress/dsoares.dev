@@ -1,4 +1,6 @@
-export const en = {
+import type { I18n } from '@/types/i18n'
+
+export const en: I18n = {
   nav: [
     { label: 'Home', url: '/' },
     { label: 'Projects', url: 'projects' },

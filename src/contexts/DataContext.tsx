@@ -4,17 +4,15 @@ import { createContext } from 'react'
 
 import { config } from '@/data/config'
 import { i18n } from '@/data/i18n'
-
-type Data = typeof i18n.en | typeof i18n.pt
-type Config = typeof config
+import type { I18n } from '@/types/i18n'
 
 type DataContextProps = {
   asPath: string
   defaultLocale: string
   locale: 'en' | 'pt'
   locales: string[]
-  t: Data
-  c: Config
+  t: I18n
+  c: typeof config
 }
 
 type RouterProps = Omit<DataContextProps, 't' | 'c'>
