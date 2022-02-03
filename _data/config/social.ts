@@ -9,7 +9,7 @@ export const social = [
   },
   {
     label: 'LinkedIn',
-    url: 'https://LinkedIn/in/dsoaress'
+    url: 'https://www.linkedin.com/in/dsoaress'
   },
   {
     label: 'Dev',
