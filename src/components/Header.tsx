@@ -1,9 +1,11 @@
 import { saveAs } from 'file-saver'
 import Image from 'next/image'
+import { BsArrowDownShort } from 'react-icons/bs'
 import { HiOutlineDocumentDuplicate } from 'react-icons/hi'
 
 import { Button } from '@/components/Button'
 import { Heading } from '@/components/Heading'
+import { ScrollLink } from '@/components/Link'
 import { Logo } from '@/components/Logo'
 import { Social } from '@/components/Social'
 import { Text } from '@/components/Text'
@@ -33,6 +35,11 @@ export function Header() {
           )}
 
           <Social />
+          <div className="mx-auto mt-6">
+            <ScrollLink to="projects">
+              <BsArrowDownShort className="h-6 w-6 animate-bounce" />
+            </ScrollLink>
+          </div>
         </div>
       </header>
 
