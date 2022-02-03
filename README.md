@@ -12,8 +12,7 @@ cd dsoares.me && yarn && yarn dev
 ## Built Using
 
 - [Next.js](https://nextjs.org)
-- [Stitches](https://stitches.dev)
-- [Prismic (With GraphQl)](https://prismic.io)
+- [Tailwind](https://tailwindcss.com)
 - [TypeScript](https://www.typescriptlang.org)
 
 ![Lighthouse](./.github/lighthouse.gif)
