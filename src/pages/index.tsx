@@ -5,8 +5,7 @@ import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Posts } from '@/components/Posts'
 import { Projects } from '@/components/Projects'
-import { getAllPosts } from '@/queries/getAllPosts'
-import { getAllProjects } from '@/queries/getAllProjects'
+import { getAllPosts, getAllProjects } from '@/lib/api'
 import type { Post } from '@/types/post'
 import type { Project } from '@/types/project'
 
@@ -28,9 +27,9 @@ export default function IndexPage({ posts, projects }: IndexPageProps) {
   )
 }
 
-export const getStaticProps: GetStaticProps = async ctx => {
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
   const projects = await getAllProjects()
-  const posts = await getAllPosts(ctx)
+  const posts = getAllPosts(locale as string)
 
   return {
     props: {

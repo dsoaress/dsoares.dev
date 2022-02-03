@@ -18,6 +18,6 @@ export async function github<T>(query: string, { variables }: Variables = {}) {
     })
   } catch (error) {
     console.log(error)
-    throw new Error('Failed to fetch GitHub API')
+    throw new Error('failed to fetch GitHub API')
   }
 }

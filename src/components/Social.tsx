@@ -29,7 +29,7 @@ export function Social() {
           const Icon: IconType = Icons[label as keyof typeof Icons]
           return (
             <li
-              className="mr-6 transition-transform transform last:mr-0 hover:scale-110 active:scale-95"
+              className="mr-6 transform transition-transform last:mr-0 hover:scale-110 active:scale-95"
               key={url}
             >
               <Link

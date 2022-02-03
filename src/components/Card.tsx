@@ -13,10 +13,10 @@ type CardProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
 
 export function Card({ children, image, title, href, ...props }: CardProps) {
   return (
-    <div className="relative transition-all duration-300 border border-solid rounded-md border-neutral-800 hover:bg-neutral-800 hover:shadow-md">
+    <div className="relative rounded-md border border-solid border-neutral-800 transition-all duration-300 hover:bg-neutral-800 hover:shadow-md">
       <CardLink href={href} aria-label={title} {...props} />
 
-      <div className="relative hidden h-64 rounded-tl-md rounded-tr-md">
+      <div className="relative h-64 overflow-hidden rounded-tl-md rounded-tr-md">
         <Image src={image} alt={title} objectFit="cover" layout="fill" />
       </div>
 

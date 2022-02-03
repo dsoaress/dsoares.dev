@@ -10,4 +10,9 @@
   body {
     @apply text-base font-sans font-normal text-neutral-50 bg-neutral-900;
   }
+
+  a {
+    cursor: pointer !important;
+    @apply z-10 font-medium no-underline transition-colors text-neutral-50 hover:text-primary-500 active:text-primary-600;
+  }
 }

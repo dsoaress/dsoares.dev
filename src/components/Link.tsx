@@ -10,14 +10,11 @@ export type LinkProps = {
   locale?: string
 } & AnchorHTMLAttributes<HTMLAnchorElement>
 
-const baseStyles =
-  'z-10 font-medium no-underline transition-colors text-neutral-50 pointer hover:text-primary-500 active:text-primary-600'
-
 export function Link({ active = false, href, className, locale, ...props }: LinkProps) {
   return (
     <NextLink href={href} locale={locale}>
       <a
-        className={cn(baseStyles, className, {
+        className={cn(className, {
           'text-primary-500': active
         })}
         {...props}
@@ -26,10 +23,14 @@ export function Link({ active = false, href, className, locale, ...props }: Link
   )
 }
 
-export function ScrollLink({ to }: ReactScrollLinkProps) {
-  return <ReactScroll to={to} className={baseStyles} smooth={true} offset={-76} />
+export function ScrollLink({ to, children }: ReactScrollLinkProps) {
+  return (
+    <ReactScroll to={to} smooth={true} offset={-76}>
+      {children}
+    </ReactScroll>
+  )
 }
 
-export function CardLink(props: LinkProps) {
-  return <Link className="absolute inset-0" {...props} />
+export function CardLink({ className, ...props }: LinkProps) {
+  return <Link className={cn('absolute inset-0', className)} {...props} />
 }

@@ -9,7 +9,7 @@ type HeadingProps = {
 export function Heading({ as: Tag = 'h1', className, size = '5xl', ...props }: HeadingProps) {
   return (
     <Tag
-      className={cn('font-bold leading-4 text-neutral-50 m-0', className, {
+      className={cn('m-0 font-bold leading-4 text-neutral-50', className, {
         'text-xs': size === 'xs',
         'text-sm leading-5': size === 'sm',
         'text-base leading-6': size === 'md',

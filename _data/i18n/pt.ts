@@ -25,7 +25,7 @@ export const pt = {
     title: 'Posts',
     description:
       'Aqui estão os posts mais recentes. Costumo escrever sobre tecnologias web e assuntos relacionados.',
-    readingTime: (time: number) => `minuto${time > 1 && 's'} de leitura`,
+    readingTime: (time: number) => `minuto${time > 1 ? 's' : ''} de leitura`,
     readMore: 'leia mais'
   },
   errors: {
@@ -33,5 +33,5 @@ export const pt = {
     internalError: 'Erro interno',
     buttonLabel: 'Voltar à página inicial'
   },
-  footer: 'Feito com 💚 e'
+  footer: 'Feito com 💚 e Next.js'
 }

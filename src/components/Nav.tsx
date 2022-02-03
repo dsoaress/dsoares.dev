@@ -6,8 +6,8 @@ export function Nav() {
   const isHome = asPath === '/'
 
   return (
-    <nav className="absolute inset-x-0 z-10 px-16 pt-12 pb-32 text-sm bg-gradient-to-b from-neutral-900 to-transparent">
-      <ul className="flex justify-center list-none md:items-end">
+    <nav className="absolute inset-x-0 z-10 bg-gradient-to-b from-neutral-900 to-transparent px-16 pt-12 pb-32 text-sm">
+      <ul className="flex list-none justify-center md:justify-end">
         {c.parameters.showNav &&
           t.nav.map(navItem => {
             if (isHome && navItem.url === '/') return
@@ -26,7 +26,7 @@ export function Nav() {
           })}
 
         <li className="mr-6">
-          <ul className="flex justify-center list-none">
+          <ul className="flex list-none justify-center">
             {locales.map(localeItem => {
               return (
                 <li className="mr-2 last:mr-0" key={localeItem}>

@@ -1,4 +1,4 @@
-export const projects = [
+export const projects: Project[] = [
   {
     title: 'React Query University app',
     description: {
@@ -30,3 +30,14 @@ export const projects = [
     cover: '/assets/projects/dsoares.jpeg'
   }
 ]
+
+type Project = {
+  title: string
+  description: {
+    en: string
+    pt: string
+  }
+  tags: string
+  repo: string
+  cover: string
+}

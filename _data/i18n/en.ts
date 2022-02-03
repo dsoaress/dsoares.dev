@@ -16,7 +16,7 @@ export const en = {
     title: 'Posts',
     description:
       'Here are the most recent posts. I often write about web technologies and related topics.',
-    readingTime: (time: number) => `minute${time > 1 && 's'} of reading`,
+    readingTime: (time: number) => `minute${time > 1 ? 's' : ''} of reading`,
     readMore: 'read more'
   },
   errors: {
@@ -24,5 +24,5 @@ export const en = {
     internalError: 'Internal error',
     buttonLabel: 'Back to home'
   },
-  footer: 'Made with 💚 and'
+  footer: 'Made with 💚 and Next.js'
 }
