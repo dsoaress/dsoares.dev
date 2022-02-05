@@ -1,8 +1,4 @@
 export type I18n = {
-  nav: {
-    label: string
-    url: string
-  }[]
   resume: {
     title: string
     file: string
@@ -10,12 +6,6 @@ export type I18n = {
   projects: {
     title: string
     description: string
-  }
-  posts: {
-    title: string
-    description: string
-    readingTime: (time: number) => string
-    readMore: string
   }
   errors: {
     notFound: string

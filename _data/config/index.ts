@@ -2,9 +2,10 @@ import tailwindConfig from '../../tailwind.config'
 import { analytics } from './analytics'
 import { favicons } from './favicons'
 import locales from './locales'
-import { parameters } from './parameters'
 import { profile } from './profile'
 import { social } from './social'
+
+const isDev = process.env.NODE_ENV === 'development'
 
 export const config = {
   analytics,
@@ -12,7 +13,7 @@ export const config = {
   favicons,
   githubUsername: 'dsoaress',
   locales,
-  parameters,
   profile,
-  social
+  social,
+  showResume: isDev ? true : false
 }

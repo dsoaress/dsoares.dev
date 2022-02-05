@@ -16,14 +16,14 @@ export function Header() {
 
   return (
     <>
-      <header className="absolute flex h-screen w-full items-end justify-center pb-24">
-        <div className="z-10 grid gap-8 py-8 text-center">
+      <header className="absolute flex h-screen w-full items-end justify-center pb-8">
+        <div className="z-10 grid gap-8 p-8 text-center">
           <Logo width={80} height={80} className="mx-auto" />
           <Heading>{c.profile.title}</Heading>
           <Text>{c.profile.description[locale]}</Text>
 
-          {c.parameters.showResume && (
-            <nav className="flex justify-center">
+          {c.showResume && (
+            <div className="flex justify-center">
               <Button
                 className={`umami--click--resume-${locale}`}
                 icon={HiOutlineDocumentDuplicate}
@@ -31,7 +31,7 @@ export function Header() {
               >
                 {t.resume.title}
               </Button>
-            </nav>
+            </div>
           )}
 
           <Social />

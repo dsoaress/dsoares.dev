@@ -1,20 +1,6 @@
 import type { I18n } from '@/types/i18n'
 
 export const pt: I18n = {
-  nav: [
-    {
-      label: 'Início',
-      url: '/'
-    },
-    {
-      label: 'Projetos',
-      url: 'projects'
-    },
-    {
-      label: 'Posts',
-      url: 'posts'
-    }
-  ],
   resume: {
     title: 'Currículo',
     file: '/assets/resume-pt.pdf'
@@ -22,13 +8,6 @@ export const pt: I18n = {
   projects: {
     title: 'Projetos',
     description: 'Alguns dos meus projetos no GitHub.'
-  },
-  posts: {
-    title: 'Posts',
-    description:
-      'Aqui estão os posts mais recentes. Costumo escrever sobre tecnologias web e assuntos relacionados.',
-    readingTime: (time: number) => `minuto${time > 1 ? 's' : ''} de leitura`,
-    readMore: 'leia mais'
   },
   errors: {
     notFound: 'Não encontrado',

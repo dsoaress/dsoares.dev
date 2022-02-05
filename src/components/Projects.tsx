@@ -16,7 +16,7 @@ export function Projects({ projects }: ProjectsProps) {
   const { locale, c, t } = useData()
   const { title, description } = t.projects
 
-  return c.parameters.showProjects ? (
+  return (
     <Section id="projects">
       <Heading as="h2" size="3xl" className="mb-6">
         {title}
@@ -54,5 +54,5 @@ export function Projects({ projects }: ProjectsProps) {
         ))}
       </CardList>
     </Section>
-  ) : null
+  )
 }

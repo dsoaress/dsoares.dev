@@ -1,11 +1,6 @@
 import type { I18n } from '@/types/i18n'
 
 export const en: I18n = {
-  nav: [
-    { label: 'Home', url: '/' },
-    { label: 'Projects', url: 'projects' },
-    { label: 'Posts', url: 'posts' }
-  ],
   resume: {
     title: 'Resume',
     file: '/assets/resume-en.pdf'
@@ -13,13 +8,6 @@ export const en: I18n = {
   projects: {
     title: 'Projects',
     description: 'Some of my projects on GitHub.'
-  },
-  posts: {
-    title: 'Posts',
-    description:
-      'Here are the most recent posts. I often write about web technologies and related topics.',
-    readingTime: (time: number) => `minute${time > 1 ? 's' : ''} of reading`,
-    readMore: 'read more'
   },
   errors: {
     notFound: 'Not found',
