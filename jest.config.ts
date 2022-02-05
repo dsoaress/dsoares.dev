@@ -12,7 +12,7 @@ const config: Config.InitialOptions = {
   moduleNameMapper: {
     '^@/components(.*)$': '<rootDir>/src/components$1',
     '^@/contexts(.*)$': '<rootDir>/src/contexts$1',
-    '^@/data(.*)$': '<rootDir>/data$1',
+    '^@/data(.*)$': '<rootDir>/_data$1',
     '^@/hooks(.*)$': '<rootDir>/src/hooks$1',
     '^@/lib(.*)$': '<rootDir>/src/lib$1',
     '^@/services(.*)$': '<rootDir>/src/services$1',
