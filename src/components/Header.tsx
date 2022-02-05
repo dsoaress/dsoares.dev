@@ -18,7 +18,7 @@ export function Header() {
     <>
       <header className="absolute flex h-screen w-full items-end justify-center pb-8">
         <div className="z-10 grid gap-8 p-8 text-center">
-          <Logo width={80} height={80} className="mx-auto" />
+          <Logo width={80} height={80} className="mx-auto hidden sm:block" />
           <Heading>{c.profile.title}</Heading>
           <Text>{c.profile.description[locale]}</Text>
 

@@ -11,7 +11,7 @@ exports[`<Error /> should matches snapshot 1`] = `
       class="text-center"
     >
       <h1
-        class="m-0 font-bold leading-4 text-neutral-50 mb-6 text-xl leading-8"
+        class="m-0 font-bold text-neutral-50 mb-6 text-xl leading-8"
       >
         404
       </h1>

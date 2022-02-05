@@ -4,7 +4,7 @@ import Script from 'next/script'
 import { useData } from '@/hooks/useData'
 
 export function Seo() {
-  const { defaultLocale, locale, c } = useData()
+  const { locale, c } = useData()
 
   return (
     <>
@@ -21,10 +21,7 @@ export function Seo() {
         <meta name="googlebot" content="index,follow" />
         <meta name="description" content={c.profile.description[locale]} />
         <meta name="theme-color" content={c.colors.neutral[900]} />
-        <link
-          rel="manifest"
-          href={locale === defaultLocale ? '/manifest.json' : `/${locale}/manifest.json`}
-        />
+        <link rel="manifest" href={`/${locale}/manifest.json`} />
 
         {c.favicons.map(favicon => {
           const { size, src } = favicon

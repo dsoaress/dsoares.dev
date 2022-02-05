@@ -8,7 +8,6 @@ import type { I18n } from '@/types/i18n'
 
 type DataContextProps = {
   asPath: string
-  defaultLocale: string
   locale: 'en' | 'pt'
   locales: string[]
   t: I18n
@@ -24,12 +23,12 @@ type DataProviderProps = {
 export const DataContext = createContext({} as DataContextProps)
 
 export function DataProvider({ children }: DataProviderProps) {
-  const { asPath, defaultLocale, locale, locales } = useRouter() as RouterProps
+  const { asPath, locale, locales } = useRouter() as RouterProps
   const t = i18n[locale]
   const c = config
 
   return (
-    <DataContext.Provider value={{ asPath, defaultLocale, locale, locales, t, c }}>
+    <DataContext.Provider value={{ asPath, locale, locales, t, c }}>
       {children}
     </DataContext.Provider>
   )

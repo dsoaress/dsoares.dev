@@ -5,7 +5,7 @@ import { config } from '@/data/config'
 function initialdata() {
   config.locales.locales.map(locale => {
     const startUrl = locale === config.locales.defaultLocale ? '' : locale
-    const manifestDir = locale === config.locales.defaultLocale ? './public' : `./public/${locale}`
+    const manifestDir = `./public/${locale}`
 
     const manifest = {
       name: config.profile.title,

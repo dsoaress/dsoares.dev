@@ -1,4 +1,6 @@
-export const social = [
+import { Social } from '@/types/social'
+
+export const social: Social[] = [
   {
     label: 'Instagram',
     url: 'https://instagram.com/dansoares'
