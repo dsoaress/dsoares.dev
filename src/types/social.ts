@@ -1,4 +1,4 @@
-import { Icons } from '@/components/Icons'
+import { Icons } from '@/components/Social'
 
 export type Social = {
   label: keyof typeof Icons

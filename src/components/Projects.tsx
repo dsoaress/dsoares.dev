@@ -1,8 +1,8 @@
+import Image from 'next/image'
 import { AiOutlineStar } from 'react-icons/ai'
 
-import { Card } from '@/components/Card'
-import { CardList } from '@/components/CardList'
 import { Heading } from '@/components/Heading'
+import { CardLink } from '@/components/Link'
 import { Section } from '@/components/Section'
 import { Text } from '@/components/Text'
 import { useData } from '@/hooks/useData'
@@ -13,7 +13,7 @@ type ProjectsProps = {
 }
 
 export function Projects({ projects }: ProjectsProps) {
-  const { locale, c, t } = useData()
+  const { locale, t } = useData()
   const { title, description } = t.projects
 
   return (
@@ -25,34 +25,47 @@ export function Projects({ projects }: ProjectsProps) {
         {description}
       </Text>
 
-      <CardList>
+      <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, i) => (
-          <Card
+          <div
             key={i}
-            image={project.cover}
-            title={project.title}
-            href={project.repositoryUrl}
-            rel="noopener noreferrer"
-            target="_blank"
-            className={`umami--click--project-${project.title}`}
+            className="relative rounded-md border border-solid border-neutral-800 transition-all duration-300 hover:bg-neutral-800 hover:shadow-md"
           >
-            <Text>{project.description[locale]}</Text>
-            <footer className="flex items-end justify-between">
-              <Text faded size="sm">
-                {project.tags}
-              </Text>
-              <span>
-                {project.stars > 0 && (
-                  <Text faded size="sm" className="flex items-center">
-                    <AiOutlineStar className="mr-1" />
-                    {project.stars}
-                  </Text>
-                )}
-              </span>
-            </footer>
-          </Card>
+            <CardLink
+              href={project.repositoryUrl}
+              aria-label={project.title}
+              rel="noopener noreferrer"
+              target="_blank"
+              className={`umami--click--project-${project.title}`}
+            />
+
+            <div className="relative h-64 overflow-hidden rounded-tl-md rounded-tr-md">
+              <Image src={project.cover} alt={project.title} objectFit="cover" layout="fill" />
+            </div>
+
+            <div className="grid gap-4 p-6">
+              <Heading as="h3" size="lg">
+                {project.title}
+              </Heading>
+
+              <Text>{project.description[locale]}</Text>
+              <footer className="flex items-end justify-between">
+                <Text faded size="sm">
+                  {project.tags}
+                </Text>
+                <span>
+                  {project.stars > 0 && (
+                    <Text faded size="sm" className="flex items-center">
+                      <AiOutlineStar className="mr-1" />
+                      {project.stars}
+                    </Text>
+                  )}
+                </span>
+              </footer>
+            </div>
+          </div>
         ))}
-      </CardList>
+      </div>
     </Section>
   )
 }

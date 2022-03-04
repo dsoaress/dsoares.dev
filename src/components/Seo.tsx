@@ -23,15 +23,15 @@ export function Seo() {
         <meta name="theme-color" content={c.colors.neutral[900]} />
         <link rel="manifest" href={`/${locale}/manifest.json`} />
 
-        {c.favicons.map(favicon => {
-          const { size, src } = favicon
-
-          if (size === '32') {
-            return <link rel="icon" href={src} type="image/png" key={size} />
-          }
-
-          return <link rel="apple-touch-icon" sizes={`${size}x${size}`} href={src} key={size} />
-        })}
+        {c.favicons.map(({ size, src }) => (
+          <link
+            rel={size === '32' ? 'icon' : 'apple-touch-icon'}
+            sizes={`${size}x${size}`}
+            href={src}
+            type="image/png"
+            key={size}
+          />
+        ))}
       </Head>
     </>
   )
