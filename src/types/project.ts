@@ -7,6 +7,7 @@ export type Project = {
   tags: string
   repositoryUrl: string
   repo: string
+  forks: number
   stars: number
   cover: string
 }

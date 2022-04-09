@@ -6,6 +6,7 @@ import { github } from '@/services/github'
 
 type GithubResponse = {
   repository: {
+    forkCount: number
     stargazerCount: number
   }
 }
@@ -17,6 +18,7 @@ export async function getAllProjects() {
         gql`
           query ($owner: String!, $name: String!) {
             repository(owner: $owner, name: $name) {
+              forkCount
               stargazerCount
             }
           }
@@ -31,6 +33,7 @@ export async function getAllProjects() {
 
       return {
         ...project,
+        forks: gitHubData?.repository.forkCount,
         stars: gitHubData?.repository.stargazerCount || 0
       }
     })

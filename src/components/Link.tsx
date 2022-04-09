@@ -7,6 +7,7 @@ type LinkProps = {
   active?: boolean
   href: string
   locale?: string
+  external?: boolean
 } & AnchorHTMLAttributes<HTMLAnchorElement>
 
 type ScrollLinkProps = {
@@ -15,10 +16,15 @@ type ScrollLinkProps = {
   children: ReactNode
 }
 
-export function Link({ active = false, href, className, locale, ...props }: LinkProps) {
+export function Link({ active = false, href, className, locale, external, ...props }: LinkProps) {
   return (
     <NextLink href={href} locale={locale}>
-      <a className={cn(className, { 'text-primary-500': active })} {...props} />
+      <a
+        className={cn(className, { 'text-primary-500': active })}
+        rel={external ? 'noopener noreferrer' : undefined}
+        target={external ? '_blank' : undefined}
+        {...props}
+      />
     </NextLink>
   )
 }

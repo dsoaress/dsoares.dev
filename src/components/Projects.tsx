@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import { AiOutlineStar } from 'react-icons/ai'
+import type { IconType } from 'react-icons'
+import { AiOutlineFork, AiOutlineStar } from 'react-icons/ai'
 
 import { Heading } from '@/components/Heading'
 import { CardLink } from '@/components/Link'
@@ -10,6 +11,22 @@ import type { Project } from '@/types/project'
 
 type ProjectsProps = {
   projects: Project[]
+}
+
+type InfoMetadataProps = {
+  icon: IconType
+  info: number
+}
+
+function InfoMetadata({ icon: Icon, info }: InfoMetadataProps) {
+  return info > 0 ? (
+    <span>
+      <Text faded size="sm" className="flex items-center">
+        <Icon className="mr-0.5" />
+        {info}
+      </Text>
+    </span>
+  ) : null
 }
 
 export function Projects({ projects }: ProjectsProps) {
@@ -34,9 +51,8 @@ export function Projects({ projects }: ProjectsProps) {
             <CardLink
               href={project.repositoryUrl}
               aria-label={project.title}
-              rel="noopener noreferrer"
-              target="_blank"
               className={`umami--click--project-${project.title}`}
+              external
             />
 
             <div className="relative h-64 overflow-hidden rounded-tl-md rounded-tr-md">
@@ -53,14 +69,11 @@ export function Projects({ projects }: ProjectsProps) {
                 <Text faded size="sm">
                   {project.tags}
                 </Text>
-                <span>
-                  {project.stars > 0 && (
-                    <Text faded size="sm" className="flex items-center">
-                      <AiOutlineStar className="mr-1" />
-                      {project.stars}
-                    </Text>
-                  )}
-                </span>
+
+                <div className="ml-3 flex gap-3">
+                  <InfoMetadata icon={AiOutlineFork} info={project.forks} />
+                  <InfoMetadata icon={AiOutlineStar} info={project.stars} />
+                </div>
               </footer>
             </div>
           </div>
