@@ -16,7 +16,7 @@ export function Header() {
 
   return (
     <>
-      <header className="absolute flex h-screen w-full items-end justify-center pb-8">
+      <header className="absolute flex h-screen w-full items-end justify-center pb-20 md:pb-8">
         <div className="z-10 grid gap-8 p-8 text-center">
           <Logo width={80} height={80} className="mx-auto hidden sm:block" />
           <Heading>{c.profile.title}</Heading>
@@ -35,7 +35,7 @@ export function Header() {
           )}
 
           <Social />
-          <div className="mx-auto mt-6">
+          <div className="mx-auto mt-2 md:mt-6">
             <ScrollLink to="projects">
               <BsArrowDownShort className="h-6 w-6 animate-bounce" />
             </ScrollLink>
