@@ -17,7 +17,7 @@ export function Text({
   return (
     <Tag
       className={cn('font-normal text-neutral-50', className, {
-        'text-neutral-500': faded,
+        'text-neutral-400': faded,
         'text-xs': size === 'xs',
         'text-sm leading-5': size === 'sm',
         'text-base leading-6': size === 'md',

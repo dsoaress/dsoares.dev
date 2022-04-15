@@ -30,7 +30,7 @@ export function Link({ active = false, href, className, locale, external, ...pro
 }
 
 export function ScrollLink(props: ScrollLinkProps) {
-  return <ReactScroll smooth={true} offset={-76} {...props} />
+  return <ReactScroll smooth={true} offset={-76} href="/" aria-hidden {...props} />
 }
 
 export function CardLink({ className, ...props }: LinkProps) {

@@ -28,7 +28,7 @@ describe('<Text />', () => {
     render(<Text faded>Children</Text>)
     const element = screen.getByText('Children')
 
-    expect(element).toHaveClass('text-neutral-500')
+    expect(element).toHaveClass('text-neutral-400')
   })
 
   it('should render with with xs variant', () => {

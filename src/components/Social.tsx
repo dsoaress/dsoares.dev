@@ -30,9 +30,8 @@ export function Social() {
               <Link
                 href={url}
                 aria-label={label}
-                rel="noopener noreferrer"
-                target="_blank"
                 className={`umami--click--${label} text-neutral-50`}
+                external
               >
                 <Icon size={22} />
               </Link>

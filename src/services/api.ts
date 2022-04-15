@@ -16,7 +16,8 @@ export async function getAvatar() {
   const { base64: blurDataURL, img } = await getPlaiceholder(config.profile.avatar, { size: 10 })
 
   return {
-    ...img,
+    src: img.src,
+    type: img.type,
     blurDataURL
   }
 }
