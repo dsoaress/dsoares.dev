@@ -1,5 +1,3 @@
-import type { TransformadImg } from './transformadImg'
-
 export type Project = {
   title: string
   description: {
@@ -13,5 +11,5 @@ export type Project = {
   forks: number
   stars: number
   cover: string
-  transformadCover: TransformadImg
+  coverBlurDataURL: string
 }

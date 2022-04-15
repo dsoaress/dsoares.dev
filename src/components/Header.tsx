@@ -13,10 +13,10 @@ import { useData } from '@/hooks/useData'
 import type { TransformadImg } from '@/types/transformadImg'
 
 type HeaderProps = {
-  avatar: TransformadImg
+  avatarBlurDataURL: string
 }
 
-export function Header({ avatar }: HeaderProps) {
+export function Header({ avatarBlurDataURL }: HeaderProps) {
   const { locale, t, c } = useData()
 
   return (
@@ -50,13 +50,14 @@ export function Header({ avatar }: HeaderProps) {
 
       <div className="relative h-screen">
         <Image
+          src={c.profile.avatar}
           alt={c.profile.title}
           objectFit="cover"
           objectPosition="top"
           layout="fill"
           placeholder="blur"
           quality={100}
-          {...avatar}
+          blurDataURL={avatarBlurDataURL}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 to-transparent" />
       </div>

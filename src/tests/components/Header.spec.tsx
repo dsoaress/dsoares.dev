@@ -6,14 +6,6 @@ const profile = {
   title: 'John Doe'
 }
 
-const avatar = {
-  src: 'https://via.placeholder.com/150',
-  width: 150,
-  height: 150,
-  type: 'jpg',
-  blurDataURL: ''
-}
-
 const description = 'John Doe is a software engineer.'
 
 const resume = {
@@ -65,7 +57,7 @@ describe('<Header />', () => {
   let element: HTMLElement | null = null
 
   beforeEach(() => {
-    const { container } = render(<Header avatar={avatar} />)
+    const { container } = render(<Header avatarBlurDataURL="" />)
     element = container
   })
 

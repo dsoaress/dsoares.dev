@@ -12,14 +12,9 @@ type GithubResponse = {
   }
 }
 
-export async function getAvatar() {
-  const { base64: blurDataURL, img } = await getPlaiceholder(config.profile.avatar, { size: 10 })
-
-  return {
-    src: img.src,
-    type: img.type,
-    blurDataURL
-  }
+export async function getAvatarBlurDataURL() {
+  const { base64: avatarBlurDataURL } = await getPlaiceholder(config.profile.avatar, { size: 10 })
+  return avatarBlurDataURL
 }
 
 export async function getAllProjects() {
@@ -42,15 +37,11 @@ export async function getAllProjects() {
         }
       )
 
-      const { base64: blurDataURL, img } = await getPlaiceholder(project.cover, { size: 10 })
+      const { base64: coverBlurDataURL } = await getPlaiceholder(project.cover, { size: 10 })
 
       return {
         ...project,
-        transformadCover: {
-          src: img.src,
-          type: img.type,
-          blurDataURL
-        },
+        coverBlurDataURL,
         forks: gitHubData?.repository.forkCount,
         stars: gitHubData?.repository.stargazerCount || 0
       }

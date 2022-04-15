@@ -57,11 +57,12 @@ export function Projects({ projects }: ProjectsProps) {
 
             <div className="relative h-64 overflow-hidden rounded-tl-md rounded-tr-md">
               <Image
+                src={project.cover}
                 alt={project.title}
                 objectFit="cover"
                 layout="fill"
                 placeholder="blur"
-                {...project.transformadCover}
+                blurDataURL={project.coverBlurDataURL}
               />
             </div>
 

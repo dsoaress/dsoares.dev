@@ -94,7 +94,6 @@ exports[`<Header /> should matches snapshot 1`] = `
   >
     <img
       alt="John Doe"
-      src="https://via.placeholder.com/150"
     />
     <div
       class="absolute inset-0 bg-gradient-to-t from-neutral-900 to-transparent"
