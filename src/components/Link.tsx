@@ -30,6 +30,8 @@ export function Link({ active = false, href, className, locale, external, ...pro
 }
 
 export function ScrollLink(props: ScrollLinkProps) {
+  // TODO fix this
+  // @ts-ignore
   return <ReactScroll smooth={true} offset={-76} href="/" aria-hidden {...props} />
 }
 
