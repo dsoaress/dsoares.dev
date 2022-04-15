@@ -47,7 +47,8 @@ export async function getAllProjects() {
       return {
         ...project,
         transformadCover: {
-          ...img,
+          src: img.src,
+          type: img.type,
           blurDataURL
         },
         forks: gitHubData?.repository.forkCount,
