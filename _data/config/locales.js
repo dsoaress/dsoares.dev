@@ -2,6 +2,6 @@
 // configuration file and needs to be in js format
 
 module.exports = {
-  locales: ['en', 'pt'],
+  locales: ['en', 'es', 'pt'],
   defaultLocale: 'en'
 }

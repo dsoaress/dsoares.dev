@@ -4,6 +4,7 @@ export type Project = {
   title: string
   description: {
     en: string
+    es: string
     pt: string
   }
   tags: string

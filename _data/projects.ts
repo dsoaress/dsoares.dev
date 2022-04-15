@@ -5,6 +5,7 @@ export const projects: Omit<Project, 'transformadCover' | 'forks' | 'stars'>[] =
     title: 'React Query University app',
     description: {
       en: 'This application is a practical demonstration of the power of React Query',
+      es: 'Esta aplicación es una demostración práctica de la potencia de React Query',
       pt: 'Este aplicativo é uma demonstração prática do poder do React Query'
     },
     tags: 'React, React Query, TypeScript',
@@ -15,8 +16,9 @@ export const projects: Omit<Project, 'transformadCover' | 'forks' | 'stars'>[] =
   {
     title: 'React News',
     description: {
-      en: 'Next.js blog with Paywall and integration with Stripe, Faunadb and Prismic.',
-      pt: 'Blog Next.js com Paywall e integração com Stripe, Faunadb e Prismic.'
+      en: 'Next.js blog with Paywall and integration with Stripe, Faunadb and Prismic',
+      es: 'Blog Next.js con Paywall y integración con Stripe, Faunadb y Prismic',
+      pt: 'Blog Next.js com Paywall e integração com Stripe, Faunadb e Prismic'
     },
     tags: 'TypeScript, Next.js, Stripe, Faunadb, Prismic',
     repo: 'react-news',
@@ -26,8 +28,9 @@ export const projects: Omit<Project, 'transformadCover' | 'forks' | 'stars'>[] =
   {
     title: 'dsoares.me',
     description: {
-      en: 'Source of my personal site using Next.js (with TypeScript).',
-      pt: 'Código fonte do meu site pessoal utilizando Next.js (com TypeScript).'
+      en: 'Source of my personal site using Next.js (with TypeScript)',
+      es: 'Fuente de mi sitio personal usando Next.js (con TypeScript)',
+      pt: 'Código fonte do meu site pessoal utilizando Next.js (com TypeScript)'
     },
     tags: 'TypeScript, Next.js',
     repo: 'dsoares.me',
