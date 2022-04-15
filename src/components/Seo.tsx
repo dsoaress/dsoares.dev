@@ -4,7 +4,7 @@ import Script from 'next/script'
 import { useData } from '@/hooks/useData'
 
 export function Seo() {
-  const { locale, c } = useData()
+  const { locale, c, t } = useData()
 
   return (
     <>
@@ -19,7 +19,7 @@ export function Seo() {
         <title>{c.profile.title}</title>
         <meta name="robots" content="index,follow" />
         <meta name="googlebot" content="index,follow" />
-        <meta name="description" content={c.profile.description[locale]} />
+        <meta name="description" content={t.description} />
         <meta name="theme-color" content={c.colors.neutral[900]} />
         <link rel="manifest" href={`/${locale}/manifest.json`} />
 

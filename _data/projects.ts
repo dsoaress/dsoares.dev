@@ -1,6 +1,6 @@
 import type { Project } from '@/types/project'
 
-export const projects: Omit<Project, 'forks' | 'stars'>[] = [
+export const projects: Omit<Project, 'transformadCover' | 'forks' | 'stars'>[] = [
   {
     title: 'React Query University app',
     description: {

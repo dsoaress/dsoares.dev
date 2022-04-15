@@ -3,12 +3,18 @@ import { render, screen } from '@testing-library/react'
 import { Header } from '@/components/Header'
 
 const profile = {
-  title: 'John Doe',
-  description: {
-    en: 'John Doe is a software engineer.'
-  },
-  avatar: 'https://via.placeholder.com/150'
+  title: 'John Doe'
 }
+
+const avatar = {
+  src: 'https://via.placeholder.com/150',
+  width: 150,
+  height: 150,
+  type: 'jpg',
+  blurDataURL: ''
+}
+
+const description = 'John Doe is a software engineer.'
 
 const resume = {
   title: 'resume',
@@ -39,15 +45,12 @@ jest.mock('@/hooks/useData', () => {
         locale: 'en',
         c: {
           profile: {
-            title: profile.title,
-            description: {
-              en: profile.description.en
-            },
-            avatar: profile.avatar
+            title: profile.title
           },
           showResume: true
         },
         t: {
+          description,
           resume: {
             title: resume.title,
             file: resume.file
@@ -62,7 +65,7 @@ describe('<Header />', () => {
   let element: HTMLElement | null = null
 
   beforeEach(() => {
-    const { container } = render(<Header />)
+    const { container } = render(<Header avatar={avatar} />)
     element = container
   })
 
@@ -75,7 +78,7 @@ describe('<Header />', () => {
   })
 
   it('should render with correct description', () => {
-    expect(screen.getByText(profile.description.en)).toBeInTheDocument()
+    expect(screen.getByText(description)).toBeInTheDocument()
   })
 
   it('should render with correct avatar', () => {

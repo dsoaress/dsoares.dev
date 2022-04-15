@@ -3,6 +3,7 @@ export type I18n = {
     title: string
     file: string
   }
+  description: string
   projects: {
     title: string
     description: string

@@ -56,7 +56,13 @@ export function Projects({ projects }: ProjectsProps) {
             />
 
             <div className="relative h-64 overflow-hidden rounded-tl-md rounded-tr-md">
-              <Image src={project.cover} alt={project.title} objectFit="cover" layout="fill" />
+              <Image
+                alt={project.title}
+                objectFit="cover"
+                layout="fill"
+                placeholder="blur"
+                {...project.transformadCover}
+              />
             </div>
 
             <div className="grid gap-4 p-6">

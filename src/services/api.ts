@@ -1,4 +1,5 @@
 import { gql } from 'graphql-request'
+import { getPlaiceholder } from 'plaiceholder'
 
 import { config } from '@/data/config'
 import { projects } from '@/data/projects'
@@ -8,6 +9,15 @@ type GithubResponse = {
   repository: {
     forkCount: number
     stargazerCount: number
+  }
+}
+
+export async function getAvatar() {
+  const { base64: blurDataURL, img } = await getPlaiceholder(config.profile.avatar, { size: 10 })
+
+  return {
+    ...img,
+    blurDataURL
   }
 }
 
@@ -31,8 +41,14 @@ export async function getAllProjects() {
         }
       )
 
+      const { base64: blurDataURL, img } = await getPlaiceholder(project.cover, { size: 10 })
+
       return {
         ...project,
+        transformadCover: {
+          ...img,
+          blurDataURL
+        },
         forks: gitHubData?.repository.forkCount,
         stars: gitHubData?.repository.stargazerCount || 0
       }

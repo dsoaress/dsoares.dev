@@ -10,8 +10,13 @@ import { Logo } from '@/components/Logo'
 import { Social } from '@/components/Social'
 import { Text } from '@/components/Text'
 import { useData } from '@/hooks/useData'
+import type { TransformadImg } from '@/types/transformadImg'
 
-export function Header() {
+type HeaderProps = {
+  avatar: TransformadImg
+}
+
+export function Header({ avatar }: HeaderProps) {
   const { locale, t, c } = useData()
 
   return (
@@ -20,7 +25,7 @@ export function Header() {
         <div className="z-10 grid gap-8 p-8 text-center">
           <Logo width={80} height={80} className="mx-auto hidden sm:block" />
           <Heading>{c.profile.title}</Heading>
-          <Text>{c.profile.description[locale]}</Text>
+          <Text>{t.description}</Text>
 
           {c.showResume && (
             <div className="flex justify-center">
@@ -45,12 +50,13 @@ export function Header() {
 
       <div className="relative h-screen">
         <Image
-          src={c.profile.avatar}
           alt={c.profile.title}
           objectFit="cover"
           objectPosition="top"
           layout="fill"
+          placeholder="blur"
           quality={100}
+          {...avatar}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 to-transparent" />
       </div>

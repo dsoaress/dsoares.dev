@@ -5,6 +5,7 @@ export const pt: I18n = {
     title: 'Currículo',
     file: '/assets/resume-pt.pdf'
   },
+  description: 'Eu sou um desenvolvedor full stack trabalhando com React, Next.js e Node.js',
   projects: {
     title: 'Projetos',
     description: 'Alguns dos meus projetos no GitHub.'
@@ -14,5 +15,5 @@ export const pt: I18n = {
     internalError: 'Erro interno',
     buttonLabel: 'Voltar à página inicial'
   },
-  footer: 'Feito com 💚 e Next.js'
+  footer: 'Feito com ❤️ e Next.js'
 }

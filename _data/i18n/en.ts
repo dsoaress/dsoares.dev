@@ -5,6 +5,7 @@ export const en: I18n = {
     title: 'Resume',
     file: '/assets/resume-en.pdf'
   },
+  description: 'I am a full stack developer working with React, Next.js and Node.js',
   projects: {
     title: 'Projects',
     description: 'Some of my projects on GitHub.'
@@ -14,5 +15,5 @@ export const en: I18n = {
     internalError: 'Internal error',
     buttonLabel: 'Back to home'
   },
-  footer: 'Made with 💚 and Next.js'
+  footer: 'Made with ❤️ and Next.js'
 }
