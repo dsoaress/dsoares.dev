@@ -23,11 +23,11 @@ export function Seo() {
         <meta name="theme-color" content={c.colors.neutral[900]} />
         <link rel="manifest" href={`/${locale}/manifest.json`} />
 
-        {c.favicons.map(({ size, src }) => (
+        {c.profile.favicon.sizes.map(size => (
           <link
-            rel={size === '32' ? 'icon' : 'apple-touch-icon'}
+            rel={size === 32 ? 'icon' : 'apple-touch-icon'}
             sizes={`${size}x${size}`}
-            href={src}
+            href={`/favicons/favicon-${size}.png`}
             type="image/png"
             key={size}
           />

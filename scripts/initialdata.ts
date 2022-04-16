@@ -1,34 +1,49 @@
-import fs from 'fs'
+import { existsSync, mkdirSync, writeFileSync } from 'node:fs'
+import { join } from 'node:path'
+import sharp from 'sharp'
 
 import { config } from '@/data/config'
 
 function initialdata() {
-  config.locales.locales.map(locale => {
-    const startUrl = locale === config.locales.defaultLocale ? '' : locale
-    const manifestDir = `./public/${locale}`
+  const { profile, colors } = config
+  const { locales, defaultLocale } = config.locales
+  const publicDir = join(__dirname, '..', 'public')
+  const faviconsDir = join(publicDir, 'favicons')
+  const faviconSRC = join(publicDir, config.profile.favicon.src)
+  const faviconSizes = config.profile.favicon.sizes
+
+  if (!existsSync(faviconsDir)) mkdirSync(faviconsDir)
+
+  faviconSizes.forEach(size => {
+    sharp(faviconSRC)
+      .resize({ width: size, height: size })
+      .toFile(`${faviconsDir}/favicon-${size}.png`)
+  })
+
+  locales.map(locale => {
+    const isDefaultLocale = locale === defaultLocale
+    const startUrl = isDefaultLocale ? '' : locale
+    const manifestDir = join(publicDir, locale)
 
     const manifest = {
-      name: config.profile.title,
-      short_name: config.profile.shortTitle,
+      name: profile.title,
+      short_name: profile.shortTitle,
+      id: `/${startUrl}`,
       start_url: `/${startUrl}`,
-      background_color: config.colors.neutral[900],
-      theme_color: config.colors.neutral[900],
+      background_color: colors.neutral[900],
+      theme_color: colors.neutral[900],
       display: 'fullscreen',
-      icons: config.favicons.map(favicon => {
-        return {
-          purpose: 'any maskable',
-          src: favicon.src,
-          sizes: `${favicon.size}x${favicon.size}`,
-          type: 'image/png'
-        }
-      })
+      icons: faviconSizes.map(size => ({
+        purpose: 'any maskable',
+        src: `/favicons/favicon-${size}.png`,
+        sizes: `${size}x${size}`,
+        type: 'image/png'
+      }))
     }
 
-    if (!fs.existsSync(manifestDir)) {
-      fs.mkdirSync(manifestDir, { recursive: true })
-    }
+    if (!existsSync(manifestDir)) mkdirSync(manifestDir)
 
-    fs.writeFileSync(`${manifestDir}/manifest.json`, JSON.stringify(manifest, null, 2))
+    writeFileSync(`${manifestDir}/manifest.json`, JSON.stringify(manifest, null, 2))
   })
 }
 

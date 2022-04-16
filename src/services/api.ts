@@ -31,7 +31,7 @@ export async function getAllProjects() {
         `,
         {
           variables: {
-            owner: config.githubUsername,
+            owner: config.profile.githubUsername,
             name: project.repo
           }
         }
