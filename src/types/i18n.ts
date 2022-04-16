@@ -1,4 +1,5 @@
 export type I18n = {
+  listeningNow: string
   resume: {
     title: string
     file: string

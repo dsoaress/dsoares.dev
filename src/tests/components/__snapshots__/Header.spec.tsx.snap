@@ -35,6 +35,9 @@ exports[`<Header /> should matches snapshot 1`] = `
         John Doe is a software engineer.
       </p>
       <div
+        class="h-10 text-center"
+      />
+      <div
         class="flex justify-center"
       >
         <button

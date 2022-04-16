@@ -1,6 +1,7 @@
 import type { I18n } from '@/types/i18n'
 
 export const pt: I18n = {
+  listeningNow: 'Ouvindo agora no 🍎 Music:',
   resume: {
     title: 'Currículo',
     file: '/assets/resume-pt.pdf'

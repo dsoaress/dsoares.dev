@@ -10,14 +10,15 @@ import { Logo } from '@/components/Logo'
 import { Social } from '@/components/Social'
 import { Text } from '@/components/Text'
 import { useData } from '@/hooks/useData'
-import type { TransformadImg } from '@/types/transformadImg'
 
 type HeaderProps = {
   avatarBlurDataURL: string
 }
 
 export function Header({ avatarBlurDataURL }: HeaderProps) {
-  const { locale, t, c } = useData()
+  const { locale, currentTrack, t, c } = useData()
+  const isPlaying = currentTrack?.isPlaying
+  const track = currentTrack?.track
 
   return (
     <>
@@ -26,6 +27,19 @@ export function Header({ avatarBlurDataURL }: HeaderProps) {
           <Logo width={80} height={80} className="mx-auto hidden sm:block" />
           <Heading>{c.profile.title}</Heading>
           <Text>{t.description}</Text>
+
+          <div className="h-10 text-center">
+            {isPlaying && track && (
+              <>
+                <Text size="xs" faded>
+                  {t.listeningNow}
+                </Text>
+                <Text size="xs" className="mt-2">
+                  {track.title} - {track.artist} ({track.album}) | {track.duration}
+                </Text>
+              </>
+            )}
+          </div>
 
           {c.showResume && (
             <div className="flex justify-center">
@@ -40,6 +54,7 @@ export function Header({ avatarBlurDataURL }: HeaderProps) {
           )}
 
           <Social />
+
           <div className="mx-auto mt-2 md:mt-6">
             <ScrollLink to="projects">
               <BsArrowDownShort className="h-6 w-6 animate-bounce" />
