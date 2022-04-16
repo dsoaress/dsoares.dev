@@ -8,8 +8,8 @@ import type { I18n } from '@/types/i18n'
 
 type DataContextProps = {
   asPath: string
-  locale: 'en' | 'pt'
-  locales: string[]
+  locale: 'en' | 'es' | 'pt'
+  locales: 'en' | 'es' | 'pt'[]
   t: I18n
   c: typeof config
 }
