@@ -20,7 +20,8 @@ export const sharedTypographyVariants = css({
       xl: { true: { fontSize: '$xl', lineHeight: '$relaxed' } },
       '2xl': { true: { fontSize: '$2xl', lineHeight: '$loose' } },
       '3xl': { true: { fontSize: '$3xl', lineHeight: '$loose' } },
-      '4xl': { true: { fontSize: '$4xl', lineHeight: '$none' } }
+      '4xl': { true: { fontSize: '$4xl', lineHeight: '$none' } },
+      '5xl': { true: { fontSize: '$5xl', lineHeight: '$none' } }
     },
 
     lineHeight: {
