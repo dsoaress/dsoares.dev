@@ -1,3 +1,4 @@
+import { mauve } from '@radix-ui/colors'
 import Head from 'next/head'
 import Script from 'next/script'
 
@@ -20,7 +21,7 @@ export function Seo() {
         <meta name="robots" content="index,follow" />
         <meta name="googlebot" content="index,follow" />
         <meta name="description" content={t.description} />
-        <meta name="theme-color" content={c.colors.neutral[900]} />
+        <meta name="theme-color" content={mauve.mauve12} />
         <link rel="manifest" href={`/${locale}/manifest.json`} />
 
         {c.profile.favicon.sizes.map(size => (

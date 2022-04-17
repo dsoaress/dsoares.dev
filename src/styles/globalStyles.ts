@@ -14,5 +14,22 @@ export const globalStyles = globalCss({
     lineHeight: '$normal',
     color: '$neutral1',
     backgroundColor: '$neutral12'
+  },
+
+  a: {
+    zIndex: 10,
+    color: '$neutral1',
+    fontWeight: '$medium',
+    textDecoration: 'none',
+    transition: '$colors',
+    cursor: 'pointer',
+
+    '&:hover': {
+      color: '$accent8'
+    },
+
+    '&:active': {
+      color: '$accent8'
+    }
   }
 })

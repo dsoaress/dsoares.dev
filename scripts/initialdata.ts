@@ -1,3 +1,4 @@
+import { mauve } from '@radix-ui/colors'
 import { existsSync, mkdirSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import sharp from 'sharp'
@@ -5,7 +6,7 @@ import sharp from 'sharp'
 import { config } from '@/data/config'
 
 function initialdata() {
-  const { profile, colors } = config
+  const { profile } = config
   const { locales, defaultLocale } = config.locales
   const publicDir = join(__dirname, '..', 'public')
   const faviconsDir = join(publicDir, 'favicons')
@@ -30,8 +31,8 @@ function initialdata() {
       short_name: profile.shortTitle,
       id: `/${startUrl}`,
       start_url: `/${startUrl}`,
-      background_color: colors.neutral[900],
-      theme_color: colors.neutral[900],
+      background_color: mauve.mauve12,
+      theme_color: mauve.mauve12,
       display: 'fullscreen',
       icons: faviconSizes.map(size => ({
         purpose: 'any maskable',
