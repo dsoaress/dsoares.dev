@@ -1,22 +1,43 @@
-import cn from 'classnames'
 import type { ButtonHTMLAttributes } from 'react'
 import type { IconType } from 'react-icons/lib'
+
+import { styled } from '@/styles/stitches'
 
 type ButtonProps = {
   icon?: IconType
 } & ButtonHTMLAttributes<HTMLButtonElement>
 
-export function Button({ className, children, icon: Icon, ...props }: ButtonProps) {
+const StyledButton = styled('button', {
+  unset: 'all',
+  display: 'flex',
+  height: 44,
+  cursor: 'pointer',
+  alignItems: 'center',
+  borderRadius: '$md',
+  border: 'none',
+  backgroundColor: '$accent10',
+  px: 24,
+  fontSize: 14,
+  fontWeight: 500,
+  lineHeight: '$none',
+  color: '$neutral1',
+  transition: 'background-color 0.3s ease-in-out',
+
+  '&:hover': {
+    backgroundColor: '$accent11'
+  },
+
+  svg: {
+    mr: 8,
+    fontSize: 18
+  }
+})
+
+export function Button({ children, icon: Icon, ...props }: ButtonProps) {
   return (
-    <button
-      className={cn(
-        'flex h-11 cursor-pointer items-center rounded-md border-0 bg-primary-600 px-6 text-sm font-medium leading-none text-neutral-50 transition-colors duration-300 hover:bg-primary-700 active:bg-primary-800',
-        className
-      )}
-      {...props}
-    >
-      {!!Icon && <Icon className="mr-2 text-lg" />}
+    <StyledButton {...props}>
+      {!!Icon && <Icon />}
       {children}
-    </button>
+    </StyledButton>
   )
 }

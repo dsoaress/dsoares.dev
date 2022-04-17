@@ -1,16 +1,24 @@
 import { Social } from '@/components/Social'
 import { Text } from '@/components/Text'
 import { useData } from '@/hooks/useData'
+import { styled } from '@/styles/stitches'
+
+const Wrapper = styled('footer', {
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  my: 48
+})
 
 export function Footer() {
   const { t } = useData()
 
   return (
-    <footer className="my-12 flex flex-col justify-center">
+    <Wrapper>
       <Social />
-      <Text size="sm" className="mt-6 text-center" faded>
+      <Text size="sm" center faded css={{ marginTop: 24 }}>
         {t.footer}
       </Text>
-    </footer>
+    </Wrapper>
   )
 }

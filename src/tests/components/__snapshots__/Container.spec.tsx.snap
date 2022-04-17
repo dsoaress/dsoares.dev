@@ -2,7 +2,7 @@
 
 exports[`<Container /> should matches snapshot 1`] = `
 <main
-  class="mx-auto max-w-screen-xl px-6"
+  class="c-bNqoxi"
 >
   Children
 </main>

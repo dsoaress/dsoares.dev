@@ -1,6 +1,18 @@
-import cn from 'classnames'
-import type { HTMLAttributes, ReactNode } from 'react'
+import type { CSS, VariantProps } from '@stitches/react'
+import type { HTMLAttributes } from 'react'
 
-export function Section({ className, ...props }: HTMLAttributes<HTMLDivElement>) {
-  return <section className={cn('my-20', className)} {...props} />
+import { styled } from '@/styles/stitches'
+
+type SectionProps = {
+  as?: 'section' | 'div'
+  css?: CSS
+} & VariantProps<typeof StyledSection> &
+  HTMLAttributes<HTMLDivElement>
+
+const StyledSection = styled('section', {
+  my: 80
+})
+
+export function Section(props: SectionProps) {
+  return <section {...props} />
 }

@@ -30,7 +30,7 @@ exports[`<Header /> should matches snapshot 1`] = `
         John Doe
       </h1>
       <p
-        class="font-normal text-neutral-50 text-base leading-6"
+        class="c-kPVhEC c-kPVhEC-cVddOu-size-md"
       >
         John Doe is a software engineer.
       </p>
@@ -41,10 +41,9 @@ exports[`<Header /> should matches snapshot 1`] = `
         class="flex justify-center"
       >
         <button
-          class="flex h-11 cursor-pointer items-center rounded-md border-0 bg-primary-600 px-6 text-sm font-medium leading-none text-neutral-50 transition-colors duration-300 hover:bg-primary-700 active:bg-primary-800 umami--click--resume-en"
+          class="c-kFpNgP umami--click--resume-en"
         >
           <svg
-            class="mr-2 text-lg"
             fill="none"
             height="1em"
             stroke="currentColor"

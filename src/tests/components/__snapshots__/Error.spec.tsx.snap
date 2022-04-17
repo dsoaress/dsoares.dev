@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Error /> should matches snapshot 1`] = `
-<main
-  class="fixed inset-0 flex items-center justify-center"
+<div
+  class="c-dtSjCc"
 >
   <main
-    class="mx-auto max-w-screen-xl px-6"
+    class="c-bNqoxi"
   >
     <div
-      class="text-center"
+      class="c-gjdJOs"
     >
       <h1
         class="m-0 font-bold text-neutral-50 mb-6 text-xl leading-8"
@@ -16,7 +16,7 @@ exports[`<Error /> should matches snapshot 1`] = `
         404
       </h1>
       <p
-        class="font-normal text-neutral-50 mb-4 text-base leading-6"
+        class="c-kPVhEC c-kPVhEC-cVddOu-size-md mb-4"
       >
         Not found
       </p>
@@ -25,10 +25,9 @@ exports[`<Error /> should matches snapshot 1`] = `
         href="/"
       >
         <button
-          class="flex h-11 cursor-pointer items-center rounded-md border-0 bg-primary-600 px-6 text-sm font-medium leading-none text-neutral-50 transition-colors duration-300 hover:bg-primary-700 active:bg-primary-800"
+          class="c-kFpNgP"
         >
           <svg
-            class="mr-2 text-lg"
             fill="currentColor"
             height="1em"
             stroke="currentColor"
@@ -46,5 +45,5 @@ exports[`<Error /> should matches snapshot 1`] = `
       </a>
     </div>
   </main>
-</main>
+</div>
 `;

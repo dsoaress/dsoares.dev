@@ -2,7 +2,7 @@
 
 exports[`<Button /> should matches snapshot 1`] = `
 <button
-  class="flex h-11 cursor-pointer items-center rounded-md border-0 bg-primary-600 px-6 text-sm font-medium leading-none text-neutral-50 transition-colors duration-300 hover:bg-primary-700 active:bg-primary-800"
+  class="c-kFpNgP"
 >
   Children
 </button>
@@ -10,10 +10,9 @@ exports[`<Button /> should matches snapshot 1`] = `
 
 exports[`<Button /> should render with icon 1`] = `
 <button
-  class="flex h-11 cursor-pointer items-center rounded-md border-0 bg-primary-600 px-6 text-sm font-medium leading-none text-neutral-50 transition-colors duration-300 hover:bg-primary-700 active:bg-primary-800"
+  class="c-kFpNgP"
 >
   <svg
-    class="mr-2 text-lg"
     fill="none"
     height="1em"
     stroke="currentColor"

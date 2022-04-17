@@ -2,7 +2,7 @@
 
 exports[`<Text /> should matches snapshot 1`] = `
 <p
-  class="font-normal text-neutral-50 text-base leading-6"
+  class="c-kPVhEC c-kPVhEC-cVddOu-size-md"
 >
   Children
 </p>
