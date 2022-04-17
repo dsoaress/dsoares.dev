@@ -1,4 +1,3 @@
-import cn from 'classnames'
 import NextLink from 'next/link'
 import type { AnchorHTMLAttributes, ReactNode } from 'react'
 import { Link as ReactScroll } from 'react-scroll'
@@ -20,7 +19,7 @@ export function Link({ active = false, href, className, locale, external, ...pro
   return (
     <NextLink href={href} locale={locale}>
       <a
-        className={cn(className, { 'text-primary-500': active })}
+        // className={cn(className, { 'text-primary-500': active })}
         rel={external ? 'noopener noreferrer' : undefined}
         target={external ? '_blank' : undefined}
         {...props}
@@ -36,5 +35,10 @@ export function ScrollLink(props: ScrollLinkProps) {
 }
 
 export function CardLink({ className, ...props }: LinkProps) {
-  return <Link className={cn('absolute inset-0', className)} {...props} />
+  return (
+    <Link
+      // className={cn('absolute inset-0', className)}
+      {...props}
+    />
+  )
 }
