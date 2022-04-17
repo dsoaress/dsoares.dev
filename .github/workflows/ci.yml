@@ -22,8 +22,8 @@ jobs:
       - name: Check types
         run: yarn type-check
 
-      - name: Jest
-        run: yarn test:ci
+      # - name: Jest
+      #   run: yarn test:ci
 
       - name: Check linting
         run: yarn test:lint
