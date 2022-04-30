@@ -1,22 +1,25 @@
-import dayjs from 'dayjs'
+import axios from 'axios'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-import { prisma } from '@/services/prisma'
-
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
-  const result = await prisma.track.findMany({
-    orderBy: { createdAt: 'desc' },
-    take: 1
+  const { UPSTASH_URL, UPSTASH_TOKEN } = process.env
+
+  if (!UPSTASH_URL || !UPSTASH_TOKEN) {
+    return res.status(400).json({ error: 'UPSTASH_REST_URL or UPSTASH_REDIS_URL is not set' })
+  }
+
+  const upstashClient = axios.create({
+    baseURL: UPSTASH_URL,
+    headers: {
+      Authorization: `Bearer ${UPSTASH_TOKEN}`
+    }
   })
 
-  if (!result.length) {
-    return res.status(400).json({ error: 'No current track found' })
-  }
+  const { data: isPlaying } = await upstashClient.get('isPlaying')
+  const { data: currentTrack } = await upstashClient.get('currentTrack')
 
-  const response = {
-    isPlaying: dayjs(result[0].createdAt).isAfter(dayjs().subtract(30, 'seconds')),
-    track: result[0]
-  }
-
-  res.status(200).json(response)
+  res.status(200).json({
+    isPlaying: isPlaying?.result === 'true',
+    track: JSON.parse(currentTrack?.result ?? '{}')
+  })
 }
