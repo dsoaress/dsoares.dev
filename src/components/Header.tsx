@@ -17,8 +17,6 @@ type HeaderProps = {
 
 export function Header({ avatarBlurDataURL }: HeaderProps) {
   const { locale, currentTrack, t, c } = useData()
-  const isPlaying = currentTrack?.isPlaying
-  const track = currentTrack?.track
 
   return (
     <>
@@ -29,13 +27,14 @@ export function Header({ avatarBlurDataURL }: HeaderProps) {
           <Text>{t.description}</Text>
 
           <div className="h-10 text-center">
-            {isPlaying && track && (
+            {!!currentTrack?.title && (
               <>
                 <Text size="xs" faded>
                   {t.listeningNow}
                 </Text>
                 <Text size="xs" className="mt-2">
-                  {track.title} - {track.artist} ({track.album}) | {track.duration}
+                  {currentTrack?.title} - {currentTrack?.artist} ({currentTrack?.album}) |{' '}
+                  {currentTrack?.duration}
                 </Text>
               </>
             )}
