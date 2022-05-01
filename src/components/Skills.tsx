@@ -16,6 +16,8 @@ import {
 
 import { useData } from '@/hooks/useData'
 
+import { Tooltip } from './Tooltip'
+
 export const Icons = {
   React: SiReact,
   'Next.js': SiNextdotjs,
@@ -42,7 +44,9 @@ export function Skills() {
           const Icon = Icons[label]
           return (
             <li key={label}>
-              <Icon size={18} aria-label={label} />
+              <Tooltip content={label}>
+                <Icon size={18} aria-label={label} />
+              </Tooltip>
             </li>
           )
         })}
