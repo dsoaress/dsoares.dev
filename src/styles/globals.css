@@ -8,10 +8,10 @@
   }
 
   body {
-    @apply bg-neutral-900 font-sans text-base font-normal text-neutral-50;
+    @apply bg-neutral-50 font-sans text-base font-normal text-neutral-900 dark:bg-neutral-900 dark:text-neutral-50;
   }
 
   a {
-    @apply z-10 !cursor-pointer font-medium text-neutral-50 no-underline transition-colors hover:text-primary-500 active:text-primary-600;
+    @apply z-10 !cursor-pointer font-medium text-neutral-900 no-underline transition-colors hover:text-primary-500 active:text-primary-600 dark:text-neutral-50;
   }
 }

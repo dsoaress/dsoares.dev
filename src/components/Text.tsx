@@ -16,8 +16,8 @@ export function Text({
 }: TextProps) {
   return (
     <Tag
-      className={cn('font-normal text-neutral-50', className, {
-        'text-neutral-400': faded,
+      className={cn('font-normal text-neutral-900 dark:text-neutral-50', className, {
+        'text-neutral-600 dark:text-neutral-400': faded,
         'text-xs': size === 'xs',
         'text-sm leading-5': size === 'sm',
         'text-base leading-6': size === 'md',

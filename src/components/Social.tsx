@@ -13,7 +13,7 @@ export function Social() {
             <Link
               href={url}
               aria-label={label}
-              className={`umami--click--${label} text-neutral-50`}
+              className={`umami--click--${label} text-neutral-900 dark:text-neutral-50`}
               external
             >
               <Icon variant={label} size={22} />

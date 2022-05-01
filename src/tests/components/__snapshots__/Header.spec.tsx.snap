@@ -25,12 +25,12 @@ exports[`<Header /> should matches snapshot 1`] = `
         />
       </svg>
       <h1
-        class="m-0 font-bold text-neutral-50 text-5xl leading-tight"
+        class="m-0 font-bold text-neutral-900 dark:text-neutral-50 text-5xl leading-tight"
       >
         John Doe
       </h1>
       <p
-        class="font-normal text-neutral-50 text-base leading-6"
+        class="font-normal text-neutral-900 dark:text-neutral-50 text-base leading-6"
       >
         John Doe is a software engineer.
       </p>
@@ -99,7 +99,7 @@ exports[`<Header /> should matches snapshot 1`] = `
       alt="John Doe"
     />
     <div
-      class="absolute inset-0 bg-gradient-to-t from-neutral-900 to-transparent"
+      class="absolute inset-0 bg-gradient-to-t from-neutral-50 to-transparent dark:from-neutral-900"
     />
   </div>
 </div>

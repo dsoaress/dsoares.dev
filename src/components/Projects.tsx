@@ -46,7 +46,7 @@ export function Projects({ projects }: ProjectsProps) {
         {projects.map((project, i) => (
           <div
             key={i}
-            className="relative rounded-md border border-solid border-neutral-800 transition-all duration-300 hover:bg-neutral-800 hover:shadow-md"
+            className="relative rounded-md border border-solid border-neutral-200 transition-all duration-300 hover:bg-neutral-200 hover:shadow-md dark:border-neutral-800 dark:hover:bg-neutral-800"
           >
             <CardLink
               href={project.repositoryUrl}

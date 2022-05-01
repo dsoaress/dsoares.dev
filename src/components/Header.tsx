@@ -73,7 +73,7 @@ export function Header({ avatarBlurDataURL }: HeaderProps) {
           quality={100}
           blurDataURL={avatarBlurDataURL}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-neutral-50 to-transparent dark:from-neutral-900" />
       </div>
     </>
   )
