@@ -11,12 +11,12 @@ exports[`<Error /> should matches snapshot 1`] = `
       class="text-center"
     >
       <h1
-        class="m-0 font-bold text-neutral-900 dark:text-neutral-50 mb-6 text-xl leading-8"
+        class="m-0 font-bold text-neutral-900 transition-colors duration-300 dark:text-neutral-50 mb-6 text-xl leading-8"
       >
         404
       </h1>
       <p
-        class="font-normal text-neutral-900 dark:text-neutral-50 mb-4 text-base leading-6"
+        class="font-normal text-neutral-900 transition-colors duration-300 dark:text-neutral-50 mb-4 text-base leading-6"
       >
         Not found
       </p>

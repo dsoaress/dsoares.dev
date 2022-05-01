@@ -1,6 +1,8 @@
 import { Link } from '@/components/Link'
 import { useData } from '@/hooks/useData'
 
+import { ThemeToggle } from './ThemeToggle'
+
 export function Nav() {
   const { asPath, locale, locales } = useData()
 
@@ -21,6 +23,7 @@ export function Nav() {
             </li>
           )
         })}
+        <ThemeToggle />
       </ul>
     </nav>
   )

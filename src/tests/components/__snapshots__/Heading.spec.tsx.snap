@@ -2,7 +2,7 @@
 
 exports[`<Heading /> should matches snapshot 1`] = `
 <h1
-  class="m-0 font-bold text-neutral-900 dark:text-neutral-50 text-5xl leading-tight"
+  class="m-0 font-bold text-neutral-900 transition-colors duration-300 dark:text-neutral-50 text-5xl leading-tight"
 >
   Children
 </h1>

@@ -2,7 +2,7 @@
 
 exports[`<Link /> Renders with active className 1`] = `
 <a
-  class="text-primary-500"
+  class="text-primary-500 dark:text-primary-500"
   href="/#"
 >
   Children
