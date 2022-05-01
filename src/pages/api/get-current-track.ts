@@ -15,7 +15,7 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
     }
   })
 
-  const { data: currentTrack } = await upstashClient.get('current-track')
+  const { data: currentTrack } = await upstashClient.get('get/current-track')
 
   res.status(200).json(JSON.parse(currentTrack?.result ?? '{}'))
 }
