@@ -51,7 +51,7 @@
     "@types/react-scroll": "1.8.3",
     "@types/sharp": "0.30.2",
     "@types/tailwindcss": "3.0.10",
-    "autoprefixer": "10.4.4",
+    "autoprefixer": "10.4.5",
     "babel-jest": "27.5.1",
     "babel-loader": "8.2.5",
     "eslint": "8.13.0",
