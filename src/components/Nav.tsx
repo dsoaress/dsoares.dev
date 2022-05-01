@@ -10,7 +10,12 @@ export function Nav() {
         {locales.map(localeItem => {
           return (
             <li className="mr-2 last:mr-0" key={localeItem}>
-              <Link href={asPath} active={locale === localeItem} locale={localeItem}>
+              <Link
+                href={asPath}
+                active={locale === localeItem}
+                className="text-neutral-50"
+                locale={localeItem}
+              >
                 [{localeItem}]
               </Link>
             </li>
