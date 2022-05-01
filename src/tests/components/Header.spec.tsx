@@ -22,10 +22,10 @@ jest.mock(
     }
 )
 
-jest.mock('@/components/Social', () => {
+jest.mock('@/components/Skills', () => {
   return {
-    Social: () => {
-      return <div data-testid="social" />
+    Skills: () => {
+      return <div data-testid="skills" />
     }
   }
 })
@@ -81,7 +81,7 @@ describe('<Header />', () => {
     expect(screen.getByText(resume.title)).toBeInTheDocument()
   })
 
-  it('should render with social component in the right place', () => {
-    expect(screen.getByTestId('social')).toBeInTheDocument()
+  it('should render with skills component in the right place', () => {
+    expect(screen.getByTestId('skills')).toBeInTheDocument()
   })
 })

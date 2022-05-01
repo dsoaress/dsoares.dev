@@ -7,7 +7,7 @@ import { Button } from '@/components/Button'
 import { Heading } from '@/components/Heading'
 import { ScrollLink } from '@/components/Link'
 import { Logo } from '@/components/Logo'
-import { Social } from '@/components/Social'
+import { Skills } from '@/components/Skills'
 import { Text } from '@/components/Text'
 import { useData } from '@/hooks/useData'
 
@@ -52,7 +52,7 @@ export function Header({ avatarBlurDataURL }: HeaderProps) {
             </div>
           )}
 
-          <Social />
+          <Skills />
 
           <div className="mx-auto mt-2 md:mt-6">
             <ScrollLink to="projects">

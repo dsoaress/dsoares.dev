@@ -19,12 +19,12 @@ export function Social() {
 
   return (
     <div className="mx-auto">
-      <ul className="inline-flex list-none">
+      <ul className="flex list-none flex-wrap justify-center gap-6">
         {c.social.map(({ label, url }) => {
           const Icon = Icons[label]
           return (
             <li
-              className="mr-6 transform transition-transform last:mr-0 hover:scale-110 active:scale-95"
+              className="transform transition-transform hover:scale-110 active:scale-95"
               key={url}
             >
               <Link

@@ -1,4 +1,4 @@
-import { Social } from '@/types/social'
+import type { Social } from '@/types/social'
 
 export const social: Social[] = [
   {

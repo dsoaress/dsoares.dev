@@ -64,7 +64,7 @@ exports[`<Header /> should matches snapshot 1`] = `
         </button>
       </div>
       <div
-        data-testid="social"
+        data-testid="skills"
       />
       <div
         class="mx-auto mt-2 md:mt-6"
