@@ -1,6 +1,6 @@
-import type { Skills } from '@/types/skills'
+import type { IconsVariants } from '@/components/Icon'
 
-export const skills: Skills[] = [
+export const skills: IconsVariants[] = [
   'JavaScript',
   'TypeScript',
   'Node',

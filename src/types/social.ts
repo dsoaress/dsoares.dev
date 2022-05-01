@@ -1,6 +1,6 @@
-import { Icons } from '@/components/Social'
+import type { IconsVariants } from '@/components/Icon'
 
 export type Social = {
-  label: keyof typeof Icons
+  label: IconsVariants
   url: string
 }
