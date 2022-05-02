@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 
 export function useTheme() {
-  const initialTheme =
+  const initialTheme: 'light' | 'dark' =
     typeof window !== 'undefined' && localStorage.theme ? localStorage.theme : 'dark'
 
-  const [theme, setTheme] = useState<'light' | 'dark'>(initialTheme)
+  const [theme, setTheme] = useState(initialTheme)
   const previousTheme = theme === 'dark' ? 'light' : 'dark'
 
   useEffect(() => {
