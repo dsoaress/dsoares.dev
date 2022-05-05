@@ -2,7 +2,7 @@
 
 exports[`<Logo /> should matches snapshot 1`] = `
 <svg
-  class="fill-current text-primary-500"
+  class="fill-current text-primary-600 dark:text-primary-500"
   clip-rule="evenodd"
   data-testid="logo"
   fill-rule="evenodd"

@@ -20,7 +20,7 @@ export function Link({ active = false, href, className, locale, external, ...pro
   return (
     <NextLink href={href} locale={locale}>
       <a
-        className={cn(className, { 'text-primary-500 dark:text-primary-500': active })}
+        className={cn(className, { 'text-primary-300 dark:text-primary-300': active })}
         rel={external ? 'noopener noreferrer' : undefined}
         target={external ? '_blank' : undefined}
         {...props}

@@ -12,8 +12,8 @@ module.exports = {
         normal: 300
       },
       colors: {
-        neutral: colors.gray,
-        primary: colors.rose
+        neutral: colors.zinc,
+        primary: colors.sky
       },
       keyframes: {
         'slide-up-fade': {

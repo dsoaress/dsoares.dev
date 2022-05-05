@@ -28,6 +28,6 @@ describe('<Logo />', () => {
     render(<Logo height={80} width={80} />)
     const element = screen.getByTestId('logo')
 
-    expect(element).toHaveClass('text-primary-500')
+    expect(element).toHaveClass('text-primary-600')
   })
 })

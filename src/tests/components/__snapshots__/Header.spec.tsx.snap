@@ -9,7 +9,7 @@ exports[`<Header /> should matches snapshot 1`] = `
       class="z-10 grid gap-8 p-8 text-center"
     >
       <svg
-        class="fill-current text-primary-500 mx-auto hidden sm:block"
+        class="fill-current text-primary-600 dark:text-primary-500 mx-auto hidden sm:block"
         clip-rule="evenodd"
         data-testid="logo"
         fill-rule="evenodd"
