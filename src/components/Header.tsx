@@ -6,6 +6,7 @@ import { HiOutlineDocumentDuplicate } from 'react-icons/hi'
 import { Button } from '@/components/Button'
 import { Heading } from '@/components/Heading'
 import { ScrollLink } from '@/components/Link'
+import { ListeningNow } from '@/components/ListeningNow'
 import { Logo } from '@/components/Logo'
 import { Skills } from '@/components/Skills'
 import { Text } from '@/components/Text'
@@ -16,7 +17,7 @@ type HeaderProps = {
 }
 
 export function Header({ avatarBlurDataURL }: HeaderProps) {
-  const { locale, currentTrack, t, c } = useData()
+  const { locale, t, c } = useData()
 
   return (
     <>
@@ -26,19 +27,7 @@ export function Header({ avatarBlurDataURL }: HeaderProps) {
           <Heading>{c.profile.title}</Heading>
           <Text>{t.description}</Text>
 
-          <div className="h-10 text-center">
-            {!!currentTrack?.title && (
-              <>
-                <Text size="xs" faded>
-                  {t.listeningNow}
-                </Text>
-                <Text size="xs" className="mt-2">
-                  {currentTrack?.title} - {currentTrack?.artist} ({currentTrack?.album}) |{' '}
-                  {currentTrack?.duration}
-                </Text>
-              </>
-            )}
-          </div>
+          <ListeningNow />
 
           {c.showResume && (
             <div className="flex justify-center">

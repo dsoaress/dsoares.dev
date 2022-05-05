@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Script from 'next/script'
 
 import { useData } from '@/hooks/useData'
 
@@ -8,13 +7,6 @@ export function Seo() {
 
   return (
     <>
-      <Script
-        strategy="beforeInteractive"
-        src={c.analytics.src}
-        data-website-id={c.analytics.id}
-        data-domains={c.analytics.domain}
-      />
-
       <Head>
         <title>{c.profile.title}</title>
         <meta name="robots" content="index,follow" />

@@ -7,7 +7,6 @@ const locales = require('./_data/config/locales')
 const nextConfig = {
   reactStrictMode: true,
   i18n: locales,
-  eslint: { dirs: ['./src/**/*'] },
   pwa: {
     dest: 'public',
     disable: process.env.NODE_ENV === 'development'

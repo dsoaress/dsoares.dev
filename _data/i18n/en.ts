@@ -1,7 +1,7 @@
 import type { I18n } from '@/types/i18n'
 
 export const en: I18n = {
-  listeningNow: 'Listening now on 🍎 Music:',
+  listeningNow: 'Listening now:',
   resume: {
     title: 'Resume',
     file: '/assets/resume-en.pdf'
