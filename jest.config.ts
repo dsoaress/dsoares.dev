@@ -15,7 +15,6 @@ const config: Config.InitialOptions = {
     '^@/data(.*)$': '<rootDir>/_data$1',
     '^@/hooks(.*)$': '<rootDir>/src/hooks$1',
     '^@/services(.*)$': '<rootDir>/src/services$1',
-    '^@/styles(.*)$': '<rootDir>/src/styles$1',
     '^@/types(.*)$': '<rootDir>/src/types$1'
   }
 }

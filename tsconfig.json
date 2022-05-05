@@ -7,7 +7,6 @@
       "@/data/*": ["./_data/*"],
       "@/hooks/*": ["./src/hooks/*"],
       "@/services/*": ["./src/services/*"],
-      "@/styles/*": ["./src/styles/*"],
       "@/types/*": ["./src/types/*"]
     },
     "target": "es5",
