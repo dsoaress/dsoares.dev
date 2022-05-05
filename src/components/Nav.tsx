@@ -1,4 +1,5 @@
 import { Link } from '@/components/Link'
+import { ThemeToggle } from '@/components/ThemeToggle'
 import { useData } from '@/hooks/useData'
 
 export function Nav() {
@@ -21,6 +22,7 @@ export function Nav() {
             </li>
           )
         })}
+        <ThemeToggle />
       </ul>
     </nav>
   )
