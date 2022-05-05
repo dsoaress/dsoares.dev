@@ -42,7 +42,7 @@ export async function getAllProjects() {
       return {
         ...project,
         coverBlurDataURL,
-        forks: gitHubData?.repository.forkCount,
+        forks: gitHubData?.repository.forkCount || 0,
         stars: gitHubData?.repository.stargazerCount || 0
       }
     })

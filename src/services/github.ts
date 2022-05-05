@@ -16,7 +16,7 @@ export async function github<T>(query: string, { variables }: Variables = {}) {
       Authorization: `bearer ${GITHUB_ACCESS_TOKEN}`
     })
   } catch (error) {
-    if (error instanceof ClientError) console.log('github api:', error.response.message)
-    else console.log('github api:', error)
+    const errorMessage = error instanceof ClientError && error.response.message
+    console.log('github api:', errorMessage || JSON.stringify(error, null, 2))
   }
 }
