@@ -1,5 +1,6 @@
 import { saveAs } from 'file-saver'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 import { BsArrowDownShort } from 'react-icons/bs'
 import { HiOutlineDocumentDuplicate } from 'react-icons/hi'
 
@@ -17,7 +18,8 @@ type HeaderProps = {
 }
 
 export function Header({ avatarBlurDataURL }: HeaderProps) {
-  const { locale, t, c } = useData()
+  const { locale } = useRouter()
+  const { t, c } = useData()
 
   return (
     <>

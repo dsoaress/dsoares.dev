@@ -5,7 +5,7 @@ import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Projects } from '@/components/Projects'
 import { getAllProjects, getAvatarBlurDataURL } from '@/services/api'
-import type { Project } from '@/types/project'
+import type { Project } from '@/types'
 
 type IndexPageProps = {
   avatarBlurDataURL: string

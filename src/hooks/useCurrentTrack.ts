@@ -1,7 +1,7 @@
 import useSWR from 'swr'
 
 import { fetcher } from '@/services/fetcher'
-import type { CurrentTrack } from '@/types/currentTrack'
+import type { CurrentTrack } from '@/types'
 
 export function useCurrentTrack() {
   const { data } = useSWR<CurrentTrack>('/api/get-current-track', fetcher, {

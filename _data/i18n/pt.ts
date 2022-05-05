@@ -1,4 +1,4 @@
-import type { I18n } from '@/types/i18n'
+import type { I18n } from '@/types'
 
 export const pt: I18n = {
   listeningNow: 'Ouvindo agora:',

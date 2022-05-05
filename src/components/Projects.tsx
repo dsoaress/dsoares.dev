@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 import type { IconType } from 'react-icons'
 import { AiOutlineFork, AiOutlineStar } from 'react-icons/ai'
 
@@ -7,7 +8,7 @@ import { CardLink } from '@/components/Link'
 import { Section } from '@/components/Section'
 import { Text } from '@/components/Text'
 import { useData } from '@/hooks/useData'
-import type { Project } from '@/types/project'
+import type { Locales, Project } from '@/types'
 
 type ProjectsProps = {
   projects: Project[]
@@ -30,7 +31,8 @@ function InfoMetadata({ icon: Icon, info }: InfoMetadataProps) {
 }
 
 export function Projects({ projects }: ProjectsProps) {
-  const { locale, t } = useData()
+  const { locale } = useRouter()
+  const { t } = useData()
   const { title, description } = t.projects
 
   return (
@@ -71,7 +73,7 @@ export function Projects({ projects }: ProjectsProps) {
                 {project.title}
               </Heading>
 
-              <Text>{project.description[locale]}</Text>
+              <Text>{project.description[locale as Locales]}</Text>
               <footer className="flex items-end justify-between">
                 <Text faded size="sm">
                   {project.tags}

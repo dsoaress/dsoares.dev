@@ -30,6 +30,16 @@ jest.mock('@/components/Skills', () => {
   }
 })
 
+jest.mock('next/router', () => {
+  return {
+    useRouter() {
+      return {
+        locale: 'en'
+      }
+    }
+  }
+})
+
 jest.mock('@/hooks/useData', () => {
   return {
     useData() {

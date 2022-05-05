@@ -1,9 +1,11 @@
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 
 import { useData } from '@/hooks/useData'
 
 export function Seo() {
-  const { locale, c, t } = useData()
+  const { locale } = useRouter()
+  const { c, t } = useData()
 
   return (
     <>

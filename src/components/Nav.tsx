@@ -1,14 +1,15 @@
+import { useRouter } from 'next/router'
+
 import { Link } from '@/components/Link'
 import { ThemeToggle } from '@/components/ThemeToggle'
-import { useData } from '@/hooks/useData'
 
 export function Nav() {
-  const { asPath, locale, locales } = useData()
+  const { asPath, locale, locales } = useRouter()
 
   return (
     <nav className="absolute inset-x-0 z-10 bg-gradient-to-b from-neutral-900 to-transparent px-16 pt-12 pb-32 text-sm">
       <ul className="flex list-none justify-center md:justify-end">
-        {locales.map(localeItem => {
+        {locales?.map(localeItem => {
           return (
             <li className="mr-2 last:mr-0" key={localeItem}>
               <Link

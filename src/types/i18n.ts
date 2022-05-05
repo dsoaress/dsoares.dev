@@ -1,3 +1,5 @@
+import { i18n } from '@/data/i18n'
+
 export type I18n = {
   listeningNow: string
   resume: {
@@ -16,3 +18,5 @@ export type I18n = {
   }
   footer: string
 }
+
+export type Locales = keyof typeof i18n
