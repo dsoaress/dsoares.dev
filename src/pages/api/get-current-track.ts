@@ -1,7 +1,7 @@
 import { Redis } from '@upstash/redis'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-import { CurrentTrack } from '@/types'
+import type { CurrentTrack } from '@/types'
 
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
   const upstashClient = Redis.fromEnv()
