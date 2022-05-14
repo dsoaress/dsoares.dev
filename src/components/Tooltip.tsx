@@ -23,11 +23,11 @@ export function Tooltip({
       </TooltipPrimitive.Trigger>
       <TooltipPrimitive.Content
         side={side}
-        sideOffset={4}
-        className="inline-flex items-center rounded-md bg-neutral-50 px-4 py-2.5 radix-side-top:animate-slide-down-fade radix-side-bottom:animate-slide-up-fade radix-side-left:animate-slide-right-fade radix-side-right:animate-slide-left-fade dark:bg-neutral-800"
+        sideOffset={8}
+        className="inline-flex items-center rounded-md bg-neutral-800 px-4 py-2.5 radix-side-top:animate-slide-down-fade radix-side-bottom:animate-slide-up-fade radix-side-left:animate-slide-right-fade radix-side-right:animate-slide-left-fade dark:bg-neutral-50"
       >
-        <TooltipPrimitive.Arrow className="fill-current text-neutral-50 dark:text-neutral-800" />
-        <span className="block text-xs leading-none text-neutral-700 dark:text-neutral-100">
+        <TooltipPrimitive.Arrow className="fill-current text-neutral-800 dark:text-neutral-50" />
+        <span className="block text-xs leading-none text-neutral-50 dark:text-neutral-900">
           {content}
         </span>
       </TooltipPrimitive.Content>
