@@ -4,6 +4,18 @@ type Projects = Omit<Project, 'coverBlurDataURL' | 'forks' | 'stars'>[]
 
 export const projects: Projects = [
   {
+    title: 'Nest.js Clean Architecture',
+    description: {
+      en: 'A clean architecture for Nest.js applications',
+      es: 'Una arquitectura limpia para aplicaciones de Nest.js',
+      pt: 'Uma arquitetura limpa para aplicações Nest.js'
+    },
+    tags: 'Nest.js, Clean Architecture, TypeScript',
+    repo: 'nest-clean-architecture',
+    repositoryUrl: 'https://github.com/dsoaress/nest-clean-architecture',
+    cover: '/assets/projects/nest-clean-architecture.png'
+  },
+  {
     title: 'React Query University app',
     description: {
       en: 'This application is a practical demonstration of the power of React Query',
