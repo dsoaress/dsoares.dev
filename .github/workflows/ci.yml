@@ -16,6 +16,9 @@ jobs:
         with:
           node-version: 16
 
+      - name: Packages check
+        uses: Amr-Reda/npm-unused-packages-checker@v1
+
       - name: Install dependencies (with cache)
         uses: bahmutov/npm-install@HEAD
 
