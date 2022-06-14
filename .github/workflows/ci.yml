@@ -54,7 +54,7 @@ jobs:
         run: yarn test:lint
 
   testing:
-    name: Check linters
+    name: Jest
     runs-on: ubuntu-latest
     needs: install
     steps:
