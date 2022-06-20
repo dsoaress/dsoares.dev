@@ -1,18 +1,15 @@
-import { GetStaticProps } from 'next'
-
 import { Container } from '@/components/Container'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Projects } from '@/components/Projects'
-import { getAllProjects, getAvatarBlurDataURL } from '@/services/api'
 import type { Project } from '@/types'
 
-type IndexPageProps = {
+type HomeProps = {
   avatarBlurDataURL: string
   projects: Project[]
 }
 
-export default function IndexPage({ avatarBlurDataURL, projects }: IndexPageProps) {
+export function Home({ avatarBlurDataURL, projects }: HomeProps) {
   return (
     <>
       <Header avatarBlurDataURL={avatarBlurDataURL} />
@@ -22,16 +19,4 @@ export default function IndexPage({ avatarBlurDataURL, projects }: IndexPageProp
       </Container>
     </>
   )
-}
-
-export const getStaticProps: GetStaticProps = async () => {
-  const avatarBlurDataURL = await getAvatarBlurDataURL()
-  const projects = await getAllProjects()
-
-  return {
-    props: {
-      avatarBlurDataURL,
-      projects
-    }
-  }
 }

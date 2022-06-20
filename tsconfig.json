@@ -3,6 +3,7 @@
     "baseUrl": ".",
     "paths": {
       "@/components/*": ["./src/components/*"],
+      "@/containers/*": ["./src/containers/*"],
       "@/contexts/*": ["./src/contexts/*"],
       "@/data/*": ["./_data/*"],
       "@/hooks/*": ["./src/hooks/*"],
