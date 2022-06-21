@@ -45,7 +45,7 @@ export function Projects({ projects }: ProjectsProps) {
       </Text>
 
       <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project, i) => (
+        {projects?.map((project, i) => (
           <div
             key={i}
             className="relative rounded-md border border-solid border-neutral-200 transition-all duration-300 hover:bg-neutral-200 hover:shadow-md dark:border-neutral-800 dark:hover:bg-neutral-800"

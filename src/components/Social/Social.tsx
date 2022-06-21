@@ -8,7 +8,7 @@ export function Social() {
   return (
     <div className="mx-auto">
       <ul className="flex list-none flex-wrap justify-center gap-6">
-        {c.social.map(({ label, url }) => (
+        {c.social?.map(({ label, url }) => (
           <li className="transform transition-transform hover:scale-110 active:scale-95" key={url}>
             <Link
               href={url}

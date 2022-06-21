@@ -1,16 +1,8 @@
 import { render, screen } from '@testing-library/react'
 
+import { data } from '@/mocks'
+
 import { Footer } from '.'
-
-const footer = 'Footer'
-
-jest.mock('@/components/Social', () => ({
-  Social: () => <div />
-}))
-
-jest.mock('@/hooks/useData', () => ({
-  useData: () => ({ t: { footer } })
-}))
 
 describe('<Footer />', () => {
   beforeEach(() => {
@@ -22,6 +14,6 @@ describe('<Footer />', () => {
   })
 
   it('should render correct footer text', () => {
-    expect(screen.getByText(footer)).toBeInTheDocument()
+    expect(screen.getByText(data.t.footer)).toBeInTheDocument()
   })
 })

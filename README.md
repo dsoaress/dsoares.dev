@@ -9,6 +9,12 @@ git clone https://github.com/dsoaress/dsoares.me.git
 cd dsoares.me && yarn && yarn dev
 ```
 
+## Running tests
+
+```shell
+yarn test:ci
+```
+
 ## Built Using
 
 - [Next.js](https://nextjs.org)

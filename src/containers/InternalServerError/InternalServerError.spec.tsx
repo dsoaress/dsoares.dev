@@ -1,28 +1,16 @@
 import { render, screen } from '@testing-library/react'
 
+import { data } from '@/mocks'
+
 import { InternalServerError } from '.'
-
-const internalError = 'Internal server error'
-const buttonLabel = 'Back to home'
-
-jest.mock('@/hooks/useData', () => ({
-  useData: () => ({
-    t: {
-      errors: {
-        internalError,
-        buttonLabel
-      }
-    }
-  })
-}))
 
 describe('<InternalServerError />', () => {
   let element: ChildNode | null = null
+  const statusCode = '500'
 
   beforeEach(() => {
     const { container } = render(<InternalServerError />)
-    const { firstChild } = container
-    element = firstChild
+    element = container
   })
 
   it('should matches snapshot', () => {
@@ -30,10 +18,12 @@ describe('<InternalServerError />', () => {
   })
 
   it('should render with correct status code', () => {
-    expect(screen.getByRole('heading')).toHaveTextContent('500')
+    expect(screen.getByRole('heading')).toHaveTextContent(statusCode)
   })
 
   it('should render with correct error message', () => {
-    expect(screen.getByText(internalError)).toHaveTextContent(internalError)
+    expect(screen.getByText(data.t.errors.internalError)).toHaveTextContent(
+      data.t.errors.internalError
+    )
   })
 })

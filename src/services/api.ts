@@ -22,7 +22,7 @@ export async function getAvatarBlurDataURL() {
 
 export async function getAllProjects() {
   return await Promise.all(
-    projects.map(async project => {
+    projects?.map(async project => {
       const gitHubData = await github<GithubResponse>(
         gql`
           query ($owner: String!, $name: String!) {

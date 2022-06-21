@@ -1,50 +1,52 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<InternalServerError /> should matches snapshot 1`] = `
-<main
-  class="fixed inset-0 flex items-center justify-center"
->
+<div>
   <main
-    class="mx-auto max-w-screen-xl px-6"
+    class="fixed inset-0 flex items-center justify-center"
   >
-    <div
-      class="text-center"
+    <main
+      class="mx-auto max-w-screen-xl px-6"
     >
-      <h1
-        class="m-0 font-bold text-neutral-900 transition-colors duration-300 dark:text-neutral-50 mb-6 text-xl leading-8"
+      <div
+        class="text-center"
       >
-        500
-      </h1>
-      <p
-        class="font-normal text-neutral-900 transition-colors duration-300 dark:text-neutral-50 mb-4 text-base leading-6"
-      >
-        Internal server error
-      </p>
-      <a
-        class=""
-        href="/"
-      >
-        <button
-          class="flex h-11 cursor-pointer items-center rounded-md border-0 bg-primary-600 px-6 text-sm font-medium leading-none text-neutral-50 transition-colors duration-300 hover:bg-primary-700 active:bg-primary-800"
+        <h1
+          class="m-0 font-bold text-neutral-900 transition-colors duration-300 dark:text-neutral-50 mb-6 text-xl leading-8"
         >
-          <svg
-            class="mr-2 text-lg"
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            stroke-width="0"
-            viewBox="0 0 1024 1024"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
+          500
+        </h1>
+        <p
+          class="font-normal text-neutral-900 transition-colors duration-300 dark:text-neutral-50 mb-4 text-base leading-6"
+        >
+          Internal error
+        </p>
+        <a
+          class=""
+          href="/"
+        >
+          <button
+            class="flex h-11 cursor-pointer items-center rounded-md border-0 bg-primary-600 px-6 text-sm font-medium leading-none text-neutral-50 transition-colors duration-300 hover:bg-primary-700 active:bg-primary-800"
           >
-            <path
-              d="M946.5 505L534.6 93.4a31.93 31.93 0 0 0-45.2 0L77.5 505c-12 12-18.8 28.3-18.8 45.3 0 35.3 28.7 64 64 64h43.4V908c0 17.7 14.3 32 32 32H448V716h112v224h265.9c17.7 0 32-14.3 32-32V614.3h43.4c17 0 33.3-6.7 45.3-18.8 24.9-25 24.9-65.5-.1-90.5z"
-            />
-          </svg>
-          Back to home
-        </button>
-      </a>
-    </div>
+            <svg
+              class="mr-2 text-lg"
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 1024 1024"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M946.5 505L534.6 93.4a31.93 31.93 0 0 0-45.2 0L77.5 505c-12 12-18.8 28.3-18.8 45.3 0 35.3 28.7 64 64 64h43.4V908c0 17.7 14.3 32 32 32H448V716h112v224h265.9c17.7 0 32-14.3 32-32V614.3h43.4c17 0 33.3-6.7 45.3-18.8 24.9-25 24.9-65.5-.1-90.5z"
+              />
+            </svg>
+            Go back
+          </button>
+        </a>
+      </div>
+    </main>
   </main>
-</main>
+</div>
 `;

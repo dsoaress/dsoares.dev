@@ -1,28 +1,16 @@
 import { render, screen } from '@testing-library/react'
 
+import { data } from '@/mocks'
+
 import { NotFoundError } from '.'
-
-const notFound = 'Not found'
-const buttonLabel = 'Back to home'
-
-jest.mock('@/hooks/useData', () => ({
-  useData: () => ({
-    t: {
-      errors: {
-        notFound,
-        buttonLabel
-      }
-    }
-  })
-}))
 
 describe('<NotFoundError />', () => {
   let element: ChildNode | null = null
+  const statusCode = '404'
 
   beforeEach(() => {
     const { container } = render(<NotFoundError />)
-    const { firstChild } = container
-    element = firstChild
+    element = container
   })
 
   it('should matches snapshot', () => {
@@ -30,10 +18,10 @@ describe('<NotFoundError />', () => {
   })
 
   it('should render with correct status code', () => {
-    expect(screen.getByRole('heading')).toHaveTextContent('404')
+    expect(screen.getByRole('heading')).toHaveTextContent(statusCode)
   })
 
   it('should render with correct error message', () => {
-    expect(screen.getByText(notFound)).toHaveTextContent(notFound)
+    expect(screen.getByText(data.t.errors.notFound)).toHaveTextContent(data.t.errors.notFound)
   })
 })

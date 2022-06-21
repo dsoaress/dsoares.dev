@@ -1,20 +1,17 @@
 import { render, screen } from '@testing-library/react'
 
+import { data } from '@/mocks'
+
 import { Error } from '.'
-
-const statusCode = '404'
-const errorMessage = 'Not found'
-const buttonLabel = 'Back to home'
-
-jest.mock('@/hooks/useData', () => ({
-  useData: () => ({ t: { errors: { buttonLabel } } })
-}))
 
 describe('<Error />', () => {
   let element: ChildNode | null = null
+  const statusCode = '404'
 
   beforeEach(() => {
-    const { container } = render(<Error statusCode={statusCode} errorMessage={errorMessage} />)
+    const { container } = render(
+      <Error statusCode={statusCode} errorMessage={data.t.errors.notFound} />
+    )
     const { firstChild } = container
     element = firstChild
   })
@@ -28,10 +25,10 @@ describe('<Error />', () => {
   })
 
   it('should render with correct error message', () => {
-    expect(screen.getByText(errorMessage)).toHaveTextContent(errorMessage)
+    expect(screen.getByText(data.t.errors.notFound)).toHaveTextContent(data.t.errors.notFound)
   })
 
   it('should render with correct button label', () => {
-    expect(screen.getByRole('button')).toHaveTextContent(buttonLabel)
+    expect(screen.getByRole('button')).toHaveTextContent(data.t.errors.buttonLabel)
   })
 })

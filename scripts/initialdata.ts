@@ -20,7 +20,7 @@ function initialdata() {
       .toFile(`${faviconsDir}/favicon-${size}.png`)
   })
 
-  locales.map(locale => {
+  locales?.map(locale => {
     const isDefaultLocale = locale === defaultLocale
     const startUrl = isDefaultLocale ? '' : locale
     const manifestDir = join(publicDir, locale)
@@ -33,7 +33,7 @@ function initialdata() {
       background_color: colors.neutral[900],
       theme_color: colors.neutral[900],
       display: 'fullscreen',
-      icons: faviconSizes.map(size => ({
+      icons: faviconSizes?.map(size => ({
         purpose: 'any maskable',
         src: `/favicons/favicon-${size}.png`,
         sizes: `${size}x${size}`,
