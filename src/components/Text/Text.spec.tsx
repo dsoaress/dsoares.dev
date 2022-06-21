@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 
-import { Text } from '@/components/Text'
+import { Text } from '.'
 
 describe('<Text />', () => {
   it('should matches snapshot', () => {

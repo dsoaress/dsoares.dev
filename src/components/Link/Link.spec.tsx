@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 
-import { Link } from '@/components/Link'
+import { Link } from '.'
 
 describe('<Link />', () => {
   it('Renders with children', () => {

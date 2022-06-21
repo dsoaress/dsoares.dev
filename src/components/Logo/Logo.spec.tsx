@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 
-import { Logo } from '@/components/Logo'
+import { Logo } from '.'
 
 describe('<Logo />', () => {
   it('should matches snapshot', () => {

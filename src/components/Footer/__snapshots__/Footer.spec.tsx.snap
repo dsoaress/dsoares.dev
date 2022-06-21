@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> should matches snapshot 1`] = `
+<footer
+  class="my-12 flex flex-col justify-center"
+  data-testid="footer"
+>
+  <div />
+  <p
+    class="font-normal text-neutral-900 transition-colors duration-300 dark:text-neutral-50 mt-6 text-center text-neutral-600 dark:text-neutral-400 text-sm leading-5"
+  >
+    Footer
+  </p>
+</footer>
+`;

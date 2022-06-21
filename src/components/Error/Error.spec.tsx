@@ -1,24 +1,14 @@
 import { render, screen } from '@testing-library/react'
 
-import { Error } from '@/components/Error'
+import { Error } from '.'
 
-const statusCode = 404
+const statusCode = '404'
 const errorMessage = 'Not found'
 const buttonLabel = 'Back to home'
 
-jest.mock('@/hooks/useData', () => {
-  return {
-    useData() {
-      return {
-        t: {
-          errors: {
-            buttonLabel: 'Back to home'
-          }
-        }
-      }
-    }
-  }
-})
+jest.mock('@/hooks/useData', () => ({
+  useData: () => ({ t: { errors: { buttonLabel } } })
+}))
 
 describe('<Error />', () => {
   let element: ChildNode | null = null
@@ -34,14 +24,14 @@ describe('<Error />', () => {
   })
 
   it('should render with correct status code', () => {
-    expect(screen.getByText(statusCode)).toBeInTheDocument()
+    expect(screen.getByRole('heading')).toHaveTextContent(statusCode)
   })
 
   it('should render with correct error message', () => {
-    expect(screen.getByText(errorMessage)).toBeInTheDocument()
+    expect(screen.getByText(errorMessage)).toHaveTextContent(errorMessage)
   })
 
   it('should render with correct button label', () => {
-    expect(screen.getByText(buttonLabel)).toBeInTheDocument()
+    expect(screen.getByRole('button')).toHaveTextContent(buttonLabel)
   })
 })

@@ -1,17 +1,10 @@
 import { render, screen } from '@testing-library/react'
 
-import { Header } from '@/components/Header'
+import { Header } from '.'
 
-const profile = {
-  title: 'John Doe'
-}
-
+const profile = { title: 'John Doe' }
 const description = 'John Doe is a software engineer.'
-
-const resume = {
-  title: 'resume',
-  file: ''
-}
+const resume = { title: 'resume', file: '' }
 
 jest.mock(
   'next/image',
@@ -22,46 +15,27 @@ jest.mock(
     }
 )
 
-jest.mock('@/components/Skills', () => {
-  return {
-    Skills: () => {
-      return <div data-testid="skills" />
-    }
-  }
-})
+jest.mock('@/components/Skills', () => ({
+  Skills: () => <div data-testid="skills" />
+}))
 
-jest.mock('next/router', () => {
-  return {
-    useRouter() {
-      return {
-        locale: 'en'
-      }
-    }
-  }
-})
+jest.mock('next/router', () => ({
+  useRouter: () => ({ locale: 'en' })
+}))
 
-jest.mock('@/hooks/useData', () => {
-  return {
-    useData() {
-      return {
-        locale: 'en',
-        c: {
-          profile: {
-            title: profile.title
-          },
-          showResume: true
-        },
-        t: {
-          description,
-          resume: {
-            title: resume.title,
-            file: resume.file
-          }
-        }
-      }
+jest.mock('@/hooks/useData', () => ({
+  useData: () => ({
+    locale: 'en',
+    c: {
+      profile: { title: profile.title },
+      showResume: true
+    },
+    t: {
+      description,
+      resume: { title: resume.title, file: resume.file }
     }
-  }
-})
+  })
+}))
 
 describe('<Header />', () => {
   let element: HTMLElement | null = null
