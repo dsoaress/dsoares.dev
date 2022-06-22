@@ -18,9 +18,9 @@ const config: Config.InitialOptions = {
     '^@/components(.*)$': '<rootDir>/src/components$1',
     '^@/containers(.*)$': '<rootDir>/src/containers$1',
     '^@/contexts(.*)$': '<rootDir>/src/contexts$1',
-    '^@/data(.*)$': '<rootDir>/_data$1',
+    '^@/data(.*)$': '<rootDir>/src/_data$1',
     '^@/hooks(.*)$': '<rootDir>/src/hooks$1',
-    '^@/mocks(.*)$': '<rootDir>/mocks$1',
+    '^@/mocks(.*)$': '<rootDir>/src/mocks$1',
     '^@/services(.*)$': '<rootDir>/src/services$1',
     '^@/types(.*)$': '<rootDir>/src/types$1'
   }

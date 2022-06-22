@@ -5,9 +5,9 @@
       "@/components/*": ["./src/components/*"],
       "@/containers/*": ["./src/containers/*"],
       "@/contexts/*": ["./src/contexts/*"],
-      "@/data/*": ["./_data/*"],
+      "@/data/*": ["./src/_data/*"],
       "@/hooks/*": ["./src/hooks/*"],
-      "@/mocks": ["./mocks"],
+      "@/mocks": ["./src/mocks"],
       "@/services/*": ["./src/services/*"],
       "@/types": ["./src/types"]
     },

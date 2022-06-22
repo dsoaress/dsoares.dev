@@ -1,7 +1,7 @@
 import { config } from '@/data/config'
 import type { I18n } from '@/types'
 
-import tailwindConfig from '../tailwind.config'
+import tailwindConfig from '../../tailwind.config'
 
 type Data = {
   c: typeof config

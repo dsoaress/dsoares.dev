@@ -1,6 +1,6 @@
-import tailwindConfig from '../../tailwind.config'
+import locales from '../../../locales'
+import tailwindConfig from '../../../tailwind.config'
 import { analytics } from './analytics'
-import locales from './locales'
 import { profile } from './profile'
 import { skills } from './skills'
 import { social } from './social'

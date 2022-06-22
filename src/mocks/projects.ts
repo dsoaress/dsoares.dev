@@ -1,5 +1,7 @@
 import type { Project } from '@/types'
 
+const tags = 'tag a, tag b, tag c'
+
 export const projects: Project[] = [
   {
     title: 'Project 1',
@@ -8,7 +10,7 @@ export const projects: Project[] = [
       es: 'Descripción del proyecto 1',
       pt: 'Descrição do projeto 1'
     },
-    tags: 'tag a, tag b, tag c',
+    tags,
     repo: 'project-1',
     repositoryUrl: 'https://github.com/johndoe/project-1',
     cover: '/assets/projects/project-1.png',
@@ -23,7 +25,7 @@ export const projects: Project[] = [
       es: 'Descripción del proyecto 2',
       pt: 'Descrição do projeto 2'
     },
-    tags: 'tag a, tag b, tag c',
+    tags,
     repo: 'project-2',
     repositoryUrl: 'https://github.com/johndoe/project-2',
     cover: '/assets/projects/project-2.png',
@@ -38,7 +40,7 @@ export const projects: Project[] = [
       es: 'Descripción del proyecto 3',
       pt: 'Descrição do projeto 3'
     },
-    tags: 'tag a, tag b, tag c',
+    tags,
     repo: 'project-3',
     repositoryUrl: 'https://github.com/johndoe/project-3',
     cover: '/assets/projects/project-3.png',
