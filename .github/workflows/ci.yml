@@ -1,6 +1,6 @@
-name: Check PR
+name: Checks
 
-on: [pull_request]
+on: [push, pull_request]
 
 jobs:
   install:
@@ -71,4 +71,4 @@ jobs:
         run: yarn test:coverage
 
       - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v2
+        uses: codecov/codecov-action@v3
