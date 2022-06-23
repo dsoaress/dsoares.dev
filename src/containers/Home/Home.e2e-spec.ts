@@ -1,7 +1,7 @@
 import { i18n } from '@/data/i18n'
 import type { Locales } from '@/types'
 
-import locales from '../../locales'
+import locales from '../../../locales'
 
 describe('Home', () => {
   before(() => {
