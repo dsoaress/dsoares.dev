@@ -11,7 +11,8 @@ const config: Config.InitialOptions = {
     '<rootDir>/src/components/**/*.{ts,tsx}',
     '!<rootDir>/src/components/**/index.ts',
     '<rootDir>/src/containers/**/*.{ts,tsx}',
-    '!<rootDir>/src/containers/**/index.ts'
+    '!<rootDir>/src/containers/**/index.ts',
+    '!<rootDir>/src/containers/**/*.e2e-spec.ts'
   ],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   moduleNameMapper: {
