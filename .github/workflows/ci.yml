@@ -1,6 +1,12 @@
 name: Checks
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - development
+  pull_request:
+    branches:
+      - development
 
 jobs:
   install:
@@ -20,7 +26,7 @@ jobs:
         run: yarn install
 
   check-types:
-    name: Check types
+    name: Build
     runs-on: ubuntu-latest
     needs: install
     steps:
@@ -33,8 +39,8 @@ jobs:
           path: node_modules
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
 
-      - name: Run type-check
-        run: yarn type-check
+      - name: Run build
+        run: yarn build
 
   check-linters:
     name: Check linters
@@ -54,7 +60,7 @@ jobs:
         run: yarn test:lint
 
   testing:
-    name: Jest
+    name: Tests
     runs-on: ubuntu-latest
     needs: install
     steps:
@@ -67,11 +73,14 @@ jobs:
           path: node_modules
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
 
-      - name: Run unit tests and collect coverage
-        run: yarn test:coverage
+      - name: Install Cypress
+        run: npm i -g cypress
 
       - name: Run e2e tests
-        run: test:e2e:ci
+        run: yarn test:e2e:ci
+
+      - name: Run unit tests and collect coverage
+        run: yarn test:coverage
 
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
