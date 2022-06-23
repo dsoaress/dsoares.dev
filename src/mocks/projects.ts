@@ -15,8 +15,8 @@ export const projects: Project[] = [
     repositoryUrl: 'https://github.com/johndoe/project-1',
     cover: '/assets/projects/project-1.png',
     coverBlurDataURL: '',
-    forks: 5,
-    stars: 10
+    forks: 0,
+    stars: 0
   },
   {
     title: 'Project 2',
