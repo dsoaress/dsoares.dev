@@ -13,6 +13,10 @@ public/favicons
 # jest
 coverage
 
+# cypress
+cypress/screenshots
+cypress/videos
+
 # misc
 .DS_Store
 *.pem

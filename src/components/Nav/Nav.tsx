@@ -8,7 +8,7 @@ export function Nav() {
 
   return (
     <nav className="absolute inset-x-0 z-10 bg-gradient-to-b from-neutral-900 to-transparent px-16 pt-12 pb-32 text-sm">
-      <ul className="flex list-none justify-center md:justify-end">
+      <ul className="flex list-none justify-center md:justify-end" data-testid="language-selector">
         {locales?.map(localeItem => {
           return (
             <li className="mr-2 last:mr-0" key={localeItem}>

@@ -15,7 +15,7 @@ export function ThemeToggle() {
   return (
     <li className="ml-6 w-11 text-neutral-50" aria-hidden>
       {mounted && (
-        <button onClick={switchTheme}>
+        <button onClick={switchTheme} data-testid="theme-toggle">
           {resolvedTheme === 'light' ? <BiMoon size={20} /> : <BiSun size={20} />}
         </button>
       )}
