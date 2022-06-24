@@ -8,10 +8,10 @@ const createJestConfig = nextJest({
 const config: Config.InitialOptions = {
   testEnvironment: 'jest-environment-jsdom',
   collectCoverageFrom: [
+    '<rootDir>/src/_data/**/*.ts',
     '<rootDir>/src/components/**/*.{ts,tsx}',
-    '!<rootDir>/src/components/**/index.ts',
     '<rootDir>/src/containers/**/*.{ts,tsx}',
-    '!<rootDir>/src/containers/**/index.ts'
+    '!<rootDir>/src/**/index.ts'
   ],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   moduleNameMapper: {
