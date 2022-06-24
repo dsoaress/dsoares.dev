@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Projects should render correctly 1`] = `
+exports[`<Projects /> should render correctly 1`] = `
 <div>
   <section
     class="my-20"
