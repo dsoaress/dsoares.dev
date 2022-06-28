@@ -3,9 +3,8 @@ import './globals.css'
 import type { AppProps } from 'next/app'
 import { ThemeProvider } from 'next-themes'
 
-import { Nav } from '@/components/Nav'
-import { Seo } from '@/components/Seo'
-import { DataProvider } from '@/contexts/DataContext'
+import { Nav, Seo } from '@/components'
+import { DataProvider } from '@/contexts'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

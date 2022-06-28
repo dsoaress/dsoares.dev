@@ -1,7 +1,7 @@
 import type { GetStaticProps } from 'next'
 
-import { Home } from '@/containers/Home'
-import { getAllProjects, getAvatarBlurDataURL } from '@/services/api'
+import { Home } from '@/containers'
+import { getAllProjects, getAvatarBlurDataURL } from '@/services'
 
 export const getStaticProps: GetStaticProps = async () => {
   const avatarBlurDataURL = await getAvatarBlurDataURL()

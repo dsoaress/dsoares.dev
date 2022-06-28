@@ -1,4 +1,4 @@
-import type { IconsVariants } from '@/components/Icon'
+import type { IconsVariants } from '@/components'
 
 export const skills: IconsVariants[] = [
   'JavaScript',

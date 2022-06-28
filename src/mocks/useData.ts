@@ -1,4 +1,4 @@
-import { config } from '@/data/config'
+import { config } from '@/data'
 import type { I18n } from '@/types'
 
 import tailwindConfig from '../../tailwind.config'

@@ -1,3 +1,3 @@
-import { getCurrentTrack } from '@/services/api'
+import { getCurrentTrack } from '@/services'
 
 export default getCurrentTrack

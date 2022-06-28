@@ -1,3 +1,3 @@
-import { InternalServerError } from '@/containers/InternalServerError'
+import { InternalServerError } from '@/containers'
 
 export default InternalServerError

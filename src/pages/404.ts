@@ -1,3 +1,3 @@
-import { NotFoundError } from '@/containers/NotFoundError'
+import { NotFoundError } from '@/containers'
 
 export default NotFoundError

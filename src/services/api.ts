@@ -3,9 +3,8 @@ import { gql } from 'graphql-request'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { getPlaiceholder } from 'plaiceholder'
 
-import { config } from '@/data/config'
-import { projects } from '@/data/projects'
-import { github } from '@/services/github'
+import { config, projects } from '@/data'
+import { github } from '@/services'
 import type { CurrentTrack } from '@/types'
 
 type GithubResponse = {

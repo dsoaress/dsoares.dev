@@ -1,7 +1,7 @@
 import NextDocument, { Head, Html, Main, NextScript } from 'next/document'
 import Script from 'next/script'
 
-import { config } from '@/data/config'
+import { config } from '@/data'
 
 export default class Document extends NextDocument {
   render() {

@@ -2,13 +2,13 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/components/*": ["./src/components/*"],
-      "@/containers/*": ["./src/containers/*"],
-      "@/contexts/*": ["./src/contexts/*"],
-      "@/data/*": ["./src/_data/*"],
+      "@/components": ["./src/components"],
+      "@/containers": ["./src/containers"],
+      "@/contexts": ["./src/contexts"],
+      "@/data": ["./src/_data"],
       "@/hooks/*": ["./src/hooks/*"],
       "@/mocks": ["./src/mocks"],
-      "@/services/*": ["./src/services/*"],
+      "@/services": ["./src/services"],
       "@/types": ["./src/types"]
     },
     "target": "es5",
