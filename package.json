@@ -41,8 +41,8 @@
   },
   "devDependencies": {
     "@babel/core": "7.18.5",
-    "@commitlint/cli": "17.0.2",
-    "@commitlint/config-conventional": "17.0.2",
+    "@commitlint/cli": "17.0.3",
+    "@commitlint/config-conventional": "17.0.3",
     "@dsoaress/eslint-config": "1.1.0",
     "@dsoaress/prettier-config": "1.0.0",
     "@testing-library/dom": "8.14.0",
