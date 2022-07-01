@@ -1282,10 +1282,10 @@
     eslint-plugin-simple-import-sort "7.0.0"
     eslint-plugin-sonarjs "0.13.0"
 
-"@dsoaress/prettier-config@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@dsoaress/prettier-config/-/prettier-config-1.0.0.tgz#81dc33966c3a13fedebe7e53bdd75aac89bcb125"
-  integrity sha512-PSaziYmbjHxRt7e2nm6ecZ6cfCbRwOmbKYxZLC9+J/+yWyz1mbI2pqEHlcV228YSkVj/zt6/lOX0HqYSJwSteg==
+"@dsoaress/prettier-config@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@dsoaress/prettier-config/-/prettier-config-1.0.1.tgz#3cf34ad951bc33da8e73ee012a76f3574dabc9db"
+  integrity sha512-ZXEMsDQBcaE1yHh4Lo3ln0o7/LMF5ByhIKNDtsewENf972h01wclIVEn2m+b8cicF+j4L1L4RlKk4T3c58KFBg==
 
 "@eslint/eslintrc@^1.3.0":
   version "1.3.0"
