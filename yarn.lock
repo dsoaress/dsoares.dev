@@ -1272,10 +1272,10 @@
   dependencies:
     "@jridgewell/trace-mapping" "0.3.9"
 
-"@dsoaress/eslint-config@1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@dsoaress/eslint-config/-/eslint-config-1.1.0.tgz#fb1eda4a8f73000121a1c7e29a65c705b9bf0439"
-  integrity sha512-P76ggFnQUVqUf5wjuQxjC+B+Jr+1ofm/whc1jnOMBJMPqkM/undRKU/sriKIOcaZLvFZauvBBNKzyGFanXGWWg==
+"@dsoaress/eslint-config@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@dsoaress/eslint-config/-/eslint-config-1.1.1.tgz#cd912b38b2f09b6037494f077dc2a9a0aef78432"
+  integrity sha512-1CKgEaOthezA3uKBTbWWgEGEa78JDQ6luaBTXpr4HqXKsctOu6XpkAA4KdGUXffBMnZT2LKSFZG805OYv7FaWA==
   dependencies:
     eslint-config-prettier "8.5.0"
     eslint-plugin-prettier "4.0.0"
