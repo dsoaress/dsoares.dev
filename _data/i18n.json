@@ -1,0 +1,56 @@
+{
+  "en": {
+    "listeningNow": "Listening now:",
+    "resume": {
+      "title": "Resume",
+      "file": "https://rctszfogxlyyxmhbxolm.supabase.co/storage/v1/object/sign/storage/assets/resume-en.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzdG9yYWdlL2Fzc2V0cy9yZXN1bWUtZW4ucGRmIiwiaWF0IjoxNjU3NDMyMzQwLCJleHAiOjE5NzI3OTIzNDB9.jnDIibtx0MPRts5RzEQZ1rGTDbKB7QOK1VsQaDZl7-E"
+    },
+    "description": "I am a full stack developer working with React, Next.js and Node.js",
+    "projects": {
+      "title": "Projects",
+      "description": "Some of my projects on GitHub."
+    },
+    "errors": {
+      "notFound": "Not found",
+      "internalError": "Internal error",
+      "buttonLabel": "Back to home"
+    },
+    "footer": "Made with ❤️ and Next.js"
+  },
+  "es": {
+    "listeningNow": "Escuchando ahora:",
+    "resume": {
+      "title": "Currículo profesional",
+      "file": "https://rctszfogxlyyxmhbxolm.supabase.co/storage/v1/object/sign/storage/assets/resume-en.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzdG9yYWdlL2Fzc2V0cy9yZXN1bWUtZW4ucGRmIiwiaWF0IjoxNjU3NDMyMzQwLCJleHAiOjE5NzI3OTIzNDB9.jnDIibtx0MPRts5RzEQZ1rGTDbKB7QOK1VsQaDZl7-E"
+    },
+    "description": "Soy un desarrollador de pila completa que trabaja con React, Next.js y Node.js",
+    "projects": {
+      "title": "Proyectos",
+      "description": "Algunos de mis proyectos en GitHub."
+    },
+    "errors": {
+      "notFound": "No encontrado",
+      "internalError": "Error interno",
+      "buttonLabel": "Regresar a la página principal"
+    },
+    "footer": "Hecho con ❤️ y Next.js"
+  },
+  "pt": {
+    "listeningNow": "Ouvindo agora:",
+    "resume": {
+      "title": "Currículo",
+      "file": "https://rctszfogxlyyxmhbxolm.supabase.co/storage/v1/object/sign/storage/assets/resume-pt.pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzdG9yYWdlL2Fzc2V0cy9yZXN1bWUtcHQucGRmIiwiaWF0IjoxNjU3NDMyMzczLCJleHAiOjE5NzI3OTIzNzN9.3PnBsQhZlUQiQJ6Y_4usvHHPFSMeXOrn_neNypPgw-I"
+    },
+    "description": "Eu sou um desenvolvedor full stack trabalhando com React, Next.js e Node.js",
+    "projects": {
+      "title": "Projetos",
+      "description": "Alguns dos meus projetos no GitHub."
+    },
+    "errors": {
+      "notFound": "Não encontrado",
+      "internalError": "Erro interno",
+      "buttonLabel": "Voltar à página inicial"
+    },
+    "footer": "Feito com ❤️ e Next.js"
+  }
+}

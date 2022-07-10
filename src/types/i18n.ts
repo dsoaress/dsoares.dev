@@ -1,22 +1,7 @@
-import { i18n } from '@/i18n'
+import { config, i18n } from '@/data'
 
-export type I18n = {
-  listeningNow: string
-  resume: {
-    title: string
-    file: string
-  }
-  description: string
-  projects: {
-    title: string
-    description: string
-  }
-  errors: {
-    notFound: string
-    internalError: string
-    buttonLabel: string
-  }
-  footer: string
-}
+type Locales = keyof typeof i18n
+const { defaultLocale } = config.locales as { defaultLocale: Locales }
+type I18n = typeof i18n[typeof defaultLocale]
 
-export type Locales = keyof typeof i18n
+export type { I18n, Locales }

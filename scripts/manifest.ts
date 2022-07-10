@@ -16,10 +16,10 @@ export function manifest({
   title: string
   shortTitle: string
 }) {
-  console.log('generating manifest...')
-
   const { colors } = tailwindConfig.theme.extend
   const publicDir = join(__dirname, '..', 'public')
+
+  if (!existsSync(publicDir)) mkdirSync(publicDir)
 
   locales?.map(locale => {
     const isDefaultLocale = locale === defaultLocale

@@ -29,6 +29,7 @@ export const data: Data = {
         src: '/assets/favicon.png',
         sizes: [16, 32, 48, 64, 96, 128, 256, 512]
       },
+      githubUsername: 'username',
       shortTitle: 'JDoe',
       title: 'John Doe'
     },

@@ -10,8 +10,6 @@ export async function favicons({
   favicon: string
   faviconSizes: number[]
 }) {
-  console.log('generating favicons...')
-
   const publicDir = join(__dirname, '..', 'public')
   const faviconsDir = join(publicDir, 'favicons')
 

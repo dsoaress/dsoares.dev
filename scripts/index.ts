@@ -15,47 +15,26 @@ async function main() {
   console.log('🚀 Starting...')
 
   const dataDir = join(__dirname, '..', '_data')
-
-  const {
-    DEFAULT_LOCALE,
-    FAVICON,
-    FAVICON_SIZES,
-    PROFILE_SHORT_TITLE,
-    PROFILE_TITLE,
-    PROFILE_AVATAR,
-    PROFILE_GITHUB_USERNAME
-  } = await parameters()
-
+  const { DEFAULT_LOCALE } = await parameters()
+  const { FAVICON, FAVICON_SIZES, TITLE, SHORT_TITLE } = await profile({ dataDir })
   const LOCALES = await locales({ dataDir, defaultLocale: DEFAULT_LOCALE })
-
-  const NORMALIZED_FAVICON_SIZES = FAVICON_SIZES.split(',').map((a: string) => +a)
 
   manifest({
     defaultLocale: DEFAULT_LOCALE,
     locales: LOCALES,
-    faviconSizes: NORMALIZED_FAVICON_SIZES,
-    title: PROFILE_TITLE,
-    shortTitle: PROFILE_SHORT_TITLE
+    faviconSizes: FAVICON_SIZES,
+    title: TITLE,
+    shortTitle: SHORT_TITLE
   })
 
   favicons({
     favicon: FAVICON,
-    faviconSizes: NORMALIZED_FAVICON_SIZES
+    faviconSizes: FAVICON_SIZES
   })
 
   skills({ dataDir })
   social({ dataDir })
   analytics({ dataDir })
-
-  profile({
-    dataDir,
-    title: PROFILE_TITLE,
-    shortTitle: PROFILE_SHORT_TITLE,
-    githubUsername: PROFILE_GITHUB_USERNAME,
-    avatar: PROFILE_AVATAR,
-    favicon: FAVICON,
-    faviconSizes: NORMALIZED_FAVICON_SIZES
-  })
 }
 
 main()

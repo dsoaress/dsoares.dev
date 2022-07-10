@@ -1,0 +1,13 @@
+{
+  "title": "Daniel Soares",
+  "shortTitle": "Soares",
+  "githubUsername": "dsoaress",
+  "avatar": {
+    "blur": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAEH/8QAIBAAAQMEAgMAAAAAAAAAAAAAAQIFEQADBAYHEiEiMf/EABUBAQEAAAAAAAAAAAAAAAAAAAUG/8QAHBEAAgEFAQAAAAAAAAAAAAAAAQMEAAJhwdET/9oADAMBAAIRAxEAPwCaDrmuPnHjs8O2RkhTZdXcQbfUC2Qk+RIk/TIkCDWYpdW7qPZFKVXRG3ezRkc1QEmIu5S8A92a/9k=",
+    "src": "https://rctszfogxlyyxmhbxolm.supabase.co/storage/v1/object/sign/storage/assets/avatar.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzdG9yYWdlL2Fzc2V0cy9hdmF0YXIuanBnIiwiaWF0IjoxNjU3NDI1MTY4LCJleHAiOjE5NzI3ODUxNjh9.YqKzM_XCqaB55XTkBNWgCUuR6pUL5PznCnnawl9xb0A"
+  },
+  "favicon": {
+    "src": "https://rctszfogxlyyxmhbxolm.supabase.co/storage/v1/object/sign/storage/assets/favicon.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzdG9yYWdlL2Fzc2V0cy9mYXZpY29uLnBuZyIsImlhdCI6MTY1NzQxOTg0MCwiZXhwIjoxOTcyNzc5ODQwfQ.QVlkrxC5TNLZNrp4orNTHEBX1sCh-JtHAXIBP-s0Fak",
+    "sizes": [32, 48, 72, 96, 144, 192, 256, 384, 512]
+  }
+}

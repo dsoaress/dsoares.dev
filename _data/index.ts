@@ -2,8 +2,8 @@ import type { IconsVariants } from '@/components'
 import type { Social } from '@/types'
 
 import tailwindConfig from '../tailwind.config'
-// this files are generated at build time
 import analytics from './analytics.json'
+import i18n from './i18n.json'
 import locales from './locales.json'
 import profile from './profile.json'
 import skills from './skills.json'
@@ -20,3 +20,5 @@ export const config = {
   social: social as Social[],
   showResume: isDev
 }
+
+export { i18n }
