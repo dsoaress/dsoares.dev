@@ -33,7 +33,7 @@ jobs:
         run: yarn install
 
   check-types:
-    name: Check types
+    name: Build
     runs-on: ubuntu-latest
     needs: install
     steps:
@@ -48,8 +48,8 @@ jobs:
             _data
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
 
-      - name: Run type-check
-        run: yarn type-check
+      - name: Run build
+        run: yarn build
 
   check-linters:
     name: Check linters

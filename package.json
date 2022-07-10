@@ -19,7 +19,6 @@
     "test:coverage": "jest --coverage",
     "prepare": "husky install",
     "clear": "rimraf node_modules .next",
-    "type-check": "tsc",
     "postversion": "scripts/postversion"
   },
   "dependencies": {
