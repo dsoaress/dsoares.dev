@@ -2,7 +2,8 @@ import { useRouter } from 'next/router'
 import type { ReactNode } from 'react'
 import { createContext } from 'react'
 
-import { config, i18n } from '@/data'
+import { config } from '@/data'
+import { i18n } from '@/i18n'
 import type { I18n, Locales } from '@/types'
 
 type DataContextProps = {

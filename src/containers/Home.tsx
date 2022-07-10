@@ -2,16 +2,15 @@ import { Container, Footer, Header, Projects } from '@/components'
 import type { Project } from '@/types'
 
 type HomeProps = {
-  avatarBlurDataURL: string
   projects: Project[]
 }
 
-export function Home({ avatarBlurDataURL, projects }: HomeProps) {
+export function Home({ projects }: HomeProps) {
   const hasContent = !!projects.length
 
   return (
     <>
-      <Header avatarBlurDataURL={avatarBlurDataURL} hasContent={hasContent} />
+      <Header hasContent={hasContent} />
 
       {hasContent && (
         <Container>

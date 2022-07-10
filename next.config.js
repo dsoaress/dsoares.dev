@@ -2,7 +2,7 @@
 
 const withPWA = require('next-pwa')
 
-const locales = require('./locales')
+const locales = require('./_data/locales.json')
 
 const nextConfig = {
   reactStrictMode: true,

@@ -8,11 +8,10 @@ import { Button, Heading, ListeningNow, Logo, ScrollLink, Skills, Text } from '@
 import { useData } from '@/hooks/useData'
 
 type HeaderProps = {
-  avatarBlurDataURL: string
   hasContent: boolean
 }
 
-export function Header({ avatarBlurDataURL, hasContent }: HeaderProps) {
+export function Header({ hasContent }: HeaderProps) {
   const { locale } = useRouter()
   const { t, c } = useData()
 
@@ -52,14 +51,14 @@ export function Header({ avatarBlurDataURL, hasContent }: HeaderProps) {
 
       <div className="relative h-screen">
         <Image
-          src={c.profile.avatar}
+          src={c.profile.avatar.src}
           alt={c.profile.title}
           objectFit="cover"
           objectPosition="top"
           layout="fill"
           placeholder="blur"
           quality={100}
-          blurDataURL={avatarBlurDataURL}
+          blurDataURL={c.profile.avatar.blur}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-neutral-50 to-transparent dark:from-neutral-900" />
       </div>

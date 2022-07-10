@@ -21,12 +21,14 @@ export const data: Data = {
       locales: ['en']
     },
     profile: {
-      avatar: '/assets/avatar.png',
+      avatar: {
+        src: '/assets/avatar.png',
+        blur: '/assets/avatar-blur.png'
+      },
       favicon: {
         src: '/assets/favicon.png',
         sizes: [16, 32, 48, 64, 96, 128, 256, 512]
       },
-      githubUsername: 'johndoe',
       shortTitle: 'JDoe',
       title: 'John Doe'
     },

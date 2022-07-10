@@ -8,7 +8,7 @@ describe('<Header />', () => {
   let element: HTMLElement | null = null
 
   beforeEach(() => {
-    const { container } = render(<Header avatarBlurDataURL="" hasContent={true} />)
+    const { container } = render(<Header hasContent={true} />)
     element = container
   })
 

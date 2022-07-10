@@ -9,6 +9,7 @@ public/sw.js
 public/workbox-*.js
 public/**/manifest.json
 public/favicons
+_data/*.json
 
 # jest
 coverage

@@ -1,33 +1,33 @@
 import { existsSync, mkdirSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
-import sharp from 'sharp'
 
-import { config } from '@/data'
+import tailwindConfig from '../tailwind.config'
 
-function initialdata() {
-  const { profile, colors } = config
-  const { locales, defaultLocale } = config.locales
+export function manifest({
+  defaultLocale,
+  locales,
+  faviconSizes,
+  title,
+  shortTitle
+}: {
+  defaultLocale: string
+  locales: string[]
+  faviconSizes: number[]
+  title: string
+  shortTitle: string
+}) {
+  console.log('generating manifest...')
+
+  const { colors } = tailwindConfig.theme.extend
   const publicDir = join(__dirname, '..', 'public')
-  const faviconsDir = join(publicDir, 'favicons')
-  const faviconSRC = join(publicDir, config.profile.favicon.src)
-  const faviconSizes = config.profile.favicon.sizes
-
-  if (!existsSync(faviconsDir)) mkdirSync(faviconsDir)
-
-  faviconSizes.forEach(size => {
-    sharp(faviconSRC)
-      .resize({ width: size, height: size })
-      .toFile(`${faviconsDir}/favicon-${size}.png`)
-  })
 
   locales?.map(locale => {
     const isDefaultLocale = locale === defaultLocale
     const startUrl = isDefaultLocale ? '' : locale
     const manifestDir = join(publicDir, locale)
-
     const manifest = {
-      name: profile.title,
-      short_name: profile.shortTitle,
+      name: title,
+      short_name: shortTitle,
       id: `/${startUrl}`,
       start_url: `/${startUrl}`,
       background_color: colors.neutral[900],
@@ -46,5 +46,3 @@ function initialdata() {
     writeFileSync(`${manifestDir}/manifest.json`, JSON.stringify(manifest, null, 2))
   })
 }
-
-initialdata()
