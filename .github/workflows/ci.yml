@@ -23,7 +23,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Cache node_modules
+      - name: Cache
         uses: actions/cache@v3
         with:
           path: |
@@ -42,10 +42,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Restore node_modules
-        uses: actions/cache@v2
+      - name: Restore cache
+        uses: actions/cache@v3
         with:
-          path: node_modules
+          path: |
+            node_modules
+            _data
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
 
       - name: Run type-check
@@ -59,10 +61,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Restore node_modules
-        uses: actions/cache@v2
+      - name: Restore cache
+        uses: actions/cache@v3
         with:
-          path: node_modules
+          path: |
+            node_modules
+            _data
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
 
       - name: Run test:lint
@@ -76,10 +80,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Restore node_modules
-        uses: actions/cache@v2
+      - name: Restore cache
+        uses: actions/cache@v3
         with:
-          path: node_modules
+          path: |
+            node_modules
+            _data
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
 
       - name: Run tests and collect coverage
