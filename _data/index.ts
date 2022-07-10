@@ -1,12 +1,13 @@
 import type { IconsVariants } from '@/components'
+import type { Social } from '@/types'
 
-// Most of this files are generated at build time
 import tailwindConfig from '../tailwind.config'
-import { analytics } from './analytics'
+// this files are generated at build time
+import analytics from './analytics.json'
 import locales from './locales.json'
 import profile from './profile.json'
 import skills from './skills.json'
-import { social } from './social'
+import social from './social.json'
 
 const isDev = process.env.NODE_ENV === 'development'
 
@@ -16,6 +17,6 @@ export const config = {
   locales,
   profile,
   skills: skills as IconsVariants[],
-  social,
+  social: social as Social[],
   showResume: isDev
 }

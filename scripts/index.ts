@@ -2,12 +2,14 @@ import 'dotenv/config'
 
 import { join } from 'node:path'
 
+import { analytics } from './analytics'
 import { favicons } from './favicons'
 import { locales } from './locales'
 import { manifest } from './manifest'
 import { parameters } from './parameters'
 import { profile } from './profile'
 import { skills } from './skills'
+import { social } from './social'
 
 async function main() {
   console.log('🚀 Starting...')
@@ -25,7 +27,6 @@ async function main() {
   } = await parameters()
 
   const LOCALES = await locales({ dataDir, defaultLocale: DEFAULT_LOCALE })
-  await skills({ dataDir })
 
   const NORMALIZED_FAVICON_SIZES = FAVICON_SIZES.split(',').map((a: string) => +a)
 
@@ -41,6 +42,10 @@ async function main() {
     favicon: FAVICON,
     faviconSizes: NORMALIZED_FAVICON_SIZES
   })
+
+  skills({ dataDir })
+  social({ dataDir })
+  analytics({ dataDir })
 
   profile({
     dataDir,
