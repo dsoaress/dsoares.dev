@@ -7,13 +7,18 @@ type HomeProps = {
 }
 
 export function Home({ avatarBlurDataURL, projects }: HomeProps) {
+  const hasContent = !!projects.length
+
   return (
     <>
-      <Header avatarBlurDataURL={avatarBlurDataURL} />
-      <Container>
-        <Projects projects={projects} />
-        <Footer />
-      </Container>
+      <Header avatarBlurDataURL={avatarBlurDataURL} hasContent={hasContent} />
+
+      {hasContent && (
+        <Container>
+          <Projects projects={projects} />
+          <Footer />
+        </Container>
+      )}
     </>
   )
 }

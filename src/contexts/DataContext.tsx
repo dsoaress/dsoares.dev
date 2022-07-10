@@ -10,13 +10,9 @@ type DataContextProps = {
   c: typeof config
 }
 
-type DataProviderProps = {
-  children: ReactNode
-}
-
 export const DataContext = createContext({} as DataContextProps)
 
-export function DataProvider({ children }: DataProviderProps) {
+export function DataProvider({ children }: { children: ReactNode }) {
   const { locale } = useRouter()
   const t = i18n[locale as Locales]
   const c = config

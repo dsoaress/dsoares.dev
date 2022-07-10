@@ -9,9 +9,10 @@ import { useData } from '@/hooks/useData'
 
 type HeaderProps = {
   avatarBlurDataURL: string
+  hasContent: boolean
 }
 
-export function Header({ avatarBlurDataURL }: HeaderProps) {
+export function Header({ avatarBlurDataURL, hasContent }: HeaderProps) {
   const { locale } = useRouter()
   const { t, c } = useData()
 
@@ -39,11 +40,13 @@ export function Header({ avatarBlurDataURL }: HeaderProps) {
 
           <Skills />
 
-          <div className="mx-auto mt-2 md:mt-6">
-            <ScrollLink to="projects">
-              <BsArrowDownShort className="h-6 w-6 animate-bounce" />
-            </ScrollLink>
-          </div>
+          {hasContent && (
+            <div className="mx-auto mt-2 md:mt-6">
+              <ScrollLink to="projects">
+                <BsArrowDownShort className="h-6 w-6 animate-bounce" />
+              </ScrollLink>
+            </div>
+          )}
         </div>
       </header>
 
