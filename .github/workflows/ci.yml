@@ -32,7 +32,10 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
 
       - name: Install dependencies
-        run: yarn install && yarn getInitialData
+        run: yarn install
+
+      - name: Get initial data
+        run: yarn getInitialData
 
   check-types:
     name: Check types
