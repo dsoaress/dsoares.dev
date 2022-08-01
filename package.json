@@ -54,7 +54,7 @@
     "@types/jest": "28.1.4",
     "@types/node": "18.0.1",
     "@types/react": "18.0.15",
-    "@types/react-scroll": "1.8.3",
+    "@types/react-scroll": "1.8.4",
     "@types/sharp": "0.30.4",
     "autoprefixer": "10.4.7",
     "babel-loader": "8.2.5",
