@@ -1,0 +1,37 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "baseBranch": "origin/development",
+  "pipeline": {
+    "dev": {
+      "cache": false
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/**"]
+    },
+    "start": {
+      "outputs": []
+    },
+    "test": {
+      "outputs": []
+    },
+    "test:ci": {
+      "outputs": []
+    },
+    "test:cov": {
+      "outputs": []
+    },
+    "lint": {
+      "outputs": []
+    },
+    "lint:ci": {
+      "outputs": []
+    },
+    "clear": {
+      "outputs": []
+    },
+    "type-check": {
+      "outputs": []
+    }
+  }
+}

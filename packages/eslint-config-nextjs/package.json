@@ -1,0 +1,13 @@
+{
+  "name": "@dsoaress/eslint-config-nextjs",
+  "version": "0.0.0",
+  "private": true,
+  "main": "index.js",
+  "dependencies": {
+    "@dsoaress/eslint-config-base": "*",
+    "eslint-config-next": "12.2.3"
+  },
+  "devDependencies": {
+    "eslint": "8.21.0"
+  }
+}

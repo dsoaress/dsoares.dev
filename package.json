@@ -4,75 +4,48 @@
   "version": "3.16.6",
   "private": true,
   "license": "MIT",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "dev": "next dev",
-    "prebuild": "ts-node -r tsconfig-paths/register scripts/initialdata.ts",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint src --fix",
-    "test": "jest --watch",
-    "test:us": "jest --watch --updateSnapshot",
-    "test:ci": "jest --ci",
-    "test:lint": "eslint src",
-    "test:coverage": "jest --coverage",
-    "prepare": "husky install",
-    "clear": "rimraf node_modules .next",
-    "type-check": "tsc",
-    "postversion": "scripts/postversion"
-  },
-  "dependencies": {
-    "@radix-ui/react-tooltip": "0.1.8-rc.46",
-    "@upstash/redis": "1.7.0",
-    "classnames": "2.3.1",
-    "file-saver": "2.0.5",
-    "graphql": "16.5.0",
-    "graphql-request": "4.3.0",
-    "next": "12.2.0",
-    "next-pwa": "5.5.4",
-    "next-themes": "0.2.0",
-    "plaiceholder": "2.4.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-icons": "4.4.0",
-    "react-scroll": "1.8.7",
-    "sharp": "0.30.7",
-    "swr": "1.3.0",
-    "tailwindcss": "3.1.4",
-    "tailwindcss-radix": "2.3.1"
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build --parallel",
+    "start": "turbo run start --parallel",
+    "lint": "turbo run lint",
+    "lint:ci": "turbo run lint:ci",
+    "test": "turbo run test",
+    "test:ci": "turbo run test:ci",
+    "test:cov": "turbo run test:cov",
+    "clear": "turbo run clear",
+    "type-check": "turbo run type-check"
   },
   "devDependencies": {
-    "@babel/core": "7.18.9",
     "@commitlint/cli": "17.0.3",
     "@commitlint/config-conventional": "17.0.3",
-    "@dsoaress/eslint-config": "1.1.1",
-    "@dsoaress/prettier-config": "1.0.1",
-    "@testing-library/dom": "8.14.0",
-    "@testing-library/jest-dom": "5.16.4",
-    "@testing-library/react": "13.3.0",
-    "@testing-library/user-event": "14.2.1",
-    "@types/file-saver": "2.0.5",
-    "@types/jest": "28.1.4",
-    "@types/node": "18.0.1",
-    "@types/react": "18.0.15",
-    "@types/react-scroll": "1.8.4",
-    "@types/sharp": "0.30.4",
-    "autoprefixer": "10.4.8",
-    "babel-loader": "8.2.5",
-    "eslint": "8.19.0",
-    "eslint-config-next": "12.2.0",
+    "@dsoaress/eslint-config-base": "*",
+    "@dsoaress/prettier-config-base": "*",
+    "eslint": "8.21.0",
     "husky": "8.0.1",
-    "jest": "28.1.2",
-    "jest-environment-jsdom": "28.1.2",
     "lint-staged": "13.0.3",
-    "postcss": "8.4.14",
     "prettier": "2.7.1",
-    "prettier-plugin-tailwindcss": "0.1.11",
     "pretty-quick": "3.1.3",
     "rimraf": "3.0.2",
-    "ts-node": "10.8.2",
-    "tsconfig-paths": "4.0.0",
-    "typescript": "4.7.4",
-    "webpack": "5.73.0"
+    "turbo": "1.4.2"
   },
-  "prettier": "@dsoaress/prettier-config"
+  "prettier": "@dsoaress/prettier-config-base",
+  "eslintConfig": {
+    "extends": [
+      "@dsoaress/eslint-config-base"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.{md,json}": "prettier --write --ignore-path .gitignore",
+    "*.{js,jsx,ts,tsx}": "eslint --fix"
+  }
 }

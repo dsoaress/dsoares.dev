@@ -1,0 +1,39 @@
+[35mdsoares.me:build[0m: cache hit, replaying output [2m692be97c597fc3fa[0m
+[35mdsoares.me:build: [0m$ ts-node -r tsconfig-paths/register scripts/initialdata.ts
+[35mdsoares.me:build: [0m$ next build
+[35mdsoares.me:build: [0minfo  - Loaded env from /Users/dsoares/www/dsoares.me/apps/web/.env
+[35mdsoares.me:build: [0minfo  - Linting and checking validity of types...
+[35mdsoares.me:build: [0minfo  - Creating an optimized production build...
+[35mdsoares.me:build: [0m> [PWA] Compile server
+[35mdsoares.me:build: [0m> [PWA] Compile client (static)
+[35mdsoares.me:build: [0m> [PWA] Auto register service worker with: /Users/dsoares/www/dsoares.me/node_modules/next-pwa/register.js
+[35mdsoares.me:build: [0m> [PWA] Service worker: /Users/dsoares/www/dsoares.me/apps/web/.next/sw.js
+[35mdsoares.me:build: [0m> [PWA]   url: /sw.js
+[35mdsoares.me:build: [0m> [PWA]   scope: /
+[35mdsoares.me:build: [0m> [PWA] Compile server
+[35mdsoares.me:build: [0minfo  - Compiled successfully
+[35mdsoares.me:build: [0minfo  - Collecting page data...
+[35mdsoares.me:build: [0minfo  - Generating static pages (0/11)
+[35mdsoares.me:build: [0minfo  - Generating static pages (2/11)
+[35mdsoares.me:build: [0minfo  - Generating static pages (5/11)
+[35mdsoares.me:build: [0minfo  - Generating static pages (8/11)
+[35mdsoares.me:build: [0minfo  - Generating static pages (11/11)
+[35mdsoares.me:build: [0minfo  - Finalizing page optimization...
+[35mdsoares.me:build: [0m
+[35mdsoares.me:build: [0mPage                                       Size     First Load JS
+[35mdsoares.me:build: [0m┌ ● /                                      475 B           142 kB
+[35mdsoares.me:build: [0m├   /_app                                  0 B             141 kB
+[35mdsoares.me:build: [0m├ ○ /404                                   462 B           142 kB
+[35mdsoares.me:build: [0m├ ○ /500                                   463 B           142 kB
+[35mdsoares.me:build: [0m└ λ /api/get-current-track                 0 B             141 kB
+[35mdsoares.me:build: [0m+ First Load JS shared by all              141 kB
+[35mdsoares.me:build: [0m  ├ chunks/framework-c02f198d58d34563.js   45.3 kB
+[35mdsoares.me:build: [0m  ├ chunks/main-050fc37bb110e5bc.js        37.5 kB
+[35mdsoares.me:build: [0m  ├ chunks/pages/_app-2fc91f3be6adf6bb.js  57.7 kB
+[35mdsoares.me:build: [0m  ├ chunks/webpack-df4cf1c8d23aa877.js     1.03 kB
+[35mdsoares.me:build: [0m  └ css/d948054e20e25b34.css               3.57 kB
+[35mdsoares.me:build: [0m
+[35mdsoares.me:build: [0mλ  (Server)  server-side renders at runtime (uses getInitialProps or getServerSideProps)
+[35mdsoares.me:build: [0m○  (Static)  automatically rendered as static HTML (uses no initial props)
+[35mdsoares.me:build: [0m●  (SSG)     automatically generated as static HTML + JSON (uses getStaticProps)
+[35mdsoares.me:build: [0m

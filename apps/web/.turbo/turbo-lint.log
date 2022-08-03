@@ -1,0 +1,2 @@
+[34mdsoares.me:lint[0m: cache hit, replaying output [2ma1792176d1074e35[0m
+[34mdsoares.me:lint: [0m$ eslint src --fix

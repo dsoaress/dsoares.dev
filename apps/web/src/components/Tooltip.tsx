@@ -34,3 +34,5 @@ export function Tooltip({
     </TooltipPrimitive.Root>
   )
 }
+
+export const TooltipProvider = TooltipPrimitive.Provider
