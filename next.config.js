@@ -2,7 +2,7 @@
 
 const withPWA = require('next-pwa')
 
-const locales = require('./locales')
+const locales = require('./locales.config.json')
 
 const nextConfig = {
   reactStrictMode: true,
@@ -10,9 +10,6 @@ const nextConfig = {
   pwa: {
     dest: 'public',
     disable: process.env.NODE_ENV === 'development'
-  },
-  async rewrites() {
-    return [{ source: '/posts', destination: '/' }]
   }
 }
 

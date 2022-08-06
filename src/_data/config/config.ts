@@ -1,4 +1,4 @@
-import locales from '../../../locales'
+import locales from '../../../locales.config.json'
 import tailwindConfig from '../../../tailwind.config'
 import { analytics } from './analytics'
 import { profile } from './profile'
