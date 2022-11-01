@@ -53,7 +53,7 @@
     "@types/react": "18.0.24",
     "@types/react-scroll": "1.8.4",
     "@types/sharp": "0.30.4",
-    "autoprefixer": "10.4.12",
+    "autoprefixer": "10.4.13",
     "babel-loader": "8.2.5",
     "eslint": "8.21.0",
     "eslint-config-next": "12.2.4",
