@@ -1,14 +1,15 @@
 import cn from 'classnames'
+import type { LinkProps as NextLinkProps } from 'next/link'
 import NextLink from 'next/link'
-import type { AnchorHTMLAttributes, ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import { Link as ReactScroll } from 'react-scroll'
 
 type LinkProps = {
   active?: boolean
-  href: string
-  locale?: string
+  className?: string
   external?: boolean
-} & AnchorHTMLAttributes<HTMLAnchorElement>
+  children?: ReactNode
+} & NextLinkProps
 
 type ScrollLinkProps = {
   to: string
@@ -16,16 +17,14 @@ type ScrollLinkProps = {
   children: ReactNode
 }
 
-export function Link({ active = false, href, className, locale, external, ...props }: LinkProps) {
+export function Link({ active = false, className, external, ...props }: LinkProps) {
   return (
-    <NextLink href={href} locale={locale}>
-      <a
-        className={cn(className, { 'text-primary-300 dark:text-primary-300': active })}
-        rel={external ? 'noopener noreferrer' : undefined}
-        target={external ? '_blank' : undefined}
-        {...props}
-      />
-    </NextLink>
+    <NextLink
+      className={cn(className, { 'text-primary-300 dark:text-primary-300': active })}
+      rel={external ? 'noopener noreferrer' : undefined}
+      target={external ? '_blank' : undefined}
+      {...props}
+    />
   )
 }
 

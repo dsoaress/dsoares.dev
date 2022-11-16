@@ -58,10 +58,10 @@ export function Projects({ projects }: ProjectsProps) {
               <Image
                 src={project.cover}
                 alt={project.title}
-                objectFit="cover"
-                layout="fill"
                 placeholder="blur"
                 blurDataURL={project.coverBlurDataURL}
+                className="object-cover object-top"
+                fill
               />
             </div>
 

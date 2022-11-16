@@ -51,12 +51,11 @@ export function Header({ avatarBlurDataURL }: HeaderProps) {
         <Image
           src={c.profile.avatar}
           alt={c.profile.title}
-          objectFit="cover"
-          objectPosition="top"
-          layout="fill"
+          className="object-cover object-top"
           placeholder="blur"
-          quality={100}
           blurDataURL={avatarBlurDataURL}
+          quality={100}
+          fill
         />
         <div className="absolute inset-0 bg-gradient-to-t from-neutral-50 to-transparent dark:from-neutral-900" />
       </div>
