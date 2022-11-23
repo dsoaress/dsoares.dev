@@ -1,4 +1,4 @@
-import { Redis } from '@upstash/redis'
+import { Redis } from '@upstash/redis/with-fetch'
 import { gql } from 'graphql-request'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { getPlaiceholder } from 'plaiceholder'
