@@ -48,7 +48,7 @@
     "@testing-library/user-event": "14.4.3",
     "@types/file-saver": "2.0.5",
     "@types/jest": "29.2.3",
-    "@types/node": "18.11.9",
+    "@types/node": "18.11.10",
     "@types/react": "18.0.25",
     "@types/react-scroll": "1.8.5",
     "@types/sharp": "0.31.0",
