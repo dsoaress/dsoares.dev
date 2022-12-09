@@ -10,7 +10,7 @@
     "build": "next build",
     "start": "next start",
     "format": "prettier --write '**/*.{json,yml,yaml,md,mdx}' --ignore-path .gitignore",
-    "lint": "yarn format && eslint src --fix",
+    "lint": "pnpm format && eslint src --fix",
     "lint:ci": "eslint src",
     "test": "jest --watch",
     "test:ci": "jest --ci",

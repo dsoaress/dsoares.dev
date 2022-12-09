@@ -1,6 +1,6 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-yarn lint-staged
-yarn pretty-quick --staged
-yarn test:ci
+pnpm lint-staged
+pnpm pretty-quick --staged
+pnpm test:ci

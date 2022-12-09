@@ -8,13 +8,13 @@ Source of my personal site.
 
 ```shell
 git clone https://github.com/dsoaress/dsoares.me.git
-cd dsoares.me && yarn && yarn dev
+cd dsoares.me && pnpm && pnpm dev
 ```
 
 ## Running tests
 
 ```shell
-yarn test:ci
+pnpm test:ci
 ```
 
 ## Built Using

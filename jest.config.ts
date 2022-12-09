@@ -1,11 +1,11 @@
-import { Config } from '@jest/types'
+import { Config } from 'jest'
 import nextJest from 'next/jest'
 
 const createJestConfig = nextJest({
   dir: './'
 })
 
-const config: Config.InitialOptions = {
+const config: Config = {
   testEnvironment: 'jest-environment-jsdom',
   collectCoverageFrom: [
     '<rootDir>/src/_data/**/*.ts',
