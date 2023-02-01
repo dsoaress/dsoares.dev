@@ -13,7 +13,7 @@ specifiers:
   '@types/jest': 29.2.5
   '@types/node': 18.11.18
   '@types/react': 18.0.27
-  '@types/react-scroll': 1.8.5
+  '@types/react-scroll': 1.8.6
   '@types/sharp': 0.31.1
   '@upstash/redis': 1.16.0
   autoprefixer: 10.4.13
@@ -84,7 +84,7 @@ devDependencies:
   '@types/jest': 29.2.5
   '@types/node': 18.11.18
   '@types/react': 18.0.27
-  '@types/react-scroll': 1.8.5
+  '@types/react-scroll': 1.8.6
   '@types/sharp': 0.31.1
   autoprefixer: 10.4.13_postcss@8.4.20
   babel-loader: 9.1.0_la66t7xldg4uecmyawueag5wkm
@@ -1546,8 +1546,8 @@ packages:
       '@types/react': 18.0.27
     dev: true
 
-  /@types/react-scroll/1.8.5:
-    resolution: {integrity: sha512-+adEt41hQHMX4aoBOD9Y336QzQzAtlFXTrsFWToS+efgqsYXUOo0JKLeI0O5GLE50Peap6DsbUQRK6gnv8t6wQ==}
+  /@types/react-scroll/1.8.6:
+    resolution: {integrity: sha512-aMTiNgcmA7dwn1yjoHsiL78RfRnKCXzFyMbv63VrZTXloSfNePBdKtVObC3/My6irwDf0Oz0U4VjEC/vrv6/9w==}
     dependencies:
       '@types/react': 18.0.27
     dev: true
