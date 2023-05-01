@@ -39,7 +39,7 @@
     "tailwindcss-radix": "2.6.1"
   },
   "devDependencies": {
-    "@babel/core": "7.20.12",
+    "@babel/core": "7.21.5",
     "@commitlint/cli": "17.6.1",
     "@commitlint/config-conventional": "17.6.1",
     "@testing-library/dom": "8.19.1",
