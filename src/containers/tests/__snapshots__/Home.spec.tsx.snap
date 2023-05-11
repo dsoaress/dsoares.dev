@@ -77,11 +77,12 @@ exports[`<Home /> should matches snapshot 1`] = `
           class="flex h-11 cursor-pointer items-center rounded-md border-0 bg-primary-600 px-6 text-sm font-medium leading-none text-neutral-50 transition-colors duration-300 hover:bg-primary-700 active:bg-primary-800 umami--click--resume-en"
         >
           <svg
+            aria-hidden="true"
             class="mr-2 text-lg"
             fill="none"
             height="1em"
             stroke="currentColor"
-            stroke-width="0"
+            stroke-width="2"
             viewBox="0 0 24 24"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +91,6 @@ exports[`<Home /> should matches snapshot 1`] = `
               d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              stroke-width="2"
             />
           </svg>
           Resume
@@ -738,7 +738,7 @@ exports[`<Home /> should matches snapshot 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"
+                  d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"
                 />
               </svg>
             </a>
