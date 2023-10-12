@@ -23,6 +23,6 @@ export const social: Social[] = [
   },
   {
     label: 'Email',
-    url: 'mailto:m@dsoares.me'
+    url: 'mailto:daniel.soares@me.com'
   }
 ]

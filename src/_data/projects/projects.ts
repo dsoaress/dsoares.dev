@@ -40,15 +40,15 @@ export const projects: Projects = [
     cover: '/assets/projects/react-news.jpeg'
   },
   {
-    title: 'dsoares.me',
+    title: 'dsoares.dev',
     description: {
       en: 'Source of my personal site using Next.js (with TypeScript)',
       es: 'Fuente de mi sitio personal usando Next.js (con TypeScript)',
       pt: 'Código fonte do meu site pessoal utilizando Next.js (com TypeScript)'
     },
     tags: 'TypeScript, Next.js',
-    repo: 'dsoares.me',
-    repositoryUrl: 'https://github.com/dsoaress/dsoares.me',
+    repo: 'dsoares.dev',
+    repositoryUrl: 'https://github.com/dsoaress/dsoares.dev',
     cover: '/assets/projects/dsoares.jpeg'
   }
 ]

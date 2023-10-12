@@ -7,8 +7,8 @@ Source of my personal site.
 ## Running Locally
 
 ```shell
-git clone https://github.com/dsoaress/dsoares.me.git
-cd dsoares.me && pnpm && pnpm dev
+git clone https://github.com/dsoaress/dsoares.dev.git
+cd dsoares.dev && pnpm && pnpm dev
 ```
 
 ## Running tests
