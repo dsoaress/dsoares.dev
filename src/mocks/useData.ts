@@ -10,11 +10,6 @@ type Data = {
 
 export const data: Data = {
   c: {
-    analytics: {
-      domain: 'example.com',
-      id: '1111111',
-      src: 'https://example.com/analytics.js'
-    },
     colors: tailwindConfig.theme.extend.colors,
     locales: {
       defaultLocale: 'en',

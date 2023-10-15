@@ -2,7 +2,6 @@ import { config } from '../config'
 
 describe('config', () => {
   it('should has required properties', () => {
-    expect(config).toHaveProperty('analytics')
     expect(config).toHaveProperty('colors')
     expect(config).toHaveProperty('locales')
     expect(config).toHaveProperty('profile')
@@ -12,7 +11,6 @@ describe('config', () => {
   })
 
   it('should has correct properties types', () => {
-    expect(typeof config.analytics).toBe('object')
     expect(typeof config.colors).toBe('object')
     expect(typeof config.locales).toBe('object')
     expect(typeof config.profile).toBe('object')
