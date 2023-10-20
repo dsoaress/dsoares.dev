@@ -1,5 +1,6 @@
 import { existsSync, mkdirSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
+
 import sharp from 'sharp'
 
 import { config } from '@/data'
