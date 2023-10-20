@@ -2,7 +2,6 @@ import "./globals.css";
 
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Header } from "../components/header";
 import { Locale, trans } from "@/_data/i18n";
 import { c } from "@/_data/config";
 
@@ -20,14 +19,11 @@ export default function RootLayout({
   params: { lang },
 }: {
   children: ReactNode;
-  params: { lang: string };
+  params: { lang: Locale };
 }) {
   return (
     <html lang={lang}>
-      <body>
-        <Header />
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
