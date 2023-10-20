@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`<Container /> should matches snapshot 1`] = `
-<main
-  class="mx-auto max-w-screen-xl px-6"
->
-  Children
-</main>
-`;

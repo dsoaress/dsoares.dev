@@ -22,5 +22,3 @@ pnpm test:ci
 - [Next.js](https://nextjs.org)
 - [Tailwind](https://tailwindcss.com)
 - [TypeScript](https://www.typescriptlang.org)
-
-![Lighthouse](./.github/lighthouse.gif)
