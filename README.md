@@ -1,6 +1,6 @@
 # Daniel Soares
 
-[![codecov](https://codecov.io/gh/dsoaress/dsoares.me/branch/development/graph/badge.svg?token=N3L06J3GQN)](https://codecov.io/gh/dsoaress/dsoares.me)
+[![codecov](https://codecov.io/gh/dsoaress/dsoares.dev/graph/badge.svg?token=N3L06J3GQN)](https://codecov.io/gh/dsoaress/dsoares.dev)
 
 Source of my personal site.
 

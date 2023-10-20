@@ -1,5 +1,3 @@
-import fs from 'node:fs/promises'
-
 import { Redis } from '@upstash/redis/with-fetch'
 import { gql } from 'graphql-request'
 import type { NextApiRequest, NextApiResponse } from 'next'
@@ -16,14 +14,8 @@ type GithubResponse = {
   }
 }
 
-const getImage = async (src: string) => {
-  const buffer = await fs.readFile(src)
-  return getPlaiceholder(buffer, { size: 10 })
-}
-
 export async function getAvatarBlurDataURL() {
-  const buffer = await fs.readFile(config.profile.avatar)
-  const { base64: avatarBlurDataURL } = await getPlaiceholder(buffer, { size: 10 })
+  const { base64: avatarBlurDataURL } = await getPlaiceholder(config.profile.avatar, { size: 10 })
   return avatarBlurDataURL
 }
 
@@ -47,8 +39,7 @@ export async function getAllProjects() {
         }
       )
 
-      const buffer = await fs.readFile(project.cover)
-      const { base64: coverBlurDataURL } = await getPlaiceholder(buffer, { size: 10 })
+      const { base64: coverBlurDataURL } = await getPlaiceholder(project.cover, { size: 10 })
 
       return {
         ...project,
