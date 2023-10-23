@@ -5,7 +5,7 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "dev": "next dev --turbo",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -13,6 +13,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "classnames": "2.3.2",
     "next": "13.5.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
