@@ -5,41 +5,43 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { BiHome, BiInfoCircle, BiLogoGithub, BiLogoLinkedin, BiReceipt } from 'react-icons/bi'
 
-export const links = [
-  {
-    href: '/',
-    label: 'Home',
-    icon: BiHome,
-    external: false
-  },
-  {
-    href: '/about',
-    label: 'About',
-    icon: BiInfoCircle,
-    external: false
-  },
-  {
-    href: '/posts',
-    label: 'Posts',
-    icon: BiReceipt,
-    external: false
-  },
-  {
-    href: 'https://linkedin.com/in/dsoaress',
-    label: 'LinkedIn',
-    icon: BiLogoLinkedin,
-    external: true
-  },
-  {
-    href: 'https://github.com/dsoaress',
-    label: 'GitHub',
-    icon: BiLogoGithub,
-    external: true
-  }
-]
+import { useI18n } from '@/locales/client'
 
 export function Nav() {
+  const t = useI18n()
   const pathname = usePathname()
+  const links = [
+    {
+      href: '/',
+      label: t('nav.home'),
+      icon: BiHome,
+      external: false
+    },
+    {
+      href: '/about',
+      label: t('nav.about'),
+      icon: BiInfoCircle,
+      external: false
+    },
+    {
+      href: '/posts',
+      label: t('nav.posts'),
+      icon: BiReceipt,
+      external: false
+    },
+    {
+      href: 'https://linkedin.com/in/dsoaress',
+      label: 'LinkedIn',
+      icon: BiLogoLinkedin,
+      external: true
+    },
+    {
+      href: 'https://github.com/dsoaress',
+      label: 'GitHub',
+      icon: BiLogoGithub,
+      external: true
+    }
+  ]
   return (
     <nav className="w-full">
       <ul className="space-y-4">
@@ -49,7 +51,7 @@ export function Nav() {
               href={href}
               className={cn(
                 'w-full h-6 flex items-center justify-center relative text-neutral-400 hover:text-neutral-500 transition-colors duration-300',
-                { 'text-primary-500 hover:text-primary-600': pathname === href }
+                { 'text-primary-500 hover:text-primary-500': pathname === href }
               )}
               target={external ? '_blank' : '_self'}
               rel={external ? 'noopener noreferrer' : undefined}
@@ -59,9 +61,7 @@ export function Nav() {
               <div
                 className={cn(
                   'bg-opacity-0 absolute w-0.5 right-0 top-0 bottom-0 bg-primary-500 transition-colors duration-500',
-                  {
-                    'bg-opacity-100': pathname === href
-                  }
+                  { 'bg-opacity-100': pathname === href }
                 )}
               />
             </Link>

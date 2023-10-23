@@ -1,7 +1,10 @@
+import { getI18n } from '@/locales/server'
+
 export default async function Home() {
+  const t = await getI18n()
   return (
     <div>
-      <h1>Home</h1>
+      <h1>{t('nav.home')}</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, accusamus aspernatur fuga
         voluptas odio facere error blanditiis tempora iste libero architecto dolorem ullam suscipit,
