@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-gradient-to-r from-neutral-50 from-50% to-white to-50% text-neutral-900;
+  }
+}

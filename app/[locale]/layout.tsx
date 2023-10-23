@@ -26,12 +26,10 @@ export default function RootLayout({
   return (
     <html lang={locale}>
       <I18nProviderClient locale={locale}>
-        <body className="max-w-7xl mx-auto">
-          <div className="min-h-screen flex">
+        <body className="max-w-7xl mx-auto min-h-screen">
+          <div className="flex">
             <Aside />
-            <main className="grow overflow-hidden px-6 py-16 border-t border-b border-neutral-200">
-              {children}
-            </main>
+            <main className="grow overflow-hidden px-6 py-16 bg-white">{children}</main>
           </div>
         </body>
       </I18nProviderClient>
