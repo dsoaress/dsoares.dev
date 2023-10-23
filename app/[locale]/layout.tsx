@@ -1,13 +1,20 @@
 import './globals.css'
 
 import type { Metadata } from 'next'
+import { setStaticParamsLocale } from 'next-international/server'
 import type { ReactNode } from 'react'
 
+import { I18nProviderClient } from '@/app/locales/client'
+import { getStaticParams } from '@/app/locales/server'
+
 import { Aside } from '../components/aside'
-import I18nProvider from '../hooks/i18n-provider'
 
 export function generateMetadata(): Metadata {
   return {}
+}
+
+export function generateStaticParams() {
+  return getStaticParams()
 }
 
 export default function RootLayout({
@@ -17,16 +24,19 @@ export default function RootLayout({
   children: ReactNode
   params: { locale: string }
 }) {
+  setStaticParamsLocale(locale)
   return (
-    <html lang="en" className="border-t border-b border-neutral-200">
-      <I18nProvider locale={locale}>
+    <html lang={locale}>
+      <I18nProviderClient locale={locale}>
         <body className="max-w-7xl mx-auto">
           <div className="min-h-screen flex">
             <Aside />
-            <main className="grow overflow-hidden px-6 my-16">{children}</main>
+            <main className="grow overflow-hidden px-6 py-16 border-t border-b border-neutral-200">
+              {children}
+            </main>
           </div>
         </body>
-      </I18nProvider>
+      </I18nProviderClient>
     </html>
   )
 }
