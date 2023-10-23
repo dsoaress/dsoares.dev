@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className="max-w-7xl mx-auto">
         <div className="min-h-screen flex">
           <Aside />
-          <main className="grow overflow-hidden px-6">{children}</main>
+          <main className="grow overflow-hidden px-6 my-16">{children}</main>
         </div>
       </body>
     </html>
