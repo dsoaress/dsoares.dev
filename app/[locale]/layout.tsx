@@ -9,7 +9,9 @@ import { getStaticParams } from '@/app/locales/server'
 import { Aside } from '../components/aside'
 
 export function generateMetadata(): Metadata {
-  return {}
+  return {
+    themeColor: '#f8fafc'
+  }
 }
 
 export function generateStaticParams() {
