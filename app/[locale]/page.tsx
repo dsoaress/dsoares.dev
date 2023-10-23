@@ -1,6 +1,9 @@
+import { setStaticParamsLocale } from 'next-international/server'
+
 import { getI18n } from '@/app/locales/server'
 
-export default async function Home() {
+export default async function Home({ params: { locale } }: { params: { locale: string } }) {
+  setStaticParamsLocale(locale)
   const t = await getI18n()
   return (
     <div>

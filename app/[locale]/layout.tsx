@@ -1,7 +1,6 @@
 import './globals.css'
 
 import type { Metadata } from 'next'
-import { setStaticParamsLocale } from 'next-international/server'
 import type { ReactNode } from 'react'
 
 import { I18nProviderClient } from '@/app/locales/client'
@@ -24,7 +23,6 @@ export default function RootLayout({
   children: ReactNode
   params: { locale: string }
 }) {
-  setStaticParamsLocale(locale)
   return (
     <html lang={locale}>
       <I18nProviderClient locale={locale}>
