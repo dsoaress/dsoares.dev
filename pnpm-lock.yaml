@@ -92,8 +92,8 @@ devDependencies:
     specifier: 18.2.39
     version: 18.2.39
   '@types/react-scroll':
-    specifier: 1.8.9
-    version: 1.8.9
+    specifier: 1.8.10
+    version: 1.8.10
   '@types/sharp':
     specifier: 0.31.1
     version: 0.31.1
@@ -1738,8 +1738,8 @@ packages:
       '@types/react': 18.2.39
     dev: true
 
-  /@types/react-scroll@1.8.9:
-    resolution: {integrity: sha512-FvfY7wmN7UqwStZFny6riMMnx56rdTBshE3irmoaZPeIEgBRvt1R9/lDNPQ3CVhm5OPJLHKDSvMk4c3JSwoY0g==}
+  /@types/react-scroll@1.8.10:
+    resolution: {integrity: sha512-RD4Z7grbdNGOKwKnUBKar6zNxqaW3n8m9QSrfvljW+gmkj1GArb8AFBomVr6xMOgHPD3v1uV3BrIf01py57daQ==}
     dependencies:
       '@types/react': 18.2.39
     dev: true
