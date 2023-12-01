@@ -80,8 +80,8 @@ devDependencies:
     specifier: 14.5.1
     version: 14.5.1(@testing-library/dom@9.3.3)
   '@types/file-saver':
-    specifier: 2.0.6
-    version: 2.0.6
+    specifier: 2.0.7
+    version: 2.0.7
   '@types/jest':
     specifier: 29.5.7
     version: 29.5.7
@@ -1659,8 +1659,8 @@ packages:
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
     dev: true
 
-  /@types/file-saver@2.0.6:
-    resolution: {integrity: sha512-Mw671DVqoMHbjw0w4v2iiOro01dlT/WhWp5uwecBa0Wg8c+bcZOjgF1ndBnlaxhtvFCgTRBtsGivSVhrK/vnag==}
+  /@types/file-saver@2.0.7:
+    resolution: {integrity: sha512-dNKVfHd/jk0SkR/exKGj2ggkB45MAkzvWCaqLUUgkyjITkGNzH8H+yUwr+BLJUBjZOe9w8X3wgmXhZDRg1ED6A==}
     dev: true
 
   /@types/graceful-fs@4.1.9:
