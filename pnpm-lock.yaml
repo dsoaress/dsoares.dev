@@ -119,8 +119,8 @@ devDependencies:
     specifier: 10.0.0
     version: 10.0.0(eslint@8.57.0)
   eslint-plugin-sonarjs:
-    specifier: 0.21.0
-    version: 0.21.0(eslint@8.57.0)
+    specifier: 0.25.1
+    version: 0.25.1(eslint@8.57.0)
   husky:
     specifier: 8.0.3
     version: 8.0.3
@@ -3530,9 +3530,9 @@ packages:
       eslint: 8.57.0
     dev: true
 
-  /eslint-plugin-sonarjs@0.21.0(eslint@8.57.0):
-    resolution: {integrity: sha512-oezUDfFT5S6j3rQheZ4DLPrbetPmMS7zHIKWGHr0CM3g5JgyZroz1FpIKa4jV83NsGpmgIeagpokWDKIJzRQmw==}
-    engines: {node: '>=14'}
+  /eslint-plugin-sonarjs@0.25.1(eslint@8.57.0):
+    resolution: {integrity: sha512-5IOKvj/GMBNqjxBdItfotfRHo7w48496GOu1hxdeXuD0mB1JBlDCViiLHETDTfA8pDAVSBimBEQoetRXYceQEw==}
+    engines: {node: '>=16'}
     peerDependencies:
       eslint: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
     dependencies:
