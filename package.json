@@ -65,7 +65,7 @@
     "jest-environment-jsdom": "29.7.0",
     "lint-staged": "15.2.7",
     "postcss": "8.4.39",
-    "prettier": "3.2.5",
+    "prettier": "3.3.2",
     "prettier-plugin-tailwindcss": "0.6.5",
     "pretty-quick": "3.3.1",
     "rimraf": "5.0.7",
