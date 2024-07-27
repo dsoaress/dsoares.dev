@@ -46,9 +46,5 @@
     "*.{js,jsx,ts,tsx}": "eslint --max-warnings=0 --fix",
     "*.{js,jsx,ts,tsx,json,yml,yaml,md}": "prettier --write --ignore-path .gitignore"
   },
-  "engines": {
-    "node": ">=18.0.0",
-    "npm": "9.6.0"
-  },
   "packageManager": "pnpm@9.6.0"
 }
