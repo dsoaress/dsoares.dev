@@ -17,8 +17,8 @@ export default function Home() {
         <Header />
         <Social />
         <About />
-        <Location />
-        <EmailList />
+        {/* <Location />
+        <EmailList /> */}
       </HomeContainer>
       <Footer />
     </main>

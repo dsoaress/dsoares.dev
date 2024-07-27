@@ -2,6 +2,7 @@ import '@/styles/globals.css'
 
 import type { Metadata } from 'next'
 import { Inter as FontSans } from 'next/font/google'
+import { ReactNode } from 'react'
 
 import { cn } from '@/lib/utils'
 
@@ -12,15 +13,19 @@ const fontSans = FontSans({
 
 export const metadata: Metadata = {
   title: 'Daniel Soares',
-  description: 'I am a full stack developer working with React, Next.js and Node.js',
-  robots: 'follow, index'
+  description: 'Hi! I&apos;m a full stack developer working with React, Next.js and Node.js',
+  robots: 'follow, index',
+  icons: [
+    { rel: 'icon', type: 'image/svg+xml', url: '/favicon.svg' },
+    { rel: 'icon', type: 'image/png', url: '/favicon.png' }
+  ]
 }
 
-export default function RootLayout({
-  children
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+type Props = {
+  children: ReactNode
+}
+
+export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
       <body
