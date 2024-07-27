@@ -1,11 +1,13 @@
-import { About } from '@/components/about'
-import { EmailList } from '@/components/email-list'
-import { Footer } from '@/components/footer'
-import { Header } from '@/components/header'
-import { HomeContainer } from '@/components/home-container'
-import { Location } from '@/components/location'
-import { Logo } from '@/components/logo'
-import { Social } from '@/components/social'
+import {
+  About,
+  EmailList,
+  Footer,
+  Header,
+  HomeContainer,
+  Location,
+  Logo,
+  Social
+} from '@/components'
 
 export default function Home() {
   return (
