@@ -1,64 +1,32 @@
-import { saveAs } from 'file-saver'
 import Image from 'next/image'
-import { useRouter } from 'next/router'
-import { BsArrowDownShort } from 'react-icons/bs'
-import { HiOutlineDocumentDuplicate } from 'react-icons/hi'
+import Link from 'next/link'
+import { FiArrowRight } from 'react-icons/fi'
 
-import { Button, Heading, ListeningNow, Logo, ScrollLink, Skills, Text } from '@/components'
-import { useData } from '@/hooks/useData'
+import { Block } from './block'
 
-type HeaderProps = {
-  avatarBlurDataURL: string
-}
-
-export function Header({ avatarBlurDataURL }: HeaderProps) {
-  const { locale } = useRouter()
-  const { t, c } = useData()
-
+export function Header() {
   return (
-    <>
-      <header className="absolute flex h-screen w-full items-end justify-center pb-20 md:pb-8">
-        <div className="z-10 grid gap-8 p-8 text-center">
-          <Logo width={80} height={80} className="mx-auto hidden sm:block" />
-          <Heading>{c.profile.title}</Heading>
-          <Text>{t.description}</Text>
-
-          <ListeningNow />
-
-          {c.showResume && (
-            <div className="flex justify-center">
-              <Button
-                className={`umami--click--resume-${locale}`}
-                icon={HiOutlineDocumentDuplicate}
-                onClick={() => saveAs(t.resume.file, `${c.profile.title}-resume-${locale}.pdf`)}
-              >
-                {t.resume.title}
-              </Button>
-            </div>
-          )}
-
-          <Skills />
-
-          <div className="mx-auto mt-2 md:mt-6">
-            <ScrollLink to="projects">
-              <BsArrowDownShort className="h-6 w-6 animate-bounce" />
-            </ScrollLink>
-          </div>
-        </div>
-      </header>
-
-      <div className="relative h-screen">
-        <Image
-          src={c.profile.avatar}
-          alt={c.profile.title}
-          className="object-cover object-top"
-          placeholder="blur"
-          blurDataURL={avatarBlurDataURL}
-          quality={100}
-          fill
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-neutral-50 to-transparent dark:from-neutral-900" />
-      </div>
-    </>
+    <Block className="col-span-12 row-span-2 md:col-span-6">
+      <Image
+        src="https://github.com/dsoaress.png"
+        alt="avatar"
+        className="mb-4 size-16 rounded-full object-cover object-top"
+        width={64}
+        height={64}
+      />
+      <h1 className="mb-12 text-4xl font-medium leading-tight">
+        Hi, I&apos;m Daniel Soares.
+        <br />
+        <span className="text-neutral-400">I build cool things with Go, Node and React.</span>
+      </h1>
+      <Link
+        href="https://www.linkedin.com/in/dsoaress"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-1 text-primary-300 hover:underline"
+      >
+        Get in touch <FiArrowRight />
+      </Link>
+    </Block>
   )
 }
