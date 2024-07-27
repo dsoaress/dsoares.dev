@@ -9,7 +9,7 @@ export function Footer() {
           href="https://nextjs.org/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-primary-300 hover:underline"
+          className="font-medium text-primary-300 hover:underline"
         >
           Next.js
         </Link>
