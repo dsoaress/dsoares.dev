@@ -1,11 +1,24 @@
 {
-  "extends": ["next/core-web-vitals", "plugin:sonarjs/recommended", "plugin:prettier/recommended"],
-  "plugins": ["sonarjs", "prettier", "simple-import-sort"],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:tailwindcss/recommended",
+    "plugin:sonarjs/recommended-legacy",
+    "prettier"
+  ],
+  "plugins": ["sonarjs", "simple-import-sort", "import"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "parser": "@typescript-eslint/parser"
+    }
+  ],
   "rules": {
-    "prettier/prettier": "error",
-    "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error",
-    "sonarjs/no-duplicate-string": "off",
-    "sonarjs/cognitive-complexity": ["error", 50]
+    "simple-import-sort/imports": "warn",
+    "simple-import-sort/exports": "warn",
+    "import/first": "warn",
+    "import/newline-after-import": "warn",
+    "import/no-duplicates": "warn",
+    "tailwindcss/no-custom-classname": "off",
+    "sonarjs/no-duplicate-string": "off"
   }
 }
