@@ -50,7 +50,7 @@ function StyledBlock({ className, rotate, ...props }: BlockProps & { rotate: str
 function StyledLink({
   className,
   ...props
-}: LinkProps & { className: string; children: ReactNode }) {
+}: Readonly<LinkProps & { className: string; children: ReactNode }>) {
   return (
     <Link
       {...props}

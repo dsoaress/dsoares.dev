@@ -1,13 +1,4 @@
-import {
-  About,
-  EmailList,
-  Footer,
-  Header,
-  HomeContainer,
-  Location,
-  Logo,
-  Social
-} from '@/components'
+import { About, Footer, Header, HomeContainer, Logo, Social } from '@/components'
 
 export default function Home() {
   return (
@@ -17,8 +8,6 @@ export default function Home() {
         <Header />
         <Social />
         <About />
-        {/* <Location />
-        <EmailList /> */}
       </HomeContainer>
       <Footer />
     </main>
