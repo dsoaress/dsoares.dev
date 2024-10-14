@@ -1,5 +1,6 @@
 import '@/styles/globals.css'
 
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata } from 'next'
 import { Inter as FontSans } from 'next/font/google'
 import { ReactNode } from 'react'
@@ -35,6 +36,7 @@ export default function RootLayout({ children }: Readonly<Props>) {
         )}
       >
         {children}
+        <SpeedInsights />
       </body>
     </html>
   )
