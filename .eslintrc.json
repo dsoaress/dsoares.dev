@@ -1,11 +1,6 @@
 {
-  "extends": [
-    "next/core-web-vitals",
-    "plugin:tailwindcss/recommended",
-    "plugin:sonarjs/recommended-legacy",
-    "prettier"
-  ],
-  "plugins": ["sonarjs", "simple-import-sort", "import"],
+  "extends": ["next/core-web-vitals", "plugin:tailwindcss/recommended", "prettier"],
+  "plugins": ["simple-import-sort", "import"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
