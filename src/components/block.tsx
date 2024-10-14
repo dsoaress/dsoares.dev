@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils'
 
 type BlockProps = MotionProps & HTMLAttributes<HTMLDivElement>
 
-export function Block({ className, ...rest }: Readonly<BlockProps>) {
+export function Block({ className, ...props }: Readonly<BlockProps>) {
   return (
     <motion.div
       variants={{
@@ -19,7 +19,7 @@ export function Block({ className, ...rest }: Readonly<BlockProps>) {
         'col-span-4 rounded-lg border border-neutral-700 bg-neutral-800 p-6',
         className
       )}
-      {...rest}
+      {...props}
     />
   )
 }

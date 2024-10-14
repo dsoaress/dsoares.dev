@@ -1,5 +1,11 @@
 {
-  "extends": ["next/core-web-vitals", "plugin:tailwindcss/recommended", "prettier"],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:tailwindcss/recommended",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
   "plugins": ["simple-import-sort", "import"],
   "overrides": [
     {
