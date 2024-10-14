@@ -1,46 +1,25 @@
 import type { Config } from 'tailwindcss'
-import {
-  amber,
-  blue,
-  cyan,
-  emerald,
-  fuchsia,
-  gray,
-  green,
-  indigo,
-  lime,
-  orange,
-  pink,
-  purple,
-  red,
-  rose,
-  sky,
-  slate,
-  stone,
-  teal,
-  violet,
-  zinc
-} from 'tailwindcss/colors'
+import * as c from 'tailwindcss/colors'
 import { fontFamily } from 'tailwindcss/defaultTheme'
 
-const neutralPalette = [zinc, gray, slate, stone]
+const neutralPalette = [c.zinc, c.gray, c.slate, c.stone]
 const primaryPalette = [
-  rose,
-  pink,
-  fuchsia,
-  purple,
-  violet,
-  indigo,
-  cyan,
-  teal,
-  emerald,
-  lime,
-  amber,
-  orange,
-  red,
-  blue,
-  green,
-  sky
+  c.rose,
+  c.pink,
+  c.fuchsia,
+  c.purple,
+  c.violet,
+  c.indigo,
+  c.cyan,
+  c.teal,
+  c.emerald,
+  c.lime,
+  c.amber,
+  c.orange,
+  c.red,
+  c.blue,
+  c.green,
+  c.sky
 ]
 
 function randomColor(palette: typeof neutralPalette | typeof primaryPalette) {

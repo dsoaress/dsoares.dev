@@ -1,10 +1,9 @@
-import Link, { LinkProps } from 'next/link'
-import { ReactNode } from 'react'
+import Link from 'next/link'
 import { SiDevdotto, SiGithub, SiInstagram, SiLinkedin } from 'react-icons/si'
 
 import { cn } from '@/lib/utils'
 
-import { Block, BlockProps } from './block'
+import { Block } from './block'
 
 const social = [
   {
@@ -37,43 +36,25 @@ const social = [
   }
 ]
 
-function StyledBlock({ className, rotate, ...props }: BlockProps & { rotate: string }) {
-  return (
-    <Block
-      whileHover={{ rotate, scale: 1.1 }}
-      className={cn('col-span-6 md:col-span-3 relative', className)}
-      {...props}
-    />
-  )
-}
-
-function StyledLink({
-  className,
-  ...props
-}: Readonly<LinkProps & { className: string; children: ReactNode }>) {
-  return (
-    <Link
-      {...props}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={cn('grid h-full place-content-center text-3xl absolute inset-0', className)}
-    />
-  )
-}
-
 export function Social() {
-  return (
-    <>
-      {social.map(({ label, url, icon, color, background }, i) => {
-        const rotate = i % 2 === 0 ? '-2.5deg' : '2.5deg'
-        return (
-          <StyledBlock key={label} rotate={rotate} className={background}>
-            <StyledLink href={url} aria-label={label} className={color}>
-              {icon}
-            </StyledLink>
-          </StyledBlock>
-        )
-      })}
-    </>
-  )
+  return social.map(({ label, url, icon, color, background }, i) => {
+    const rotate = i % 2 === 0 ? '-2.5deg' : '2.5deg'
+    return (
+      <Block
+        key={label}
+        whileHover={{ rotate, scale: 1.1 }}
+        className={cn('col-span-6 md:col-span-3 relative', background)}
+      >
+        <Link
+          href={url}
+          aria-label={label}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={cn('grid h-full place-content-center text-3xl absolute inset-0', color)}
+        >
+          {icon}
+        </Link>
+      </Block>
+    )
+  })
 }

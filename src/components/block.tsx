@@ -1,13 +1,13 @@
 'use client'
 
 import { motion, type MotionProps } from 'framer-motion'
-import { HTMLAttributes } from 'react'
+import type { HTMLAttributes } from 'react'
 
 import { cn } from '@/lib/utils'
 
-export type BlockProps = MotionProps & HTMLAttributes<HTMLDivElement>
+type BlockProps = MotionProps & HTMLAttributes<HTMLDivElement>
 
-export function Block({ className, ...rest }: BlockProps) {
+export function Block({ className, ...rest }: Readonly<BlockProps>) {
   return (
     <motion.div
       variants={{

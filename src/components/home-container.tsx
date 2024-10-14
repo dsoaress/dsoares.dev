@@ -1,9 +1,11 @@
 'use client'
 
-import { motion, MotionProps } from 'framer-motion'
-import { HTMLAttributes } from 'react'
+import { motion, type MotionProps } from 'framer-motion'
+import type { HTMLAttributes } from 'react'
 
-export function HomeContainer(props: MotionProps & HTMLAttributes<HTMLDivElement>) {
+type Props = MotionProps & HTMLAttributes<HTMLDivElement>
+
+export function HomeContainer(props: Readonly<Props>) {
   return (
     <motion.div
       initial="initial"
