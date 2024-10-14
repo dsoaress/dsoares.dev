@@ -2,14 +2,12 @@ name: Checks
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   pull_request:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
-  check-pr:
+  check:
     name: Installing Packages
     runs-on: ubuntu-latest
     steps:
@@ -33,6 +31,9 @@ jobs:
 
       - name: Run lint
         run: pnpm lint
+
+      - name: Run test
+        run: pnpm test
 
       - name: Run build
         run: pnpm build
