@@ -11,8 +11,8 @@ jest.mock('./block', () => ({
 describe('About', () => {
   it('renders the content inside Block', () => {
     const { getByText } = render(<About />)
-    expect(getByText(/As a developer, I have a passion for/i)).toBeInTheDocument()
-    expect(getByText(/building robust and scalable applications/i)).toBeInTheDocument()
+    expect(getByText(/Specializing in/i)).toBeInTheDocument()
+    expect(getByText(/scalable, robust applications/i)).toBeInTheDocument()
   })
 
   it('renders Block with the correct className', () => {
@@ -28,7 +28,7 @@ describe('About', () => {
 
   it('renders text with the correct className', () => {
     const { getByText } = render(<About />)
-    expect(getByText(/As a developer, I have a passion for/i)).toHaveClass('text-neutral-400')
-    expect(getByText(/building robust and scalable applications/i)).toHaveClass('text-neutral-50')
+    expect(getByText(/Specializing in/i)).toHaveClass('text-neutral-400')
+    expect(getByText(/scalable, robust applications/i)).toHaveClass('text-neutral-50')
   })
 })

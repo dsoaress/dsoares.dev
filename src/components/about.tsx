@@ -4,9 +4,9 @@ export function About() {
   return (
     <Block className="col-span-12 text-3xl leading-snug">
       <p className="text-neutral-400">
-        As a developer, I have a passion for{' '}
-        <span className="text-neutral-50">building robust and scalable applications</span>. I use my
-        skills to create seamless user experiences and efficient backend systems.
+        Specializing in <span className="text-neutral-50">scalable, robust applications</span>, I
+        focus on delivering seamless user experiences and optimizing backend systems for maximum
+        efficiency.
       </p>
     </Block>
   )
