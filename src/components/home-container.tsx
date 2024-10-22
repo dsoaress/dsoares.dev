@@ -1,9 +1,9 @@
-'use client'
+"use client";
 
-import { motion, type MotionProps } from 'framer-motion'
-import type { HTMLAttributes } from 'react'
+import { MotionProps, motion } from "framer-motion";
+import type { HTMLAttributes } from "react";
 
-type Props = MotionProps & HTMLAttributes<HTMLDivElement>
+type Props = MotionProps & HTMLAttributes<HTMLDivElement>;
 
 export function HomeContainer(props: Readonly<Props>) {
   return (
@@ -14,5 +14,5 @@ export function HomeContainer(props: Readonly<Props>) {
       className="mx-auto grid max-w-4xl grid-flow-dense grid-cols-12 gap-4"
       {...props}
     />
-  )
+  );
 }

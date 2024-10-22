@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react'
-import { motion, type MotionProps } from 'framer-motion'
+import { type MotionProps, motion } from 'framer-motion'
 import type { HTMLAttributes } from 'react'
 
 import { Block } from '.'
