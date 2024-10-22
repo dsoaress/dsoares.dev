@@ -53,5 +53,5 @@
     "*.{js,jsx,ts,tsx}": "eslint --max-warnings=0 --fix",
     "*.{js,jsx,ts,tsx,json,yml,yaml,md}": "prettier --write --ignore-path .gitignore"
   },
-  "packageManager": "pnpm@9.12.1"
+  "packageManager": "pnpm@9.12.2"
 }
