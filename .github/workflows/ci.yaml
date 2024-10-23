@@ -26,13 +26,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22.9.0
-          cache: 'pnpm'
+          cache: "pnpm"
 
       - name: Install dependencies
         run: pnpm install
 
       - name: Run lint
-        run: pnpm lint
+        run: pnpm lint:ci
 
       - name: Run test
         run: pnpm test

@@ -8,8 +8,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "pnpm biome check src",
-    "lint:fix": "pnpm biome check --write src",
+    "lint": "pnpm biome check --write src",
+    "lint:ci": "pnpm biome ci src",
     "test": "jest",
     "test:watch": "jest --watch",
     "prepare": "lefthook install"
