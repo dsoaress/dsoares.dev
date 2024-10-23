@@ -1,3 +1,5 @@
+import type { JSX } from 'react'
+
 import { Block } from './block'
 
 export function About(): JSX.Element {

@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom'
 
-import type { ImgHTMLAttributes } from 'react'
+import type { ImgHTMLAttributes, JSX } from 'react'
 
 jest.mock('next/image', () => ({
   __esModule: true,

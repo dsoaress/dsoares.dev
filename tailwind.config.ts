@@ -22,11 +22,13 @@ const primaryPalette = [
   c.sky
 ]
 
-function randomColor(palette: typeof neutralPalette | typeof primaryPalette) {
+function randomColor(
+  palette: typeof neutralPalette | typeof primaryPalette
+): (typeof neutralPalette)[number] | (typeof primaryPalette)[number] {
   return palette[Math.floor(Math.random() * palette.length)]
 }
 
-const config = {
+const config: Config = {
   content: ['./src/**/*.{ts,tsx}'],
   theme: {
     extend: {
@@ -39,6 +41,6 @@ const config = {
       }
     }
   }
-} satisfies Config
+}
 
 export default config

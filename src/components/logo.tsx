@@ -1,4 +1,4 @@
-import type { SVGProps } from 'react'
+import type { JSX, SVGProps } from 'react'
 
 import { cn } from '@/lib/utils'
 

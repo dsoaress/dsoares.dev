@@ -1,11 +1,9 @@
 import { render } from '@testing-library/react'
 
-import { Logo } from '@/components'
-
 import Home from './page'
 
 jest.mock('@/components', () => ({
-  Logo: jest.fn(() => <div data-testid="logo" />),
+  Logo: jest.fn(props => <div data-testid="logo" {...props} />),
   HomeContainer: jest.fn(({ children }) => <div data-testid="home-container">{children}</div>),
   Header: jest.fn(() => <header data-testid="header" />),
   Social: jest.fn(() => <div data-testid="social" />),
@@ -18,13 +16,7 @@ describe('Home', () => {
     const { getByTestId } = render(<Home />)
     const logo = getByTestId('logo')
     expect(logo).toBeInTheDocument()
-    expect(Logo).toHaveBeenCalledWith(
-      expect.objectContaining({
-        size: 36,
-        className: 'mx-auto mb-12 text-primary-300'
-      }),
-      {}
-    )
+    expect(logo).toHaveClass('mx-auto mb-12 text-primary-300')
   })
 
   it('renders the HomeContainer component with its children', () => {

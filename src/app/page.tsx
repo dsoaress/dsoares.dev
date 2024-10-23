@@ -1,3 +1,5 @@
+import type { JSX } from 'react'
+
 import { About, Footer, Header, HomeContainer, Logo, Social } from '@/components'
 
 export default function Home(): JSX.Element {
