@@ -1,22 +1,13 @@
 {
   "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
-  "vcs": {
-    "enabled": false,
-    "clientKind": "git",
-    "useIgnoreFile": false
-  },
   "files": {
-    "ignoreUnknown": false
+    "ignoreUnknown": true
   },
   "formatter": {
     "enabled": true,
     "formatWithErrors": false,
     "indentStyle": "space",
-    "indentWidth": 2,
-    "lineEnding": "lf",
-    "lineWidth": 100,
-    "attributePosition": "auto",
-    "bracketSpacing": true
+    "lineWidth": 100
   },
   "organizeImports": {
     "enabled": true
@@ -26,7 +17,6 @@
     "rules": {
       "style": {
         "useFragmentSyntax": "error",
-        "useWhile": "error",
         "noDoneCallback": "error",
         "useExplicitLengthCheck": "error",
         "useForOf": "error",
@@ -43,14 +33,9 @@
         "noUnusedVariables": "error"
       },
       "complexity": {
-        "noExcessiveCognitiveComplexity": "error",
-        "noExcessiveNestedTestSuites": "error",
-        "noForEach": "error",
-        "noStaticOnlyClass": "error"
+        "noExcessiveCognitiveComplexity": "error"
       },
       "suspicious": {
-        "noDuplicateTestHooks": "error",
-        "noExportsInTest": "error",
         "noSkippedTests": "error",
         "noMisplacedAssertion": "error",
         "useErrorMessage": "error"
@@ -69,15 +54,10 @@
   },
   "javascript": {
     "formatter": {
-      "jsxQuoteStyle": "double",
-      "quoteProperties": "asNeeded",
       "trailingCommas": "none",
       "semicolons": "asNeeded",
       "arrowParentheses": "asNeeded",
-      "bracketSameLine": false,
-      "quoteStyle": "single",
-      "attributePosition": "auto",
-      "bracketSpacing": true
+      "quoteStyle": "single"
     }
   }
 }
