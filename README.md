@@ -5,7 +5,7 @@
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=dsoaress_dsoares.dev&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=dsoaress_dsoares.dev)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=dsoaress_dsoares.dev&metric=coverage)](https://sonarcloud.io/summary/new_code?id=dsoaress_dsoares.dev)
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=dsoaress_dsoares.dev&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=dsoaress_dsoares.dev)
-[![Formatted with Biome](https://img.shields.io/badge/Formatted_with-Biome-60a5fa?style=flat&logo=biome)](https://biomejs.dev/)
+[![Checked with Biome](https://img.shields.io/badge/Checked_with-Biome-60a5fa?style=flat&logo=biome)](https://biomejs.dev)
 
 Source of my personal site.
 
