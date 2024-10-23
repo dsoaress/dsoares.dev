@@ -7,9 +7,9 @@ import { Header } from '.'
 
 jest.mock('next/image', () => ({
   __esModule: true,
-  default: ({ src, alt, ...props }: ImageProps) => {
-    // eslint-disable-next-line @next/next/no-img-element
-    return <img src={src as string} alt={alt} {...props} />
+  default: ({ src, alt, ...props }: ImageProps): JSX.Element => {
+    // biome-ignore lint/nursery/noImgElement: this is a mock
+    return <img {...props} src={src as string} alt={alt} />
   }
 }))
 

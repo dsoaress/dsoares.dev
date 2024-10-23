@@ -4,7 +4,7 @@ import { FiArrowRight } from 'react-icons/fi'
 
 import { Block } from './block'
 
-export function Header() {
+export function Header(): JSX.Element {
   return (
     <Block className="col-span-12 row-span-2 md:col-span-6">
       <Image

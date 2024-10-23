@@ -9,35 +9,35 @@ const social = [
   {
     label: 'GitHub',
     url: 'https://github.com/dsoaress',
-    icon: <SiGithub />,
+    icon: SiGithub,
     color: 'text-black',
     background: 'bg-neutral-50'
   },
   {
     label: 'LinkedIn',
     url: 'https://www.linkedin.com/in/dsoaress',
-    icon: <SiLinkedin />,
+    icon: SiLinkedin,
     color: 'text-white',
     background: 'bg-blue-500'
   },
   {
     label: 'Dev',
     url: 'https://dev.to/dsoares',
-    icon: <SiDevdotto />,
+    icon: SiDevdotto,
     color: 'text-white',
     background: 'bg-black'
   },
   {
     label: 'Instagram',
     url: 'https://instagram.com/dansoares',
-    icon: <SiInstagram />,
+    icon: SiInstagram,
     color: 'text-white',
     background: 'bg-gradient-to-r from-pink-500 to-yellow-500'
   }
 ]
 
-export function Social() {
-  return social.map(({ label, url, icon, color, background }, i) => {
+export function Social(): JSX.Element[] {
+  return social.map(({ label, url, icon: Icon, color, background }, i) => {
     const rotate = i % 2 === 0 ? '-2.5deg' : '2.5deg'
     return (
       <Block
@@ -52,7 +52,7 @@ export function Social() {
           rel="noopener noreferrer"
           className={cn('grid h-full place-content-center text-3xl absolute inset-0', color)}
         >
-          {icon}
+          <Icon />
         </Link>
       </Block>
     )

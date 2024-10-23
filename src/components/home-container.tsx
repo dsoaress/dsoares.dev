@@ -5,7 +5,7 @@ import type { HTMLAttributes } from 'react'
 
 type Props = MotionProps & HTMLAttributes<HTMLDivElement>
 
-export function HomeContainer(props: Readonly<Props>) {
+export function HomeContainer(props: Readonly<Props>): JSX.Element {
   return (
     <motion.div
       initial="initial"

@@ -1,6 +1,6 @@
 import { Block } from './block'
 
-export function About() {
+export function About(): JSX.Element {
   return (
     <Block className="col-span-12 text-3xl leading-snug">
       <p className="text-neutral-400">

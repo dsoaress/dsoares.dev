@@ -26,7 +26,7 @@ type Props = {
   children: ReactNode
 }
 
-export default function RootLayout({ children }: Readonly<Props>) {
+export default function RootLayout({ children }: Readonly<Props>): JSX.Element {
   return (
     <html lang="en">
       <body

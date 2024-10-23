@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils'
 
 type BlockProps = MotionProps & HTMLAttributes<HTMLDivElement>
 
-export function Block({ className, ...props }: Readonly<BlockProps>) {
+export function Block({ className, ...props }: Readonly<BlockProps>): JSX.Element {
   return (
     <motion.div
       variants={{

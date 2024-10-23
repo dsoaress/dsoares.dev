@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export function Footer() {
+export function Footer(): JSX.Element {
   return (
     <footer className="mt-12">
       <p className="text-center text-neutral-400">
