@@ -1,14 +1,6 @@
 import { render } from '@testing-library/react'
-import type { HTMLAttributes } from 'react'
 
 import { Social } from '.'
-
-jest.mock('next/link', () => ({
-  __esModule: true,
-  default: jest.fn(({ children, ...props }: HTMLAttributes<HTMLAnchorElement>) => (
-    <a {...props}>{children}</a>
-  ))
-}))
 
 describe('Social', () => {
   it('renders all social media links', () => {

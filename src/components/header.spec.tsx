@@ -1,15 +1,6 @@
 import { render } from '@testing-library/react'
-import type { ImageProps } from 'next/image'
 
 import { Header } from '.'
-
-jest.mock('next/image', () => ({
-  __esModule: true,
-  default: ({ src, alt, ...props }: ImageProps): JSX.Element => {
-    // biome-ignore lint/nursery/noImgElement: this is a mock
-    return <img {...props} src={src as string} alt={alt} />
-  }
-}))
 
 describe('Header', () => {
   it('renders the avatar image with correct attributes and styles', () => {
