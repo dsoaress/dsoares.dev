@@ -1,4 +1,4 @@
-import { cn } from './utils'
+import { cn } from './cn'
 
 describe('cn', () => {
   it('merges Tailwind classes correctly', () => {

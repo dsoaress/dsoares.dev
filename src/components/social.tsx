@@ -2,7 +2,7 @@ import Link from 'next/link'
 import type { JSX } from 'react'
 import { SiDevdotto, SiGithub, SiInstagram, SiLinkedin } from 'react-icons/si'
 
-import { cn } from '@/lib/utils'
+import { cn } from '@/lib/cn'
 
 import { Block } from './block'
 

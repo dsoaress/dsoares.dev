@@ -1,6 +1,6 @@
 import type { JSX, SVGProps } from 'react'
 
-import { cn } from '@/lib/utils'
+import { cn } from '@/lib/cn'
 
 type Props = {
   size: number
