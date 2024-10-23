@@ -1,7 +1,5 @@
 import { render } from '@testing-library/react'
-import type { MotionProps } from 'framer-motion'
 import type { ImageProps } from 'next/image'
-import type { HTMLAttributes } from 'react'
 
 import { Header } from '.'
 
@@ -11,10 +9,6 @@ jest.mock('next/image', () => ({
     // biome-ignore lint/nursery/noImgElement: this is a mock
     return <img {...props} src={src as string} alt={alt} />
   }
-}))
-
-jest.mock('./block', () => ({
-  Block: jest.fn((props: MotionProps & HTMLAttributes<HTMLDivElement>) => <div {...props} />)
 }))
 
 describe('Header', () => {

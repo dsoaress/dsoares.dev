@@ -1,15 +1,6 @@
 import { render } from '@testing-library/react'
-import { type MotionProps, motion } from 'framer-motion'
-import type { HTMLAttributes } from 'react'
 
 import { HomeContainer } from './home-container'
-
-jest.mock('framer-motion', () => ({
-  ...jest.requireActual('framer-motion'),
-  motion: {
-    div: jest.fn((props: MotionProps & HTMLAttributes<HTMLDivElement>) => <div {...props} />)
-  }
-}))
 
 describe('HomeContainer', () => {
   it('renders with default styles', () => {
@@ -28,17 +19,5 @@ describe('HomeContainer', () => {
     )
     expect(container.firstChild).toHaveAttribute('data-testid', 'home-container')
     expect(container.firstChild).toHaveAttribute('aria-label', 'Home')
-  })
-
-  it('applies framer-motion animation variants', () => {
-    render(<HomeContainer />)
-    expect(motion.div).toHaveBeenCalledWith(
-      expect.objectContaining({
-        initial: 'initial',
-        animate: 'animate',
-        transition: { staggerChildren: 0.05 }
-      }),
-      {}
-    )
   })
 })

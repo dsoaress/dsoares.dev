@@ -37,13 +37,15 @@ const social = [
 ]
 
 export function Social(): JSX.Element[] {
-  return social.map(({ label, url, icon: Icon, color, background }, i) => {
-    const rotate = i % 2 === 0 ? '-2.5deg' : '2.5deg'
+  return social.map(({ label, url, icon: Icon, color, background }) => {
     return (
       <Block
         key={label}
-        whileHover={{ rotate, scale: 1.1 }}
-        className={cn('col-span-6 md:col-span-3 relative', background)}
+        data-testid={`social-${label.toLowerCase()}`}
+        className={cn(
+          'col-span-6 md:col-span-3 relative transition-transform ease-in-out duration-300 hover:scale-105',
+          background
+        )}
       >
         <Link
           href={url}
