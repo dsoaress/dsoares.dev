@@ -10,7 +10,7 @@ const createJestConfig = nextJest({
 
 const config: Config = {
   clearMocks: true,
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.tsx'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
     prefix: '<rootDir>/'
   }),

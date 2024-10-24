@@ -7,7 +7,10 @@ describe('Header', () => {
     const { getByAltText } = render(<Header />)
     const image = getByAltText('avatar')
     expect(image).toBeInTheDocument()
-    expect(image).toHaveAttribute('src', 'https://github.com/dsoaress.png')
+    expect(image).toHaveAttribute(
+      'src',
+      '/_next/image?url=https%3A%2F%2Fgithub.com%2Fdsoaress.png&w=128&q=75'
+    )
     expect(image).toHaveClass('mb-4 size-16 rounded-full object-cover object-top')
   })
 
