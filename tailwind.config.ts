@@ -22,9 +22,9 @@ const primaryPalette = [
   c.sky
 ]
 
-function randomColor(
-  palette: typeof neutralPalette | typeof primaryPalette
-): (typeof neutralPalette)[number] | (typeof primaryPalette)[number] {
+type Palette = typeof neutralPalette | typeof primaryPalette
+
+function randomColor(palette: Palette): Palette[number] {
   return palette[Math.floor(Math.random() * palette.length)]
 }
 
