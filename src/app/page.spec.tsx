@@ -2,13 +2,13 @@ import { render } from '@testing-library/react'
 
 import Home from './page'
 
-jest.mock('@/components', () => ({
-  Logo: jest.fn(props => <div data-testid="logo" {...props} />),
-  HomeContainer: jest.fn(({ children }) => <div data-testid="home-container">{children}</div>),
-  Header: jest.fn(() => <header data-testid="header" />),
-  Social: jest.fn(() => <div data-testid="social" />),
-  About: jest.fn(() => <section data-testid="about" />),
-  Footer: jest.fn(() => <footer data-testid="footer" />)
+vi.mock('@/components', () => ({
+  Logo: vi.fn(props => <div data-testid="logo" {...props} />),
+  HomeContainer: vi.fn(({ children }) => <div data-testid="home-container">{children}</div>),
+  Header: vi.fn(() => <header data-testid="header" />),
+  Social: vi.fn(() => <div data-testid="social" />),
+  About: vi.fn(() => <section data-testid="about" />),
+  Footer: vi.fn(() => <footer data-testid="footer" />)
 }))
 
 describe('Home', () => {
