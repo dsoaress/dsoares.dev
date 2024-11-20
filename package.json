@@ -12,7 +12,7 @@
     "lint:ci": "pnpm biome ci src",
     "test": "jest",
     "test:watch": "jest --watch",
-    "prepare": "lefthook install"
+    "prepare": "lefthook install || true"
   },
   "dependencies": {
     "@vercel/speed-insights": "1.0.14",
@@ -41,5 +41,9 @@
     "ts-node": "10.9.2",
     "typescript": "5.6.3"
   },
-  "packageManager": "pnpm@9.12.3"
+  "engines": {
+    "node": "22.11.0",
+    "pnpm": "9.13.2"
+  },
+  "packageManager": "pnpm@9.13.2"
 }
