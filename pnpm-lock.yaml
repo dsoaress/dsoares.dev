@@ -55,8 +55,8 @@ importers:
         specifier: npm:types-react-dom@19.0.0
         version: types-react-dom@19.0.0
       '@vitejs/plugin-react':
-        specifier: 4.3.3
-        version: 4.3.3(vite@5.4.11(@types/node@22.8.6))
+        specifier: 4.3.4
+        version: 4.3.4(vite@5.4.11(@types/node@22.8.6))
       '@vitest/coverage-v8':
         specifier: 2.1.5
         version: 2.1.5(vitest@2.1.5)
@@ -774,11 +774,11 @@ packages:
       vue-router:
         optional: true
 
-  '@vitejs/plugin-react@4.3.3':
-    resolution: {integrity: sha512-NooDe9GpHGqNns1i8XDERg0Vsg5SSYRhRxxyTGogUdkdNt47jal+fbuYi+Yfq6pzRCKXyoPcWisfxE6RIM3GKA==}
+  '@vitejs/plugin-react@4.3.4':
+    resolution: {integrity: sha512-SCCPBJtYLdE8PX/7ZQAs1QAZ8Jqwih+0VBLum1EGqmCCQal+MIUqLCzj3ZUy8ufbC0cAM4LRlSTm7IQJwWT4ug==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
-      vite: ^4.2.0 || ^5.0.0
+      vite: ^4.2.0 || ^5.0.0 || ^6.0.0
 
   '@vitest/coverage-v8@2.1.5':
     resolution: {integrity: sha512-/RoopB7XGW7UEkUndRXF87A9CwkoZAJW01pj8/3pgmDVsjMH2IKy6H1A38po9tmUlwhSyYs0az82rbKd9Yaynw==}
@@ -2418,7 +2418,7 @@ snapshots:
       next: 15.0.2(@babel/core@7.26.0)(react-dom@19.0.0-rc-02c0e824-20241028(react@19.0.0-rc-02c0e824-20241028))(react@19.0.0-rc-02c0e824-20241028)
       react: 19.0.0-rc-02c0e824-20241028
 
-  '@vitejs/plugin-react@4.3.3(vite@5.4.11(@types/node@22.8.6))':
+  '@vitejs/plugin-react@4.3.4(vite@5.4.11(@types/node@22.8.6))':
     dependencies:
       '@babel/core': 7.26.0
       '@babel/plugin-transform-react-jsx-self': 7.25.9(@babel/core@7.26.0)
