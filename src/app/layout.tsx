@@ -32,7 +32,7 @@ export default function RootLayout({ children }: Readonly<Props>): JSX.Element {
     <html lang="en">
       <body
         className={cn(
-          'font-sans antialiased min-h-screen bg-neutral-900 px-4 py-12 text-neutral-50',
+          'font-sans antialiased min-h-screen bg-slate-900 px-4 py-12 text-slate-50',
           fontSans.variable
         )}
       >

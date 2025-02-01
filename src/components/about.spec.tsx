@@ -16,7 +16,7 @@ describe('About', () => {
 
   it('renders text with the correct className', () => {
     const { getByText } = render(<About />)
-    expect(getByText(/Specializing in/i)).toHaveClass('text-neutral-400')
-    expect(getByText(/scalable, robust applications/i)).toHaveClass('text-neutral-50')
+    expect(getByText(/Specializing in/i)).toHaveClass('text-slate-400')
+    expect(getByText(/scalable, robust applications/i)).toHaveClass('text-slate-50')
   })
 })

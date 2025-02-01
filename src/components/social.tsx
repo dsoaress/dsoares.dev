@@ -12,7 +12,7 @@ const social = [
     url: 'https://github.com/dsoaress',
     icon: SiGithub,
     color: 'text-black',
-    background: 'bg-neutral-50'
+    background: 'bg-slate-50'
   },
   {
     label: 'LinkedIn',
