@@ -29,6 +29,6 @@ describe('Header', () => {
     expect(link).toHaveAttribute('href', 'https://www.linkedin.com/in/dsoaress')
     expect(link).toHaveAttribute('target', '_blank')
     expect(link).toHaveAttribute('rel', 'noopener noreferrer')
-    expect(link).toHaveClass('flex items-center gap-1 text-lime-300 hover:underline')
+    expect(link).toHaveClass('flex items-center gap-1 text-rose-300 hover:underline')
   })
 })

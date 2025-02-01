@@ -16,7 +16,7 @@ describe('Home', () => {
     const { getByTestId } = render(<Home />)
     const logo = getByTestId('logo')
     expect(logo).toBeInTheDocument()
-    expect(logo).toHaveClass('mx-auto mb-12 text-lime-300')
+    expect(logo).toHaveClass('mx-auto mb-12 text-rose-300')
   })
 
   it('renders the HomeContainer component with its children', () => {

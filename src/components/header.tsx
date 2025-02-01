@@ -18,13 +18,13 @@ export function Header(): JSX.Element {
       <h1 className="mb-12 text-4xl font-medium leading-tight">
         Hi, I&apos;m Daniel Soares.
         <br />
-        <span className="text-slate-400">I build cool things with Go, Node and React.</span>
+        <span className="text-zinc-400">I build cool things with Go, Node and React.</span>
       </h1>
       <Link
         href="https://www.linkedin.com/in/dsoaress"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center gap-1 text-lime-300 hover:underline"
+        className="flex items-center gap-1 text-rose-300 hover:underline"
       >
         Get in touch <FiArrowRight />
       </Link>

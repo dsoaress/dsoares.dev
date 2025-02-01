@@ -7,7 +7,7 @@ describe('Footer', () => {
     const { getByText } = render(<Footer />)
     const paragraph = getByText(/Made with ❤️ with/)
     expect(paragraph).toBeInTheDocument()
-    expect(paragraph).toHaveClass('text-center text-slate-400')
+    expect(paragraph).toHaveClass('text-center text-zinc-400')
   })
 
   it('renders the Next.js link with correct attributes', () => {
@@ -17,6 +17,6 @@ describe('Footer', () => {
     expect(link).toHaveAttribute('href', 'https://nextjs.org/')
     expect(link).toHaveAttribute('target', '_blank')
     expect(link).toHaveAttribute('rel', 'noopener noreferrer')
-    expect(link).toHaveClass('font-medium text-lime-300 hover:underline')
+    expect(link).toHaveClass('font-medium text-rose-300 hover:underline')
   })
 })

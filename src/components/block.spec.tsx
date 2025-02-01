@@ -6,7 +6,7 @@ describe('Block', () => {
   it('renders with default styles', () => {
     const { container } = render(<Block />)
     expect(container.firstChild).toHaveClass(
-      'col-span-4 rounded-lg border border-slate-700 bg-slate-800 p-6'
+      'col-span-4 rounded-lg border border-zinc-700 bg-zinc-800 p-6'
     )
   })
 
