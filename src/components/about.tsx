@@ -1,8 +1,6 @@
-import type { JSX } from 'react'
-
 import { Block } from './block'
 
-export function About(): JSX.Element {
+export function About(): React.JSX.Element {
   return (
     <Block className="col-span-12 text-3xl leading-snug">
       <p className="text-zinc-400">

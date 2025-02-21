@@ -1,7 +1,6 @@
 import Link from 'next/link'
-import type { JSX } from 'react'
 
-export function Footer(): JSX.Element {
+export function Footer(): React.JSX.Element {
   return (
     <footer className="mt-12">
       <p className="text-center text-zinc-400">

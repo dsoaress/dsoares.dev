@@ -1,11 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import type { JSX } from 'react'
 import { FiArrowRight } from 'react-icons/fi'
 
 import { Block } from './block'
 
-export function Header(): JSX.Element {
+export function Header(): React.JSX.Element {
   return (
     <Block className="col-span-12 row-span-2 md:col-span-6">
       <Image

@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import type { JSX } from 'react'
 import { SiDevdotto, SiGithub, SiInstagram, SiLinkedin } from 'react-icons/si'
 
 import { cn } from '@/lib/cn'
@@ -37,7 +36,7 @@ const social = [
   }
 ]
 
-export function Social(): JSX.Element[] {
+export function Social(): React.JSX.Element[] {
   return social.map(({ label, url, icon: Icon, color, background }) => {
     return (
       <Block

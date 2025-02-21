@@ -1,4 +1,4 @@
-import type { JSX, SVGProps } from 'react'
+import type { SVGProps } from 'react'
 
 import { cn } from '@/lib/cn'
 
@@ -6,7 +6,7 @@ type Props = {
   size: number
 } & SVGProps<SVGSVGElement>
 
-export function Logo({ size, className, ...props }: Readonly<Props>): JSX.Element {
+export function Logo({ size, className, ...props }: Readonly<Props>): React.JSX.Element {
   return (
     <svg
       viewBox="0 0 375 548"

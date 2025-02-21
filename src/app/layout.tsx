@@ -4,7 +4,6 @@ import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata } from 'next'
 import { Inter as FontSans } from 'next/font/google'
-import type { JSX, ReactNode } from 'react'
 
 import { cn } from '@/lib/cn'
 
@@ -24,10 +23,10 @@ export const metadata: Metadata = {
 }
 
 type Props = {
-  children: ReactNode
+  children: React.ReactNode
 }
 
-export default function RootLayout({ children }: Readonly<Props>): JSX.Element {
+export default function RootLayout({ children }: Readonly<Props>): React.JSX.Element {
   return (
     <html lang="en">
       <body
