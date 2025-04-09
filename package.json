@@ -17,34 +17,32 @@
     "prepare": "lefthook install || true"
   },
   "dependencies": {
-    "@vercel/analytics": "1.5.0",
-    "@vercel/speed-insights": "1.2.0",
     "clsx": "2.1.1",
-    "next": "15.2.4",
+    "next": "15.2.5",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-icons": "5.5.0",
-    "sharp": "0.33.5",
-    "tailwind-merge": "3.0.2"
+    "sharp": "0.34.1",
+    "tailwind-merge": "3.2.0"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "@tailwindcss/postcss": "4.0.17",
+    "@tailwindcss/postcss": "4.1.3",
     "@testing-library/jest-dom": "6.6.3",
-    "@testing-library/react": "16.2.0",
-    "@types/node": "22.13.8",
-    "@types/react": "19.0.12",
-    "@types/react-dom": "19.0.4",
+    "@testing-library/react": "16.3.0",
+    "@types/node": "22.14.0",
+    "@types/react": "19.1.0",
+    "@types/react-dom": "19.1.1",
     "@vitejs/plugin-react": "4.3.4",
-    "@vitest/coverage-v8": "3.0.7",
-    "@vitest/ui": "3.0.7",
+    "@vitest/coverage-v8": "3.1.1",
+    "@vitest/ui": "3.1.1",
     "jsdom": "26.0.0",
-    "lefthook": "1.11.6",
+    "lefthook": "1.11.8",
     "postcss": "8.5.3",
-    "tailwindcss": "4.0.17",
-    "typescript": "5.7.3",
+    "tailwindcss": "4.1.3",
+    "typescript": "5.8.3",
     "vite-tsconfig-paths": "5.1.4",
-    "vitest": "3.0.7"
+    "vitest": "3.1.1"
   },
-  "packageManager": "pnpm@10.4.1"
+  "packageManager": "pnpm@10.8.0"
 }
