@@ -52,6 +52,7 @@ export function Social(): React.JSX.Element[] {
           aria-label={label}
           target="_blank"
           rel="noopener noreferrer"
+          data-umami-event={`Clicked ${label}`}
           className={cn('grid h-full place-content-center text-3xl absolute inset-0', color)}
         >
           <Icon />

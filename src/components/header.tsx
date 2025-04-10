@@ -23,6 +23,7 @@ export function Header(): React.JSX.Element {
         href="https://www.linkedin.com/in/dsoaress"
         target="_blank"
         rel="noopener noreferrer"
+        data-umami-event="Clicked Get in touch"
         className="flex items-center gap-1 text-rose-300 hover:underline"
       >
         Get in touch <FiArrowRight />

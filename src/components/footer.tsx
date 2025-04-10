@@ -9,6 +9,7 @@ export function Footer(): React.JSX.Element {
           href="https://nextjs.org/"
           target="_blank"
           rel="noopener noreferrer"
+          data-umami-event="Clicked Next.js"
           className="font-medium text-rose-300 hover:underline"
         >
           Next.js
