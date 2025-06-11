@@ -17,7 +17,7 @@ export function Header(): React.JSX.Element {
       <h1 className="mb-12 text-4xl font-medium leading-tight">
         Hi, I&apos;m Daniel Soares.
         <br />
-        <span className="text-zinc-400">I build cool things with Go, Node and React.</span>
+        <span className="text-zinc-400">I build cool things with Node and React.</span>
       </h1>
       <Link
         href="https://www.linkedin.com/in/dsoaress"

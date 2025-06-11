@@ -17,7 +17,7 @@ describe('Header', () => {
   it('renders the heading with correct content', () => {
     const { getByText } = render(<Header />)
     const title = getByText("Hi, I'm Daniel Soares.")
-    const subtitle = getByText('I build cool things with Go, Node and React.')
+    const subtitle = getByText('I build cool things with Node and React.')
     expect(title).toBeInTheDocument()
     expect(subtitle).toBeInTheDocument()
   })
